@@ -105,9 +105,9 @@ def raspar_horarios(urls: list[tuple[str, str]]) -> list[Horario]:
 print("Raspando linhas...")
 linhas, urls = raspar_linhas()
 
-salvar_csv(linhas, "out/linhas_jotur.csv")
+salvar_csv(linhas, "out/linhas_santa_terezinha.csv")
 
 print("Raspando horarios...")
 horarios = raspar_horarios(urls)
 
-salvar_csv(horarios, "out/horarios_jotur.csv")
+salvar_csv(horarios, "out/horarios_santa_terezinha.csv")
