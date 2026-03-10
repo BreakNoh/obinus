@@ -1,7 +1,9 @@
 import re
 from bs4 import Tag
 from dataclasses import dataclass, asdict
+
 import csv
+from pathlib import Path
 
 
 def salvar_csv(dados: list, nome_arquivo: str):
@@ -12,7 +14,10 @@ def salvar_csv(dados: list, nome_arquivo: str):
     cabecalho = asdict(dados[0]).keys()
 
     try:
-        with open(nome_arquivo, "w", newline="", encoding="utf-8") as f:
+        caminho = Path(nome_arquivo)
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(caminho, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=cabecalho, delimiter=";")
 
             writer.writeheader()
