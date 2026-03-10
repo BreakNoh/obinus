@@ -32,6 +32,7 @@ def salvar_csv(dados: list, nome_arquivo: str):
 
 
 def normalizar(s: str) -> str:
+    s = str(s)
     return re.sub(r"\s+", " ", s).strip()
 
 
@@ -49,6 +50,7 @@ headers = {
 
 def get_html(url, params: dict = {}) -> tuple[str, int]:
     req = sessao.get(url, params=params, headers=headers)
+    req.encoding = "utf-8"
     return (req.text, req.status_code)
 
 
