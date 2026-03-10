@@ -35,8 +35,8 @@ def normalizar(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-def extrair_texto(tag: Tag):
-    if not tag:
+def extrair_texto(tag: Tag | None):
+    if not tag or tag is None:
         return ""
     return normalizar("".join(tag.find_all(string=True, recursive=False)))
 
