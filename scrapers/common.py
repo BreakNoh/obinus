@@ -5,6 +5,8 @@ from dataclasses import dataclass, asdict
 import csv
 from pathlib import Path
 
+import requests
+
 
 def salvar_csv(dados: list, nome_arquivo: str):
     if not dados:
@@ -37,6 +39,17 @@ def extrair_texto(tag: Tag):
     if not tag:
         return ""
     return normalizar("".join(tag.find_all(string=True, recursive=False)))
+
+
+sessao = requests.Session()
+headers = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0"
+}
+
+
+def get_html(url, params: dict = {}) -> tuple[str, int]:
+    req = sessao.get(url, params=params, headers=headers)
+    return (req.text, req.status_code)
 
 
 @dataclass

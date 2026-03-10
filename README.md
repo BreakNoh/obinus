@@ -2,7 +2,7 @@
 
 - [x] Biguaçu
 - [x] Fenix / SIM
-- [ ] Estrela
+- [x] Estrela
 - [ ] Jotur
 - [ ] Imperatriz
 - [ ] Santa Terezinha
