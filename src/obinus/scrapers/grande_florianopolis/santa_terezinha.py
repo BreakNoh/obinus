@@ -1,5 +1,8 @@
-from bs4 import BeautifulSoup
-from common import *
+from obinus.core.base import Raspador
+from obinus.core.modelos import Linha, Horario
+from obinus.utils.http import get_soup
+from obinus.utils.texto import extrair_texto
+import re
 
 EMPRESA: str = "SANTA_TEREZINHA"
 
@@ -35,8 +38,7 @@ class SantaTerezinha(Raspador):
     def raspar_linhas(self) -> list[Linha]:
         linhas = []
 
-        html, status = get_html(URL_BASE)
-        soup = BeautifulSoup(html, "html.parser")
+        soup, status = get_soup(URL_BASE)
 
         for item in soup.select(".box-body"):
             nome = extrair_texto(item.select_one("h3"))

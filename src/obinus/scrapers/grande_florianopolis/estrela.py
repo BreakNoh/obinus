@@ -1,4 +1,9 @@
-from common import *
+import re
+
+from obinus.core.base import Raspador
+from obinus.core.modelos import Linha, Horario
+from obinus.utils.http import get_soup
+from obinus.utils.texto import extrair_texto
 
 EMPRESA: str = "ESTRELA"
 

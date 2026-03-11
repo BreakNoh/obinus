@@ -1,0 +1,18 @@
+[project]
+name = "obinus"
+version = "0.1.0"
+description = "Coleção de scrapers de linhas de ônibus de SC"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "bs4>=0.0.2",
+  "requests>=2.32.5",
+]
+
+[project.scripts]
+raspar-empresa = "obinus.main:empresas"
+raspar-teste = "obinus.main:teste"
+raspar-tudo = "obinus.main:main"
+
+[tool.uv]
+package = true

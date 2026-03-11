@@ -1,50 +1,61 @@
 from dataclasses import asdict
+from pathlib import Path
 import sqlite3
 import os
 
-from common import Horario, Linha
-from config import PATHS
-from db import queries
+from obinus.core.base import *
+import obinus.database.queries as queries
 
-SCHEMA = PATHS["schema"]
-SEED = PATHS["seed"]
-ARQUIVO = PATHS["db"]
+ARQUIVO_ATUAL = Path(__file__).resolve()
+DIR_ATUAL = ARQUIVO_ATUAL.parent
+DIR_PACOTE = DIR_ATUAL.parent
+DIR_RAIZ = DIR_PACOTE.parent.parent
+PASTA_SQL = DIR_ATUAL / "sql"
+PASTA_OUTPUT = DIR_RAIZ / "output"
 
-conexao = sqlite3.connect(ARQUIVO)
+PASTA_OUTPUT.mkdir(parents=True, exist_ok=True)
+
+conexao = sqlite3.connect(PASTA_OUTPUT / "dados.db")
 cursor = conexao.cursor()
 
 cursor.execute("PRAGMA foreign_keys = ON;")
 
 
+ARQUIVO_SCHEMA = PASTA_SQL / "schema.sql"
+
+
 def iniciar_db():
-    if not os.path.exists(SCHEMA):
+    if not os.path.exists(ARQUIVO_SCHEMA):
         print("schema não encontrado")
         return
 
-    with open(SCHEMA, "r") as f:
+    with open(ARQUIVO_SCHEMA, "r") as f:
         script = f.read()
+
+        # print(script)
 
         try:
             cursor.executescript(script)
             conexao.commit()
+            print("db iniciada")
         except Exception as e:
             conexao.rollback()
             print("erro ao iniciar db", e)
 
 
-def popular_db():
-    if not os.path.exists(SEED):
-        return
-
-    with open(SEED, "r") as f:
-        script = f.read()
-
-        try:
-            cursor.executescript(script)
-            conexao.commit()
-        except Exception as e:
-            conexao.rollback()
-            print("erro ao popular db", e)
+# def popular_db():
+#     if not os.path.exists(SEED):
+#         return
+#
+#     with open(SEED, "r") as f:
+#         script = f.read()
+#
+#         try:
+#             cursor.executescript(script)
+#             conexao.commit()
+#         except Exception as e:
+#             conexao.rollback()
+#             print("erro ao popular db", e)
 
 
 def salvar_linhas(linhas: list[Linha]):
