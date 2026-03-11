@@ -1,2 +1,2 @@
-scrapers/out/
-scrapers/__pycache__/
+**/out/
+**/__pycache__/
