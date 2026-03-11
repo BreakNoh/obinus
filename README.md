@@ -27,12 +27,20 @@
   - https://mobilibus.com/api/routes?origin=web&project_id=5 | dados de linhas
   - https://mobilibus.com/api/timetable?origin=web&v=2&project_id=5&route_id={{ID_ROTA}} | dados horarios
 - [ ] Transpiedade
+  - https://www.transpiedade.com.br/itinerarios | dados de linhas
+  - https://www.transpiedade.com.br/linhas/29/partenope/ | dados horarios
 - [ ] PGTur
 - [ ] Expressul
 - [ ] Consórcio Nosso Brusque
-- [ ] Viação Navegantes
-- [ ] Coletivo Caturani
+  - https://www.nossobrusque.com.br/ | SPA -> chatinho
+- [ ] Viação Navegantes - https://www.viacaonavegantes.net/pages/horarios/action.php -> API de saida - destino
+<!-- - [ ] Coletivo Caturani -->
+- [ ] Expresso presidente
+  - https://www.expressopresidente.com.br/cidades/gaspar/consulta-itinerario -> SPA
+  - https://mobilibus.com/api/timetable?origin=web&v=2&project_id=699&route_id=504951 | API (OMAGA)
 - [ ] Viação Praiana
+  - https://praiana.com.br/horarios/ | SPA horarios
+  - https://praiana.com.br/linhas/ | linhas
 
 # SUL
 
