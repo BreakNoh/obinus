@@ -83,8 +83,8 @@ BIGUACU;44801;Três Riachos / Biguaçu;Até Viaduto Janaína;False;https://www.t
 BIGUACU;44800;Três Riachos / Florianópolis;Via: Estrada Geral Tres Riachos, BR-101, Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44800
 FENIX;665;Abraão;;False;https://www.consorciofenix.com.br/horarios/abraao,665
 FENIX;762;Angelo Laporta;;False;https://www.consorciofenix.com.br/horarios/angelo-laporta,762
-FENIX;844;Bairro de Fátima;;False;https://www.consorciofenix.com.br/horarios/bairro-de-fatima,844
 FENIX;V-844;Bairro de Fátima;;False;https://www.consorciofenix.com.br/horarios/bairro-de-fatima,V-844
+FENIX;844;Bairro de Fátima;;False;https://www.consorciofenix.com.br/horarios/bairro-de-fatima,844
 FENIX;V-661;Balneário;;False;https://www.consorciofenix.com.br/horarios/balneario,V-661
 FENIX;661;Balneário;;False;https://www.consorciofenix.com.br/horarios/balneario,661
 FENIX;763;Caeira do Saco dos Limões;;False;https://www.consorciofenix.com.br/horarios/caeira-do-saco-dos-limoes,763
@@ -485,13 +485,13 @@ IMPERATRIZ;62700;Santo Amaro/Florianópolis;Via Sul do Rio;False;https://www.tci
 IMPERATRIZ;62701;Santo Amaro/Florianópolis;Via Sertão;False;https://www.tcimperatriz.com.br/linhas/62701-santo-amaro-florianopolis/
 IMPERATRIZ;62800;Alto Aririú/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/62800-alto-aririu-florianopolis/
 IMPERATRIZ;62802;Capela Alto Aririú/Florianopolis;;False;https://www.tcimperatriz.com.br/linhas/62802-capela-alto-aririu-florianopolis/
-SANTA-TEREZINHA;santana-kobrasol;Santana - Kobrasol;;False;https://santaterezinha.com/horarios/santana-kobrasol/
-SANTA-TEREZINHA;santana-florianopolis;Santana - Florianópolis;;False;https://santaterezinha.com/horarios/santana-florianopolis/
-SANTA-TEREZINHA;diretao;Diretão;;False;https://santaterezinha.com/horarios/diretao/
-SANTA-TEREZINHA;flor-de-napolis-florianopolis;Flor de Nápolis - Florianópolis;;False;https://santaterezinha.com/horarios/flor-de-napolis-florianopolis/
-SANTA-TEREZINHA;picada-do-sul-florianopolis;Picada do Sul - Florianópolis;;False;https://santaterezinha.com/horarios/picada-do-sul-florianopolis/
-SANTA-TEREZINHA;sao-pedro-de-alcantara-florianopolis;São Pedro de Alcântara - Florianópolis;;False;https://santaterezinha.com/horarios/sao-pedro-de-alcantara-florianopolis/
-SANTA-TEREZINHA;continente-park-shopping-florianopolis;Continente Park Shopping - Florianópolis;;False;https://santaterezinha.com/horarios/continente-park-shopping-florianopolis/
-SANTA-TEREZINHA;rancho-queimado-florianopolis;Rancho Queimado - Florianópolis;;False;https://santaterezinha.com/horarios/rancho-queimado-florianopolis/
-SANTA-TEREZINHA;sertao-florianopolis;Sertão - Florianópolis;;False;https://santaterezinha.com/horarios/sertao-florianopolis/
-SANTA-TEREZINHA;forquilhinhas-serraria;Forquilhinhas - Serraria;;False;https://santaterezinha.com/horarios/forquilhinhas-serraria/
+SANTA_TEREZINHA;santana-kobrasol;Santana - Kobrasol;;False;https://santaterezinha.com/horarios/santana-kobrasol/
+SANTA_TEREZINHA;santana-florianopolis;Santana - Florianópolis;;False;https://santaterezinha.com/horarios/santana-florianopolis/
+SANTA_TEREZINHA;diretao;Diretão;;False;https://santaterezinha.com/horarios/diretao/
+SANTA_TEREZINHA;flor-de-napolis-florianopolis;Flor de Nápolis - Florianópolis;;False;https://santaterezinha.com/horarios/flor-de-napolis-florianopolis/
+SANTA_TEREZINHA;picada-do-sul-florianopolis;Picada do Sul - Florianópolis;;False;https://santaterezinha.com/horarios/picada-do-sul-florianopolis/
+SANTA_TEREZINHA;sao-pedro-de-alcantara-florianopolis;São Pedro de Alcântara - Florianópolis;;False;https://santaterezinha.com/horarios/sao-pedro-de-alcantara-florianopolis/
+SANTA_TEREZINHA;continente-park-shopping-florianopolis;Continente Park Shopping - Florianópolis;;False;https://santaterezinha.com/horarios/continente-park-shopping-florianopolis/
+SANTA_TEREZINHA;rancho-queimado-florianopolis;Rancho Queimado - Florianópolis;;False;https://santaterezinha.com/horarios/rancho-queimado-florianopolis/
+SANTA_TEREZINHA;sertao-florianopolis;Sertão - Florianópolis;;False;https://santaterezinha.com/horarios/sertao-florianopolis/
+SANTA_TEREZINHA;forquilhinhas-serraria;Forquilhinhas - Serraria;;False;https://santaterezinha.com/horarios/forquilhinhas-serraria/

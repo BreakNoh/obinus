@@ -1,38 +1,32 @@
 from common import Horario, Linha, salvar_csv
-import grande_floripa
-import sqlite3
-
-from tabela import iniciar_db
+import db.db as db
+import grande_floripa as gf
 
 todas_linhas: list[Linha] = []
 todos_horarios: list[Horario] = []
 
-for raspador in grande_floripa.todos:
-    print(f"! raspando {raspador.empresa()}")
+db.iniciar_db()
 
-    linhas: list[Linha] = raspador.raspar_linhas()
+for raspador in gf.todos:
+    print(f"# raspando {raspador.empresa()}...")
+    linhas_raspadas: list[Linha] = raspador.raspar_linhas()
+    print(f"> {len(linhas_raspadas)} linhas raspadas")
 
-    print(f"! {raspador.empresa()}: {len(linhas)} linhas raspadas")
+    num_horarios = 0
+    todas_linhas.extend(linhas_raspadas)
+    # todos_horarios_raspados = []
 
-    horarios: list[Horario] = []
+    for linha in linhas_raspadas:
+        horarios_raspados = raspador.raspar_horarios_linha(linha)
+        num_horarios += len(horarios_raspados)
 
-    for linha in linhas:
-        print(f"> raspando {linha.codigo} - {linha.nome}...")
-        horarios_ = raspador.raspar_horarios_linha(linha)
-        horarios.extend(horarios_)
+        # todos_horarios_raspados.extend(horarios_raspados)
+        todos_horarios.extend(horarios_raspados)
 
-    print(f"! {raspador.empresa()}: {len(horarios)} horarios raspados")
+    print(f"> {num_horarios} horarios raspados")
 
-    todas_linhas.extend(linhas)
-    todos_horarios.extend(horarios)
+print("# salvando linhas...")
+db.salvar_linhas(todas_linhas)
 
-print("! salvando dados em csv...")
-
-salvar_csv(todas_linhas, "out/linhas.csv")
-salvar_csv(todos_horarios, "out/horarios.csv")
-
-print("! salvando dados na db")
-
-print("! dados salvos")
-
-print("! operacao concluida")
+print("# salvando horarios...")
+db.salvar_horarios(todos_horarios)

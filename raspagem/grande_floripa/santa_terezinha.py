@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from common import *
 
-EMPRESA: str = "SANTA-TEREZINHA"
+EMPRESA: str = "SANTA_TEREZINHA"
 
 
 URL_BASE = "https://santaterezinha.com/horarios/"
