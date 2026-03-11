@@ -1,0 +1,2167 @@
+linha;sentido;hora;dia
+64100;Partida: Antônio Carlos;12:25;UTIL
+64100;Partida: Antônio Carlos;17:00;UTIL
+64100;Partida: Antônio Carlos;18:10;UTIL
+64100;Partida: Antônio Carlos;22:00;UTIL
+64100;Partida: Viaduto Janaína - Biguaçu;06:10;UTIL
+64100;Partida: Viaduto Janaína - Biguaçu;06:30;UTIL
+64100;Partida: Viaduto Janaína - Biguaçu;11:55;UTIL
+64100;Partida: Viaduto Janaína - Biguaçu;12:55;UTIL
+64100;Partida: Viaduto Janaína - Biguaçu;17:15;UTIL
+64100;Partida: Viaduto Janaína - Biguaçu;23:20;UTIL
+10500;Partida: Antônio Carlos;05:00;UTIL
+10500;Partida: Antônio Carlos;05:35;UTIL
+10500;Partida: Antônio Carlos;06:20;UTIL
+10500;Partida: Antônio Carlos;07:05;UTIL
+10500;Partida: Antônio Carlos;07:30;UTIL
+10500;Partida: Antônio Carlos;09:00;UTIL
+10500;Partida: Antônio Carlos;10:30;UTIL
+10500;Partida: Antônio Carlos;11:40;UTIL
+10500;Partida: Antônio Carlos;13:10;UTIL
+10500;Partida: Antônio Carlos;14:00;UTIL
+10500;Partida: Antônio Carlos;15:20;UTIL
+10500;Partida: Antônio Carlos;17:00;UTIL
+10500;Partida: Antônio Carlos;18:30;UTIL
+10500;Partida: Antônio Carlos;22:00;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;05:45;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;06:10;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;07:40;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;09:00;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;10:10;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;11:00;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;12:30;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;14:05;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;15:30;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;16:50;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;18:00;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;19:00;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;20:10;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;21:50;UTIL
+10500;Partida: TICEN - Plataforma D - Fpolis;23:00;UTIL
+10500;Partida: Antônio Carlos;05:40;SABADO
+10500;Partida: Antônio Carlos;08:30;SABADO
+10500;Partida: Antônio Carlos;12:00;SABADO
+10500;Partida: Antônio Carlos;15:00;SABADO
+10500;Partida: TICEN - Plataforma D - Fpolis;07:00;SABADO
+10500;Partida: TICEN - Plataforma D - Fpolis;10:45;SABADO
+10500;Partida: TICEN - Plataforma D - Fpolis;13:20;SABADO
+10500;Partida: TICEN - Plataforma D - Fpolis;18:05;SABADO
+10500;Partida: Antônio Carlos;06:40;DOMINGO_FERIADO
+10500;Partida: Antônio Carlos;17:00;DOMINGO_FERIADO
+10500;Partida: TICEN - Plataforma D - Fpolis;08:00;DOMINGO_FERIADO
+10500;Partida: TICEN - Plataforma D - Fpolis;19:00;DOMINGO_FERIADO
+970000;Partida: Antonio Carlos - Colegio Altamiro Guimarães;06:35;UTIL
+970000;Partida: Antonio Carlos - Colegio Altamiro Guimarães;11:35;UTIL
+11302;Partida: Bairro Araucária - São José;05:35;UTIL
+11302;Partida: Bairro Araucária - São José;05:55;UTIL
+11302;Partida: Bairro Araucária - São José;06:10;UTIL
+11302;Partida: Bairro Araucária - São José;06:30;UTIL
+11302;Partida: Bairro Araucária - São José;07:20;UTIL
+11302;Partida: Bairro Araucária - São José;08:00;UTIL
+11302;Partida: Bairro Araucária - São José;08:35;UTIL
+11302;Partida: Bairro Araucária - São José;09:00;UTIL
+11302;Partida: Bairro Araucária - São José;12:25;UTIL
+11302;Partida: Bairro Araucária - São José;13:00;UTIL
+11302;Partida: Bairro Araucária - São José;18:10;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;08:30;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;11:45;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;12:20;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;17:10;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;17:20;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;18:15;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;18:30;UTIL
+11302;Partida: TICEN - Plataforma D - Fpolis;19:15;UTIL
+11302;Partida: Bairro Araucária - São José;06:30;SABADO
+11302;Partida: Bairro Araucária - São José;08:00;SABADO
+11302;Partida: Bairro Araucária - São José;11:35;SABADO
+11302;Partida: TICEN - Plataforma D - Fpolis;13:00;SABADO
+10301;Partida: Biguaçu;06:35;UTIL
+10301;Partida: Biguaçu;09:40;UTIL
+10300;Partida: Armação da Piedade - G C Ramos;04:45;UTIL
+10300;Partida: Armação da Piedade - G C Ramos;08:00;UTIL
+10300;Partida: Armação da Piedade - G C Ramos;11:30;UTIL
+10300;Partida: TICEN - Plataforma D - Fpolis;06:10;UTIL
+10300;Partida: TICEN - Plataforma D - Fpolis;09:15;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;05:50;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;06:05;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;06:15;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;06:30;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;07:20;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;08:00;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;09:00;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;11:50;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;13:35;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;16:20;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;18:10;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;11:00;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;12:45;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;15:30;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;17:20;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;18:25;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;18:55;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;19:20;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;20:10;UTIL
+84500;Partida: TICEN - Plataforma D - Fpolis;22:10;UTIL
+84500;Partida: Bairro Avenida das Torres - São José;07:00;SABADO
+84500;Partida: Bairro Avenida das Torres - São José;08:40;SABADO
+84500;Partida: Bairro Avenida das Torres - São José;12:15;SABADO
+84500;Partida: TICEN - Plataforma D - Fpolis;08:00;SABADO
+84500;Partida: TICEN - Plataforma D - Fpolis;11:40;SABADO
+84500;Partida: TICEN - Plataforma D - Fpolis;12:15;SABADO
+84500;Partida: TICEN - Plataforma D - Fpolis;13:10;SABADO
+84500;Partida: TICEN - Plataforma D - Fpolis;18:20;SABADO
+84500;Partida: Bairro Avenida das Torres - São José;07:00;DOMINGO_FERIADO
+84500;Partida: Bairro Avenida das Torres - São José;08:40;DOMINGO_FERIADO
+84500;Partida: Bairro Avenida das Torres - São José;12:15;DOMINGO_FERIADO
+84500;Partida: TICEN - Plataforma D - Fpolis;08:00;DOMINGO_FERIADO
+84500;Partida: TICEN - Plataforma D - Fpolis;11:40;DOMINGO_FERIADO
+84500;Partida: TICEN - Plataforma D - Fpolis;13:10;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;04:50;UTIL
+10400;Partida: Bairro Ipiranga - São José;05:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;05:45;UTIL
+10400;Partida: Bairro Ipiranga - São José;05:55;UTIL
+10400;Partida: Bairro Ipiranga - São José;06:05;UTIL
+10400;Partida: Bairro Ipiranga - São José;06:15;UTIL
+10400;Partida: Bairro Ipiranga - São José;06:25;UTIL
+10400;Partida: Bairro Ipiranga - São José;06:40;UTIL
+10400;Partida: Bairro Ipiranga - São José;06:55;UTIL
+10400;Partida: Bairro Ipiranga - São José;07:00;UTIL
+10400;Partida: Bairro Ipiranga - São José;07:07;UTIL
+10400;Partida: Bairro Ipiranga - São José;07:15;UTIL
+10400;Partida: Bairro Ipiranga - São José;07:35;UTIL
+10400;Partida: Bairro Ipiranga - São José;07:55;UTIL
+10400;Partida: Bairro Ipiranga - São José;08:20;UTIL
+10400;Partida: Bairro Ipiranga - São José;08:40;UTIL
+10400;Partida: Bairro Ipiranga - São José;09:00;UTIL
+10400;Partida: Bairro Ipiranga - São José;09:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;10:00;UTIL
+10400;Partida: Bairro Ipiranga - São José;10:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;11:00;UTIL
+10400;Partida: Bairro Ipiranga - São José;11:40;UTIL
+10400;Partida: Bairro Ipiranga - São José;12:00;UTIL
+10400;Partida: Bairro Ipiranga - São José;12:25;UTIL
+10400;Partida: Bairro Ipiranga - São José;12:45;UTIL
+10400;Partida: Bairro Ipiranga - São José;13:05;UTIL
+10400;Partida: Bairro Ipiranga - São José;13:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;13:50;UTIL
+10400;Partida: Bairro Ipiranga - São José;14:10;UTIL
+10400;Partida: Bairro Ipiranga - São José;14:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;15:00;UTIL
+10400;Partida: Bairro Ipiranga - São José;15:20;UTIL
+10400;Partida: Bairro Ipiranga - São José;15:45;UTIL
+10400;Partida: Bairro Ipiranga - São José;16:10;UTIL
+10400;Partida: Bairro Ipiranga - São José;16:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;17:25;UTIL
+10400;Partida: Bairro Ipiranga - São José;18:15;UTIL
+10400;Partida: Bairro Ipiranga - São José;18:45;UTIL
+10400;Partida: Bairro Ipiranga - São José;19:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;20:15;UTIL
+10400;Partida: Bairro Ipiranga - São José;21:35;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;06:20;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;06:35;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;07:00;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;07:15;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;07:40;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;08:05;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;08:30;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;08:55;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;09:25;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;09:55;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;10:25;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;11:00;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;11:25;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;11:50;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;12:10;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;12:30;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;12:50;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;13:10;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;13:35;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;13:55;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;14:20;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;14:45;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;15:10;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;15:35;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;15:55;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;16:20;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;16:40;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;16:55;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;17:05;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;17:15;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;17:30;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;17:50;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;18:00;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;18:15;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;18:25;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;18:35;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;18:45;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;19:00;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;19:20;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;19:30;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;19:45;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;20:10;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;20:30;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;21:00;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;21:35;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;22:15;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;22:40;UTIL
+10400;Partida: TICEN - Plataforma D - Fpolis;23:30;UTIL
+10400;Partida: Bairro Ipiranga - São José;05:00;SABADO
+10400;Partida: Bairro Ipiranga - São José;05:40;SABADO
+10400;Partida: Bairro Ipiranga - São José;06:05;SABADO
+10400;Partida: Bairro Ipiranga - São José;06:20;SABADO
+10400;Partida: Bairro Ipiranga - São José;06:55;SABADO
+10400;Partida: Bairro Ipiranga - São José;07:10;SABADO
+10400;Partida: Bairro Ipiranga - São José;07:30;SABADO
+10400;Partida: Bairro Ipiranga - São José;07:40;SABADO
+10400;Partida: Bairro Ipiranga - São José;08:00;SABADO
+10400;Partida: Bairro Ipiranga - São José;08:15;SABADO
+10400;Partida: Bairro Ipiranga - São José;08:35;SABADO
+10400;Partida: Bairro Ipiranga - São José;09:05;SABADO
+10400;Partida: Bairro Ipiranga - São José;09:35;SABADO
+10400;Partida: Bairro Ipiranga - São José;10:05;SABADO
+10400;Partida: Bairro Ipiranga - São José;10:35;SABADO
+10400;Partida: Bairro Ipiranga - São José;11:20;SABADO
+10400;Partida: Bairro Ipiranga - São José;12:05;SABADO
+10400;Partida: Bairro Ipiranga - São José;13:00;SABADO
+10400;Partida: Bairro Ipiranga - São José;13:30;SABADO
+10400;Partida: Bairro Ipiranga - São José;13:50;SABADO
+10400;Partida: Bairro Ipiranga - São José;14:00;SABADO
+10400;Partida: Bairro Ipiranga - São José;14:45;SABADO
+10400;Partida: Bairro Ipiranga - São José;15:15;SABADO
+10400;Partida: Bairro Ipiranga - São José;16:00;SABADO
+10400;Partida: Bairro Ipiranga - São José;16:40;SABADO
+10400;Partida: Bairro Ipiranga - São José;17:40;SABADO
+10400;Partida: Bairro Ipiranga - São José;18:20;SABADO
+10400;Partida: Bairro Ipiranga - São José;19:10;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;05:35;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;06:20;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;07:00;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;07:25;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;07:40;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;08:05;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;08:30;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;09:05;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;09:35;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;10:05;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;10:45;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;11:30;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;12:00;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;12:30;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;13:00;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;13:15;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;13:30;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;13:55;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;14:15;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;14:45;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;15:30;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;16:10;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;17:00;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;17:50;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;18:40;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;19:20;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;20:05;SABADO
+10400;Partida: TICEN - Plataforma D - Fpolis;21:00;SABADO
+10400;Partida: Bairro Ipiranga - São José;06:00;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;06:40;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;07:20;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;08:00;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;08:50;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;10:20;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;11:15;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;12:40;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;14:10;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;15:30;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;17:00;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;17:45;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;18:30;DOMINGO_FERIADO
+10400;Partida: Bairro Ipiranga - São José;20:00;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;06:50;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;07:30;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;08:20;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;09:50;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;10:45;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;12:10;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;13:40;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;15:00;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;16:30;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;17:15;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;18:00;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;19:30;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;20:15;DOMINGO_FERIADO
+10400;Partida: TICEN - Plataforma D - Fpolis;21:00;DOMINGO_FERIADO
+66800;Partida: Bairro Ipiranga - São José;21:05;UTIL
+66800;Partida: TICEN - Plataforma D - Fpolis;17:40;UTIL
+10200;Partida: Bairro São Pedro - São José;05:00;UTIL
+10200;Partida: Bairro São Pedro - São José;05:30;UTIL
+10200;Partida: Bairro São Pedro - São José;05:45;UTIL
+10200;Partida: Bairro São Pedro - São José;05:55;UTIL
+10200;Partida: Bairro São Pedro - São José;06:20;UTIL
+10200;Partida: Bairro São Pedro - São José;06:45;UTIL
+10200;Partida: Bairro São Pedro - São José;07:15;UTIL
+10200;Partida: Bairro São Pedro - São José;07:35;UTIL
+10200;Partida: Bairro São Pedro - São José;08:00;UTIL
+10200;Partida: Bairro São Pedro - São José;08:30;UTIL
+10200;Partida: Bairro São Pedro - São José;09:10;UTIL
+10200;Partida: Bairro São Pedro - São José;09:35;UTIL
+10200;Partida: Bairro São Pedro - São José;10:25;UTIL
+10200;Partida: Bairro São Pedro - São José;11:25;UTIL
+10200;Partida: Bairro São Pedro - São José;12:15;UTIL
+10200;Partida: Bairro São Pedro - São José;12:55;UTIL
+10200;Partida: Bairro São Pedro - São José;13:40;UTIL
+10200;Partida: Bairro São Pedro - São José;14:25;UTIL
+10200;Partida: Bairro São Pedro - São José;15:10;UTIL
+10200;Partida: Bairro São Pedro - São José;15:40;UTIL
+10200;Partida: Bairro São Pedro - São José;16:10;UTIL
+10200;Partida: Bairro São Pedro - São José;16:40;UTIL
+10200;Partida: Bairro São Pedro - São José;17:05;UTIL
+10200;Partida: Bairro São Pedro - São José;17:35;UTIL
+10200;Partida: Bairro São Pedro - São José;18:20;UTIL
+10200;Partida: Bairro São Pedro - São José;19:25;UTIL
+10200;Partida: Bairro São Pedro - São José;20:00;UTIL
+10200;Partida: Bairro São Pedro - São José;20:50;UTIL
+10200;Partida: Bairro São Pedro - São José;22:05;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;06:50;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;07:45;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;08:25;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;08:50;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;09:40;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;10:35;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;11:20;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;12:10;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;12:55;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;13:45;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;14:25;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;14:55;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;15:30;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;15:50;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;16:15;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;16:45;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;17:15;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;17:35;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;18:00;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;18:30;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;19:00;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;19:30;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;20:10;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;21:00;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;22:15;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;22:40;UTIL
+10200;Partida: TICEN - Plataforma C - Fpolis;23:30;UTIL
+10200;Partida: Bairro São Pedro - São José;05:30;SABADO
+10200;Partida: Bairro São Pedro - São José;06:00;SABADO
+10200;Partida: Bairro São Pedro - São José;06:25;SABADO
+10200;Partida: Bairro São Pedro - São José;07:00;SABADO
+10200;Partida: Bairro São Pedro - São José;07:15;SABADO
+10200;Partida: Bairro São Pedro - São José;08:00;SABADO
+10200;Partida: Bairro São Pedro - São José;08:35;SABADO
+10200;Partida: Bairro São Pedro - São José;09:15;SABADO
+10200;Partida: Bairro São Pedro - São José;10:00;SABADO
+10200;Partida: Bairro São Pedro - São José;11:00;SABADO
+10200;Partida: Bairro São Pedro - São José;11:45;SABADO
+10200;Partida: Bairro São Pedro - São José;12:40;SABADO
+10200;Partida: Bairro São Pedro - São José;13:05;SABADO
+10200;Partida: Bairro São Pedro - São José;14:45;SABADO
+10200;Partida: Bairro São Pedro - São José;15:40;SABADO
+10200;Partida: Bairro São Pedro - São José;16:05;SABADO
+10200;Partida: Bairro São Pedro - São José;17:05;SABADO
+10200;Partida: Bairro São Pedro - São José;18:30;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;05:30;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;06:40;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;08:00;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;08:45;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;09:30;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;10:20;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;11:10;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;12:00;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;12:30;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;14:00;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;15:05;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;15:35;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;16:35;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;18:00;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;19:30;SABADO
+10200;Partida: TICEN - Plataforma C - Fpolis;20:10;SABADO
+10200;Partida: Bairro São Pedro - São José;05:40;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;06:40;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;07:15;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;08:00;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;09:30;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;11:00;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;11:40;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;13:20;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;14:50;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;17:40;DOMINGO_FERIADO
+10200;Partida: Bairro São Pedro - São José;19:10;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;07:30;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;09:00;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;10:30;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;11:00;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;12:50;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;14:20;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;17:10;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;18:40;DOMINGO_FERIADO
+10200;Partida: TICEN - Plataforma C - Fpolis;20:00;DOMINGO_FERIADO
+44200;Partida: Bairro Barreiros - São José (Previsão de Horário);05:45;UTIL
+44200;Partida: Bairro Barreiros - São José (Previsão de Horário);06:45;UTIL
+44200;Partida: Bairro Barreiros - São José (Previsão de Horário);08:20;UTIL
+44200;Partida: Bairro Barreiros - São José (Previsão de Horário);17:20;UTIL
+44200;Partida: TICEN - Plataforma C - Fpolis;07:55;UTIL
+44200;Partida: TICEN - Plataforma C - Fpolis;16:50;UTIL
+44200;Partida: TICEN - Plataforma C - Fpolis;18:50;UTIL
+44200;Partida: Bairro Barreiros - São José (Previsão de Horário);08:45;SABADO
+44200;Partida: TICEN - Plataforma C - Fpolis;08:20;SABADO
+60100;Partida: TICEN - Plataforma C - Fpolis;06:30;UTIL
+43100;Partida: Bairro Bela Vista - São José;05:00;UTIL
+43100;Partida: Bairro Bela Vista - São José;05:25;UTIL
+43100;Partida: Bairro Bela Vista - São José;05:55;UTIL
+43100;Partida: Bairro Bela Vista - São José;06:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;06:35;UTIL
+43100;Partida: Bairro Bela Vista - São José;06:45;UTIL
+43100;Partida: Bairro Bela Vista - São José;06:55;UTIL
+43100;Partida: Bairro Bela Vista - São José;07:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;07:45;UTIL
+43100;Partida: Bairro Bela Vista - São José;08:05;UTIL
+43100;Partida: Bairro Bela Vista - São José;08:20;UTIL
+43100;Partida: Bairro Bela Vista - São José;08:55;UTIL
+43100;Partida: Bairro Bela Vista - São José;09:30;UTIL
+43100;Partida: Bairro Bela Vista - São José;10:05;UTIL
+43100;Partida: Bairro Bela Vista - São José;10:40;UTIL
+43100;Partida: Bairro Bela Vista - São José;11:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;11:50;UTIL
+43100;Partida: Bairro Bela Vista - São José;12:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;12:40;UTIL
+43100;Partida: Bairro Bela Vista - São José;13:05;UTIL
+43100;Partida: Bairro Bela Vista - São José;13:35;UTIL
+43100;Partida: Bairro Bela Vista - São José;14:10;UTIL
+43100;Partida: Bairro Bela Vista - São José;14:45;UTIL
+43100;Partida: Bairro Bela Vista - São José;15:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;15:45;UTIL
+43100;Partida: Bairro Bela Vista - São José;16:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;16:50;UTIL
+43100;Partida: Bairro Bela Vista - São José;17:25;UTIL
+43100;Partida: Bairro Bela Vista - São José;18:15;UTIL
+43100;Partida: Bairro Bela Vista - São José;18:45;UTIL
+43100;Partida: Bairro Bela Vista - São José;19:35;UTIL
+43100;Partida: Bairro Bela Vista - São José;20:30;UTIL
+43100;Partida: Bairro Bela Vista - São José;21:55;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;06:30;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;06:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;07:20;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;07:55;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;08:30;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;09:05;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;09:40;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;10:15;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;10:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;11:25;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;11:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;12:15;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;12:40;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;13:10;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;13:45;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;14:20;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;14:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;15:20;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;15:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;16:25;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;16:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;17:15;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;17:40;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;17:50;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;18:05;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;18:25;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;19:10;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;19:45;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;20:05;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;20:30;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;21:30;UTIL
+43100;Partida: TICEN - Plataforma D - Fpolis;22:25;UTIL
+43100;Partida: Bairro Bela Vista - São José;06:00;SABADO
+43100;Partida: Bairro Bela Vista - São José;06:35;SABADO
+43100;Partida: Bairro Bela Vista - São José;07:10;SABADO
+43100;Partida: Bairro Bela Vista - São José;07:45;SABADO
+43100;Partida: Bairro Bela Vista - São José;08:20;SABADO
+43100;Partida: Bairro Bela Vista - São José;09:30;SABADO
+43100;Partida: Bairro Bela Vista - São José;10:35;SABADO
+43100;Partida: Bairro Bela Vista - São José;11:35;SABADO
+43100;Partida: Bairro Bela Vista - São José;12:35;SABADO
+43100;Partida: Bairro Bela Vista - São José;13:10;SABADO
+43100;Partida: Bairro Bela Vista - São José;14:15;SABADO
+43100;Partida: Bairro Bela Vista - São José;14:35;SABADO
+43100;Partida: Bairro Bela Vista - São José;14:55;SABADO
+43100;Partida: Bairro Bela Vista - São José;15:45;SABADO
+43100;Partida: Bairro Bela Vista - São José;16:35;SABADO
+43100;Partida: Bairro Bela Vista - São José;17:25;SABADO
+43100;Partida: Bairro Bela Vista - São José;18:40;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;06:45;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;07:20;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;07:55;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;09:05;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;10:10;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;11:10;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;12:10;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;12:45;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;13:20;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;13:50;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;14:30;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;15:20;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;16:10;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;17:00;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;18:15;SABADO
+43100;Partida: TICEN - Plataforma D - Fpolis;20:00;SABADO
+43100;Partida: Bairro Bela Vista - São José;06:00;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;06:30;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;07:10;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;07:45;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;08:25;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;09:25;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;11:25;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;12:40;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;13:55;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;15:10;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;16:15;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;17:20;DOMINGO_FERIADO
+43100;Partida: Bairro Bela Vista - São José;19:05;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;06:45;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;07:20;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;08:00;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;09:00;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;11:00;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;12:15;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;13:30;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;14:45;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;15:50;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;16:55;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;18:40;DOMINGO_FERIADO
+43100;Partida: TICEN - Plataforma D - Fpolis;20:00;DOMINGO_FERIADO
+43101;Partida: Bairro Bela Vista - São José;05:30;UTIL
+43101;Partida: Bairro Bela Vista - São José;15:45;UTIL
+43101;Partida: TICEN - Plataforma D - Fpolis;12:05;UTIL
+43102;Partida: Bairro Bela Vista - São José;19:00;UTIL
+43102;Partida: TICEN - Plataforma D - Fpolis;07:30;UTIL
+43201;Partida: Bela Vista 2(Avenida das Torres - São José);07:30;UTIL
+55900;Partida: Bairro Bela Vista - São José;17:40;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);04:25;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);05:00;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);05:50;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);07:00;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);08:05;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);08:30;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);09:00;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);09:30;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);10:00;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);10:35;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);11:10;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);11:30;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);12:00;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);12:25;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);13:10;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);13:40;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);14:10;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);14:35;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);15:05;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);15:35;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);16:05;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);16:35;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);17:05;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);17:45;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);19:05;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);19:06;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);19:30;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);20:10;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);21:15;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);21:45;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);22:35;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;05:05;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;06:05;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;07:30;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;07:55;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;08:25;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;08:55;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;09:25;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;10:00;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;10:35;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;10:55;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;11:25;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;11:50;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;12:35;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;13:05;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;13:35;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;14:00;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;14:30;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;15:00;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;15:35;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;16:00;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;16:35;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;17:05;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;18:55;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;21:40;UTIL
+44300;Partida: Ticen - Plataforma D - Fpolis;00:05;UTIL
+44300;Partida: Biguaçu (Previsão de Horário);04:30;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);05:10;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);06:00;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);07:00;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);07:50;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);09:15;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);09:30;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);10:00;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);10:30;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);12:05;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);12:15;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);14:55;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);15:25;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);15:55;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);16:50;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);18:10;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);18:30;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);19:30;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;05:05;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;08:55;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;09:30;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;10:00;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;10:30;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;11:30;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;11:45;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;13:00;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;14:25;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;14:55;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;15:25;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;16:20;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;17:40;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;18:00;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;19:00;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;20:20;SABADO
+44300;Partida: Ticen - Plataforma D - Fpolis;21:00;SABADO
+44300;Partida: Biguaçu (Previsão de Horário);04:30;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);05:10;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);07:15;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);10:45;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);13:45;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);15:45;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);16:45;DOMINGO_FERIADO
+44300;Partida: Biguaçu (Previsão de Horário);19:15;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;06:45;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;10:15;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;13:15;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;15:15;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;16:10;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;18:45;DOMINGO_FERIADO
+44300;Partida: Ticen - Plataforma D - Fpolis;21:00;DOMINGO_FERIADO
+8800;Partida: Biguaçu (Horários Compartilhados);05:35;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);06:30;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);06:40;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);06:55;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);07:20;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);08:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);08:30;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);09:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);10:20;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);11:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);11:20;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);12:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);12:50;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);14:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);15:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);15:35;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);16:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);16:30;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);17:00;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);17:30;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);17:55;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);18:40;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);20:20;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);21:20;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);22:20;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);05:35;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);06:00;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);06:45;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);07:10;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);08:00;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);08:20;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);08:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);09:00;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);09:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);10:10;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);11:45;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);12:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);13:20;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);15:00;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);15:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);16:00;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);16:40;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);17:10;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);17:20;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);17:50;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);18:05;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);18:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);19:00;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);19:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);21:30;UTIL
+8800;Partida: Palhoça (Horários Compartilhados);22:20;UTIL
+8800;Partida: Biguaçu (Horários Compartilhados);05:50;SABADO
+8800;Partida: Biguaçu (Horários Compartilhados);07:05;SABADO
+8800;Partida: Biguaçu (Horários Compartilhados);11:50;SABADO
+8800;Partida: Biguaçu (Horários Compartilhados);12:10;SABADO
+8800;Partida: Palhoça (Horários Compartilhados);06:10;SABADO
+8800;Partida: Palhoça (Horários Compartilhados);06:50;SABADO
+8800;Partida: Palhoça (Horários Compartilhados);11:30;SABADO
+8800;Partida: Palhoça (Horários Compartilhados);12:50;SABADO
+55700;Partida: Biguaçu;21:30;UTIL
+55700;Partida: TICEN - Plataforma D - Fpolis;05:50;UTIL
+10000;Partida: Bom Viver - Biguaçu;05:15;UTIL
+10000;Partida: Bom Viver - Biguaçu;05:35;UTIL
+10000;Partida: Bom Viver - Biguaçu;05:50;UTIL
+10000;Partida: Bom Viver - Biguaçu;06:05;UTIL
+10000;Partida: Bom Viver - Biguaçu;06:15;UTIL
+10000;Partida: Bom Viver - Biguaçu;06:25;UTIL
+10000;Partida: Bom Viver - Biguaçu;06:45;UTIL
+10000;Partida: Bom Viver - Biguaçu;07:05;UTIL
+10000;Partida: Bom Viver - Biguaçu;07:35;UTIL
+10000;Partida: Bom Viver - Biguaçu;08:00;UTIL
+10000;Partida: Bom Viver - Biguaçu;08:30;UTIL
+10000;Partida: Bom Viver - Biguaçu;09:25;UTIL
+10000;Partida: Bom Viver - Biguaçu;10:00;UTIL
+10000;Partida: Bom Viver - Biguaçu;11:20;UTIL
+10000;Partida: Bom Viver - Biguaçu;12:10;UTIL
+10000;Partida: Bom Viver - Biguaçu;12:50;UTIL
+10000;Partida: Bom Viver - Biguaçu;13:40;UTIL
+10000;Partida: Bom Viver - Biguaçu;14:45;UTIL
+10000;Partida: Bom Viver - Biguaçu;15:50;UTIL
+10000;Partida: Bom Viver - Biguaçu;17:10;UTIL
+10000;Partida: Bom Viver - Biguaçu;18:10;UTIL
+10000;Partida: Bom Viver - Biguaçu;18:55;UTIL
+10000;Partida: Bom Viver - Biguaçu;20:15;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;04:50;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;05:15;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;06:45;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;07:50;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;09:20;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;10:40;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;11:30;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;12:10;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;13:00;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;14:00;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;15:10;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;15:45;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;16:30;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;16:50;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;17:30;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;17:55;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;18:20;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;18:45;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;19:00;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;19:15;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;20:00;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;21:00;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;22:30;UTIL
+10000;Partida: TICEN - Plataforma C - Fpolis;23:30;UTIL
+10000;Partida: Bom Viver - Biguaçu;05:50;SABADO
+10000;Partida: Bom Viver - Biguaçu;06:15;SABADO
+10000;Partida: Bom Viver - Biguaçu;06:40;SABADO
+10000;Partida: Bom Viver - Biguaçu;06:55;SABADO
+10000;Partida: Bom Viver - Biguaçu;07:20;SABADO
+10000;Partida: Bom Viver - Biguaçu;08:10;SABADO
+10000;Partida: Bom Viver - Biguaçu;09:00;SABADO
+10000;Partida: Bom Viver - Biguaçu;10:15;SABADO
+10000;Partida: Bom Viver - Biguaçu;11:45;SABADO
+10000;Partida: Bom Viver - Biguaçu;13:00;SABADO
+10000;Partida: Bom Viver - Biguaçu;16:10;SABADO
+10000;Partida: Bom Viver - Biguaçu;17:30;SABADO
+10000;Partida: Bom Viver - Biguaçu;18:25;SABADO
+10000;Partida: Bom Viver - Biguaçu;19:00;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;06:40;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;07:30;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;08:20;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;09:40;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;11:10;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;12:10;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;12:55;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;14:00;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;15:30;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;17:00;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;17:45;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;18:30;SABADO
+10000;Partida: TICEN - Plataforma C - Fpolis;20:00;SABADO
+10000;Partida: Bom Viver - Biguaçu;06:00;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;07:30;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;09:00;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;12:00;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;13:30;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;15:15;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;17:30;DOMINGO_FERIADO
+10000;Partida: Bom Viver - Biguaçu;19:00;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;07:00;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;08:30;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;11:30;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;13:00;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;14:45;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;17:00;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;18:30;DOMINGO_FERIADO
+10000;Partida: TICEN - Plataforma C - Fpolis;20:00;DOMINGO_FERIADO
+900056;Partida: Bairro Bom Viver - Biguaçu;05:30;UTIL
+900056;Partida: Bairro Bom Viver - Biguaçu;06:45;UTIL
+900056;Partida: Bairro Bom Viver - Biguaçu;09:00;UTIL
+900056;Partida: Bairro Bom Viver - Biguaçu;12:55;UTIL
+900056;Partida: Cicob - Após Hospital de Biguaçu;11:55;UTIL
+900056;Partida: Cicob - Após Hospital de Biguaçu;16:00;UTIL
+900056;Partida: Cicob - Após Hospital de Biguaçu;17:25;UTIL
+900056;Partida: Cicob - Após Hospital de Biguaçu;18:50;UTIL
+10001;Partida: Bom Viver - Biguaçu;21:40;UTIL
+10001;Partida: TICEN - Plataforma C - Fpolis;07:30;UTIL
+10001;Partida: TICEN - Plataforma C - Fpolis;08:50;UTIL
+900003;Partida: Bom Viver(Biguaçu);06:25;UTIL
+900003;Partida: Bom Viver(Biguaçu);06:26;UTIL
+900003;Partida: Bom Viver(Biguaçu);12:10;UTIL
+900003;Partida: Bom Viver(Biguaçu);12:15;UTIL
+900003;Partida: Bom Viver(Biguaçu);17:45;UTIL
+900003;Partida: Maria da Gloria(Colegios);11:34;UTIL
+900003;Partida: Maria da Gloria(Colegios);11:35;UTIL
+900003;Partida: Maria da Gloria(Colegios);12:05;UTIL
+900003;Partida: Maria da Gloria(Colegios);12:45;UTIL
+900003;Partida: Maria da Gloria(Colegios);17:00;UTIL
+900003;Partida: Maria da Gloria(Colegios);17:05;UTIL
+900003;Partida: Maria da Gloria(Colegios);18:05;UTIL
+900003;Partida: Maria da Gloria(Colegios);22:00;UTIL
+14600;Partida: Bairro Catarina - São José (Previsão de Horário);05:40;UTIL
+14600;Partida: Bairro Catarina - São José (Previsão de Horário);06:30;UTIL
+14600;Partida: Bairro Catarina - São José (Previsão de Horário);07:20;UTIL
+14600;Partida: Bairro Catarina - São José (Previsão de Horário);08:00;UTIL
+14600;Partida: Bairro Catarina - São José (Previsão de Horário);12:00;UTIL
+14600;Partida: Bairro Catarina - São José (Previsão de Horário);13:00;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;07:25;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;11:20;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;12:30;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;17:10;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;18:10;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;19:10;UTIL
+14600;Partida: TICEN - Plataforma C - Fpolis;21:15;UTIL
+43500;Partida: Bairro Ceasa - São José (Previsão de Horário);05:40;UTIL
+43500;Partida: Bairro Ceasa - São José (Previsão de Horário);06:30;UTIL
+43500;Partida: Bairro Ceasa - São José (Previsão de Horário);07:40;UTIL
+43500;Partida: Bairro Ceasa - São José (Previsão de Horário);11:00;UTIL
+43500;Partida: Bairro Ceasa - São José (Previsão de Horário);12:45;UTIL
+43500;Partida: Bairro Ceasa - São José (Previsão de Horário);18:40;UTIL
+43500;Partida: TICEN - Plataforma D - Fpolis;07:08;UTIL
+43500;Partida: TICEN - Plataforma D - Fpolis;10:45;UTIL
+43500;Partida: TICEN - Plataforma D - Fpolis;12:30;UTIL
+43500;Partida: TICEN - Plataforma D - Fpolis;18:20;UTIL
+43500;Partida: TICEN - Plataforma D - Fpolis;19:35;UTIL
+90900;Partida: Bairro José Nitro - São José;05:50;UTIL
+90900;Partida: Bairro José Nitro - São José;06:00;UTIL
+90900;Partida: Bairro José Nitro - São José;07:10;UTIL
+90900;Partida: Bairro José Nitro - São José;07:50;UTIL
+90900;Partida: Bairro José Nitro - São José;10:20;UTIL
+90900;Partida: Bairro José Nitro - São José;12:00;UTIL
+90900;Partida: Bairro José Nitro - São José;16:00;UTIL
+90900;Partida: Bairro José Nitro - São José;18:45;UTIL
+90900;Partida: Hospital Regional São José (Previsão de partida);07:00;UTIL
+90900;Partida: Hospital Regional São José (Previsão de partida);08:50;UTIL
+90900;Partida: Hospital Regional São José (Previsão de partida);11:10;UTIL
+90900;Partida: Hospital Regional São José (Previsão de partida);12:50;UTIL
+90900;Partida: Hospital Regional São José (Previsão de partida);17:00;UTIL
+90900;Partida: Hospital Regional São José (Previsão de partida);19:45;UTIL
+90900;Partida: Bairro José Nitro - São José;06:00;SABADO
+90900;Partida: Bairro José Nitro - São José;08:00;SABADO
+90900;Partida: Bairro José Nitro - São José;10:30;SABADO
+90900;Partida: Bairro José Nitro - São José;12:15;SABADO
+90900;Partida: Hospital Regional São José (Previsão de partida);06:45;SABADO
+90900;Partida: Hospital Regional São José (Previsão de partida);08:45;SABADO
+90900;Partida: Hospital Regional São José (Previsão de partida);11:15;SABADO
+90900;Partida: Hospital Regional São José (Previsão de partida);13:00;SABADO
+900006;Partida: Hospital Regional - Biguaçu;11:25;UTIL
+900007;Partida: Cicob;07:05;UTIL
+900007;Partida: Cicob;17:10;UTIL
+900007;Partida: Fundos;06:30;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);06:15;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);06:30;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);08:20;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);10:40;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);12:15;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);12:30;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);14:20;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);16:10;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);18:40;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);22:00;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);05:30;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);07:20;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);11:30;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);13:20;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);15:30;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);18:00;UTIL
+80001;Partida: Areias de Cima (Via Armação - Sul);22:00;UTIL
+80001;Partida: Areias de Cima (Via Jordao - Norte);06:30;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);10:40;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);12:30;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);14:20;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);16:10;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);18:40;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);22:00;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);05:30;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);07:20;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);11:30;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);13:20;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);15:20;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);17:50;SABADO
+80001;Partida: Areias de Cima (Via Armação - Sul);22:00;SABADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);06:30;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);10:40;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);12:30;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);14:20;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);16:10;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);18:40;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Jordao - Norte);22:00;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);05:30;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);07:20;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);11:30;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);13:20;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);15:20;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);17:50;DOMINGO_FERIADO
+80001;Partida: Areias de Cima (Via Armação - Sul);22:00;DOMINGO_FERIADO
+900001;Partida: Colegio Roldão;11:45;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);05:50;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);06:10;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);06:25;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);06:45;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);07:00;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);07:10;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);07:30;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);08:05;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);08:15;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);08:40;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);09:50;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);10:45;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);11:10;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);11:30;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);11:45;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);12:30;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);12:50;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);13:15;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);13:45;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);14:20;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);14:35;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);15:50;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);16:10;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);16:25;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);16:50;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);17:10;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);17:25;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);17:40;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);18:00;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);18:30;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);19:00;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);19:25;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);19:45;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);20:20;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);21:30;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);22:30;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);06:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);06:20;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);06:40;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);07:05;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);07:20;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);07:35;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);08:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);09:30;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);09:55;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);10:40;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);11:35;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);12:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);12:20;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);12:45;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);13:20;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);13:40;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);14:05;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);14:40;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);15:25;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);15:50;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);16:20;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);16:40;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);17:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);17:20;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);17:50;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);18:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);18:30;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);19:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);19:30;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);20:00;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);21:30;UTIL
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);22:30;UTIL
+90800;Partida: Barreiros - São José (Horários Compartilhados);07:00;SABADO
+90800;Partida: Barreiros - São José (Horários Compartilhados);07:50;SABADO
+90800;Partida: Barreiros - São José (Horários Compartilhados);08:40;SABADO
+90800;Partida: Barreiros - São José (Horários Compartilhados);10:35;SABADO
+90800;Partida: Barreiros - São José (Horários Compartilhados);11:25;SABADO
+90800;Partida: Barreiros - São José (Horários Compartilhados);12:15;SABADO
+90800;Partida: Barreiros - São José (Horários Compartilhados);13:05;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);07:00;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);07:50;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);08:40;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);09:30;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);11:25;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);12:15;SABADO
+90800;Partida: Fazenda do Max - São José(Horários Compartilhados);13:05;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);05:15;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);05:45;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);06:00;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);06:20;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);06:35;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);07:00;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);07:30;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);08:15;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);09:00;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);09:35;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);10:25;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);11:25;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);12:10;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);12:45;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);13:30;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);13:55;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);14:40;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);15:25;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);16:05;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);16:55;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);17:25;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);18:40;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);19:05;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);20:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;07:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;07:50;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;08:35;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;09:10;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;10:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;11:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;11:40;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;12:20;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;13:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;13:30;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;14:15;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;15:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;15:40;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;16:20;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;17:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;17:35;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;18:00;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;18:35;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;19:10;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;19:35;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;20:30;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;21:30;UTIL
+9900;Partida: TICEN - Plataforma C - Fpolis;22:25;UTIL
+9900;Partida: Dona Adélia - São José (Previsão de Horário);06:00;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);06:35;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);07:05;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);07:30;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);07:55;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);08:30;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);09:30;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);10:25;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);11:30;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);12:45;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);15:40;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);17:25;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);18:40;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;07:10;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;07:30;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;08:05;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;09:05;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;10:00;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;11:10;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;12:20;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;13:05;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;13:50;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;15:15;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;17:05;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;18:20;SABADO
+9900;Partida: TICEN - Plataforma C - Fpolis;20:00;SABADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);07:15;DOMINGO_FERIADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);08:35;DOMINGO_FERIADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);12:55;DOMINGO_FERIADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);14:55;DOMINGO_FERIADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);16:55;DOMINGO_FERIADO
+9900;Partida: Dona Adélia - São José (Previsão de Horário);18:25;DOMINGO_FERIADO
+9900;Partida: TICEN - Plataforma C - Fpolis;08:10;DOMINGO_FERIADO
+9900;Partida: TICEN - Plataforma C - Fpolis;12:30;DOMINGO_FERIADO
+9900;Partida: TICEN - Plataforma C - Fpolis;14:30;DOMINGO_FERIADO
+9900;Partida: TICEN - Plataforma C - Fpolis;16:30;DOMINGO_FERIADO
+9900;Partida: TICEN - Plataforma C - Fpolis;18:00;DOMINGO_FERIADO
+9900;Partida: TICEN - Plataforma C - Fpolis;19:30;DOMINGO_FERIADO
+9901;Partida: Dona Adélia - São José;22:55;UTIL
+9901;Partida: TICEN - Plataforma C - Fpolis;06:15;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);05:30;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);05:40;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);05:55;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:05;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:15;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:25;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:45;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:00;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:25;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:50;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);08:15;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);09:00;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);10:00;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);10:40;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);11:15;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);11:55;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);12:40;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);13:25;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);13:55;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);15:00;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);16:05;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);16:45;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);17:25;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);18:25;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);19:00;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;06:00;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;07:00;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;07:50;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;08:35;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;09:35;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;10:15;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;10:50;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;11:30;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;12:15;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;13:00;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;13:30;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;14:35;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;15:40;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;16:15;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;16:55;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;17:10;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;17:20;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;17:45;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;18:00;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;18:35;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;19:05;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;19:20;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;19:50;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;20:10;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;21:00;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;21:45;UTIL
+43402;Partida: TICEN - Plataforma D - Fpolis;22:35;UTIL
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:00;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:35;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:15;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:50;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);08:30;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);09:05;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);10:00;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);10:35;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);11:20;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);12:45;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);13:40;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);14:25;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);15:55;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);17:25;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);18:40;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;06:10;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;07:30;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;08:00;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;08:40;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;09:35;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;10:10;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;10:50;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;12:20;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;13:15;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;14:00;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;15:30;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;17:00;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;18:15;SABADO
+43402;Partida: TICEN - Plataforma D - Fpolis;20:00;SABADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);05:55;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:10;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);08:25;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);10:40;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);12:40;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);13:55;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);17:25;DOMINGO_FERIADO
+43402;Partida: Bairro Dona Wanda - São José (Previsão de Horário);18:50;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;06:50;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;08:10;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;10:20;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;12:20;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;13:30;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;17:05;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;18:30;DOMINGO_FERIADO
+43402;Partida: TICEN - Plataforma D - Fpolis;20:00;DOMINGO_FERIADO
+43403;Partida: Bairro Dona Wanda - São José (Previsão de Horário);18:40;UTIL
+43403;Partida: Bairro Dona Wanda - São José (Previsão de Horário);21:50;UTIL
+43403;Partida: TICEN - Plataforma D - Fpolis;07:30;UTIL
+920000;Partida: Bairro Egito - Antonio Carlos;06:10;UTIL
+920000;Partida: Bairro Egito - Antonio Carlos;12:15;UTIL
+920000;Partida: Rodoviaria - Antônio Carlos;11:35;UTIL
+920000;Partida: Rodoviaria - Antônio Carlos;12:20;UTIL
+920000;Partida: Rodoviaria - Antônio Carlos;17:05;UTIL
+920000;Partida: Rodoviaria - Antônio Carlos;17:50;UTIL
+44304;Partida: Fazendinha - Sorocaba;06:15;UTIL
+44304;Partida: Fazendinha - Sorocaba;12:00;UTIL
+44304;Partida: Fazendinha - Sorocaba;12:10;UTIL
+44304;Partida: Fazendinha - Sorocaba;17:40;UTIL
+44304;Partida: Biguaçu - Colegios;11:35;UTIL
+44304;Partida: Biguaçu - Colegios;11:36;UTIL
+44304;Partida: Biguaçu - Colegios;17:05;UTIL
+44304;Partida: Biguaçu - Colegios;17:50;UTIL
+2200;Partida: Floresta - São José;05:30;UTIL
+2200;Partida: Floresta - São José;06:00;UTIL
+2200;Partida: Floresta - São José;06:25;UTIL
+2200;Partida: Floresta - São José;06:35;UTIL
+2200;Partida: Floresta - São José;06:50;UTIL
+2200;Partida: Floresta - São José;07:40;UTIL
+2200;Partida: Floresta - São José;08:35;UTIL
+2200;Partida: Floresta - São José;09:05;UTIL
+2200;Partida: Floresta - São José;09:55;UTIL
+2200;Partida: Floresta - São José;10:40;UTIL
+2200;Partida: Floresta - São José;11:40;UTIL
+2200;Partida: Floresta - São José;12:20;UTIL
+2200;Partida: Floresta - São José;13:00;UTIL
+2200;Partida: Floresta - São José;13:50;UTIL
+2200;Partida: Floresta - São José;14:30;UTIL
+2200;Partida: Floresta - São José;15:40;UTIL
+2200;Partida: Floresta - São José;16:40;UTIL
+2200;Partida: Floresta - São José;17:50;UTIL
+2200;Partida: Floresta - São José;19:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;07:05;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;07:55;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;08:25;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;09:15;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;10:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;11:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;11:40;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;12:25;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;13:10;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;13:50;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;15:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;16:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;17:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;17:35;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;18:10;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;18:40;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;19:10;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;20:00;UTIL
+2200;Partida: TICEN - Plataforma D - Fpolis;22:40;UTIL
+2200;Partida: Floresta - São José;06:00;SABADO
+2200;Partida: Floresta - São José;06:45;SABADO
+2200;Partida: Floresta - São José;07:30;SABADO
+2200;Partida: Floresta - São José;08:15;SABADO
+2200;Partida: Floresta - São José;09:00;SABADO
+2200;Partida: Floresta - São José;10:00;SABADO
+2200;Partida: Floresta - São José;11:00;SABADO
+2200;Partida: Floresta - São José;12:00;SABADO
+2200;Partida: Floresta - São José;13:00;SABADO
+2200;Partida: Floresta - São José;16:10;SABADO
+2200;Partida: Floresta - São José;17:30;SABADO
+2200;Partida: Floresta - São José;19:00;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;06:50;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;07:40;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;08:20;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;09:20;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;10:20;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;11:20;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;12:20;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;14:00;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;15:30;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;17:00;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;18:30;SABADO
+2200;Partida: TICEN - Plataforma D - Fpolis;20:00;SABADO
+2200;Partida: Floresta - São José;06:00;DOMINGO_FERIADO
+2200;Partida: Floresta - São José;07:30;DOMINGO_FERIADO
+2200;Partida: Floresta - São José;09:00;DOMINGO_FERIADO
+2200;Partida: Floresta - São José;11:40;DOMINGO_FERIADO
+2200;Partida: Floresta - São José;13:10;DOMINGO_FERIADO
+2200;Partida: Floresta - São José;17:10;DOMINGO_FERIADO
+2200;Partida: Floresta - São José;18:40;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;06:50;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;08:15;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;11:00;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;12:30;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;16:30;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;18:00;DOMINGO_FERIADO
+2200;Partida: TICEN - Plataforma D - Fpolis;19:55;DOMINGO_FERIADO
+66900;Partida: Bairro Floresta - São José;19:15;UTIL
+66900;Partida: TICEN - Plataforma D - Fpolis;06:30;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);05:00;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);05:30;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);05:45;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);06:10;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);06:25;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);06:45;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);07:00;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);07:40;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);08:15;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);08:50;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);10:10;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);10:55;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);11:55;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);12:45;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);13:45;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);15:15;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);16:20;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);17:40;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);18:55;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;05:40;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;07:10;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;09:35;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;10:20;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;11:20;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;12:10;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;13:10;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;14:40;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;15:45;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;16:25;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;17:00;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;17:15;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;17:25;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;17:50;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;18:20;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;19:08;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;19:25;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;20:00;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;20:30;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;21:10;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;22:30;UTIL
+76400;Partida: TICEN - Plataforma D - Fpolis;23:30;UTIL
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);05:00;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);05:50;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);06:40;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);07:25;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);08:55;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);11:45;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);12:40;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);14:00;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);17:40;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;06:55;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;08:25;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;11:15;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;12:00;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;13:30;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;17:10;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;18:30;SABADO
+76400;Partida: TICEN - Plataforma D - Fpolis;19:30;SABADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);06:00;DOMINGO_FERIADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);08:00;DOMINGO_FERIADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);09:45;DOMINGO_FERIADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);11:45;DOMINGO_FERIADO
+76400;Partida: Bairro Fundos - Biguaçu(Previsão de Horário);14:35;DOMINGO_FERIADO
+76400;Partida: TICEN - Plataforma D - Fpolis;07:30;DOMINGO_FERIADO
+76400;Partida: TICEN - Plataforma D - Fpolis;09:15;DOMINGO_FERIADO
+76400;Partida: TICEN - Plataforma D - Fpolis;11:15;DOMINGO_FERIADO
+76400;Partida: TICEN - Plataforma D - Fpolis;14:00;DOMINGO_FERIADO
+76400;Partida: TICEN - Plataforma D - Fpolis;19:30;DOMINGO_FERIADO
+44600;Partida: Governador Celso Ramos - Campo Palmas;09:30;UTIL
+44600;Partida: TICEN - Plataforma D - Fpolis;08:00;UTIL
+44600;Partida: TICEN - Plataforma D - Fpolis;22:50;UTIL
+44700;Partida: Governador Celso Ramos;04:40;UTIL
+44700;Partida: Governador Celso Ramos;05:30;UTIL
+44700;Partida: Governador Celso Ramos;06:00;UTIL
+44700;Partida: Governador Celso Ramos;07:10;UTIL
+44700;Partida: Governador Celso Ramos;08:05;UTIL
+44700;Partida: Governador Celso Ramos;11:25;UTIL
+44700;Partida: Governador Celso Ramos;12:50;UTIL
+44700;Partida: Governador Celso Ramos;14:00;UTIL
+44700;Partida: Governador Celso Ramos;15:50;UTIL
+44700;Partida: Governador Celso Ramos;16:35;UTIL
+44700;Partida: Governador Celso Ramos;17:10;UTIL
+44700;Partida: Governador Celso Ramos;19:00;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;05:30;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;06:25;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;09:50;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;11:20;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;12:20;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;14:00;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;15:05;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;15:40;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;17:05;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;17:30;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;18:35;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;19:20;UTIL
+44700;Partida: TICEN - Plataforma D - Fpolis;20:40;UTIL
+44700;Partida: Governador Celso Ramos;05:00;SABADO
+44700;Partida: Governador Celso Ramos;06:20;SABADO
+44700;Partida: Governador Celso Ramos;08:00;SABADO
+44700;Partida: Governador Celso Ramos;10:00;SABADO
+44700;Partida: Governador Celso Ramos;12:00;SABADO
+44700;Partida: Governador Celso Ramos;15:00;SABADO
+44700;Partida: Governador Celso Ramos;17:00;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;06:30;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;08:00;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;11:00;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;12:30;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;14:05;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;17:05;SABADO
+44700;Partida: TICEN - Plataforma D - Fpolis;19:00;SABADO
+44700;Partida: Governador Celso Ramos;05:30;DOMINGO_FERIADO
+44700;Partida: Governador Celso Ramos;10:00;DOMINGO_FERIADO
+44700;Partida: Governador Celso Ramos;12:00;DOMINGO_FERIADO
+44700;Partida: Governador Celso Ramos;15:00;DOMINGO_FERIADO
+44700;Partida: Governador Celso Ramos;17:00;DOMINGO_FERIADO
+44700;Partida: TICEN - Plataforma D - Fpolis;08:00;DOMINGO_FERIADO
+44700;Partida: TICEN - Plataforma D - Fpolis;10:00;DOMINGO_FERIADO
+44700;Partida: TICEN - Plataforma D - Fpolis;12:00;DOMINGO_FERIADO
+44700;Partida: TICEN - Plataforma D - Fpolis;13:30;DOMINGO_FERIADO
+44700;Partida: TICEN - Plataforma D - Fpolis;17:00;DOMINGO_FERIADO
+44700;Partida: TICEN - Plataforma D - Fpolis;20:00;DOMINGO_FERIADO
+54600;Partida: Governador Celso Ramos;04:40;UTIL
+54600;Partida: Governador Celso Ramos;05:30;UTIL
+54600;Partida: Governador Celso Ramos;05:50;UTIL
+54600;Partida: Governador Celso Ramos;07:00;UTIL
+54600;Partida: Governador Celso Ramos;09:25;UTIL
+54600;Partida: Governador Celso Ramos;11:25;UTIL
+54600;Partida: Governador Celso Ramos;12:35;UTIL
+54600;Partida: Governador Celso Ramos;12:50;UTIL
+54600;Partida: Governador Celso Ramos;14:00;UTIL
+54600;Partida: Governador Celso Ramos;15:15;UTIL
+54600;Partida: Governador Celso Ramos;18:00;UTIL
+54600;Partida: Governador Celso Ramos;20:00;UTIL
+54600;Partida: Governador Celso Ramos;21:00;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);06:00;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);06:50;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);08:20;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);10:15;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);11:30;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);11:45;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);12:40;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);14:10;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);14:30;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);16:05;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);17:30;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);19:00;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);21:05;UTIL
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);22:20;UTIL
+54600;Partida: Governador Celso Ramos;07:00;SABADO
+54600;Partida: Viaduto Janaína - Biguaçu (Previsão de Horário);06:00;SABADO
+54600;Partida: Governador Celso Ramos;21:00;DOMINGO_FERIADO
+44201;Partida: Rua Heriberto Hulse - São José;11:30;UTIL
+900020;Partida: Janaina(Mar das Pedras);06:55;UTIL
+900020;Partida: Biguaçu_Colegio Eloisa;11:36;UTIL
+900020;Partida: Biguaçu_Colegio Eloisa;12:20;UTIL
+900020;Partida: Biguaçu_Colegio Eloisa;17:36;UTIL
+900020;Partida: Biguaçu_Colegio Eloisa;18:21;UTIL
+75900;Partida: Bairro Jardim das Acácias - São José;05:10;UTIL
+75900;Partida: Bairro Jardim das Acácias - São José;06:10;UTIL
+75900;Partida: Bairro Jardim das Acácias - São José;07:10;UTIL
+75900;Partida: Bairro Jardim das Acácias - São José;08:15;UTIL
+75900;Partida: Bairro Jardim das Acácias - São José;12:25;UTIL
+75900;Partida: TICEN - Plataforma C - Fpolis;12:00;UTIL
+75900;Partida: TICEN - Plataforma C - Fpolis;17:15;UTIL
+75900;Partida: TICEN - Plataforma C - Fpolis;18:35;UTIL
+75900;Partida: Bairro Jardim das Acácias - São José;06:30;SABADO
+75900;Partida: Bairro Jardim das Acácias - São José;08:00;SABADO
+75900;Partida: TICEN - Plataforma C - Fpolis;07:30;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);05:00;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);05:20;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);05:40;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);05:55;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:15;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:30;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:40;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:55;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);07:25;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);07:40;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);08:10;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);08:50;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);09:30;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);10:15;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);11:00;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);11:55;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);12:45;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);13:25;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);14:00;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);14:15;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);14:50;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);15:25;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);16:15;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);16:40;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);17:00;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);17:20;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);18:00;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);18:45;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);19:30;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);21:05;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);21:50;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);23:20;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;06:20;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;06:55;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;07:40;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;08:25;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;09:00;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;09:50;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;10:30;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;11:25;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;12:15;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;12:55;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;13:35;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;14:20;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;14:55;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;15:45;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;16:10;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;16:30;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;16:55;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;17:30;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;17:50;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;18:15;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;18:45;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;19:00;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;19:20;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;19:40;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;20:40;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;21:25;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;22:35;UTIL
+43400;Partida: TICEN - Plataforma C - Fpolis;23:30;UTIL
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);05:50;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:15;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:40;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);07:05;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);07:30;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);08:00;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);08:45;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);09:40;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);10:40;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);11:40;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);12:05;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);12:35;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);13:30;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);13:55;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);14:25;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);15:15;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);16:35;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);17:30;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);18:15;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;06:40;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;07:05;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;07:35;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;08:20;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;09:15;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;10:15;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;11:15;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;11:35;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;12:10;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;13:00;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;13:30;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;14:00;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;14:50;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;16:10;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;17:00;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;17:45;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;18:40;SABADO
+43400;Partida: TICEN - Plataforma C - Fpolis;19:30;SABADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);05:50;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);06:45;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);08:15;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);09:45;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);12:45;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);14:15;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);16:45;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);18:15;DOMINGO_FERIADO
+43400;Partida: Bairro Jardim Janaina (Previsão de Horário);19:40;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;07:45;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;09:20;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;12:15;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;13:45;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;16:15;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;17:45;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;19:15;DOMINGO_FERIADO
+43400;Partida: TICEN - Plataforma C - Fpolis;20:35;DOMINGO_FERIADO
+43401;Partida: Bairro Jardim Janaína;06:59;UTIL
+11300;Partida: Bairro Zanellato - São José;05:00;UTIL
+11300;Partida: Bairro Zanellato - São José;05:20;UTIL
+11300;Partida: Bairro Zanellato - São José;05:40;UTIL
+11300;Partida: Bairro Zanellato - São José;05:55;UTIL
+11300;Partida: Bairro Zanellato - São José;06:20;UTIL
+11300;Partida: Bairro Zanellato - São José;06:45;UTIL
+11300;Partida: Bairro Zanellato - São José;07:30;UTIL
+11300;Partida: Bairro Zanellato - São José;07:55;UTIL
+11300;Partida: Bairro Zanellato - São José;08:15;UTIL
+11300;Partida: Bairro Zanellato - São José;09:00;UTIL
+11300;Partida: Bairro Zanellato - São José;09:45;UTIL
+11300;Partida: Bairro Zanellato - São José;10:30;UTIL
+11300;Partida: Bairro Zanellato - São José;11:15;UTIL
+11300;Partida: Bairro Zanellato - São José;12:00;UTIL
+11300;Partida: Bairro Zanellato - São José;12:45;UTIL
+11300;Partida: Bairro Zanellato - São José;13:30;UTIL
+11300;Partida: Bairro Zanellato - São José;14:15;UTIL
+11300;Partida: Bairro Zanellato - São José;15:00;UTIL
+11300;Partida: Bairro Zanellato - São José;15:45;UTIL
+11300;Partida: Bairro Zanellato - São José;16:30;UTIL
+11300;Partida: Bairro Zanellato - São José;17:25;UTIL
+11300;Partida: Bairro Zanellato - São José;18:05;UTIL
+11300;Partida: Bairro Zanellato - São José;19:00;UTIL
+11300;Partida: Bairro Zanellato - São José;19:45;UTIL
+11300;Partida: Bairro Zanellato - São José;20:25;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;06:55;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;07:40;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;08:25;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;09:10;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;09:50;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;10:30;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;11:25;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;12:10;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;12:55;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;13:35;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;14:20;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;15:10;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;15:50;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;16:20;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;16:30;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;16:45;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;17:30;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;17:50;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;18:20;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;19:10;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;19:45;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;20:30;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;21:00;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;21:45;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;22:35;UTIL
+11300;Partida: TICEN - Plataforma D - Fpolis;23:30;UTIL
+11300;Partida: Bairro Zanellato - São José;05:00;SABADO
+11300;Partida: Bairro Zanellato - São José;05:50;SABADO
+11300;Partida: Bairro Zanellato - São José;06:30;SABADO
+11300;Partida: Bairro Zanellato - São José;06:50;SABADO
+11300;Partida: Bairro Zanellato - São José;07:20;SABADO
+11300;Partida: Bairro Zanellato - São José;07:45;SABADO
+11300;Partida: Bairro Zanellato - São José;08:00;SABADO
+11300;Partida: Bairro Zanellato - São José;08:50;SABADO
+11300;Partida: Bairro Zanellato - São José;10:10;SABADO
+11300;Partida: Bairro Zanellato - São José;11:00;SABADO
+11300;Partida: Bairro Zanellato - São José;11:35;SABADO
+11300;Partida: Bairro Zanellato - São José;12:20;SABADO
+11300;Partida: Bairro Zanellato - São José;13:05;SABADO
+11300;Partida: Bairro Zanellato - São José;13:40;SABADO
+11300;Partida: Bairro Zanellato - São José;14:30;SABADO
+11300;Partida: Bairro Zanellato - São José;16:20;SABADO
+11300;Partida: Bairro Zanellato - São José;17:30;SABADO
+11300;Partida: Bairro Zanellato - São José;19:00;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;06:40;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;07:25;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;08:10;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;09:30;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;10:25;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;11:00;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;11:45;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;12:20;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;13:00;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;14:00;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;15:45;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;17:00;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;17:40;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;18:30;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;19:10;SABADO
+11300;Partida: TICEN - Plataforma D - Fpolis;20:00;SABADO
+11300;Partida: Bairro Zanellato - São José;06:00;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;07:20;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;08:40;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;10:45;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;12:05;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;13:35;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;15:00;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;17:35;DOMINGO_FERIADO
+11300;Partida: Bairro Zanellato - São José;19:05;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;06:50;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;08:10;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;10:10;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;11:35;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;13:05;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;14:30;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;17:05;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;18:35;DOMINGO_FERIADO
+11300;Partida: TICEN - Plataforma D - Fpolis;20:00;DOMINGO_FERIADO
+11301;Partida: Bairro Zanellato - São José;06:44;UTIL
+10002;Partida: Lot José Nitro - São José;05:45;UTIL
+10002;Partida: Lot José Nitro - São José;06:00;UTIL
+10002;Partida: Lot José Nitro - São José;06:30;UTIL
+10002;Partida: Lot José Nitro - São José;06:45;UTIL
+10002;Partida: Lot José Nitro - São José;07:00;UTIL
+10002;Partida: Lot José Nitro - São José;07:40;UTIL
+10002;Partida: Lot José Nitro - São José;08:35;UTIL
+10002;Partida: Lot José Nitro - São José;09:50;UTIL
+10002;Partida: Lot José Nitro - São José;11:10;UTIL
+10002;Partida: Lot José Nitro - São José;12:05;UTIL
+10002;Partida: Lot José Nitro - São José;13:10;UTIL
+10002;Partida: Lot José Nitro - São José;14:05;UTIL
+10002;Partida: Lot José Nitro - São José;15:20;UTIL
+10002;Partida: Lot José Nitro - São José;16:40;UTIL
+10002;Partida: Lot José Nitro - São José;17:50;UTIL
+10002;Partida: Lot José Nitro - São José;19:15;UTIL
+10002;Partida: Lot José Nitro - São José;22:35;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;06:15;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;06:20;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;07:00;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;07:55;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;09:10;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;10:30;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;11:25;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;12:30;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;13:25;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;14:40;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;16:00;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;17:10;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;18:25;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;19:00;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;19:40;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;21:00;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;22:00;UTIL
+10002;Partida: TICEN - Plataforma C - Fpolis;23:30;UTIL
+10002;Partida: Lot José Nitro - São José;06:00;SABADO
+10002;Partida: Lot José Nitro - São José;06:35;SABADO
+10002;Partida: Lot José Nitro - São José;07:10;SABADO
+10002;Partida: Lot José Nitro - São José;08:40;SABADO
+10002;Partida: Lot José Nitro - São José;10:40;SABADO
+10002;Partida: Lot José Nitro - São José;13:00;SABADO
+10002;Partida: Lot José Nitro - São José;15:40;SABADO
+10002;Partida: Lot José Nitro - São José;17:20;SABADO
+10002;Partida: Lot José Nitro - São José;19:00;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;08:00;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;10:00;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;12:20;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;13:00;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;14:00;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;15:00;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;16:40;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;17:40;SABADO
+10002;Partida: TICEN - Plataforma C - Fpolis;18:20;SABADO
+900002;Partida: Morro Boa Vista(Biguaçu);06:30;UTIL
+900002;Partida: Morro Boa Vista(Biguaçu);07:30;UTIL
+900002;Partida: Morro Boa Vista(Biguaçu);12:40;UTIL
+900002;Partida: Maria da Gloria(Colegios);11:36;UTIL
+900002;Partida: Maria da Gloria(Colegios);17:05;UTIL
+43302;Partida: Palmas - Governador Celso Ramos;05:40;UTIL
+43302;Partida: Palmas - Governador Celso Ramos;11:45;UTIL
+43302;Partida: Palmas - Governador Celso Ramos;14:00;UTIL
+43302;Partida: Palmas - Governador Celso Ramos;16:20;UTIL
+43302;Partida: Palmas - Governador Celso Ramos;19:00;UTIL
+43302;Partida: Viaduto Janaina - Biguaçu;12:30;UTIL
+43302;Partida: Viaduto Janaina - Biguaçu;16:10;UTIL
+43302;Partida: Viaduto Janaina - Biguaçu;17:19;UTIL
+43302;Partida: Viaduto Janaina - Biguaçu;19:35;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;05:15;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;06:30;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;11:45;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;14:10;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;16:20;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;17:20;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;20:50;UTIL
+43300;Partida: TICEN - Plataforma D - Fpolis;10:00;UTIL
+43300;Partida: TICEN - Plataforma D - Fpolis;12:35;UTIL
+43300;Partida: TICEN - Plataforma D - Fpolis;14:30;UTIL
+43300;Partida: TICEN - Plataforma D - Fpolis;17:00;UTIL
+43300;Partida: TICEN - Plataforma D - Fpolis;18:10;UTIL
+43300;Partida: TICEN - Plataforma D - Fpolis;19:10;UTIL
+43300;Partida: Palmas - Governador Celso Ramos;06:00;SABADO
+43300;Partida: Palmas - Governador Celso Ramos;09:30;SABADO
+43300;Partida: Palmas - Governador Celso Ramos;17:00;SABADO
+43300;Partida: TICEN - Plataforma D - Fpolis;08:05;SABADO
+43300;Partida: TICEN - Plataforma D - Fpolis;12:15;SABADO
+43300;Partida: TICEN - Plataforma D - Fpolis;20:00;SABADO
+43300;Partida: Palmas - Governador Celso Ramos;06:00;DOMINGO_FERIADO
+43300;Partida: Palmas - Governador Celso Ramos;17:00;DOMINGO_FERIADO
+43300;Partida: Palmas - Governador Celso Ramos;18:30;DOMINGO_FERIADO
+43300;Partida: TICEN - Plataforma D - Fpolis;08:00;DOMINGO_FERIADO
+43300;Partida: TICEN - Plataforma D - Fpolis;19:00;DOMINGO_FERIADO
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);05:40;UTIL
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);06:10;UTIL
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);07:30;UTIL
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);16:00;UTIL
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);18:05;UTIL
+10901;Partida: TICEN - Plataforma D - Fpolis;17:20;UTIL
+10901;Partida: TICEN - Plataforma D - Fpolis;19:15;UTIL
+10901;Partida: TICEN - Plataforma D - Fpolis;22:10;UTIL
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);06:20;SABADO
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);08:30;SABADO
+10901;Partida: TICEN - Plataforma D - Fpolis;07:55;SABADO
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);06:30;DOMINGO_FERIADO
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);12:45;DOMINGO_FERIADO
+10901;Partida: Bairro Prado - Biguaçu (Previsão de Horário);18:30;DOMINGO_FERIADO
+10901;Partida: TICEN - Plataforma D - Fpolis;06:00;DOMINGO_FERIADO
+10901;Partida: TICEN - Plataforma D - Fpolis;12:15;DOMINGO_FERIADO
+10901;Partida: TICEN - Plataforma D - Fpolis;18:00;DOMINGO_FERIADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);05:20;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);05:45;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);06:15;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);07:23;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);11:35;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);12:45;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);16:50;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);17:50;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);06:50;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);11:05;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);12:15;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);16:20;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);18:05;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);19:30;UTIL
+44301;Partida: TICEN - Plataforma D(Fpolis);21:00;UTIL
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);06:00;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);06:40;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);07:15;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);08:00;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);11:30;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);13:05;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);14:35;SABADO
+44301;Partida: TICEN - Plataforma D(Fpolis);06:10;SABADO
+44301;Partida: TICEN - Plataforma D(Fpolis);07:30;SABADO
+44301;Partida: TICEN - Plataforma D(Fpolis);11:00;SABADO
+44301;Partida: TICEN - Plataforma D(Fpolis);12:35;SABADO
+44301;Partida: TICEN - Plataforma D(Fpolis);14:05;SABADO
+44301;Partida: TICEN - Plataforma D(Fpolis);20:00;SABADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);05:45;DOMINGO_FERIADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);08:45;DOMINGO_FERIADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);14:45;DOMINGO_FERIADO
+44301;Partida: Bairro Praia João Rosa - Biguaçu(Previsão Horário);17:45;DOMINGO_FERIADO
+44301;Partida: TICEN - Plataforma D(Fpolis);05:15;DOMINGO_FERIADO
+44301;Partida: TICEN - Plataforma D(Fpolis);08:15;DOMINGO_FERIADO
+44301;Partida: TICEN - Plataforma D(Fpolis);14:15;DOMINGO_FERIADO
+44301;Partida: TICEN - Plataforma D(Fpolis);17:15;DOMINGO_FERIADO
+44301;Partida: TICEN - Plataforma D(Fpolis);20:15;DOMINGO_FERIADO
+910000;Partida: Bairro Rachadel - Antonio Carlos;06:30;UTIL
+910000;Partida: Bairro Rachadel - Antonio Carlos;12:15;UTIL
+910000;Partida: Rodoviaria - Antônio Carlos;11:35;UTIL
+910000;Partida: Rodoviaria - Antônio Carlos;12:20;UTIL
+910000;Partida: Rodoviaria - Antônio Carlos;17:05;UTIL
+910000;Partida: Rodoviaria - Antônio Carlos;17:50;UTIL
+67200;Partida: Bairro Roçado - São José;12:50;UTIL
+67200;Partida: TICEN - Plataforma D - Fpolis;12:10;UTIL
+64001;Partida: Rua Sto Antonio(Previsão de Horário);06:40;UTIL
+64001;Partida: Rua Sto Antonio(Previsão de Horário);07:35;UTIL
+64001;Partida: Rua Sto Antonio(Previsão de Horário);18:40;UTIL
+64001;Partida: TICEN - Plataforma D - Fpolis;07:25;UTIL
+64001;Partida: TICEN - Plataforma D - Fpolis;18:25;UTIL
+64001;Partida: TICEN - Plataforma D - Fpolis;19:45;UTIL
+64001;Partida: Rua Sto Antonio(Previsão de Horário);05:40;SABADO
+64001;Partida: Rua Sto Antonio(Previsão de Horário);10:15;SABADO
+64001;Partida: TICEN - Plataforma D - Fpolis;10:00;SABADO
+10502;Partida: Russia - Biguaçu;06:23;UTIL
+10502;Partida: Russia - Biguaçu;12:00;UTIL
+10502;Partida: Biguaçu - Colégios;11:35;UTIL
+10502;Partida: Biguaçu - Colégios;12:05;UTIL
+10502;Partida: Biguaçu - Colégios;17:05;UTIL
+10502;Partida: Biguaçu - Colégios;17:50;UTIL
+10900;Partida: Bairro Estiva - Biguaçu;05:00;UTIL
+10900;Partida: Bairro Estiva - Biguaçu;06:10;UTIL
+10900;Partida: Bairro Estiva - Biguaçu;12:55;UTIL
+10900;Partida: TICEN - Plataforma D - Fpolis;11:35;UTIL
+10900;Partida: TICEN - Plataforma D - Fpolis;17:40;UTIL
+10900;Partida: Bairro Estiva - Biguaçu;05:50;SABADO
+10900;Partida: TICEN - Plataforma D - Fpolis;12:10;SABADO
+10902;Partida: Bairros;06:14;UTIL
+10902;Partida: Bairros;06:30;UTIL
+10902;Partida: Bairros;06:54;UTIL
+10902;Partida: Bairros;07:00;UTIL
+10902;Partida: Colegio Cônego - Bairros;06:15;UTIL
+10902;Partida: Colegio Cônego - Bairros;06:55;UTIL
+10902;Partida: Colegio Cônego - Bairros;11:49;UTIL
+10902;Partida: Colegio Cônego - Bairros;11:50;UTIL
+10902;Partida: Colegio Cônego - Bairros;11:51;UTIL
+10902;Partida: Colegio Cônego - Bairros;16:49;UTIL
+10902;Partida: Colegio Cônego - Bairros;16:50;UTIL
+10902;Partida: Colegio Cônego - Bairros;16:51;UTIL
+69500;Partida: TICEN - Plataforma C - Fpolis;06:15;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;05:10;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;05:25;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;05:50;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;06:10;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;07:30;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;10:15;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;12:40;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;20:30;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;09:05;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;11:30;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;14:20;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;15:22;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;16:10;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;16:45;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;17:30;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;18:35;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;19:35;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;20:35;UTIL
+44303;Partida: TICEN - Plataforma D - Fpolis;22:50;UTIL
+44303;Partida: Bairro Saudade - Biguaçu;05:45;SABADO
+44303;Partida: Bairro Saudade - Biguaçu;06:30;SABADO
+44303;Partida: Bairro Saudade - Biguaçu;07:00;SABADO
+44303;Partida: TICEN - Plataforma D - Fpolis;05:45;SABADO
+44303;Partida: TICEN - Plataforma D - Fpolis;12:20;SABADO
+90700;Partida: Serraria - São José (Horários Compartilhados);05:50;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);06:10;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);06:35;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);06:45;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);07:00;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);07:40;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);08:45;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);09:30;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);11:00;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);11:50;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);13:00;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);13:45;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);15:05;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);16:00;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);17:15;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);18:00;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);19:20;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);19:55;UTIL
+90700;Partida: Serraria - São José (Horários Compartilhados);22:30;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);05:30;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);06:10;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);07:05;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);08:10;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);09:05;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);09:50;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);11:40;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);12:20;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);13:10;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);15:40;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);16:25;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);17:15;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);17:30;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);17:45;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);18:05;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);18:40;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);19:35;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);20:40;UTIL
+90700;Partida: Forquilhinhas - São José (Horários Compartilhados);22:10;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);06:05;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);06:42;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);07:20;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);07:57;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);08:35;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);09:35;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);10:55;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);11:30;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);11:55;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);12:45;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);13:25;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);13:55;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);14:25;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);15:05;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);15:45;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);16:25;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);16:55;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);17:25;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);18:25;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);19:00;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);19:35;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);20:05;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);22:40;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;06:55;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;07:32;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;08:10;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;09:10;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;09:40;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;10:30;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;11:05;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;11:30;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;12:20;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;13:00;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;13:30;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;14:00;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;14:40;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;15:20;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;16:00;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;16:30;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;17:00;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;17:30;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;18:00;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;18:20;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;18:50;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;19:40;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;20:50;UTIL
+12400;Partida: TICEN - Plataforma D - Fpolis;22:15;UTIL
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);06:20;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);07:30;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);08:10;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);08:50;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);09:55;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);10:25;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);11:40;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);12:25;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);12:55;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);13:25;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);16:25;SABADO
+12400;Partida: Shopping C Itaguaçu (Previsão de Horário);18:10;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;07:05;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;07:45;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;08:25;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;09:30;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;10:00;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;11:15;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;12:00;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;12:30;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;13:00;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;14:00;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;16:00;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;17:45;SABADO
+12400;Partida: TICEN - Plataforma D - Fpolis;19:15;SABADO
+64200;Partida: Bairro Sorocaba - Biguaçu;06:05;UTIL
+64200;Partida: Bairro Sorocaba - Biguaçu;13:40;UTIL
+64200;Partida: TICEN - Plataforma D - Fpolis;12:05;UTIL
+64200;Partida: TICEN - Plataforma D - Fpolis;17:10;UTIL
+64201;Partida: Bairro Sorocaba - Biguaçu;11:40;UTIL
+64201;Partida: Bairro Sorocaba - Biguaçu;16:48;UTIL
+64201;Partida: Viaduto Janaína - Biguaçu;10:30;UTIL
+64201;Partida: Viaduto Janaína - Biguaçu;12:30;UTIL
+64201;Partida: Viaduto Janaína - Biguaçu;15:35;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;04:40;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;05:45;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;06:05;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;06:30;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;08:15;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;09:30;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;11:31;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;12:25;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;13:00;UTIL
+44801;Partida: Bairro Tres Riachos - Biguaçu;17:25;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;07:30;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;08:45;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;10:45;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;11:40;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;12:15;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;12:50;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;15:55;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;17:15;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;17:30;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;18:25;UTIL
+44801;Partida: Viaduto Janaína - Biguaçu;22:35;UTIL
+44800;Partida: Bairro Tres Riachos - Biguaçu;04:40;UTIL
+44800;Partida: Bairro Tres Riachos - Biguaçu;05:46;UTIL
+44800;Partida: Bairro Tres Riachos - Biguaçu;08:15;UTIL
+44800;Partida: Bairro Tres Riachos - Biguaçu;12:25;UTIL
+44800;Partida: Bairro Tres Riachos - Biguaçu;13:40;UTIL
+44800;Partida: TICEN - Plataforma C - Fpolis;07:05;UTIL
+44800;Partida: TICEN - Plataforma C - Fpolis;11:15;UTIL
+44800;Partida: TICEN - Plataforma C - Fpolis;12:20;UTIL
+44800;Partida: TICEN - Plataforma C - Fpolis;15:30;UTIL
+44800;Partida: TICEN - Plataforma C - Fpolis;17:00;UTIL
+44800;Partida: TICEN - Plataforma C - Fpolis;18:25;UTIL
+44800;Partida: Bairro Tres Riachos - Biguaçu;06:00;SABADO
+44800;Partida: Bairro Tres Riachos - Biguaçu;11:45;SABADO
+44800;Partida: Bairro Tres Riachos - Biguaçu;15:00;SABADO
+44800;Partida: TICEN - Plataforma C - Fpolis;10:30;SABADO
+44800;Partida: TICEN - Plataforma C - Fpolis;13:20;SABADO
+44800;Partida: TICEN - Plataforma C - Fpolis;17:05;SABADO
+44800;Partida: Bairro Tres Riachos - Biguaçu;06:30;DOMINGO_FERIADO
+44800;Partida: Bairro Tres Riachos - Biguaçu;16:30;DOMINGO_FERIADO
+44800;Partida: TICEN - Plataforma C - Fpolis;08:00;DOMINGO_FERIADO
+44800;Partida: TICEN - Plataforma C - Fpolis;18:05;DOMINGO_FERIADO
+10501;Partida: Antônio Carlos;05:30;UTIL
+10501;Partida: Antônio Carlos;17:05;UTIL
+10501;Partida: TICEN - Plataforma D - Fpolis;15:55;UTIL
+10501;Partida: TICEN - Plataforma D - Fpolis;18:25;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);05:50;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);06:10;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);06:25;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);07:05;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);07:23;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);08:03;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);08:50;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);16:00;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);17:00;UTIL
+10401;Partida: Bairro Ipiranga - São José (Previsão de Horário);17:40;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;06:58;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;08:25;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;15:30;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;16:30;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;17:22;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;18:05;UTIL
+10401;Partida: TICEN - Plataforma D - Fpolis;19:05;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);06:50;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);07:50;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);08:05;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);08:45;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);16:50;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);17:15;UTIL
+43103;Partida: Av Atlântica (Previsão de Horário);18:00;UTIL
+43103;Partida: TICEN - Plataforma D - Fpolis;16:35;UTIL
+43103;Partida: TICEN - Plataforma D - Fpolis;17:00;UTIL
+43103;Partida: TICEN - Plataforma D - Fpolis;17:35;UTIL
+43103;Partida: TICEN - Plataforma D - Fpolis;18:40;UTIL
+43103;Partida: TICEN - Plataforma D - Fpolis;19:20;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);05:40;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);07:50;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);08:25;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);09:15;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);11:25;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);12:20;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);13:30;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);14:00;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);15:20;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);16:25;UTIL
+76403;Partida: Biguaçu (Previsão de Horário);17:25;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;07:20;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;08:40;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;10:50;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;11:45;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;12:55;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;13:30;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;14:45;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;15:50;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;16:50;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;17:50;UTIL
+76403;Partida: TICEN - Plataforma D - Fpolis;18:30;UTIL
+76404;Partida: Biguaçu - Via Fundos (Previsão de horário);05:45;UTIL
+76404;Partida: Biguaçu - Via Fundos (Previsão de horário);05:55;UTIL
+76404;Partida: Biguaçu - Via Fundos (Previsão de horário);07:35;UTIL
+76404;Partida: Biguaçu - Via Fundos (Previsão de horário);16:55;UTIL
+76404;Partida: TICEN - Plataforma D - Fpolis;16:20;UTIL
+76404;Partida: TICEN - Plataforma D - Fpolis;18:00;UTIL
+76404;Partida: TICEN - Plataforma D - Fpolis;18:15;UTIL
+8801;Partida: Biguaçu (Horários Compartilhados);06:25;UTIL
+8801;Partida: Biguaçu (Horários Compartilhados);07:45;UTIL
+8801;Partida: Biguaçu (Horários Compartilhados);16:05;UTIL
+8801;Partida: Biguaçu (Horários Compartilhados);19:20;UTIL
+8801;Partida: Palhoça (Horários Compartilhados);06:45;UTIL
+8801;Partida: Palhoça (Horários Compartilhados);08:10;UTIL
+8801;Partida: Palhoça (Horários Compartilhados);17:20;UTIL
+8801;Partida: Palhoça (Horários Compartilhados);17:45;UTIL
+9902;Partida: Dona Adélia - São José (Previsão de Horário);05:55;UTIL
+9902;Partida: Dona Adélia - São José (Previsão de Horário);07:25;UTIL
+9902;Partida: Dona Adélia - São José (Previsão de Horário);08:55;UTIL
+9902;Partida: Dona Adélia - São José (Previsão de Horário);11:15;UTIL
+9902;Partida: Dona Adélia - São José (Previsão de Horário);17:10;UTIL
+9902;Partida: TICEN - Plataforma C - Fpolis;06:57;UTIL
+9902;Partida: TICEN - Plataforma C - Fpolis;16:50;UTIL
+9902;Partida: TICEN - Plataforma C - Fpolis;18:20;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);05:55;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);06:40;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);07:20;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);08:10;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);11:35;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);14:30;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);16:00;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);17:10;UTIL
+43404;Partida: Bairro Dona Wanda - São José (Previsão de Horário);17:50;UTIL
+43404;Partida: Ticen - Plataforma D - Fpolis;14:05;UTIL
+43404;Partida: Ticen - Plataforma D - Fpolis;15:30;UTIL
+43404;Partida: Ticen - Plataforma D - Fpolis;16:45;UTIL
+43404;Partida: Ticen - Plataforma D - Fpolis;17:35;UTIL
+43404;Partida: Ticen - Plataforma D - Fpolis;18:20;UTIL
+43404;Partida: Ticen - Plataforma D - Fpolis;19:15;UTIL
+44701;Partida: Palmas - Governador Celso Ramos;05:40;UTIL
+44701;Partida: Palmas - Governador Celso Ramos;14:45;UTIL
+44701;Partida: TICEN - Plataforma D - Fpolis;13:00;UTIL
+44701;Partida: TICEN - Plataforma D - Fpolis;18:10;UTIL
+76405;Partida: Praia Joao Rosa - Biguaçu (Previsão Horario);06:00;UTIL
+76405;Partida: Praia Joao Rosa - Biguaçu (Previsão Horario);06:29;UTIL
+76405;Partida: Praia Joao Rosa - Biguaçu (Previsão Horario);06:49;UTIL
+76405;Partida: Praia Joao Rosa - Biguaçu (Previsão Horario);07:14;UTIL
+76405;Partida: TICEN - Plataforma D - Fpolis;06:45;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);05:50;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);06:10;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);06:30;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);06:50;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);07:10;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);07:30;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);07:50;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);08:35;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);11:40;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);13:20;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);13:45;UTIL
+14601;Partida: Loteamento Zenaide (Horários Compartilhados);14:20;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);10:40;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);12:20;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);12:50;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);13:20;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);16:25;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);16:45;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);17:05;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);17:20;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);18:10;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);18:30;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);18:50;UTIL
+14601;Partida: TICEN - Plat C - Fpolis (Horários Compartilhados);19:10;UTIL

@@ -1,15 +1,12 @@
-from bs4 import BeautifulSoup
 from common import *
 
 URL_BASE = "https://www2.jotur.com.br/linhas/"
 
 
-def raspar_linhas() -> tuple[list[Linha], list[tuple[str, str]]]:
-    html, status = get_html(URL_BASE)
-    soup = BeautifulSoup(html, "html.parser")
+def raspar_linhas() -> list[Linha]:
+    soup, status = get_soup(URL_BASE)
 
     linhas = []
-    urls = []
 
     for item in soup.select("li>a"):
         url = item["href"]
@@ -24,12 +21,11 @@ def raspar_linhas() -> tuple[list[Linha], list[tuple[str, str]]]:
         nome = extrair_texto(tag_nome).removeprefix("- ")
         executivo = "executivo" in nome.lower()
 
-        linha = Linha(codigo, nome, "", executivo)
+        linha = Linha(codigo, nome, "", executivo, URL_BASE + str(url))
 
         linhas.append(linha)
-        urls.append((codigo, str(url)))
 
-    return (linhas, urls)
+    return linhas
 
 
 DIAS = {
@@ -39,11 +35,11 @@ DIAS = {
 }
 
 
-def raspar_horarios_linha(url: str, linha: str) -> list[Horario]:
-    html, status = get_html(URL_BASE + url)
-    soup = BeautifulSoup(html, "html.parser")
+def raspar_horarios_linha(linha: Linha) -> list[Horario]:
+    soup, status = get_soup(linha.url)
 
     horarios = []
+    codigo = linha.codigo
 
     for aba in soup.select(".accordion-item"):
         tag_sentido = aba.select_one(".accordion-header > :last-child")
@@ -67,29 +63,8 @@ def raspar_horarios_linha(url: str, linha: str) -> list[Horario]:
                 if hora == "":
                     continue
 
-                horario = Horario(linha, sentido, hora, dia)
+                horario = Horario(codigo, sentido, hora, dia)
 
                 horarios.append(horario)
 
     return horarios
-
-
-def raspar_horarios(urls: list[tuple[str, str]]) -> list[Horario]:
-    horarios = []
-
-    for cod, url in urls:
-        print(f"Raspando horarios da linha {cod}...")
-        horarios.extend(raspar_horarios_linha(url, cod))
-
-    return horarios
-
-
-print("Raspando linhas...")
-linhas, urls = raspar_linhas()
-
-salvar_csv(linhas, "out/linhas_jotur.csv")
-
-print("Raspando horarios...")
-horarios = raspar_horarios(urls)
-
-salvar_csv(horarios, "out/horarios_jotur.csv")

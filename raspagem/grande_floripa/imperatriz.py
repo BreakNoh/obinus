@@ -1,16 +1,13 @@
-from bs4 import BeautifulSoup
 from common import *
 
 
 URL_BASE = "https://www.tcimperatriz.com.br"
 
 
-def raspar_linhas() -> tuple[list[Linha], list[tuple[str, str]]]:
-    html, status = get_html(URL_BASE + "/horarios/")
-    soup = BeautifulSoup(html, "html.parser")
+def raspar_linhas() -> list[Linha]:
+    soup, status = get_soup(URL_BASE + "/horarios/")
 
     linhas = []
-    urls = []
 
     for item in soup.select(".elementor-shortcode  li > a"):
         nome = extrair_texto(item.select_one("b"))
@@ -29,12 +26,11 @@ def raspar_linhas() -> tuple[list[Linha], list[tuple[str, str]]]:
         if len(nome) == 0 or len(codigo) == 0:
             continue
 
-        linha = Linha(codigo, nome, detalhe, False)
+        linha = Linha(codigo, nome, detalhe, False, str(url))
 
         linhas.append(linha)
-        urls.append((codigo, url))
 
-    return (linhas, urls)
+    return linhas
 
 
 DIAS = {
@@ -44,9 +40,8 @@ DIAS = {
 }
 
 
-def raspar_horarios_linha(url: str, linha: str) -> list[Horario]:
-    html, status = get_html(url)
-    soup = BeautifulSoup(html, "html.parser")
+def raspar_horarios_linha(linha: Linha) -> list[Horario]:
+    soup, status = get_soup(linha.url)
 
     horarios = []
 
@@ -72,25 +67,7 @@ def raspar_horarios_linha(url: str, linha: str) -> list[Horario]:
 
                 hora = hora_extraida.group(0)
 
-                horario = Horario(linha, sentido, hora, dia)
+                horario = Horario(linha.codigo, sentido, hora, dia)
                 horarios.append(horario)
 
     return horarios
-
-
-def raspar_horarios(urls: list[tuple[str, str]]) -> list[Horario]:
-    horarios = []
-
-    for cod, url in urls:
-        print(f"Raspando horarios da linha {cod}...")
-        horarios.extend(raspar_horarios_linha(url, cod))
-
-    return horarios
-
-
-print("Raspando linhas...")
-linhas, urls = raspar_linhas()
-salvar_csv(linhas, "out/linhas_imperatriz.csv")
-
-horarios = raspar_horarios(urls)
-salvar_csv(linhas, "out/horarios_imperatriz.csv")

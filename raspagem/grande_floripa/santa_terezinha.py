@@ -21,9 +21,8 @@ TRADUCAO = str.maketrans(
 )
 
 
-def raspar_linhas() -> tuple[list[Linha], list[tuple[str, str]]]:
+def raspar_linhas() -> list[Linha]:
     linhas = []
-    urls = []
 
     html, status = get_html(URL_BASE)
     soup = BeautifulSoup(html, "html.parser")
@@ -41,13 +40,11 @@ def raspar_linhas() -> tuple[list[Linha], list[tuple[str, str]]]:
         if nome == "" or codigo == "":
             continue
 
-        linha = Linha(codigo, nome, "", False)
+        linha = Linha(codigo, nome, "", False, str(url))
 
         linhas.append(linha)
 
-        urls.append((codigo, url))
-
-    return (linhas, urls)
+    return linhas
 
 
 DIAS = {
@@ -57,10 +54,10 @@ DIAS = {
 }
 
 
-def raspar_horarios_linha(url: str, linha: str) -> list[Horario]:
+def raspar_horarios_linha(linha: Linha) -> list[Horario]:
     horarios = []
-    html, status = get_html(url)
-    soup = BeautifulSoup(html, "html.parser")
+    soup, status = get_soup(linha.url)
+    codigo = linha.codigo
 
     for tag_s in soup.select("details"):
         sentido = extrair_texto(tag_s.select_one(".e-n-accordion-item-title-text"))
@@ -85,29 +82,8 @@ def raspar_horarios_linha(url: str, linha: str) -> list[Horario]:
 
                 hora = match.group(0)
 
-                horario = Horario(linha, sentido, hora, dia)
+                horario = Horario(codigo, sentido, hora, dia)
 
                 horarios.append(horario)
 
     return horarios
-
-
-def raspar_horarios(urls: list[tuple[str, str]]) -> list[Horario]:
-    horarios = []
-
-    for cod, url in urls:
-        print(f"Raspando horarios da linha {cod}...")
-        horarios.extend(raspar_horarios_linha(url, cod))
-
-    return horarios
-
-
-print("Raspando linhas...")
-linhas, urls = raspar_linhas()
-
-salvar_csv(linhas, "out/linhas_santa_terezinha.csv")
-
-print("Raspando horarios...")
-horarios = raspar_horarios(urls)
-
-salvar_csv(horarios, "out/horarios_santa_terezinha.csv")

@@ -1,11 +1,26 @@
 import re
-from bs4 import Tag
+from bs4 import BeautifulSoup, Tag
 from dataclasses import dataclass, asdict
-
 import csv
 from pathlib import Path
-
 import requests
+
+
+@dataclass
+class Linha:
+    codigo: str
+    nome: str
+    detalhe: str
+    executivo: bool
+    url: str
+
+
+@dataclass
+class Horario:
+    linha: str
+    sentido: str
+    hora: str
+    dia: str
 
 
 def salvar_csv(dados: list, nome_arquivo: str):
@@ -50,21 +65,11 @@ headers = {
 
 def get_html(url, params: dict = {}) -> tuple[str, int]:
     req = sessao.get(url, params=params, headers=headers)
-    req.encoding = "utf-8"
+    if "charset" not in req.headers.get("Content-Type", "").lower():
+        req.encoding = req.apparent_encoding
     return (req.text, req.status_code)
 
 
-@dataclass
-class Linha:
-    codigo: str
-    nome: str
-    detalhe: str
-    executivo: bool
-
-
-@dataclass
-class Horario:
-    linha: str
-    sentido: str
-    hora: str
-    dia: str
+def get_soup(url, params: dict = {}) -> tuple[BeautifulSoup, int]:
+    html, status = get_html(url, params)
+    return (BeautifulSoup(html, "html.parser"), status)
