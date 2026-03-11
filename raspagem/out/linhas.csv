@@ -1,0 +1,497 @@
+empresa;codigo;nome;detalhe;executivo;url
+biguacu;10501;Executivo Antônio Carlos;;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10501
+biguacu;10401;Executivo Bairro Ipiranga;Via Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10401
+biguacu;43103;Executivo Bela Vista;;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43103
+biguacu;76403;Executivo Biguaçu;Via BR-101/marginais e Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=76403
+biguacu;76404;Executivo Biguaçu (Via Fundos);Via BR101-Marginas/Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=76404
+biguacu;8801;Executivo Biguaçu Palhoça;Vias_Br101_e marginais;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=8801
+biguacu;9902;Executivo Dona Adélia;Via Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=9902
+biguacu;43404;Executivo Dona Wanda;Via BR-101/marginais e Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43404
+biguacu;44701;Executivo Governador Celso Ramos;Via Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44701
+biguacu;76405;Executivo Praia J Rosa;Via BR-101/marginais e Estreito;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=76405
+biguacu;14601;Executivo Zenaide;;True;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=14601
+biguacu;64100;Antônio Carlos / Biguaçu;Até Viaduto Janaína;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=64100
+biguacu;10500;Antônio Carlos / Florianópolis;Via SC-407-BR 101-Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10500
+biguacu;970000;Antonio Carlos / Guiomar;Via Canudos/Guiomar - municipais;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=970000
+biguacu;11302;Araucária;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=11302
+biguacu;10301;Armação da Piedade;Partida Biguaçu_|Viaduto Janaina sentido Biguaçu;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10301
+biguacu;10300;Armação da Piedade / Florianópolis;Via SC-410-BR-101-Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10300
+biguacu;84500;Avenida das Torres;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=84500
+biguacu;10400;Bairro Ipiranga;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10400
+biguacu;66800;Bairro Ipiranga Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=66800
+biguacu;10200;Bairro São Pedro;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10200
+biguacu;44200;Barreiros;Via Suvec-Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44200
+biguacu;60100;Barreiros Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=60100
+biguacu;43100;Bela Vista;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43100
+biguacu;43101;Bela Vista;Via Floresta;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43101
+biguacu;43102;Bela Vista;Via Floresta e Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43102
+biguacu;43201;Bela Vista 2-(Avenida das Torres);Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43201
+biguacu;55900;Bela Vista Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=55900
+biguacu;44300;Biguaçu;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44300
+biguacu;8800;Biguaçu / Palhoça;Via BR 101;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=8800
+biguacu;55700;Biguaçu Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=55700
+biguacu;10000;Bom Viver;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10000
+biguacu;900056;Bom Viver / Biguaçu;Via Bairro Janaína, Praia João Rosa e UPA;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900056
+biguacu;10001;Bom Viver Via Expressa;Via Expressa(BR282);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10001
+biguacu;900003;Bom Viver/Maria da Gloria;Atendimento Colegios Biguaçu;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900003
+biguacu;14600;Catarina;Via Leoberto Leal e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=14600
+biguacu;43500;Ceasa;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43500
+biguacu;90900;Circular Barreiros;Via Rodovias Municipais, marginais BR 101;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=90900
+biguacu;900006;Circular Biguaçu Municipal;Via Praia João Rosa e UPA;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900006
+biguacu;900007;Circular Fundos;"Arendimento Cicob_Via Praia J Rosa;";False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900007
+biguacu;80001;Circular Governador Celso Ramos;Sentido Ida_Via Jordão Sentido volta_via Areias Baixo;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=80001
+biguacu;900001;Colegio Roldão / ViadutoJanaina;Via Saudade/Praça Biguaçu/Marginal/`Posto Petrus;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900001
+biguacu;90800;Diretão;Vias Municipais;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=90800
+biguacu;9900;Dona Adélia;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=9900
+biguacu;9901;Dona Adélia Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=9901
+biguacu;43402;Dona Wanda;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43402
+biguacu;43403;Dona Wanda Via Expressa;Via Expressa(BR 282);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43403
+biguacu;920000;Egito / Antônio Carlos;Via Santa Maria;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=920000
+biguacu;44304;Fazendinha - Biguaçu;Via Rodovias municipais;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44304
+biguacu;2200;Floresta;Via Av. Central do Kobrasol;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=2200
+biguacu;66900;Floresta Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=66900
+biguacu;76400;Fundos;Via Jardim Carandaí(Biguaçu)-Via Estreito(Fpolis);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=76400
+biguacu;44600;Governador Celso Ramos / Florianópolis;Via SC-410-Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44600
+biguacu;44700;Governador Celso Ramos / Florianópolis;Via SC-410, BR-101, Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44700
+biguacu;54600;Governador Celso Ramos/Biguaçu;Viaduto Janaína;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=54600
+biguacu;44201;Heriberto Hulse;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44201
+biguacu;900020;Janaina(Mar das Pedras) - Colegio Eloisa;Rodovias Municipais(Atendimento Colegios);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900020
+biguacu;75900;Jardim das Acácias;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=75900
+biguacu;43400;Jardim Janaína;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43400
+biguacu;43401;Jardim Janaína;Via Expressa(BR 282);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43401
+biguacu;11300;Jardim Zanellato;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=11300
+biguacu;11301;Jardim Zanellato;Via Expressa(BR 282);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=11301
+biguacu;10002;José Nitro;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10002
+biguacu;900002;Morro Boa Vista / Maria da Gloria;Via Rodovias Municipais (Atendimento Colegios);False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=900002
+biguacu;43302;Palmas / Biguaçu;Até Viaduto Janaína;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43302
+biguacu;43300;Palmas / Florianópolis;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=43300
+biguacu;10901;Prado;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10901
+biguacu;44301;Praia João Rosa;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44301
+biguacu;910000;Rachadel / Antônio Carlos;Até Vila 12;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=910000
+biguacu;67200;Roçado;Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=67200
+biguacu;64001;Rua Santo Antônio;Via Santo Antônio e Santos Dumont;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=64001
+biguacu;10502;Russia - Biguaçu;Via rodovias municipais;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10502
+biguacu;10900;São Miguel;Estiva-Via BR 101-Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10900
+biguacu;10902;São Miguel - Biguaçu;Atendimento Colegio Conego e rodovias municipais;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=10902
+biguacu;69500;São Pedro Via Expressa;Via Expressa;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=69500
+biguacu;44303;Saudade;Via BR-101/marginais e Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44303
+biguacu;90700;Serraria / Forquilhinhas;Via Bela Vista, Kobrasol, e Hospital;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=90700
+biguacu;12400;Shopping Center Itaguaçu;Via Estreito_Via Floresta;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=12400
+biguacu;64200;Sorocaba;Via BR101 - Via Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=64200
+biguacu;64201;Sorocaba / Biguaçu;Até Viaduto Janaína;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=64201
+biguacu;44801;Três Riachos / Biguaçu;Até Viaduto Janaína;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44801
+biguacu;44800;Três Riachos / Florianópolis;Via: Estrada Geral Tres Riachos, BR-101, Estreito;False;https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php?id_line_bus=44800
+fenix;665;Abraão;;False;https://www.consorciofenix.com.br/horarios/abraao,665
+fenix;762;Angelo Laporta;;False;https://www.consorciofenix.com.br/horarios/angelo-laporta,762
+fenix;V-844;Bairro de Fátima;;False;https://www.consorciofenix.com.br/horarios/bairro-de-fatima,V-844
+fenix;844;Bairro de Fátima;;False;https://www.consorciofenix.com.br/horarios/bairro-de-fatima,844
+fenix;V-661;Balneário;;False;https://www.consorciofenix.com.br/horarios/balneario,V-661
+fenix;661;Balneário;;False;https://www.consorciofenix.com.br/horarios/balneario,661
+fenix;763;Caeira do Saco dos Limões;;False;https://www.consorciofenix.com.br/horarios/caeira-do-saco-dos-limoes,763
+fenix;662;Canto via Otília Cruz;;False;https://www.consorciofenix.com.br/horarios/canto-via-otilia-cruz,662
+fenix;V-662;Canto via Otília Cruz;;False;https://www.consorciofenix.com.br/horarios/canto-via-otilia-cruz,V-662
+fenix;631;Capoeiras;;False;https://www.consorciofenix.com.br/horarios/capoeiras,631
+fenix;V-631;Capoeiras;;False;https://www.consorciofenix.com.br/horarios/capoeiras,V-631
+fenix;183;Carianos via Saco dos Limões;;False;https://www.consorciofenix.com.br/horarios/carianos-via-saco-dos-limoes,183
+fenix;772;Chico Mendes;;False;https://www.consorciofenix.com.br/horarios/chico-mendes,772
+fenix;V-663;Coloninha via Araci Vaz Callado;;False;https://www.consorciofenix.com.br/horarios/coloninha-via-araci-vaz-callado,V-663
+fenix;663;Coloninha via Araci Vaz Callado;;False;https://www.consorciofenix.com.br/horarios/coloninha-via-araci-vaz-callado,663
+fenix;630;Corredor Continente;;False;https://www.consorciofenix.com.br/horarios/corredor-continente,630
+fenix;V-630;Corredor Continente;;False;https://www.consorciofenix.com.br/horarios/corredor-continente,V-630
+fenix;664;Itaguaçu;;False;https://www.consorciofenix.com.br/horarios/itaguacu,664
+fenix;V-670;Monte Cristo;;False;https://www.consorciofenix.com.br/horarios/monte-cristo,V-670
+fenix;670;Monte Cristo;;False;https://www.consorciofenix.com.br/horarios/monte-cristo,670
+fenix;672;Monte Cristo via Esc. Edith Gama Ramos;;False;https://www.consorciofenix.com.br/horarios/monte-cristo-via-esc-edith-gama-ramos,672
+fenix;764;Monte Serrat;;False;https://www.consorciofenix.com.br/horarios/monte-serrat,764
+fenix;V-764;Monte Serrat via NEIM Evandro Sousa;;False;https://www.consorciofenix.com.br/horarios/monte-serrat-via-neim-evandro-sousa,V-764
+fenix;160;Morro da Cruz;;False;https://www.consorciofenix.com.br/horarios/morro-da-cruz,160
+fenix;161;Morro da Penitenciária;;False;https://www.consorciofenix.com.br/horarios/morro-da-penitenciaria,161
+fenix;765;Morro da Queimada;;False;https://www.consorciofenix.com.br/horarios/morro-da-queimada,765
+fenix;766;Morro do 25;;False;https://www.consorciofenix.com.br/horarios/morro-do-25,766
+fenix;760;Morro do Geraldo;;False;https://www.consorciofenix.com.br/horarios/morro-do-geraldo,760
+fenix;768;Morro do Horácio;;False;https://www.consorciofenix.com.br/horarios/morro-do-horacio,768
+fenix;769;Morro Nova Trento;;False;https://www.consorciofenix.com.br/horarios/morro-nova-trento,769
+fenix;186;Multi-hospital via Túnel;;False;https://www.consorciofenix.com.br/horarios/multi-hospital-via-tunel,186
+fenix;460;Porto da Lagoa;;False;https://www.consorciofenix.com.br/horarios/porto-da-lagoa,460
+fenix;467;Tapera / Saco dos Limões;;False;https://www.consorciofenix.com.br/horarios/tapera-saco-dos-limoes,467
+fenix;461;Tapera via Túnel;;False;https://www.consorciofenix.com.br/horarios/tapera-via-tunel,461
+fenix;154;TICEN / Carvoeira via Pantanal;;False;https://www.consorciofenix.com.br/horarios/ticen-carvoeira-via-pantanal,154
+fenix;188;TICEN / UFSC;;False;https://www.consorciofenix.com.br/horarios/ticen-ufsc,188
+fenix;431;TICEN / Aeroporto;;False;https://www.consorciofenix.com.br/horarios/ticen-aeroporto,431
+fenix;104;TICEN / Itacorubi via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/ticen-itacorubi-via-mauro-ramos,104
+fenix;476;TICEN / Tapera;;False;https://www.consorciofenix.com.br/horarios/ticen-tapera,476
+fenix;191;TITRI / TICEN via Transcaeira;;False;https://www.consorciofenix.com.br/horarios/titri-ticen-via-transcaeira,191
+fenix;184;UDESC via Beira Mar;;False;https://www.consorciofenix.com.br/horarios/udesc-via-beira-mar,184
+fenix;671;Vila / Promorar;;False;https://www.consorciofenix.com.br/horarios/vila-promorar,671
+fenix;V-671;Vila / Promorar;;False;https://www.consorciofenix.com.br/horarios/vila-promorar,V-671
+fenix;761;Vila Aparecida;;False;https://www.consorciofenix.com.br/horarios/vila-aparecida,761
+fenix;137;Volta ao Morro Norte via H.U.;;False;https://www.consorciofenix.com.br/horarios/volta-ao-morro-norte-via-hu,137
+fenix;135;Volta ao Morro Norte via Lauro Linhares;;False;https://www.consorciofenix.com.br/horarios/volta-ao-morro-norte-via-lauro-linhares,135
+fenix;136;Volta ao Morro Sul via H.U.;;False;https://www.consorciofenix.com.br/horarios/volta-ao-morro-sul-via-hu,136
+fenix;138;Volta ao Morro Sul via Lauro Linhares;;False;https://www.consorciofenix.com.br/horarios/volta-ao-morro-sul-via-lauro-linhares,138
+fenix;601;Circular Abraão / Estreito;;False;https://www.consorciofenix.com.br/horarios/circular-abraao-estreito,601
+fenix;291;Circular Canasvieiras / Praia Brava;;False;https://www.consorciofenix.com.br/horarios/circular-canasvieiras-praia-brava,291
+fenix;605;Circular Estreito / Abraão;;False;https://www.consorciofenix.com.br/horarios/circular-estreito-abraao,605
+fenix;296;Circular Santinho Ingleses;;False;https://www.consorciofenix.com.br/horarios/circular-santinho-ingleses,296
+fenix;294;Interpraias;;False;https://www.consorciofenix.com.br/horarios/interpraias,294
+fenix;100;Madrugadão Centro - UFSC Norte;;False;https://www.consorciofenix.com.br/horarios/madrugadao-centro-ufsc-norte,100
+fenix;102;Madrugadão Centro / UFSC Sul;;False;https://www.consorciofenix.com.br/horarios/madrugadao-centro-ufsc-sul,102
+fenix;600;Madrugadão Continente Norte;;False;https://www.consorciofenix.com.br/horarios/madrugadao-continente-norte,600
+fenix;604;Madrugadão Continente Sul;;False;https://www.consorciofenix.com.br/horarios/madrugadao-continente-sul,604
+fenix;300;Madrugadão Leste;;False;https://www.consorciofenix.com.br/horarios/madrugadao-leste,300
+fenix;201;Madrugadão Norte - Jurerê / Canasvieiras;;False;https://www.consorciofenix.com.br/horarios/madrugadao-norte-jurere-canasvieiras,201
+fenix;200;Madrugadão Norte - Rio Vermelho / Santinho;;False;https://www.consorciofenix.com.br/horarios/madrugadao-norte-rio-vermelho-santinho,200
+fenix;301;Madrugadão Norte - Santo Antônio / TICAN;;False;https://www.consorciofenix.com.br/horarios/madrugadao-norte-santo-antonio-tican,301
+fenix;500;Madrugadão Sul - Pântano do Sul;;False;https://www.consorciofenix.com.br/horarios/madrugadao-sul-pantano-do-sul,500
+fenix;501;Madrugadão Sul - Ribeirão;;False;https://www.consorciofenix.com.br/horarios/madrugadao-sul-ribeirao,501
+fenix;720;Monte Serrat - Serrinha;;False;https://www.consorciofenix.com.br/horarios/monte-serrat-serrinha,720
+fenix;722;Morro do 25 - Morro da Cruz;;False;https://www.consorciofenix.com.br/horarios/morro-do-25-morro-da-cruz,722
+fenix;721;Morro do Horácio - Saco dos Limões;;False;https://www.consorciofenix.com.br/horarios/morro-do-horacio-saco-dos-limoes,721
+fenix;D-564;Pântano do Sul;;False;https://www.consorciofenix.com.br/horarios/pantano-do-sul,D-564
+fenix;D-565;Ribeirão da Ilha;;False;https://www.consorciofenix.com.br/horarios/ribeirao-da-ilha,D-565
+fenix;D-260;TICEN / Cachoeira do Bom Jesus via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/ticen-cachoeira-do-bom-jesus-via-mauro-ramos,D-260
+fenix;D-264;TICEN / Ingleses via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/ticen-ingleses-via-mauro-ramos,D-264
+fenix;D-266;TICEN / Praia Brava via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/ticen-praia-brava-via-mauro-ramos,D-266
+fenix;D-267;TICEN / Rio Vermelho via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/ticen-rio-vermelho-via-mauro-ramos,D-267
+fenix;2120;Executivo Barra da Lagoa;;True;https://www.consorciofenix.com.br/horarios/executivo-barra-da-lagoa,2120
+fenix;1126;Executivo Cachoeira;;True;https://www.consorciofenix.com.br/horarios/executivo-cachoeira,1126
+fenix;4124;Executivo Caieira da Barra do Sul via Tapera;;True;https://www.consorciofenix.com.br/horarios/executivo-caieira-da-barra-do-sul-via-tapera,4124
+fenix;1120;Executivo Canasvieiras;;True;https://www.consorciofenix.com.br/horarios/executivo-canasvieiras,1120
+fenix;1128;Executivo Costa do Moçambique;;True;https://www.consorciofenix.com.br/horarios/executivo-costa-do-mocambique,1128
+fenix;1132;Executivo Costa do Moçambique via Vargem Grande;;True;https://www.consorciofenix.com.br/horarios/executivo-costa-do-mocambique-via-vargem-grande,1132
+fenix;1127;Executivo Gaivotas;;True;https://www.consorciofenix.com.br/horarios/executivo-gaivotas,1127
+fenix;1121;Executivo Ingleses / Santinho;;True;https://www.consorciofenix.com.br/horarios/executivo-ingleses-santinho,1121
+fenix;1123;Executivo Jurerê;;True;https://www.consorciofenix.com.br/horarios/executivo-jurere,1123
+fenix;1129;Executivo Muquém;;True;https://www.consorciofenix.com.br/horarios/executivo-muquem,1129
+fenix;4120;Executivo Pântano do Sul via Eucaliptos;;True;https://www.consorciofenix.com.br/horarios/executivo-pantano-do-sul-via-eucaliptos,4120
+fenix;4125;Executivo Pântano do Sul via Gramal;;True;https://www.consorciofenix.com.br/horarios/executivo-pantano-do-sul-via-gramal,4125
+fenix;1122;Executivo Praia Brava;;True;https://www.consorciofenix.com.br/horarios/executivo-praia-brava,1122
+fenix;4123;Executivo Ribeirão da Ilha;;True;https://www.consorciofenix.com.br/horarios/executivo-ribeirao-da-ilha,4123
+fenix;1125;Executivo Rio Vermelho;;True;https://www.consorciofenix.com.br/horarios/executivo-rio-vermelho,1125
+fenix;673;Ponte Viva;;False;https://www.consorciofenix.com.br/horarios/ponte-viva,673
+fenix;276;Balneário Canasvieiras;;False;https://www.consorciofenix.com.br/horarios/balneario-canasvieiras,276
+fenix;277;Balneário Ingleses;;False;https://www.consorciofenix.com.br/horarios/balneario-ingleses,277
+fenix;280;Cachoeira / TICAN;;False;https://www.consorciofenix.com.br/horarios/cachoeira-tican,280
+fenix;260;Cachoeira do Bom Jesus;;False;https://www.consorciofenix.com.br/horarios/cachoeira-do-bom-jesus,260
+fenix;261;Capivari;;False;https://www.consorciofenix.com.br/horarios/capivari,261
+fenix;V-261;Capivari via SC-403;;False;https://www.consorciofenix.com.br/horarios/capivari-via-sc-403,V-261
+fenix;262;Circular Canasvieiras;;False;https://www.consorciofenix.com.br/horarios/circular-canasvieiras,262
+fenix;285;Circular Moçambique;;False;https://www.consorciofenix.com.br/horarios/circular-mocambique,285
+fenix;288;Circular Rio Vermelho;;False;https://www.consorciofenix.com.br/horarios/circular-rio-vermelho,288
+fenix;281;Costa do Moçambique;;False;https://www.consorciofenix.com.br/horarios/costa-do-mocambique,281
+fenix;250;Forte / Canasvieiras;;False;https://www.consorciofenix.com.br/horarios/forte-canasvieiras,250
+fenix;V-250;Forte / Canasvieiras via Col. Virgílio Várzea;;False;https://www.consorciofenix.com.br/horarios/forte-canasvieiras-via-col-virgilio-varzea,V-250
+fenix;263;Gaivotas;;False;https://www.consorciofenix.com.br/horarios/gaivotas,263
+fenix;269;Moçambique via Rua Alzira Rosa Aguiar;;False;https://www.consorciofenix.com.br/horarios/mocambique-via-rua-alzira-rosa-aguiar,269
+fenix;265;Ponta das Canas;;False;https://www.consorciofenix.com.br/horarios/ponta-das-canas,265
+fenix;266;Praia Brava;;False;https://www.consorciofenix.com.br/horarios/praia-brava,266
+fenix;267;Rio Vermelho;;False;https://www.consorciofenix.com.br/horarios/rio-vermelho,267
+fenix;287;Rio Vermelho via Vargem Grande;;False;https://www.consorciofenix.com.br/horarios/rio-vermelho-via-vargem-grande,287
+fenix;264;Santinho via Ingleses;;False;https://www.consorciofenix.com.br/horarios/santinho-via-ingleses,264
+fenix;268;Sítio de Baixo;;False;https://www.consorciofenix.com.br/horarios/sitio-de-baixo,268
+fenix;274;Tulipas Vermelhas via Muquém;;False;https://www.consorciofenix.com.br/horarios/tulipas-vermelhas-via-muquem,274
+fenix;283;Vargem do Bom Jesus;;False;https://www.consorciofenix.com.br/horarios/vargem-do-bom-jesus,283
+fenix;270;Vargem Grande;;False;https://www.consorciofenix.com.br/horarios/vargem-grande,270
+fenix;289;Circular Vargem Grande via Rio Vermelho;;False;https://www.consorciofenix.com.br/horarios/circular-vargem-grande-via-rio-vermelho,289
+fenix;282;Vargem Pequena;;False;https://www.consorciofenix.com.br/horarios/vargem-pequena,282
+fenix;V-282;Vargem Pequena via Esc. Prof. Zulma Freitas;;False;https://www.consorciofenix.com.br/horarios/vargem-pequena-via-esc-prof-zulma-freitas,V-282
+fenix;846;Cacupé;;False;https://www.consorciofenix.com.br/horarios/cacupe,846
+fenix;V-846;Cacupé via Caminho dos Açores;;False;https://www.consorciofenix.com.br/horarios/cacupe-via-caminho-dos-acores,V-846
+fenix;170;Caminho da Cruz via João Paulo;;False;https://www.consorciofenix.com.br/horarios/caminho-da-cruz-via-joao-paulo,170
+fenix;151;Centro Administrativo;;False;https://www.consorciofenix.com.br/horarios/centro-administrativo,151
+fenix;164;Córrego Grande via Poção;;False;https://www.consorciofenix.com.br/horarios/corrego-grande-via-pocao,164
+fenix;165;Itacorubi;;False;https://www.consorciofenix.com.br/horarios/itacorubi,165
+fenix;169;Monte Verde via Mané Vicente;;False;https://www.consorciofenix.com.br/horarios/monte-verde-via-mane-vicente,169
+fenix;173;Morro do Quilombo;;False;https://www.consorciofenix.com.br/horarios/morro-do-quilombo,173
+fenix;V-173;Morro do Quilombo via SC 404;;False;https://www.consorciofenix.com.br/horarios/morro-do-quilombo-via-sc-404,V-173
+fenix;178;Saco Grande Retorno SC-401;;False;https://www.consorciofenix.com.br/horarios/saco-grande-retorno-sc-401,178
+fenix;176;Saco Grande via HU;;False;https://www.consorciofenix.com.br/horarios/saco-grande-via-hu,176
+fenix;174;Saco Grande via João Paulo;;False;https://www.consorciofenix.com.br/horarios/saco-grande-via-joao-paulo,174
+fenix;V-174;Saco Grande via João Paulo / Barreira do Janga;;False;https://www.consorciofenix.com.br/horarios/saco-grande-via-joao-paulo-barreira-do-janga,V-174
+fenix;177;Santa Mônica;;False;https://www.consorciofenix.com.br/horarios/santa-monica,177
+fenix;179;Serrinha;;False;https://www.consorciofenix.com.br/horarios/serrinha,179
+fenix;155;Sol Nascente;;False;https://www.consorciofenix.com.br/horarios/sol-nascente,155
+fenix;470;Tapera / TITRI;;False;https://www.consorciofenix.com.br/horarios/tapera-titri,470
+fenix;180;TITRI / Pantanal via Carvoeira;;False;https://www.consorciofenix.com.br/horarios/titri-pantanal-via-carvoeira,180
+fenix;366;Barra do Sambaqui via Padre Rohr;;False;https://www.consorciofenix.com.br/horarios/barra-do-sambaqui-via-padre-rohr,366
+fenix;181;Cacupé / João Paulo;;False;https://www.consorciofenix.com.br/horarios/cacupe-joao-paulo,181
+fenix;940;Canasvieiras / Santo Antônio via Jurerê;;False;https://www.consorciofenix.com.br/horarios/canasvieiras-santo-antonio-via-jurere,940
+fenix;273;Circular Ratones;;False;https://www.consorciofenix.com.br/horarios/circular-ratones,273
+fenix;271;Daniela;;False;https://www.consorciofenix.com.br/horarios/daniela,271
+fenix;272;Jurerê;;False;https://www.consorciofenix.com.br/horarios/jurere,272
+fenix;365;Sambaqui;;False;https://www.consorciofenix.com.br/horarios/sambaqui,365
+fenix;230;TICAN / Gama D'Eça via TITRI;;False;https://www.consorciofenix.com.br/horarios/tican-gama-deca-via-titri,230
+fenix;224;TICAN / TITRI via Virgílio Várzea;;False;https://www.consorciofenix.com.br/horarios/tican-titri-via-virgilio-varzea,224
+fenix;235;TICAN / UFSC via Beira Mar;;False;https://www.consorciofenix.com.br/horarios/tican-ufsc-via-beira-mar,235
+fenix;233;TICAN / UFSC via Santa Mônica;;False;https://www.consorciofenix.com.br/horarios/tican-ufsc-via-santa-monica,233
+fenix;210;TICAN / TICEN Direto;;False;https://www.consorciofenix.com.br/horarios/tican-ticen-direto,210
+fenix;221;TICAN / TICEN via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/tican-ticen-via-mauro-ramos,221
+fenix;231;TICAN / TICEN via TITRI;;False;https://www.consorciofenix.com.br/horarios/tican-ticen-via-titri,231
+fenix;840;TICAN / TILAG via Barra da Lagoa;;False;https://www.consorciofenix.com.br/horarios/tican-tilag-via-barra-da-lagoa,840
+fenix;132;TITRI / TICEN via Gama D'Eça / H.I;;False;https://www.consorciofenix.com.br/horarios/titri-ticen-via-gama-deca-hi,132
+fenix;850;TILAG / Rio Vermelho via Cidade da Barra;;False;https://www.consorciofenix.com.br/horarios/tilag-rio-vermelho-via-cidade-da-barra,850
+fenix;320;TILAG / TICEN via Beira Mar;;False;https://www.consorciofenix.com.br/horarios/tilag-ticen-via-beira-mar,320
+fenix;330;TILAG / TICEN via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/tilag-ticen-via-mauro-ramos,330
+fenix;841;TILAG / TIRIO;;False;https://www.consorciofenix.com.br/horarios/tilag-tirio,841
+fenix;843;TILAG / TIRIO via LIC;;False;https://www.consorciofenix.com.br/horarios/tilag-tirio-via-lic,843
+fenix;845;TILAG / TITRI via Córrego Grande;;False;https://www.consorciofenix.com.br/horarios/tilag-titri-via-corrego-grande,845
+fenix;333;TILAG / TITRI via Madre Benvenuta;;False;https://www.consorciofenix.com.br/horarios/tilag-titri-via-madre-benvenuta,333
+fenix;410;TIRIO / TICEN Direto;;False;https://www.consorciofenix.com.br/horarios/tirio-ticen-direto,410
+fenix;430;TIRIO / TICEN via Costeira;;False;https://www.consorciofenix.com.br/horarios/tirio-ticen-via-costeira,430
+fenix;847;TIRIO / TITRI via UFSC;;False;https://www.consorciofenix.com.br/horarios/tirio-titri-via-ufsc,847
+fenix;212;TISAN / TICEN Direto;;False;https://www.consorciofenix.com.br/horarios/tisan-ticen-direto,212
+fenix;332;TISAN / TICEN via Beira Mar;;False;https://www.consorciofenix.com.br/horarios/tisan-ticen-via-beira-mar,332
+fenix;331;TISAN / TICEN via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/tisan-ticen-via-mauro-ramos,331
+fenix;110;TITRI / TICEN Direto;;False;https://www.consorciofenix.com.br/horarios/titri-ticen-direto,110
+fenix;131;TITRI / TICEN via Gama D'Eça;;False;https://www.consorciofenix.com.br/horarios/titri-ticen-via-gama-deca,131
+fenix;133;TITRI / TICEN via Mauro Ramos;;False;https://www.consorciofenix.com.br/horarios/titri-ticen-via-mauro-ramos,133
+fenix;560;Armação;;False;https://www.consorciofenix.com.br/horarios/armacao,560
+fenix;561;Caieira da Barra do Sul;;False;https://www.consorciofenix.com.br/horarios/caieira-da-barra-do-sul,561
+fenix;462;Campeche;;False;https://www.consorciofenix.com.br/horarios/campeche,462
+fenix;562;Costa de Cima;;False;https://www.consorciofenix.com.br/horarios/costa-de-cima,562
+fenix;V-562;Costa de Cima via Costa de Dentro;;False;https://www.consorciofenix.com.br/horarios/costa-de-cima-via-costa-de-dentro,V-562
+fenix;563;Costa de Dentro;;False;https://www.consorciofenix.com.br/horarios/costa-de-dentro,563
+fenix;V-563;Costa de Dentro via Costa de Cima;;False;https://www.consorciofenix.com.br/horarios/costa-de-dentro-via-costa-de-cima,V-563
+fenix;473;Morro das Pedras via Eucaliptos;;False;https://www.consorciofenix.com.br/horarios/morro-das-pedras-via-eucaliptos,473
+fenix;474;Morro das Pedras via Gramal;;False;https://www.consorciofenix.com.br/horarios/morro-das-pedras-via-gramal,474
+fenix;564;Pântano do Sul;;False;https://www.consorciofenix.com.br/horarios/pantano-do-sul,564
+fenix;565;Ribeirão da Ilha;;False;https://www.consorciofenix.com.br/horarios/ribeirao-da-ilha,565
+fenix;469;Tapera / TIRIO;;False;https://www.consorciofenix.com.br/horarios/tapera-tirio,469
+fenix;477;TIRIO / Aeroporto via Tapera;;False;https://www.consorciofenix.com.br/horarios/tirio-aeroporto-via-tapera,477
+fenix;V-468;TIRIO / Multihospital via Aeroporto;;False;https://www.consorciofenix.com.br/horarios/tirio-multihospital-via-aeroporto,V-468
+fenix;468;TIRIO / Multihospital;;False;https://www.consorciofenix.com.br/horarios/tirio-multihospital,468
+fenix;360;Barra da Lagoa;;False;https://www.consorciofenix.com.br/horarios/barra-da-lagoa,360
+fenix;V-360;Barra da Lagoa via Terminal Lacustre;;False;https://www.consorciofenix.com.br/horarios/barra-da-lagoa-via-terminal-lacustre,V-360
+fenix;362;Canto dos Araçás;;False;https://www.consorciofenix.com.br/horarios/canto-dos-aracas,362
+fenix;363;Joaquina;;False;https://www.consorciofenix.com.br/horarios/joaquina,363
+fenix;364;Osni Ortiga;;False;https://www.consorciofenix.com.br/horarios/osni-ortiga,364
+jotur;353;ALTO ARIRIU / PONTE DO IMARUIM VIA LOTEAMENTO SCHUTZ/ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=353&nome=ALTO+ARIRIU+%2F+PONTE+DO+IMARUIM+VIA+LOTEAMENTO+SCHUTZ%2FANICETO+ZACCHI
+jotur;0355;ARIRIU / FLORIANÓPOLIS VIA PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0355&nome=ARIRIU+%2F+FLORIAN%C3%93POLIS+VIA+PONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;0384;ARIRIU / FLORIANÓPOLIS VIA PONTE DO IMARUIM/IVO SILVEIRA (EXECUTIVO);;True;https://www2.jotur.com.br/linhas/?linha=0384&nome=ARIRIU+%2F+FLORIAN%C3%93POLIS+VIA+PONTE+DO+IMARUIM%2FIVO+SILVEIRA+%28EXECUTIVO%29
+jotur;09;ARIRIU FORMIGA / COLÉGIO ENSEADA VIA PONTAL/PRAIA DE FORA/MARIVONE;;False;https://www2.jotur.com.br/linhas/?linha=09&nome=ARIRIU+FORMIGA+%2F+COL%C3%89GIO+ENSEADA+VIA+PONTAL%2FPRAIA+DE+FORA%2FMARIVONE
+jotur;3036;ARIRIU FORMIGA / COLÉGIO JOÃO SILVEIRA (ARIRIU) VIA GUARDA;;False;https://www2.jotur.com.br/linhas/?linha=3036&nome=ARIRIU+FORMIGA+%2F+COL%C3%89GIO+JO%C3%83O+SILVEIRA+%28ARIRIU%29+VIA+GUARDA
+jotur;6751;ARIRIU FORMIGA / FPOLIS VIA GUARDA/BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=6751&nome=ARIRIU+FORMIGA+%2F+FPOLIS+VIA+GUARDA%2FBR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;0362;BARRA / FLORIANÓPOLIS VIA PACHECOS/PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0362&nome=BARRA+%2F+FLORIAN%C3%93POLIS+VIA+PACHECOS%2FPONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;03616;BARRA / FPOLIS VIA PCH/MIRIAM/BR 101/HOSP/ IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=03616&nome=BARRA+%2F+FPOLIS+VIA+PCH%2FMIRIAM%2FBR+101%2FHOSP%2F+IVO+SILVEIRA
+jotur;03611;BARRA / FPOLIS VIA RIO GRANDE/CENTRO PH/BR 101/HOSP REG/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=03611&nome=BARRA+%2F+FPOLIS+VIA+RIO+GRANDE%2FCENTRO+PH%2FBR+101%2FHOSP+REG%2FIVO+SILVEIRA
+jotur;03615;BARRA / FPOLIS VIA RIO GRANDE/CENTRO PH/BR 101/VIA EXPRESSA/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=03615&nome=BARRA+%2F+FPOLIS+VIA+RIO+GRANDE%2FCENTRO+PH%2FBR+101%2FVIA+EXPRESSA%2FIVO+SILV
+jotur;0369;BARRA / FPOLIS VIA RIO GRANDE/PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0369&nome=BARRA+%2F+FPOLIS+VIA+RIO+GRANDE%2FPONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;213;BARRA / PALHOÇA (PRAÇA) VIA RIO GRANDE;;False;https://www2.jotur.com.br/linhas/?linha=213&nome=BARRA+%2F+PALHO%C3%87A+%28PRA%C3%87A%29+VIA+RIO+GRANDE
+jotur;223;BARRA / PALHOÇA VIA PACHECOS;;False;https://www2.jotur.com.br/linhas/?linha=223&nome=BARRA+%2F+PALHO%C3%87A+VIA+PACHECOS
+jotur;222;BARRA / PONTE DO IMARUIM VIA PACHECOS/ELZA LUCHI;;False;https://www2.jotur.com.br/linhas/?linha=222&nome=BARRA+%2F+PONTE+DO+IMARUIM+VIA+PACHECOS%2FELZA+LUCHI
+jotur;0270;BARRA DO ARIRIU / BARREIROS VIA PACHECOS/RIO GRANDE/MARGINAL BR 101;;False;https://www2.jotur.com.br/linhas/?linha=0270&nome=BARRA+DO+ARIRIU+%2F+BARREIROS+VIA+PACHECOS%2FRIO+GRANDE%2FMARGINAL+BR+101
+jotur;403;BELA VISTA / COLEGIO CLAUDETE VIA ANICETO ZACCHI/PONTE DO IMARUIM;;False;https://www2.jotur.com.br/linhas/?linha=403&nome=BELA+VISTA+%2F+COLEGIO+CLAUDETE+VIA+ANICETO+ZACCHI%2FPONTE+DO+IMARUIM
+jotur;4034;BELA VISTA / COLÉGIO CLAUDETE VIA ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=4034&nome=BELA+VISTA+%2F+COL%C3%89GIO+CLAUDETE+VIA+ANICETO+ZACCHI
+jotur;71613;BELA VISTA / FLORIANÓPOLIS VIA BR 101/HOSPITAL REGIONAL/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=71613&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FHOSPITAL+REGIONAL%2FIVO+SILVEIRA
+jotur;71610;BELA VISTA / FLORIANÓPOLIS VIA BR 101/VIA EXPRESSA (DIRETO);;False;https://www2.jotur.com.br/linhas/?linha=71610&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FVIA+EXPRESSA+%28DIRETO%29
+jotur;7165;BELA VISTA / FLORIANÓPOLIS VIA BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7165&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;7169;BELA VISTA / FLORIANÓPOLIS VIA MARGINAL BR 101/VIA EXPRESSA;;False;https://www2.jotur.com.br/linhas/?linha=7169&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+MARGINAL+BR+101%2FVIA+EXPRESSA
+jotur;7161;BELA VISTA / FLORIANÓPOLIS VIA PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7161&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+PONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;7166;BELA VISTA / FLORIANÓPOLIS VIA PORTAL/BR 101/HOSP REG/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7166&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+PORTAL%2FBR+101%2FHOSP+REG%2FIVO+SILVEIRA
+jotur;7164;BELA VISTA / FLORIANÓPOLIS VIA PORTAL/BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7164&nome=BELA+VISTA+%2F+FLORIAN%C3%93POLIS+VIA+PORTAL%2FBR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;7162;BELA VISTA / FPOLIS VIA CENTRO DE PALHOÇA/BR 101/VIA EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7162&nome=BELA+VISTA+%2F+FPOLIS+VIA+CENTRO+DE+PALHO%C3%87A%2FBR+101%2FVIA+EXP%2FIVO+SILVEIRA
+jotur;71615;BELA VISTA / FPOLIS VIA CENTRO DE PALHOÇA/MARG BR101/HOSP REG/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=71615&nome=BELA+VISTA+%2F+FPOLIS+VIA+CENTRO+DE+PALHO%C3%87A%2FMARG+BR101%2FHOSP+REG%2FIVO+SILV
+jotur;71614;BELA VISTA / FPOLIS VIA P.IMARUIM/SÃO JOSÉ/IVO SILVEIRA /EXECUTIVO;;True;https://www2.jotur.com.br/linhas/?linha=71614&nome=BELA+VISTA+%2F+FPOLIS+VIA+P.IMARUIM%2FS%C3%83O+JOS%C3%89%2FIVO+SILVEIRA+%2FEXECUTIVO
+jotur;7163;BELA VISTA / FPOLIS VIA PORTAL/PONTE DO IMARUIM/SÃO JOSÉ/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7163&nome=BELA+VISTA+%2F+FPOLIS+VIA+PORTAL%2FPONTE+DO+IMARUIM%2FS%C3%83O+JOS%C3%89%2FIVO+SILVEIRA
+jotur;7168;BELA VISTA / FPOLIS VIA UPA/CENTRO PH/MARG BR 101/EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7168&nome=BELA+VISTA+%2F+FPOLIS+VIA+UPA%2FCENTRO+PH%2FMARG+BR+101%2FEXP%2FIVO+SILVEIRA
+jotur;40311;BELA VISTA / PONTE DO IMARUIM VIA ESCOLA MUNICIPAL/ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=40311&nome=BELA+VISTA+%2F+PONTE+DO+IMARUIM+VIA+ESCOLA+MUNICIPAL%2FANICETO+ZACCHI
+jotur;11340;BELA VISTA / SHOPPING CONTINENTE VIA PONTE DO IMARUIM/MARG BR 101;;False;https://www2.jotur.com.br/linhas/?linha=11340&nome=BELA+VISTA+%2F+SHOPPING+CONTINENTE+VIA+PONTE+DO+IMARUIM%2FMARG+BR+101
+jotur;8800;Biguaçu / Palhoça (Empresa Biguaçu);;False;https://www2.jotur.com.br/linhas/?linha=8800&nome=Bigua%C3%A7u+%2F+Palho%C3%A7a+%28Empresa+Bigua%C3%A7u%29
+jotur;02811;C.NOVO / FPOLIS VIA T.NOVA/JARDINS/B.VISTA/RUA PARANÁ/P.IMAR/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=02811&nome=C.NOVO+%2F+FPOLIS+VIA+T.NOVA%2FJARDINS%2FB.VISTA%2FRUA+PARAN%C3%81%2FP.IMAR%2FIVO+SILV
+jotur;1331;CD IMPERATRIZ / BIGUAÇU VIA MARGINAL BR 101;;False;https://www2.jotur.com.br/linhas/?linha=1331&nome=CD+IMPERATRIZ+%2F+BIGUA%C3%87U+VIA+MARGINAL+BR+101
+jotur;6203;CID UNIV CIRC VIA AQUÁRIUS/PALHOÇA/P.IMARUIM/ELDORADO/IFSC;;False;https://www2.jotur.com.br/linhas/?linha=6203&nome=CID+UNIV+CIRC+VIA+AQU%C3%81RIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FELDORADO%2FIFSC
+jotur;6208;CID UNIV CIRC VIA AQUÁRIUS/PALHOÇA/P.IMARUIM/ELDORADO/TECNOPARK;;False;https://www2.jotur.com.br/linhas/?linha=6208&nome=CID+UNIV+CIRC+VIA+AQU%C3%81RIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FELDORADO%2FTECNOPARK
+jotur;6202;CID UNIV CIRC VIA AQUÁRIUS/PALHOÇA/P.IMARUIM/SENAI/ELDORADO/IFSC;;False;https://www2.jotur.com.br/linhas/?linha=6202&nome=CID+UNIV+CIRC+VIA+AQU%C3%81RIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FSENAI%2FELDORADO%2FIFSC
+jotur;11350;CID UNIV CIRC VIA AQUÁRIUS/PALHOÇA/P.IMARUIM/SHOP CONTINENTE/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=11350&nome=CID+UNIV+CIRC+VIA+AQU%C3%81RIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FSHOP+CONTINENTE%2FELDORADO
+jotur;6209;CID UNIV CIRC VIA AQUÁRIUS/PALHOÇA/PONTE DO IMARUIM/SENAI/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=6209&nome=CID+UNIV+CIRC+VIA+AQU%C3%81RIUS%2FPALHO%C3%87A%2FPONTE+DO+IMARUIM%2FSENAI%2FELDORADO
+jotur;6531;CIDADE UNIVERSITÁRIA / FLORIANÓPOLIS VIA AQUÁRIUS/FAZENDA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=6531&nome=CIDADE+UNIVERSIT%C3%81RIA+%2F+FLORIAN%C3%93POLIS+VIA+AQU%C3%81RIUS%2FFAZENDA%2FIVO+SILVEIRA
+jotur;620;CIDADE UNIVERSITÁRIA CIRC VIA AQUARIUS/PALHOÇA/P.IMARUIM/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=620&nome=CIDADE+UNIVERSIT%C3%81RIA+CIRC+VIA+AQUARIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FELDORADO
+jotur;3038;COLÉGIO JOÃO SILVEIRA (ARIRIU) / COLÉGIO DA GUARDA;;False;https://www2.jotur.com.br/linhas/?linha=3038&nome=COL%C3%89GIO+JO%C3%83O+SILVEIRA+%28ARIRIU%29+%2F+COL%C3%89GIO+DA+GUARDA
+jotur;11150;ENSEADA / FLORIANÓPOLIS VIA MARG BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=11150&nome=ENSEADA+%2F+FLORIAN%C3%93POLIS+VIA+MARG+BR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;11120;ENSEADA / FPOLIS VIA MARIVONE/PRAIA DE FORA/CENTRO PH/P.IMARUIM/I.SILV;;False;https://www2.jotur.com.br/linhas/?linha=11120&nome=ENSEADA+%2F+FPOLIS+VIA+MARIVONE%2FPRAIA+DE+FORA%2FCENTRO+PH%2FP.IMARUIM%2FI.SILV
+jotur;11371;ENSEADA / SHOPPING CONTINENTE VIA MARIVONE/PONTAL/PONTE DO IMARUIM;;False;https://www2.jotur.com.br/linhas/?linha=11371&nome=ENSEADA+%2F+SHOPPING+CONTINENTE+VIA+MARIVONE%2FPONTAL%2FPONTE+DO+IMARUIM
+jotur;11370;ENSEADA / SHOPPING CONTINENTE VIA MARIVONE/PONTE DO IMARUIM;;False;https://www2.jotur.com.br/linhas/?linha=11370&nome=ENSEADA+%2F+SHOPPING+CONTINENTE+VIA+MARIVONE%2FPONTE+DO+IMARUIM
+jotur;6330;ENT DO ELDORADO/FLORIANÓPOLIS VIA ELDORADO/MARG BR 101/VIA EXP/I.SILV;;False;https://www2.jotur.com.br/linhas/?linha=6330&nome=ENT+DO+ELDORADO%2FFLORIAN%C3%93POLIS+VIA+ELDORADO%2FMARG+BR+101%2FVIA+EXP%2FI.SILV
+jotur;0250;ENT ELD / FPOLIS VIA ELDORADO/CID UNIV/AQUÁRIUS/FAZ/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0250&nome=ENT+ELD+%2F+FPOLIS+VIA+ELDORADO%2FCID+UNIV%2FAQU%C3%81RIUS%2FFAZ%2FIVO+SILVEIRA
+jotur;62012;ENT ELD CIRC VIA ELD/CID UNIV/AQU/PALHOÇA/P.IMAR/ELD/SENAI/CID UNIV;;False;https://www2.jotur.com.br/linhas/?linha=62012&nome=ENT+ELD+CIRC+VIA+ELD%2FCID+UNIV%2FAQU%2FPALHO%C3%87A%2FP.IMAR%2FELD%2FSENAI%2FCID+UNIV
+jotur;62014;ENT ELD CIRC VIA ELD/CID UNIV/PALHOÇA/P.IMAR/ELD/CID UNIV/IFSC;;False;https://www2.jotur.com.br/linhas/?linha=62014&nome=ENT+ELD+CIRC+VIA+ELD%2FCID+UNIV%2FPALHO%C3%87A%2FP.IMAR%2FELD%2FCID+UNIV%2FIFSC
+jotur;11353;ENT ELD CIRC VIA ELD/IFSC/CID UNIV/AQUÁRIUS/PH/P.IMAR/ELDO/SHOP CONT;;False;https://www2.jotur.com.br/linhas/?linha=11353&nome=ENT+ELD+CIRC+VIA+ELD%2FIFSC%2FCID+UNIV%2FAQU%C3%81RIUS%2FPH%2FP.IMAR%2FELDO%2FSHOP+CONT
+jotur;62013;ENT ELD CIRC VIA ELDORADO/IFSC/CID UNIV/AQU/PALHOÇA/P.IMAR/ELD/SENAI;;False;https://www2.jotur.com.br/linhas/?linha=62013&nome=ENT+ELD+CIRC+VIA+ELDORADO%2FIFSC%2FCID+UNIV%2FAQU%2FPALHO%C3%87A%2FP.IMAR%2FELD%2FSENAI
+jotur;6535;ENT ELDORADO / FPOLIS VIA ELD/IFSC/CID UNIV/AQUÁRIUS/FAZ/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=6535&nome=ENT+ELDORADO+%2F+FPOLIS+VIA+ELD%2FIFSC%2FCID+UNIV%2FAQU%C3%81RIUS%2FFAZ%2FIVO+SILVEIRA
+jotur;6534;ENT ELDORADO / FPOLIS VIA ELDORADO/CID UNIV/AQUÁRIUS/FAZENDA/IVO SIL;;False;https://www2.jotur.com.br/linhas/?linha=6534&nome=ENT+ELDORADO+%2F+FPOLIS+VIA+ELDORADO%2FCID+UNIV%2FAQU%C3%81RIUS%2FFAZENDA%2FIVO+SIL
+jotur;03617;ENT PACHECOS / FPOLIS VIA PCH/PEDREGAL/PF BARRA/RG/PH/BR/HR/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=03617&nome=ENT+PACHECOS+%2F+FPOLIS+VIA+PCH%2FPEDREGAL%2FPF+BARRA%2FRG%2FPH%2FBR%2FHR%2FIVO+SILV
+jotur;0366;ENT. DO PACHECOS / HR VIA/PACHECOS/RIO GRANDE/CENTRO PH/P.IMARUIM;;False;https://www2.jotur.com.br/linhas/?linha=0366&nome=ENT.+DO+PACHECOS+%2F+HR+VIA%2FPACHECOS%2FRIO+GRANDE%2FCENTRO+PH%2FP.IMARUIM
+jotur;6204;ENTRADA DO ELDORADO CIRC VIA ELD/CID UNIV/AQU/PALHOÇA/P.IMAR/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=6204&nome=ENTRADA+DO+ELDORADO+CIRC+VIA+ELD%2FCID+UNIV%2FAQU%2FPALHO%C3%87A%2FP.IMAR%2FELDORADO
+jotur;03613;ENTRADA VILA NOVA / FPOLIS VIA MIRIAM/BR 101/EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=03613&nome=ENTRADA+VILA+NOVA+%2F+FPOLIS+VIA+MIRIAM%2FBR+101%2FEXPRESSA%2FIVO+SILVEIRA
+jotur;8801;Executivo Biguaçu / Palhoça;;True;https://www2.jotur.com.br/linhas/?linha=8801&nome=Executivo+Bigua%C3%A7u+%2F+Palho%C3%A7a
+jotur;0260;FLORIANÓPOLIS / ÁREA INDUSTRIAL VIA IVO SILVEIRA/FAZENDA SANTO ANTÔNIO;;False;https://www2.jotur.com.br/linhas/?linha=0260&nome=FLORIAN%C3%93POLIS+%2F+%C3%81REA+INDUSTRIAL+VIA+IVO+SILVEIRA%2FFAZENDA+SANTO+ANT%C3%94NIO
+jotur;0359;FORMIGA / FPOLIS VIA GUARDA/ARIRIU/PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0359&nome=FORMIGA+%2F+FPOLIS+VIA+GUARDA%2FARIRIU%2FPONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;6755;FORMIGA / SHOPPING CONTINENTE VIA GUARDA/M.QUADROS/ARIRIU/P.IMARUIM;;False;https://www2.jotur.com.br/linhas/?linha=6755&nome=FORMIGA+%2F+SHOPPING+CONTINENTE+VIA+GUARDA%2FM.QUADROS%2FARIRIU%2FP.IMARUIM
+jotur;0350;GUARDA / FPOLIS VIA FORMIGA/GUARDA/ARIRIU/BR 101/VIA EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0350&nome=GUARDA+%2F+FPOLIS+VIA+FORMIGA%2FGUARDA%2FARIRIU%2FBR+101%2FVIA+EXP%2FIVO+SILVEIRA
+jotur;0352;GUARDA / FPOLIS VIA FORMIGA/GUARDA/ARIRIU/P.IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0352&nome=GUARDA+%2F+FPOLIS+VIA+FORMIGA%2FGUARDA%2FARIRIU%2FP.IMARUIM%2FIVO+SILVEIRA
+jotur;6754;GUARDA TAB / FPOLIS VIA CENTRO PH/BR 101/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=6754&nome=GUARDA+TAB+%2F+FPOLIS+VIA+CENTRO+PH%2FBR+101%2FIVO+SILV
+jotur;0356;GUARDA TABULEIRO/ SHOP CONT VIA FORMIGA/BR 101/CENTRO PH/P.IMA/MARG BR;;False;https://www2.jotur.com.br/linhas/?linha=0356&nome=GUARDA+TABULEIRO%2F+SHOP+CONT+VIA+FORMIGA%2FBR+101%2FCENTRO+PH%2FP.IMA%2FMARG+BR
+jotur;2020;HOSPITAL REGIONAL / FLORIANÓPOLIS VIA IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=2020&nome=HOSPITAL+REGIONAL+%2F+FLORIAN%C3%93POLIS+VIA+IVO+SILVEIRA
+jotur;6536;IFSC / FLORIANÓPOLIS VIA CID UNIV/AQUÁRIUS/FAZENDA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=6536&nome=IFSC+%2F+FLORIAN%C3%93POLIS+VIA+CID+UNIV%2FAQU%C3%81RIUS%2FFAZENDA%2FIVO+SILVEIRA
+jotur;62010;IFSC CIRC VIA CID UNIV/AQUARIUS/PH/P.IMARUIM/ELD/SENAI/CID UNIV/IFSC;;False;https://www2.jotur.com.br/linhas/?linha=62010&nome=IFSC+CIRC+VIA+CID+UNIV%2FAQUARIUS%2FPH%2FP.IMARUIM%2FELD%2FSENAI%2FCID+UNIV%2FIFSC
+jotur;6207;IFSC CIRC VIA CID UNIV/AQUÁRIUS/PALHOÇA/P.IMARUIM/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=6207&nome=IFSC+CIRC+VIA+CID+UNIV%2FAQU%C3%81RIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FELDORADO
+jotur;6205;IFSC CIRC VIA CID UNIV/AQUÁRIUS/PALHOÇA/P.IMARUIM/SENAI/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=6205&nome=IFSC+CIRC+VIA+CID+UNIV%2FAQU%C3%81RIUS%2FPALHO%C3%87A%2FP.IMARUIM%2FSENAI%2FELDORADO
+jotur;62011;IFSC CIRC VIA CIDADE UNIVERSITÁRIA/AQU/PH/P.IMAR/ELD/CID/IFSC;;False;https://www2.jotur.com.br/linhas/?linha=62011&nome=IFSC+CIRC+VIA+CIDADE+UNIVERSIT%C3%81RIA%2FAQU%2FPH%2FP.IMAR%2FELD%2FCID%2FIFSC
+jotur;11351;IFSC CIRCULAR VIA CID UNIV/AQU/PALHOCA/P.IMARUIM/SHOP CONT/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=11351&nome=IFSC+CIRCULAR+VIA+CID+UNIV%2FAQU%2FPALHOCA%2FP.IMARUIM%2FSHOP+CONT%2FELDORADO
+jotur;6760;IRINEU COMELLI / FLORIANÓPOLIS VIA IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=6760&nome=IRINEU+COMELLI+%2F+FLORIAN%C3%93POLIS+VIA+IVO+SILVEIRA
+jotur;71616;JAQUEIRA / FLORIANÓPOLIS VIA BR 101/HOSP REGIONAL/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=71616&nome=JAQUEIRA+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FHOSP+REGIONAL%2FIVO+SILVEIRA
+jotur;71612;JAQUEIRA / FLORIANÓPOLIS VIA BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=71612&nome=JAQUEIRA+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;7160;JAQUEIRA / FPOLIS VIA BELA VISTA/JARDINS/PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7160&nome=JAQUEIRA+%2F+FPOLIS+VIA+BELA+VISTA%2FJARDINS%2FPONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;4036;JAQUEIRA / PALHOÇA (PRAÇA) VIA BELA VISTA/PORTAL;;False;https://www2.jotur.com.br/linhas/?linha=4036&nome=JAQUEIRA+%2F+PALHO%C3%87A+%28PRA%C3%87A%29+VIA+BELA+VISTA%2FPORTAL
+jotur;7150;JARDIM AQUÁRIUS / FPOLIS VIA MARG.BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=7150&nome=JARDIM+AQU%C3%81RIUS+%2F+FPOLIS+VIA+MARG.BR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;0354;JOMAR / FPOLIS VIA FORMIGA/GUARDA/ARIRIU/BR 101/VIA EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0354&nome=JOMAR+%2F+FPOLIS+VIA+FORMIGA%2FGUARDA%2FARIRIU%2FBR+101%2FVIA+EXP%2FIVO+SILVEIRA
+jotur;311;JOMAR / GUARDA (POSTO DE SAÚDE);;False;https://www2.jotur.com.br/linhas/?linha=311&nome=JOMAR+%2F+GUARDA+%28POSTO+DE+SA%C3%9ADE%29
+jotur;0244;MADRI / FLORIANÓPOLIS VIA PAGANI/MARGINAL BR 101/EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0244&nome=MADRI+%2F+FLORIAN%C3%93POLIS+VIA+PAGANI%2FMARGINAL+BR+101%2FEXP%2FIVO+SILVEIRA
+jotur;11362;MORRETES / SHOP CONT VIA GD/PIN/PS/BR/PH/PI (SEMIDIRETO - VERAO);;False;https://www2.jotur.com.br/linhas/?linha=11362&nome=MORRETES+%2F+SHOP+CONT+VIA+GD%2FPIN%2FPS%2FBR%2FPH%2FPI+%28SEMIDIRETO+-+VERAO%29
+jotur;02410;MORRO DO GATO - FPOLIS VIA MADRI/PAGANI/AV. TORRES/BR 101/EXP (DIRETO);;False;https://www2.jotur.com.br/linhas/?linha=02410&nome=MORRO+DO+GATO+-+FPOLIS+VIA+MADRI%2FPAGANI%2FAV.+TORRES%2FBR+101%2FEXP+%28DIRETO%29
+jotur;5033;MORRO DO GATO / PALHOÇA (PRAÇA) VIA MADRI;;False;https://www2.jotur.com.br/linhas/?linha=5033&nome=MORRO+DO+GATO+%2F+PALHO%C3%87A+%28PRA%C3%87A%29+VIA+MADRI
+jotur;50313;MORRO DO GATO / PONTE DO IMARUIM VIA MADRI / ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=50313&nome=MORRO+DO+GATO+%2F+PONTE+DO+IMARUIM+VIA+MADRI+%2F+ANICETO+ZACCHI
+jotur;5023;MORRO DO GATO / PONTE DO IMARUIM VIA MADRI/ELZA LUCHI;;False;https://www2.jotur.com.br/linhas/?linha=5023&nome=MORRO+DO+GATO+%2F+PONTE+DO+IMARUIM+VIA+MADRI%2FELZA+LUCHI
+jotur;502;MORRO DO GATO / PONTE DO IMARUIM VIA PASSA VINTE/ELZA LUCHI;;False;https://www2.jotur.com.br/linhas/?linha=502&nome=MORRO+DO+GATO+%2F+PONTE+DO+IMARUIM+VIA+PASSA+VINTE%2FELZA+LUCHI
+jotur;11330;MORRO DO GATO / SHOP CONTINENTE VIA MADRI/PH/P.IMAR/COLÉGIO CLAUDETE;;False;https://www2.jotur.com.br/linhas/?linha=11330&nome=MORRO+DO+GATO+%2F+SHOP+CONTINENTE+VIA+MADRI%2FPH%2FP.IMAR%2FCOL%C3%89GIO+CLAUDETE
+jotur;5032;MORRO DO GATO/PONTE DO IMARUIM VIA PASSA VINTE / ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=5032&nome=MORRO+DO+GATO%2FPONTE+DO+IMARUIM+VIA+PASSA+VINTE+%2F+ANICETO+ZACCHI
+jotur;1332;NOVA PALHOÇA / BIGUAÇU VIA CENTRO DE PALHOÇA/ELZA LUCCHI/MARG BR 101;;False;https://www2.jotur.com.br/linhas/?linha=1332&nome=NOVA+PALHO%C3%87A+%2F+BIGUA%C3%87U+VIA+CENTRO+DE+PALHO%C3%87A%2FELZA+LUCCHI%2FMARG+BR+101
+jotur;1334;NOVA PALHOÇA / BIGUAÇU VIA CID. UNIVERSITÁRIA/MARG BR 101 (EXECUTIVO);;True;https://www2.jotur.com.br/linhas/?linha=1334&nome=NOVA+PALHO%C3%87A+%2F+BIGUA%C3%87U+VIA+CID.+UNIVERSIT%C3%81RIA%2FMARG+BR+101+%28EXECUTIVO%29
+jotur;1333;NOVA PALHOÇA / BIGUAÇU VIA MARGINAL BR 101 (EXECUTIVO);;True;https://www2.jotur.com.br/linhas/?linha=1333&nome=NOVA+PALHO%C3%87A+%2F+BIGUA%C3%87U+VIA+MARGINAL+BR+101+%28EXECUTIVO%29
+jotur;1330;NOVA PALHOÇA / BIGUAÇU VIA SUPER SANTOS/VIADUTO B.VISTA/MARG BR 101;;False;https://www2.jotur.com.br/linhas/?linha=1330&nome=NOVA+PALHO%C3%87A+%2F+BIGUA%C3%87U+VIA+SUPER+SANTOS%2FVIADUTO+B.VISTA%2FMARG+BR+101
+jotur;6350;NOVA PALHOÇA / FLORIANÓPOLIS VIA CENTRO PH/BR 101/EXPRESSA;;False;https://www2.jotur.com.br/linhas/?linha=6350&nome=NOVA+PALHO%C3%87A+%2F+FLORIAN%C3%93POLIS+VIA+CENTRO+PH%2FBR+101%2FEXPRESSA
+jotur;0381;NOVA PALHOÇA / FLORIANÓPOLIS VIA P.IMARUIM/BR101/FAZENDA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0381&nome=NOVA+PALHO%C3%87A+%2F+FLORIAN%C3%93POLIS+VIA+P.IMARUIM%2FBR101%2FFAZENDA%2FIVO+SILVEIRA
+jotur;0380;NOVA PALHOÇA / FLORIANÓPOLIS VIA PONTE DO IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0380&nome=NOVA+PALHO%C3%87A+%2F+FLORIAN%C3%93POLIS+VIA+PONTE+DO+IMARUIM%2FIVO+SILVEIRA
+jotur;03610;PACHECOS / FLORIANÓPOLIS VIA BR 101/HOSPITAL REGIONAL/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=03610&nome=PACHECOS+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FHOSPITAL+REGIONAL%2FIVO+SILVEIRA
+jotur;0360;PACHECOS / FLORIANÓPOLIS VIA BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0360&nome=PACHECOS+%2F+FLORIAN%C3%93POLIS+VIA+BR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;03612;PACHECOS / FPOLIS VIA PORTAL/V.NOVA/MIRIAM/BR 101/VIA EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=03612&nome=PACHECOS+%2F+FPOLIS+VIA+PORTAL%2FV.NOVA%2FMIRIAM%2FBR+101%2FVIA+EXP%2FIVO+SILVEIRA
+jotur;303;PALHOCA / A.FORMIGA CIRCULAR VIA ARIRIU/GUARDA (RETORNO ATE PALHOCA);;False;https://www2.jotur.com.br/linhas/?linha=303&nome=PALHOCA+%2F+A.FORMIGA+CIRCULAR+VIA+ARIRIU%2FGUARDA+%28RETORNO+ATE+PALHOCA%29
+jotur;301;PALHOCA / GUARDA TABULEIRO CIRC VIA NOVA PALHOCA (RETORNO ATE PALHOCA);;False;https://www2.jotur.com.br/linhas/?linha=301&nome=PALHOCA+%2F+GUARDA+TABULEIRO+CIRC+VIA+NOVA+PALHOCA+%28RETORNO+ATE+PALHOCA%29
+jotur;4031;PALHOCA / JAQUEIRA CIRCULAR VIA PORTAL/UPA;;False;https://www2.jotur.com.br/linhas/?linha=4031&nome=PALHOCA+%2F+JAQUEIRA+CIRCULAR+VIA+PORTAL%2FUPA
+jotur;0243;PALHOÇA / SHOP CONTINENTE VIA P.IMARUIM/BR 101/VIAD FORQUILHINHA;;False;https://www2.jotur.com.br/linhas/?linha=0243&nome=PALHO%C3%87A+%2F+SHOP+CONTINENTE+VIA+P.IMARUIM%2FBR+101%2FVIAD+FORQUILHINHA
+jotur;02;PASSAGEM MACIAMBU / COLEGIO DA PINHEIRA VIA PRAIA DO SONHO;;False;https://www2.jotur.com.br/linhas/?linha=02&nome=PASSAGEM+MACIAMBU+%2F+COLEGIO+DA+PINHEIRA+VIA+PRAIA+DO+SONHO
+jotur;0367;PCH / FPOLIS VIA PORTAL/VN/NOVA PH/MIR/BR 101/HOSP/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=0367&nome=PCH+%2F+FPOLIS+VIA+PORTAL%2FVN%2FNOVA+PH%2FMIR%2FBR+101%2FHOSP%2FIVO+SILV
+jotur;6530;PEDRA BRANCA / FPOLIS VIA P.VINTE/MARGINAL BR 101/VIA EXPRESSA/I.SILV;;False;https://www2.jotur.com.br/linhas/?linha=6530&nome=PEDRA+BRANCA+%2F+FPOLIS+VIA+P.VINTE%2FMARGINAL+BR+101%2FVIA+EXPRESSA%2FI.SILV
+jotur;6303;PEDRA BRANCA / PALHOÇA VIA IFSC/CID UNIV/AQUARIUS/MARG BR 101;;False;https://www2.jotur.com.br/linhas/?linha=6303&nome=PEDRA+BRANCA+%2F+PALHO%C3%87A+VIA+IFSC%2FCID+UNIV%2FAQUARIUS%2FMARG+BR+101
+jotur;50314;PEDRA BRANCA / PALHOÇA VIA PASSA VINTE;;False;https://www2.jotur.com.br/linhas/?linha=50314&nome=PEDRA+BRANCA+%2F+PALHO%C3%87A+VIA+PASSA+VINTE
+jotur;2030;PONTA DE BAIXO / FLORIANÓPOLIS VIA PANIFICADORA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=2030&nome=PONTA+DE+BAIXO+%2F+FLORIAN%C3%93POLIS+VIA+PANIFICADORA%2FIVO+SILVEIRA
+jotur;720;PONTE DO IMARUIM CIRCULAR;;False;https://www2.jotur.com.br/linhas/?linha=720&nome=PONTE+DO+IMARUIM+CIRCULAR
+jotur;2060;PONTE IMARUIM / FPOLIS VIA CASQ/E.LUCHI/PATURAL/A.ZACCHI/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=2060&nome=PONTE+IMARUIM+%2F+FPOLIS+VIA+CASQ%2FE.LUCHI%2FPATURAL%2FA.ZACCHI%2FIVO+SILVEIRA
+jotur;280;PORTAL DA BARRA / PALHOÇA VIA LARANJEIRAS/RIO GRANDE;;False;https://www2.jotur.com.br/linhas/?linha=280&nome=PORTAL+DA+BARRA+%2F+PALHO%C3%87A+VIA+LARANJEIRAS%2FRIO+GRANDE
+jotur;281;PORTAL DA BARRA / PALHOÇA VIA VILA NOVA/NOVA PALHOÇA/MIRIAM;;False;https://www2.jotur.com.br/linhas/?linha=281&nome=PORTAL+DA+BARRA+%2F+PALHO%C3%87A+VIA+VILA+NOVA%2FNOVA+PALHO%C3%87A%2FMIRIAM
+jotur;0242;SAO SEB / FPOLIS VIA P.VINTE/AV TORRES/MARG BR 101/HOSP REG/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=0242&nome=SAO+SEB+%2F+FPOLIS+VIA+P.VINTE%2FAV+TORRES%2FMARG+BR+101%2FHOSP+REG%2FIVO+SILV
+jotur;0368;STAR FIT / FPOLIS VIA PORTAL/V.NOVA/N PH/MIRIAM/BR 101/EXP/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=0368&nome=STAR+FIT+%2F+FPOLIS+VIA+PORTAL%2FV.NOVA%2FN+PH%2FMIRIAM%2FBR+101%2FEXP%2FIVO+SILV
+jotur;6340;SÃO JOSÉ / FLORIANÓPOLIS VIA EXPRESSA;;False;https://www2.jotur.com.br/linhas/?linha=6340&nome=S%C3%83O+JOS%C3%89+%2F+FLORIAN%C3%93POLIS+VIA+EXPRESSA
+jotur;0370;SÃO JOSÉ / FLORIANÓPOLIS VIA IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0370&nome=S%C3%83O+JOS%C3%89+%2F+FLORIAN%C3%93POLIS+VIA+IVO+SILVEIRA
+jotur;0371;SÃO JOSÉ / FLORIANÓPOLIS VIA SENAI/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0371&nome=S%C3%83O+JOS%C3%89+%2F+FLORIAN%C3%93POLIS+VIA+SENAI%2FIVO+SILVEIRA
+jotur;0372;SÃO JOSÉ / FPOLIS VIA PONTA DE BAIXO/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0372&nome=S%C3%83O+JOS%C3%89+%2F+FPOLIS+VIA+PONTA+DE+BAIXO%2FIVO+SILVEIRA
+jotur;0247;SÃO SEB / FPOLIS VIA I.EVAN/P.VINTE/AV. TORRES/MARG BR101/EXP/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=0247&nome=S%C3%83O+SEB+%2F+FPOLIS+VIA+I.EVAN%2FP.VINTE%2FAV.+TORRES%2FMARG+BR101%2FEXP%2FIVO+SILV
+jotur;0249;SÃO SEB / FPOLIS VIA MADRI/AV DAS TORRES/MARG BR101/HOSP REG/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=0249&nome=S%C3%83O+SEB+%2F+FPOLIS+VIA+MADRI%2FAV+DAS+TORRES%2FMARG+BR101%2FHOSP+REG%2FIVO+SILV
+jotur;0248;SÃO SEB / FPOLIS VIA MADRI/PAGANI/AV. TORRES/MARG BR101/EXP/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=0248&nome=S%C3%83O+SEB+%2F+FPOLIS+VIA+MADRI%2FPAGANI%2FAV.+TORRES%2FMARG+BR101%2FEXP%2FIVO+SILV
+jotur;5039;SÃO SEBASTIÃO / PALHOÇA (PRAÇA) VIA MADRI;;False;https://www2.jotur.com.br/linhas/?linha=5039&nome=S%C3%83O+SEBASTI%C3%83O+%2F+PALHO%C3%87A+%28PRA%C3%87A%29+VIA+MADRI
+jotur;503;SÃO SEBASTIÃO / PALHOÇA (PRAÇA) VIA PASSA VINTE;;False;https://www2.jotur.com.br/linhas/?linha=503&nome=S%C3%83O+SEBASTI%C3%83O+%2F+PALHO%C3%87A+%28PRA%C3%87A%29+VIA+PASSA+VINTE
+jotur;5037;SÃO SEBASTIÃO / PONTE DO IMARUIM VIA MADRI/ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=5037&nome=S%C3%83O+SEBASTI%C3%83O+%2F+PONTE+DO+IMARUIM+VIA+MADRI%2FANICETO+ZACCHI
+jotur;5022;SÃO SEBASTIÃO / PONTE DO IMARUIM VIA MADRI/ELZA LUCHI;;False;https://www2.jotur.com.br/linhas/?linha=5022&nome=S%C3%83O+SEBASTI%C3%83O+%2F+PONTE+DO+IMARUIM+VIA+MADRI%2FELZA+LUCHI
+jotur;5036;SÃO SEBASTIÃO / PONTE DO IMARUIM VIA PASSA VINTE/ANICETO ZACCHI;;False;https://www2.jotur.com.br/linhas/?linha=5036&nome=S%C3%83O+SEBASTI%C3%83O+%2F+PONTE+DO+IMARUIM+VIA+PASSA+VINTE%2FANICETO+ZACCHI
+jotur;0245;SÃO SEBASTIÃO / SHOP CONTINENTE VIA P.VINTE/P.IMARUIM/MARG BR;;False;https://www2.jotur.com.br/linhas/?linha=0245&nome=S%C3%83O+SEBASTI%C3%83O+%2F+SHOP+CONTINENTE+VIA+P.VINTE%2FP.IMARUIM%2FMARG+BR
+jotur;0289;TERRA NOVA / FLORIANÓPOLIS VIA C.NOVO/BR 101/HOSP REG/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0289&nome=TERRA+NOVA+%2F+FLORIAN%C3%93POLIS+VIA+C.NOVO%2FBR+101%2FHOSP+REG%2FIVO+SILVEIRA
+jotur;02810;TERRA NOVA / FLORIANÓPOLIS VIA C.NOVO/BR 101/VIA EXPRESSA (DIRETO);;False;https://www2.jotur.com.br/linhas/?linha=02810&nome=TERRA+NOVA+%2F+FLORIAN%C3%93POLIS+VIA+C.NOVO%2FBR+101%2FVIA+EXPRESSA+%28DIRETO%29
+jotur;0287;TERRA NOVA / FLORIANÓPOLIS VIA CAMINHO NOVO/PONTE IMARUIM/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0287&nome=TERRA+NOVA+%2F+FLORIAN%C3%93POLIS+VIA+CAMINHO+NOVO%2FPONTE+IMARUIM%2FIVO+SILVEIRA
+jotur;0286;TERRA NOVA / FPOLIS VIA C. NOVO/MARG.BR 101/VIA EXP/I.SILV (EXECUTIVO);;True;https://www2.jotur.com.br/linhas/?linha=0286&nome=TERRA+NOVA+%2F+FPOLIS+VIA+C.+NOVO%2FMARG.BR+101%2FVIA+EXP%2FI.SILV+%28EXECUTIVO%29
+jotur;0288;TERRA NOVA / FPOLIS VIA C.NOVO/MARGINAL BR 101/VIA EXP/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0288&nome=TERRA+NOVA+%2F+FPOLIS+VIA+C.NOVO%2FMARGINAL+BR+101%2FVIA+EXP%2FIVO+SILVEIRA
+jotur;0285;TERRA NOVA / FPOLIS VIA CAMINHO NOVO/BR 101/VIA EXPRESSA/IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=0285&nome=TERRA+NOVA+%2F+FPOLIS+VIA+CAMINHO+NOVO%2FBR+101%2FVIA+EXPRESSA%2FIVO+SILVEIRA
+jotur;543;TERRA NOVA / PALHOÇA (PRAÇA) VIA CAMINHO NOVO;;False;https://www2.jotur.com.br/linhas/?linha=543&nome=TERRA+NOVA+%2F+PALHO%C3%87A+%28PRA%C3%87A%29+VIA+CAMINHO+NOVO
+jotur;01;TRÊS BARRAS / PASSAG VIA SERTÃO/ALBARDÃO/MORRETES I/II/GUARDA/PINH/PS;;False;https://www2.jotur.com.br/linhas/?linha=01&nome=TR%C3%8AS+BARRAS+%2F+PASSAG+VIA+SERT%C3%83O%2FALBARD%C3%83O%2FMORRETES+I%2FII%2FGUARDA%2FPINH%2FPS
+jotur;0387;UPA B.VISTA / FPOLIS VIA PALHOÇA/BR 101/EXPRESSA;;False;https://www2.jotur.com.br/linhas/?linha=0387&nome=UPA+B.VISTA+%2F+FPOLIS+VIA+PALHO%C3%87A%2FBR+101%2FEXPRESSA
+jotur;12;VIAD FURADINHO / RINCÃO VIA PRAIA FORA/ENSEADA (IGREJA)/BR101/MACIAMBU;;False;https://www2.jotur.com.br/linhas/?linha=12&nome=VIAD+FURADINHO+%2F+RINC%C3%83O+VIA+PRAIA+FORA%2FENSEADA+%28IGREJA%29%2FBR101%2FMACIAMBU
+jotur;11360;VIAD MAC / SHOP CONT VIA GUARDA/PINHEIRA/P.SONHO/BR101/CENTRO PH/P.IMA;;False;https://www2.jotur.com.br/linhas/?linha=11360&nome=VIAD+MAC+%2F+SHOP+CONT+VIA+GUARDA%2FPINHEIRA%2FP.SONHO%2FBR101%2FCENTRO+PH%2FP.IMA
+jotur;11140;VIAD MACIAMBU / FPOLIS VIA GUARDA/PINHEIRA/P.SONHO/P.IMAR/IVO SILV;;False;https://www2.jotur.com.br/linhas/?linha=11140&nome=VIAD+MACIAMBU+%2F+FPOLIS+VIA+GUARDA%2FPINHEIRA%2FP.SONHO%2FP.IMAR%2FIVO+SILV
+jotur;10160;ITI IDA- FLORIANÓPOLIS / ÁREA INDUSTRIAL VIA IVO SILV./P.COMPRIDA/MARG. BR 101;;False;https://www2.jotur.com.br/linhas/?linha=10160&nome=ITI+IDA-+FLORIAN%C3%93POLIS+%2F+%C3%81REA+INDUSTRIAL+VIA+IVO+SILV.%2FP.COMPRIDA%2FMARG.+BR+101
+jotur;233;CID UNIV / BARRA VIA MARG BR 101/CENTRO DE PALHOÇA/RIO GRANDE;;False;https://www2.jotur.com.br/linhas/?linha=233&nome=CID+UNIV+%2F+BARRA+VIA+MARG+BR+101%2FCENTRO+DE+PALHO%C3%87A%2FRIO+GRANDE
+jotur;101;COL T.NOVA / SHOP CAT VIA JD/B.VISTA/TERRA BELA/CN/MD/SS/M.GATO/PV;;False;https://www2.jotur.com.br/linhas/?linha=101&nome=COL+T.NOVA+%2F+SHOP+CAT+VIA+JD%2FB.VISTA%2FTERRA+BELA%2FCN%2FMD%2FSS%2FM.GATO%2FPV
+jotur;5035;COLÉGIO CLAUDETE / SÃO SEBASTIÃO VIA PONTE IMARUIM/MADRI;;False;https://www2.jotur.com.br/linhas/?linha=5035&nome=COL%C3%89GIO+CLAUDETE+%2F+S%C3%83O+SEBASTI%C3%83O+VIA+PONTE+IMARUIM%2FMADRI
+jotur;05;COLÉGIO MORRETES / RINCÃO;;False;https://www2.jotur.com.br/linhas/?linha=05&nome=COL%C3%89GIO+MORRETES+%2F+RINC%C3%83O
+jotur;4033;ESCOLA MUNICIPAL DE PALHOÇA / BELA VISTA;;False;https://www2.jotur.com.br/linhas/?linha=4033&nome=ESCOLA+MUNICIPAL+DE+PALHO%C3%87A+%2F+BELA+VISTA
+jotur;2031;FLORIANÓPLIS / PONTA DE BAIXO VIA MADEIREIRA / IVO SILVEIRA;;False;https://www2.jotur.com.br/linhas/?linha=2031&nome=FLORIAN%C3%93PLIS+%2F+PONTA+DE+BAIXO+VIA+MADEIREIRA+%2F+IVO+SILVEIRA
+jotur;03510;FLORIANÓPOLIS / ARIRIU VIA EXPRESSA/BR101/CENTRO DE PALHOÇA (DIRETO);;False;https://www2.jotur.com.br/linhas/?linha=03510&nome=FLORIAN%C3%93POLIS+%2F+ARIRIU+VIA+EXPRESSA%2FBR101%2FCENTRO+DE+PALHO%C3%87A+%28DIRETO%29
+jotur;0361;FLORIANÓPOLIS / BARRA VIA EXPRESSA/BR 101/CENTRO PH/RIO GRANDE;;False;https://www2.jotur.com.br/linhas/?linha=0361&nome=FLORIAN%C3%93POLIS+%2F+BARRA+VIA+EXPRESSA%2FBR+101%2FCENTRO+PH%2FRIO+GRANDE
+jotur;7620;FLORIANÓPOLIS / HOSPITAL REGIONAL VIA EXPRESSA;;False;https://www2.jotur.com.br/linhas/?linha=7620&nome=FLORIAN%C3%93POLIS+%2F+HOSPITAL+REGIONAL+VIA+EXPRESSA
+jotur;6533;FLORIANÓPOLIS / IFSC VIA IVO SILVEIRA/FAZENDA/TECNOPARK/CID UNIV;;False;https://www2.jotur.com.br/linhas/?linha=6533&nome=FLORIAN%C3%93POLIS+%2F+IFSC+VIA+IVO+SILVEIRA%2FFAZENDA%2FTECNOPARK%2FCID+UNIV
+jotur;0385;FLORIANÓPOLIS / NOVA PALHOÇA VIA IVO SILVEIRA/VIA EXPRESSA/BR 101;;False;https://www2.jotur.com.br/linhas/?linha=0385&nome=FLORIAN%C3%93POLIS+%2F+NOVA+PALHO%C3%87A+VIA+IVO+SILVEIRA%2FVIA+EXPRESSA%2FBR+101
+jotur;0240;FLORIANÓPOLIS / SÃO SEBASTIÃO VIA IVO SILVEIRA/P.IMARUIM/PASSA VINTE;;False;https://www2.jotur.com.br/linhas/?linha=0240&nome=FLORIAN%C3%93POLIS+%2F+S%C3%83O+SEBASTI%C3%83O+VIA+IVO+SILVEIRA%2FP.IMARUIM%2FPASSA+VINTE
+jotur;6753;FPOLIS / ARIRIU FORMIGA VIA MARG BR 101/CENTRO PH/ARIRIU/GUARDA;;False;https://www2.jotur.com.br/linhas/?linha=6753&nome=FPOLIS+%2F+ARIRIU+FORMIGA+VIA+MARG+BR+101%2FCENTRO+PH%2FARIRIU%2FGUARDA
+jotur;03511;FPOLIS / ARIRIU VIA IVO SILV/EXPRESSA/MARG BR 101/CENTRO DE PALHOÇA;;False;https://www2.jotur.com.br/linhas/?linha=03511&nome=FPOLIS+%2F+ARIRIU+VIA+IVO+SILV%2FEXPRESSA%2FMARG+BR+101%2FCENTRO+DE+PALHO%C3%87A
+jotur;03620;FPOLIS / BARRA VIA EXPRESSA/MARG BR 101/CENTRO DE PALHOÇA/PACHECOS;;False;https://www2.jotur.com.br/linhas/?linha=03620&nome=FPOLIS+%2F+BARRA+VIA+EXPRESSA%2FMARG+BR+101%2FCENTRO+DE+PALHO%C3%87A%2FPACHECOS
+jotur;03618;FPOLIS / BARRA VIA IVO SILV/P. IMARUIM/CENTRO PH/PACHECOS/VILA NOVA;;False;https://www2.jotur.com.br/linhas/?linha=03618&nome=FPOLIS+%2F+BARRA+VIA+IVO+SILV%2FP.+IMARUIM%2FCENTRO+PH%2FPACHECOS%2FVILA+NOVA
+jotur;03614;FPOLIS / BARRA VIA IVO SILVEIRA/P.IMARUIM/R.GRANDE/LARANJEIRAS;;False;https://www2.jotur.com.br/linhas/?linha=03614&nome=FPOLIS+%2F+BARRA+VIA+IVO+SILVEIRA%2FP.IMARUIM%2FR.GRANDE%2FLARANJEIRAS
+jotur;7167;FPOLIS / BELA VISTA VIA EXPRESSA/MARG BR 101/CENTRO DE PALHOÇA;;False;https://www2.jotur.com.br/linhas/?linha=7167&nome=FPOLIS+%2F+BELA+VISTA+VIA+EXPRESSA%2FMARG+BR+101%2FCENTRO+DE+PALHO%C3%87A
+jotur;6750;FPOLIS / FORMIGA VIA EXPRESSA/BR 101/CENTRO PH/ARIRIU/GUARDA;;False;https://www2.jotur.com.br/linhas/?linha=6750&nome=FPOLIS+%2F+FORMIGA+VIA+EXPRESSA%2FBR+101%2FCENTRO+PH%2FARIRIU%2FGUARDA
+jotur;6752;FPOLIS / GUARDA TABULEIRO VIA IVO SILVEIRA/P.IMAR/BR 101/FORMIGA;;False;https://www2.jotur.com.br/linhas/?linha=6752&nome=FPOLIS+%2F+GUARDA+TABULEIRO+VIA+IVO+SILVEIRA%2FP.IMAR%2FBR+101%2FFORMIGA
+jotur;6532;FPOLIS / IFSC VIA IVO SILVEIRA/PONTA BAIXO/FAZENDA/ELDORADO;;False;https://www2.jotur.com.br/linhas/?linha=6532&nome=FPOLIS+%2F+IFSC+VIA+IVO+SILVEIRA%2FPONTA+BAIXO%2FFAZENDA%2FELDORADO
+jotur;02411;FPOLIS / SÃO SEBASTIÃO VIA EXP/BR 101/AV. TORRES/P.VINTE (DIRETO);;False;https://www2.jotur.com.br/linhas/?linha=02411&nome=FPOLIS+%2F+S%C3%83O+SEBASTI%C3%83O+VIA+EXP%2FBR+101%2FAV.+TORRES%2FP.VINTE+%28DIRETO%29
+jotur;0246;FPOLIS / SÃO SEBASTIÃO VIA IVO SILVEIRA/PONTE DO IMARUIM/MADRI;;False;https://www2.jotur.com.br/linhas/?linha=0246&nome=FPOLIS+%2F+S%C3%83O+SEBASTI%C3%83O+VIA+IVO+SILVEIRA%2FPONTE+DO+IMARUIM%2FMADRI
+jotur;0280;FPOLIS / TERRA NOVA VIA EXPRESSA/BR 101/CENTRO PH/CAMINHO NOVO;;False;https://www2.jotur.com.br/linhas/?linha=0280&nome=FPOLIS+%2F+TERRA+NOVA+VIA+EXPRESSA%2FBR+101%2FCENTRO+PH%2FCAMINHO+NOVO
+jotur;253;IFSC / BARRA VIA MARG BR 101/VIAD P. VINTE/CENTRO PH/PACHECOS;;False;https://www2.jotur.com.br/linhas/?linha=253&nome=IFSC+%2F+BARRA+VIA+MARG+BR+101%2FVIAD+P.+VINTE%2FCENTRO+PH%2FPACHECOS
+jotur;5038;IFSC / SÃO SEBASTIÃO VIA CID UNIV/AQUÁRIUS/PONTE DO IMARUIM/MADRI;;False;https://www2.jotur.com.br/linhas/?linha=5038&nome=IFSC+%2F+S%C3%83O+SEBASTI%C3%83O+VIA+CID+UNIV%2FAQU%C3%81RIUS%2FPONTE+DO+IMARUIM%2FMADRI
+jotur;630;PALHOCA (MERCADO PUBLICO) / SENAI (ELDORADO) VIA PONTE DO IMARUIM;;False;https://www2.jotur.com.br/linhas/?linha=630&nome=PALHOCA+%28MERCADO+PUBLICO%29+%2F+SENAI+%28ELDORADO%29+VIA+PONTE+DO+IMARUIM
+jotur;6302;PALHOÇA (CAIXA ECONÔMICA) / CIDADE UNIVERSITÁRIA VIA ELZA LUCHI;;False;https://www2.jotur.com.br/linhas/?linha=6302&nome=PALHO%C3%87A+%28CAIXA+ECON%C3%94MICA%29+%2F+CIDADE+UNIVERSIT%C3%81RIA+VIA+ELZA+LUCHI
+jotur;50312;PALHOÇA / MORRO DO GATO VIA PASSA VINTE;;False;https://www2.jotur.com.br/linhas/?linha=50312&nome=PALHO%C3%87A+%2F+MORRO+DO+GATO+VIA+PASSA+VINTE
+jotur;263;PALHOÇA / VILA NOVA VIA MÍRIAM;;False;https://www2.jotur.com.br/linhas/?linha=263&nome=PALHO%C3%87A+%2F+VILA+NOVA+VIA+M%C3%8DRIAM
+jotur;13;PONTE DO IMARUIM / ENSEADA (ATÉ A IGREJA);;False;https://www2.jotur.com.br/linhas/?linha=13&nome=PONTE+DO+IMARUIM+%2F+ENSEADA+%28AT%C3%89+A+IGREJA%29
+jotur;50310;PONTE DO IMARUIM / SÃO SEBASTIÃO VIA PREFEITURA/PASSA VINTE;;False;https://www2.jotur.com.br/linhas/?linha=50310&nome=PONTE+DO+IMARUIM+%2F+S%C3%83O+SEBASTI%C3%83O+VIA+PREFEITURA%2FPASSA+VINTE
+jotur;02412;PRES. KENNEDY / SAO SEB VIA P.COMP/VIAD FORQ/MAR BR/AV. TORRES/MADRI;;False;https://www2.jotur.com.br/linhas/?linha=02412&nome=PRES.+KENNEDY+%2F+SAO+SEB+VIA+P.COMP%2FVIAD+FORQ%2FMAR+BR%2FAV.+TORRES%2FMADRI
+jotur;03619;PRESIDENTE KENNEDY / BARRA VIA PONTE IMARUIM/RIO GRANDE/LARANJEIRAS;;False;https://www2.jotur.com.br/linhas/?linha=03619&nome=PRESIDENTE+KENNEDY+%2F+BARRA+VIA+PONTE+IMARUIM%2FRIO+GRANDE%2FLARANJEIRAS
+jotur;11;RINCAO / MAC PEQ VIA MORRETES I E II/GUARDA/PINHEIRA/MORRETES/RINCAO;;False;https://www2.jotur.com.br/linhas/?linha=11&nome=RINCAO+%2F+MAC+PEQ+VIA+MORRETES+I+E+II%2FGUARDA%2FPINHEIRA%2FMORRETES%2FRINCAO
+jotur;11320;SHOP CONT / BARRA VIA MARG BR 101/P.IMAR/MIRIAM/N PHV.NOVA/PCH;;False;https://www2.jotur.com.br/linhas/?linha=11320&nome=SHOP+CONT+%2F+BARRA+VIA+MARG+BR+101%2FP.IMAR%2FMIRIAM%2FN+PHV.NOVA%2FPCH
+jotur;11290;SHOP CONT / BELA VISTA VIA MARG BR 101/P.IMARUIM/CENTRO PH/JAQUEIRA;;False;https://www2.jotur.com.br/linhas/?linha=11290&nome=SHOP+CONT+%2F+BELA+VISTA+VIA+MARG+BR+101%2FP.IMARUIM%2FCENTRO+PH%2FJAQUEIRA
+jotur;03512;SHOPPING CONTINENTE / GUARDA DO TABULEIRO VIA P.IMAR/ARIRIU/GUARDA;;False;https://www2.jotur.com.br/linhas/?linha=03512&nome=SHOPPING+CONTINENTE+%2F+GUARDA+DO+TABULEIRO+VIA+P.IMAR%2FARIRIU%2FGUARDA
+jotur;11310;SHOPPING CONTINENTE / TERRA NOVA VIA P.IMARUIM/A.ZACCHI/C.NOVO;;False;https://www2.jotur.com.br/linhas/?linha=11310&nome=SHOPPING+CONTINENTE+%2F+TERRA+NOVA+VIA+P.IMARUIM%2FA.ZACCHI%2FC.NOVO
+estrela;317;Campinas Via Kobrasol;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0317.htm
+estrela;328;Ceasa Santos Saraiva Via Kobrasol;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0328.htm
+estrela;039.0/1/3/4;Forquilhas Via Los Angeles;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0039.htm
+estrela;039.2;Forquilhinha Via Rodeio e Palmares;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0392.htm
+estrela;117;Forquilhinha;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0117.htm
+estrela;141;Kobrasol Via Expressa;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0141.htm
+estrela;763;Los Angeles;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0763.htm
+estrela;763.1;Parque Residencial Lisboa;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/7631.htm
+estrela;020.0/1/2/3;Potecas Santos Saraiva;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0201.htm
+estrela;763.2/4 131;Zenaide via Ceniro;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/7632.htm
+estrela;130;Diretão;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/interbairros/0130.htm
+estrela;120;Forquilhas – Kobrasol;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0120.htm
+estrela;135;Potecas – Kobrasol;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0135.htm
+estrela;105;Serraria – Forquilhinhas;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0105.htm
+estrela;125;Vila Formosa – Kobrasol;;False;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/0125.htm
+estrela;763.3;Executivo San Marino / Lisboa VIP;;True;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/7633.htm
+estrela;131.1;Executivo Zenaide/Barreiros Vip;;True;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/1311.htm
+estrela;141.2;Executivo Campinas / Kobrasol Vip;;True;http://www.insulartc.com.br/estrela/ws1/linhas/horarios/intermunicipal/1412.htm
+imperatriz;5500;Varginha;;False;https://www.tcimperatriz.com.br/linhas/5500-varginha/
+imperatriz;5600;Sertão;;False;https://www.tcimperatriz.com.br/linhas/5600-sertao/
+imperatriz;5700;Sul do Rio;;False;https://www.tcimperatriz.com.br/linhas/5700-sul-do-rio/
+imperatriz;5800;Pagará;Via Bairro São Francisco;False;https://www.tcimperatriz.com.br/linhas/5800-pagara/
+imperatriz;5900;Morro Fabricio;;False;https://www.tcimperatriz.com.br/linhas/5900-morro-fabricio/
+imperatriz;6000;Divisa/Colegio Silveira;Vias Colegio Silveira e Nereu;False;https://www.tcimperatriz.com.br/linhas/6000-divisa-colegio-silveira/
+imperatriz;6600;Queçaba/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/6600-quecaba-florianopolis/
+imperatriz;6700;Santo Amaro/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/6700-santo-amaro-florianopolis/
+imperatriz;6701;Santo Amaro/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/6701-santo-amaro-florianopolis/
+imperatriz;6702;Santo Amaro/São José;;False;https://www.tcimperatriz.com.br/linhas/6702-santo-amaro-sao-jose/
+imperatriz;6800;Caldas/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/6800-caldas-florianopolis/
+imperatriz;6802;Caldas/Florianópolis;Via Bairro São Francisco;False;https://www.tcimperatriz.com.br/linhas/6802-caldas-florianopolis/
+imperatriz;8300;Santa Isabel/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/8300-santa-isabel-florianopolis/
+imperatriz;9700;Lourdes/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/9700-lourdes-florianopolis/
+imperatriz;62400;Águas Mornas/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/62400-aguas-mornas-florianopolis/
+imperatriz;62500;Vargem Grande/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/62500-vargem-grande-florianopolis/
+imperatriz;62601;Santo Amaro/Florianópolis;Via BR101;False;https://www.tcimperatriz.com.br/linhas/62601-santo-amaro-florianopolis/
+imperatriz;62700;Santo Amaro/Florianópolis;Via Sul do Rio;False;https://www.tcimperatriz.com.br/linhas/62700-santo-amaro-florianopolis/
+imperatriz;62701;Santo Amaro/Florianópolis;Via Sertão;False;https://www.tcimperatriz.com.br/linhas/62701-santo-amaro-florianopolis/
+imperatriz;62800;Alto Aririú/Florianópolis;;False;https://www.tcimperatriz.com.br/linhas/62800-alto-aririu-florianopolis/
+imperatriz;62802;Capela Alto Aririú/Florianopolis;;False;https://www.tcimperatriz.com.br/linhas/62802-capela-alto-aririu-florianopolis/
+santa-terezinha;santana-kobrasol;Santana - Kobrasol;;False;https://santaterezinha.com/horarios/santana-kobrasol/
+santa-terezinha;santana-florianopolis;Santana - Florianópolis;;False;https://santaterezinha.com/horarios/santana-florianopolis/
+santa-terezinha;diretao;Diretão;;False;https://santaterezinha.com/horarios/diretao/
+santa-terezinha;flor-de-napolis-florianopolis;Flor de Nápolis - Florianópolis;;False;https://santaterezinha.com/horarios/flor-de-napolis-florianopolis/
+santa-terezinha;picada-do-sul-florianopolis;Picada do Sul - Florianópolis;;False;https://santaterezinha.com/horarios/picada-do-sul-florianopolis/
+santa-terezinha;sao-pedro-de-alcantara-florianopolis;São Pedro de Alcântara - Florianópolis;;False;https://santaterezinha.com/horarios/sao-pedro-de-alcantara-florianopolis/
+santa-terezinha;continente-park-shopping-florianopolis;Continente Park Shopping - Florianópolis;;False;https://santaterezinha.com/horarios/continente-park-shopping-florianopolis/
+santa-terezinha;rancho-queimado-florianopolis;Rancho Queimado - Florianópolis;;False;https://santaterezinha.com/horarios/rancho-queimado-florianopolis/
+santa-terezinha;sertao-florianopolis;Sertão - Florianópolis;;False;https://santaterezinha.com/horarios/sertao-florianopolis/
+santa-terezinha;forquilhinhas-serraria;Forquilhinhas - Serraria;;False;https://santaterezinha.com/horarios/forquilhinhas-serraria/

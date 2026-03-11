@@ -4,10 +4,12 @@ from dataclasses import dataclass, asdict
 import csv
 from pathlib import Path
 import requests
+from abc import ABC, abstractmethod
 
 
 @dataclass
 class Linha:
+    empresa: str
     codigo: str
     nome: str
     detalhe: str
@@ -17,10 +19,25 @@ class Linha:
 
 @dataclass
 class Horario:
+    empresa: str
     linha: str
     sentido: str
     hora: str
     dia: str
+
+
+class Raspador(ABC):
+    @abstractmethod
+    def empresa(self) -> str:
+        pass
+
+    @abstractmethod
+    def raspar_linhas(self) -> list[Linha]:
+        pass
+
+    @abstractmethod
+    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
+        pass
 
 
 def salvar_csv(dados: list, nome_arquivo: str):

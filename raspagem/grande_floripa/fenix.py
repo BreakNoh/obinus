@@ -1,9 +1,9 @@
 import re
 from common import *
 
-URL_BASE = "https://www.consorciofenix.com.br"
-URL_LINHAS = URL_BASE + "/horarios"
+EMPRESA: str = "FENIX"
 
+URL_BASE = "https://www.consorciofenix.com.br"
 
 DIAS = {
     "Dias Úteis": "UTIL",
@@ -12,50 +12,54 @@ DIAS = {
 }
 
 
-def raspar_horarios_linha(linha: Linha) -> list[Horario]:
-    soup, status = get_soup(linha.url)
-    horarios: list[Horario] = []
-    codigo = linha.codigo
+class Fenix(Raspador):
+    def empresa(self) -> str:
+        return EMPRESA
 
-    for sub in soup.select(".my-subtab-content"):
-        sentido = extrair_texto(sub.select_one("h5"))
+    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
+        soup, status = get_soup(linha.url)
+        horarios: list[Horario] = []
+        codigo = linha.codigo
 
-        if sentido == "":
-            continue
+        for sub in soup.select(".my-subtab-content"):
+            sentido = extrair_texto(sub.select_one("h5"))
 
-        for horario in sub.select("div[data-semana]"):
-            dia = horario.get("data-semana")
-            tag_a = horario.find("a")
-
-            if tag_a is None or dia not in DIAS:
+            if sentido == "":
                 continue
 
-            hora = extrair_texto(tag_a)
-            dia = DIAS[str(dia)]
+            for horario in sub.select("div[data-semana]"):
+                dia = horario.get("data-semana")
+                tag_a = horario.find("a")
 
-            horarios.append(Horario(codigo, sentido, hora, dia))
+                if tag_a is None or dia not in DIAS:
+                    continue
 
-    return horarios
+                hora = extrair_texto(tag_a)
+                dia = DIAS[str(dia)]
 
+                horarios.append(Horario(EMPRESA, codigo, sentido, hora, dia))
 
-def raspar_linhas() -> list[Linha]:
-    soup, status = get_soup(URL_LINHAS)
-    linhas: list[Linha] = []
+        return horarios
 
-    for li in soup.select("wrap-horarios li"):
-        tag_a = li.find("a")
-        if tag_a is None:
-            continue
+    def raspar_linhas(self) -> list[Linha]:
+        soup, status = get_soup(URL_BASE + "/horarios")
+        linhas: list[Linha] = []
 
-        conteudo = extrair_texto(tag_a)
+        for li in soup.select(".wrap-horarios li"):
+            tag_a = li.find("a")
 
-        [codigo, nome] = re.split(r"\s+-\s+", conteudo, maxsplit=1)
+            if tag_a is None:
+                continue
 
-        executivo = "executivo" in nome.lower()
-        codigo = codigo.strip()
-        nome = nome.strip()
-        url = tag_a.get("href")
+            conteudo = extrair_texto(tag_a)
 
-        linhas.append(Linha(codigo, nome, "", executivo, str(url)))
+            [codigo, nome] = re.split(r"\s+-\s+", conteudo, maxsplit=1)
 
-    return linhas
+            executivo = "executivo" in nome.lower()
+            codigo = codigo.strip()
+            nome = nome.strip()
+            url = URL_BASE + str(tag_a.get("href"))
+
+            linhas.append(Linha(EMPRESA, codigo, nome, "", executivo, url))
+
+        return linhas

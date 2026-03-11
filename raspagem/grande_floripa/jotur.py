@@ -1,33 +1,8 @@
 from common import *
 
+EMPRESA: str = "JOTUR"
+
 URL_BASE = "https://www2.jotur.com.br/linhas/"
-
-
-def raspar_linhas() -> list[Linha]:
-    soup, status = get_soup(URL_BASE)
-
-    linhas = []
-
-    for item in soup.select("li>a"):
-        url = item["href"]
-
-        tag_cod = item.select_one("strong")
-        tag_nome = item.select_one("span")
-
-        if tag_cod is None or tag_nome is None:
-            continue
-
-        codigo = extrair_texto(tag_cod)
-        nome = extrair_texto(tag_nome).removeprefix("- ")
-        executivo = "executivo" in nome.lower()
-
-        linha = Linha(codigo, nome, "", executivo, URL_BASE + str(url))
-
-        linhas.append(linha)
-
-    return linhas
-
-
 DIAS = {
     "Dias Úteis": "UTIL",
     "Sábados": "SABADO",
@@ -35,36 +10,64 @@ DIAS = {
 }
 
 
-def raspar_horarios_linha(linha: Linha) -> list[Horario]:
-    soup, status = get_soup(linha.url)
+class Jotur(Raspador):
+    def empresa(self) -> str:
+        return EMPRESA
 
-    horarios = []
-    codigo = linha.codigo
+    def raspar_linhas(self) -> list[Linha]:
+        soup, status = get_soup(URL_BASE)
 
-    for aba in soup.select(".accordion-item"):
-        tag_sentido = aba.select_one(".accordion-header > :last-child")
-        sentido = extrair_texto(tag_sentido)
+        linhas = []
 
-        if sentido == "":
-            continue
+        for item in soup.select("li>a"):
+            url = item["href"]
 
-        for coluna in aba.select(".column"):
-            tag_dia = coluna.select_one("h4")
-            dia = extrair_texto(tag_dia)
+            tag_cod = item.select_one("strong")
+            tag_nome = item.select_one("span")
 
-            if not dia in DIAS.keys():
+            if tag_cod is None or tag_nome is None:
                 continue
 
-            dia = DIAS[str(dia)]
+            codigo = extrair_texto(tag_cod)
+            nome = extrair_texto(tag_nome).removeprefix("- ")
+            executivo = "executivo" in nome.lower()
 
-            for item in coluna.select(".time-item"):
-                hora = extrair_texto(item)
+            linha = Linha(EMPRESA, codigo, nome, "", executivo, URL_BASE + str(url))
 
-                if hora == "":
+            linhas.append(linha)
+
+        return linhas
+
+    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
+        soup, status = get_soup(linha.url)
+
+        horarios = []
+        codigo = linha.codigo
+
+        for aba in soup.select(".accordion-item"):
+            tag_sentido = aba.select_one(".accordion-header > :last-child")
+            sentido = extrair_texto(tag_sentido)
+
+            if sentido == "":
+                continue
+
+            for coluna in aba.select(".column"):
+                tag_dia = coluna.select_one("h4")
+                dia = extrair_texto(tag_dia)
+
+                if not dia in DIAS.keys():
                     continue
 
-                horario = Horario(codigo, sentido, hora, dia)
+                dia = DIAS[str(dia)]
 
-                horarios.append(horario)
+                for item in coluna.select(".time-item"):
+                    hora = extrair_texto(item)
 
-    return horarios
+                    if hora == "":
+                        continue
+
+                    horario = Horario(EMPRESA, codigo, sentido, hora, dia)
+
+                    horarios.append(horario)
+
+        return horarios
