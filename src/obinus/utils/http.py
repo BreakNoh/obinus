@@ -14,6 +14,13 @@ def get_html(url, params: dict = {}) -> tuple[str, int]:
     return (req.text, req.status_code)
 
 
+def get_json(url, params: dict = {}) -> tuple[dict, int]:
+    req = sessao.get(url, params=params, headers=headers)
+    if "charset" not in req.headers.get("Content-Type", "").lower():
+        req.encoding = req.apparent_encoding
+    return req.json(), req.status_code
+
+
 def get_soup(url, params: dict = {}) -> tuple[BeautifulSoup, int]:
     html, status = get_html(url, params)
     return (BeautifulSoup(html, "html.parser"), status)

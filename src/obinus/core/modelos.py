@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Any
 
 
 @dataclass
@@ -7,8 +8,10 @@ class Linha:
     codigo: str
     nome: str
     detalhe: str
-    executivo: bool
-    url: str
+    executivo: bool = False
+    url: str = ""
+
+    metadados: Any = None
 
 
 @dataclass
@@ -18,3 +21,5 @@ class Horario:
     sentido: str
     hora: str
     dia: str
+
+    metadados: Any = None
