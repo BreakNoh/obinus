@@ -1,7 +1,9 @@
+from obinus.core.base import Raspador
 from .scrapers.grande_florianopolis import *
 from .core.modelos import *
 from .database import db
 from .utils.salvar import salvar_csv
+from .scrapers.mobilibus import Mobilibus
 
 todas_linhas: list[Linha] = []
 todos_horarios: list[Horario] = []
@@ -41,6 +43,12 @@ def empresas():
 
     scrapers = selecionados
     main()
+
+
+def testar_mobilibus():
+    raspador = Mobilibus(332, lambda s: s)
+    # print(raspador.raspar())
+    raspador.raspar()
 
 
 def teste():

@@ -5,6 +5,8 @@
 # GRANDE FLORIANÓPOLIS
 
 - [x] Consórcio Fênix
+  - Tem api mobilibus mas parece estar desatualizada
+  - project_id = 332
 - [x] Jotur
 - [x] Empresa Estrela
 <!-- - [x] Insular -->
@@ -14,23 +16,37 @@
 
 # NORTE E PLANALTO NORTE
 
+Usam o mesmo site
+
 - [ ] Transtusa
+  - https://onibus.info/api/timetableschedule/0040?date=2026-03-12 | estudar headers | horarios
+  - https://onibus.info/api/routes/group | linhas
 - [ ] Gidion
+  - https://onibus.info/api/timetableschedule/0040?date=2026-03-12 | estudar headers | horarios
+  - https://onibus.info/api/routes/group | linhas
+
 - [ ] Senhora dos Campos
+  - MOBILIBUS -> 816
 - [ ] Coletivo Rainha
+  - MOBILIBUS? https://editor.mobilibus.com/web/timetable/1db0m#nbeg
 - [ ] Coletivo Santa Cruz
+  - https://www.coletivosantacruz.com.br/ | site bem esquisito
 - [ ] Viação Santa Clara
+  - LOST MIDIA?
 
 # VALE DO ITAJAÍ E LITORAL NORTE
 
 - [ ] BluMob
   - https://mobilibus.com/api/routes?origin=web&project_id=5 | dados de linhas
   - https://mobilibus.com/api/timetable?origin=web&v=2&project_id=5&route_id={{ID_ROTA}} | dados horarios
+    - project_id = 5
 - [ ] Transpiedade
   - https://www.transpiedade.com.br/itinerarios | dados de linhas
   - https://www.transpiedade.com.br/linhas/29/partenope/ | dados horarios
-- [ ] PGTur
-- [ ] Expressul
+  <!-- - [ ] PGTur  -->
+- [ ] BCBus
+- https://bcbus.com.br/
+<!-- - [ ] Expressul -->
 - [ ] Consórcio Nosso Brusque
   - https://www.nossobrusque.com.br/ | SPA -> chatinho
 - [ ] Viação Navegantes - https://www.viacaonavegantes.net/pages/horarios/action.php -> API de saida - destino
@@ -38,6 +54,7 @@
 - [ ] Expresso presidente
   - https://www.expressopresidente.com.br/cidades/gaspar/consulta-itinerario -> SPA
   - https://mobilibus.com/api/timetable?origin=web&v=2&project_id=699&route_id=504951 | API (OMAGA)
+  - project_id = 699
 - [ ] Viação Praiana
   - https://praiana.com.br/horarios/ | SPA horarios
   - https://praiana.com.br/linhas/ | linhas

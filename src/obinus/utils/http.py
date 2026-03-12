@@ -18,6 +18,8 @@ def get_json(url, params: dict = {}) -> tuple[dict, int]:
     req = sessao.get(url, params=params, headers=headers)
     if "charset" not in req.headers.get("Content-Type", "").lower():
         req.encoding = req.apparent_encoding
+
+    print(req.status_code)
     return req.json(), req.status_code
 
 
