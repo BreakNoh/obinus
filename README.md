@@ -5,11 +5,8 @@
 # GRANDE FLORIANÓPOLIS
 
 - [x] Consórcio Fênix
-  - Tem api mobilibus mas parece estar desatualizada
-  - project_id = 332
 - [x] Jotur
 - [x] Empresa Estrela
-<!-- - [x] Insular -->
 - [x] Biguaçu Transportes Coletivos
 - [x] Auto Viação Imperatriz
 - [x] Santa Terezinha
@@ -18,17 +15,11 @@
 
 Usam o mesmo site
 
-- [ ] Transtusa
-  - https://onibus.info/api/timetableschedule/0040?date=2026-03-12 | estudar headers | horarios
-  - https://onibus.info/api/routes/group | linhas
-- [ ] Gidion
-  - https://onibus.info/api/timetableschedule/0040?date=2026-03-12 | estudar headers | horarios
-  - https://onibus.info/api/routes/group | linhas
-
+- [x] Transtusa
+- [x] Gidion
 - [ ] Senhora dos Campos
   - MOBILIBUS -> 816
-- [ ] Coletivo Rainha
-  - MOBILIBUS? https://editor.mobilibus.com/web/timetable/1db0m#nbeg
+- [x] Coletivo Rainha
 - [ ] Coletivo Santa Cruz
   - https://www.coletivosantacruz.com.br/ | site bem esquisito
 - [ ] Viação Santa Clara

@@ -1,4 +1,6 @@
 from obinus.core.base import Raspador
+from obinus.scrapers.norte.coletivo_rainha import ColetivoRainha
+from obinus.scrapers.norte.gidion_transtusa import GidionTranstusa
 from .scrapers.grande_florianopolis import *
 from .core.modelos import *
 from .database import db
@@ -48,6 +50,11 @@ def empresas():
 def testar_mobilibus():
     raspador = Mobilibus(332, lambda s: s)
     # print(raspador.raspar())
+    raspador.raspar()
+
+
+def testar_gidion():
+    raspador = ColetivoRainha()
     raspador.raspar()
 
 

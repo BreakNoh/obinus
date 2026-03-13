@@ -1,5 +1,10 @@
 from .modelos import Linha, Horario
 from abc import ABC, abstractmethod
+from time import sleep
+import random
+
+MIN_DELAY = 0.1
+MAX_DELAY = 0.5
 
 
 class Raspador(ABC):
@@ -14,6 +19,9 @@ class Raspador(ABC):
     @abstractmethod
     def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
         pass
+
+    def esperar(self):
+        sleep(random.uniform(MIN_DELAY, MAX_DELAY))
 
     def raspar(self) -> tuple[list[Linha], list[Horario]]:
         print(f"# raspando {self.empresa()}...")

@@ -14,6 +14,7 @@ dependencies = [
 raspar-empresa = "obinus.main:empresas"
 raspar-teste = "obinus.main:teste"
 raspar-tudo = "obinus.main:main"
+testar-gidion = "obinus.main:testar_gidion"
 testar-mobilibus = "obinus.main:testar_mobilibus"
 
 [tool.uv]
