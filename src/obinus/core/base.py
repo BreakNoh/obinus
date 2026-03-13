@@ -8,9 +8,10 @@ MAX_DELAY = 0.5
 
 
 class Raspador(ABC):
-    @abstractmethod
+    NOME_EMPRESA: str = "EMPRESA"
+
     def empresa(self) -> str:
-        pass
+        return self.NOME_EMPRESA
 
     @abstractmethod
     def raspar_linhas(self) -> list[Linha]:
@@ -22,6 +23,9 @@ class Raspador(ABC):
 
     def esperar(self):
         sleep(random.uniform(MIN_DELAY, MAX_DELAY))
+
+    def normalizar_dia(self, d: str) -> str:
+        return d
 
     def raspar(self) -> tuple[list[Linha], list[Horario]]:
         print(f"# raspando {self.empresa()}...")

@@ -17,9 +17,9 @@ Usam o mesmo site
 
 - [x] Transtusa
 - [x] Gidion
-- [ ] Senhora dos Campos
-  - MOBILIBUS -> 816
 - [x] Coletivo Rainha
+- [x] Senhora dos Campos
+  - MOBILIBUS -> 816
 - [ ] Coletivo Santa Cruz
   - https://www.coletivosantacruz.com.br/ | site bem esquisito
 - [ ] Viação Santa Clara

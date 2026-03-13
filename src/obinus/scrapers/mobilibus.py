@@ -1,239 +1,83 @@
-from typing import Callable, TypedDict, Optional
+from typing import TypedDict
 from obinus.core.base import Raspador
 from obinus.core.modelos import Linha, Horario
 from obinus.utils.http import get_json
 import jmespath
 
-from json import loads
-
 URL_LINHAS = "https://mobilibus.com/api/routes"
 URL_HORARIOS = "https://mobilibus.com/api/timetable"
 
 
-class Dias(TypedDict):
+class DadosDia(TypedDict):
     dia: str
     horas: list[str]
 
 
-class Horarios(TypedDict):
+class DadosHorarios(TypedDict):
     sentido: str
-    dias: list[Dias]
+    dias: list[DadosDia]
 
 
-class Linhas(TypedDict):
+class DadosLinha(TypedDict):
+    id_rota: int
     nome: str
     codigo: str
     detalhe: str
-    horarios: list[Horarios]
 
 
-TESTE = """
-[{
-    "routeId": 283791,
-    "shortName": "100",
-    "longName": "Madrugadão Centro / UFSC Norte",
-    "desc": "",
-    "type": 3,
-    "color": "#255e81",
-    "textColor": "#FFFFFF",
-    "ac": false,
-    "price": 6,
-    "timetable": {
-      "directions": [
-        {
-          "directionId": 1,
-          "desc": "TICEN - Plataforma C - Box 6",
-          "services": [
-            {
-              "serviceId": 308458,
-              "desc": "Dias Úteis - Convencional",
-              "days": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                false
-              ],
-              "departures": [
-                {
-                  "dep": "00:45",
-                  "arr": "01:40",
-                  "wa": 1,
-                  "seq": 1
-                },
-                {
-                  "dep": "02:35",
-                  "arr": "03:30",
-                  "wa": 1,
-                  "seq": 1
-                },
-                {
-                  "dep": "04:25",
-                  "arr": "05:20",
-                  "wa": 1,
-                  "seq": 1
-                }
-              ]
-            },
-            {
-              "serviceId": 308461,
-              "desc": "Sábados - Convencional",
-              "days": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                true
-              ],
-              "departures": [
-                {
-                  "dep": "00:45",
-                  "arr": "01:40",
-                  "wa": 1,
-                  "seq": 1
-                },
-                {
-                  "dep": "02:35",
-                  "arr": "03:30",
-                  "wa": 1,
-                  "seq": 1
-                },
-                {
-                  "dep": "04:25",
-                  "arr": "05:20",
-                  "wa": 1,
-                  "seq": 1
-                }
-              ]
-            },
-            {
-              "serviceId": 307430,
-              "desc": "Domingos - Convencional",
-              "days": [
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              "departures": [
-                {
-                  "dep": "00:45",
-                  "arr": "01:40",
-                  "wa": 1,
-                  "seq": 1
-                },
-                {
-                  "dep": "02:35",
-                  "arr": "03:30",
-                  "wa": 1,
-                  "seq": 1
-                },
-                {
-                  "dep": "04:25",
-                  "arr": "05:20",
-                  "wa": 1,
-                  "seq": 1
-                }
-              ]
-            }
-          ]
-    }
-      ],
-      "trips": [
-        {
-          "tripId": 777829,
-          "tripDesc": "Trindade / Córrego Grande » TICEN",
-          "shortName": "",
-          "directionId": 1,
-          "seq": 1
+QUERY_HORARIOS = """
+    [?shortName==`"%s"`].timetable.directions[].{
+        sentido: desc,
+        dias: services[].{
+            dia: desc,
+            horas: departures[].dep
         }
-      ]
     }
-  }]"""
-
+"""
 
 QUERY_LINHAS = jmespath.compile("""
-    [*].{
+    [].{
+        id_rota: routeId,
         nome: longName,
         codigo: shortName,
-        detalhe: desc,
-
-        horarios: timetable.directions[*].{
-            sentido: desc,
-            dias: services[*].{
-                dia: desc,
-                horas: departures[*].dep
-            }
-        }
+        detalhe: desc
     }
-    """)
-
-
-def extrair_linhas(json: dict) -> list[Linhas]:
-    resultado = QUERY_LINHAS.search(json)
-
-    print(resultado)
-
-    return QUERY_LINHAS.search(json)
-
-
-def testar():
-    json = loads(TESTE)
-    # print(json)
-    print(QUERY_LINHAS.search(json))
+""")
 
 
 class Mobilibus(Raspador):
-    def __init__(self, id_projeto: int, conversor: Callable[[str], str]):
-        self.id_projeto = id_projeto
-        self.converter_dia = conversor
-        self.cache_json: Optional[list[Linhas]] = None
-
-    def _carregar_dados(self):
-        if self.cache_json is None:
-            dados_brutos, status = get_json(
-                URL_HORARIOS, {"project_id": self.id_projeto}
-            )
-            if status == 200:
-                self.cache_json = extrair_linhas(dados_brutos)
-            else:
-                self.cache_json = []
-
-    id_projeto: int = 332
-    converter_dia: Callable[[str], str] = lambda s: s
-    json: list[Linhas] = []
-
-    def empresa(self) -> str:
-        return "MOBILIBUS"
+    ID_PROJETO: str
+    VERSAO_LINHAS: str = "1"
+    VERSAO_HORARIOS: str = "1"
 
     def raspar_linhas(self) -> list[Linha]:
-        self._carregar_dados()
+        json, status = get_json(
+            URL_LINHAS, params={"project_id": self.ID_PROJETO, "v": self.VERSAO_LINHAS}
+        )
 
         linhas = []
 
-        if self.cache_json is None:
+        query: list[DadosLinha] = QUERY_LINHAS.search(json)
+
+        if query is None or query == []:
             return []
 
-        for l in self.cache_json:
-            print(l)
+        for l in query:
             codigo = l["codigo"]
             nome = l["nome"]
             detalhe = l["detalhe"]
             executivo = "executivo" in nome.lower()
 
             linha = Linha(
-                empresa=self.empresa(),
+                empresa=self.NOME_EMPRESA,
                 codigo=codigo,
                 nome=nome,
                 detalhe=detalhe,
                 executivo=executivo,
+                url=URL_HORARIOS
+                + f"?project_id={self.ID_PROJETO}"
+                + f"&route_id={l['id_rota']}"
+                + f"&v={self.VERSAO_HORARIOS}",
             )
 
             linhas.append(linha)
@@ -241,27 +85,35 @@ class Mobilibus(Raspador):
         return linhas
 
     def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        self._carregar_dados()
+        json, status = get_json(linha.url)
 
         horarios = []
 
-        if self.cache_json is None:
+        query: list[DadosHorarios] = jmespath.search(
+            QUERY_HORARIOS % linha.codigo, json
+        )
+
+        if query is None or query == []:
             return []
 
-        for l in self.cache_json:
-            if l["codigo"] != linha.codigo:
-                continue
+        for ser in query:
+            sentido = ser["sentido"]
 
-            for h in l["horarios"]:
-                for d in h["dias"]:
-                    for hr in d["horas"]:
-                        horario = Horario(
-                            empresa=self.empresa(),
-                            linha=l["codigo"],
-                            sentido=h["sentido"],
-                            hora=hr,
-                            dia=self.converter_dia(d["dia"]),
+            for d in ser["dias"]:
+                dia = self.normalizar_dia(d["dia"])
+
+                horarios.extend(
+                    [
+                        Horario(
+                            empresa=self.NOME_EMPRESA,
+                            linha=linha.codigo,
+                            sentido=sentido,
+                            hora=hora,
+                            dia=dia,
                         )
-                        horarios.append(horario)
+                        for hora in d["horas"]
+                    ]
+                )
 
+        self.esperar()
         return horarios

@@ -48,8 +48,8 @@ def empresas():
 
 
 def testar_mobilibus():
-    raspador = Mobilibus(332, lambda s: s)
-    # print(raspador.raspar())
+    raspador = Mobilibus()
+    raspador.ID_PROJETO = "816"
     raspador.raspar()
 
 
