@@ -13,6 +13,12 @@ https://onibus.info/api
 
 # Coletivo Rainha
 
+**Linhas** (html)
+https://editor.mobilibus.com/web/timetable/1db0m
+
+**Horarios** (json)
+https://editor.mobilibus.com/web/timetable/1db0m/{HASH_LINHA}
+
 # Senhora dos Campos
 
 Utiliza a API do **Moblibus (Bus2)**
@@ -28,4 +34,5 @@ https://www.coletivosantacruz.com.br/horario
 https://www.coletivosantacruz.com.br/{LINHA}
 
 # Viação Santa Clara
+
 Não encontrei dados

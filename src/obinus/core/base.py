@@ -41,7 +41,10 @@ class Raspador(ABC):
         print(f"# raspando horarios...")
 
         for i, linha in enumerate(linhas_raspadas):
-            print(f"> {i + 1}/{len(linhas_raspadas)} linhas raspadas", end="\r")
+            print(
+                f"> {i + 1}/{len(linhas_raspadas)} linhas raspadas - {linha.nome}",
+                end="\r",
+            )
 
             horarios_raspados = self.raspar_horarios_linha(linha)
             num_horarios += len(horarios_raspados)
