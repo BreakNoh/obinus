@@ -52,9 +52,9 @@ def testar_mobilibus():
 
 def testar_gidion():
     from obinus.scrapers.norte.senhora_dos_campos import SenhoraDosCampos
-    from obinus.scrapers.vale_do_itajai.blumob import BluMob
+    from obinus.scrapers.vale_do_itajai.bcbus import BCBus
 
-    raspador = BluMob()
+    raspador = BCBus()
     raspador.raspar()
 
 
