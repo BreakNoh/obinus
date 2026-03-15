@@ -20,6 +20,6 @@ class Horario:
     linha: str
     sentido: str
     hora: str
-    dia: str
+    dia: str | list[str]
 
     metadados: Any = None

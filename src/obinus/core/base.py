@@ -24,7 +24,7 @@ class Raspador(ABC):
     def esperar(self):
         sleep(random.uniform(MIN_DELAY, MAX_DELAY))
 
-    def normalizar_dia(self, d: str) -> str:
+    def normalizar_dia(self, d: str) -> str | list[str]:
         return d
 
     def raspar(self) -> tuple[list[Linha], list[Horario]]:
