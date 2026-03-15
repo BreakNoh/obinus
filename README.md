@@ -25,7 +25,7 @@
     - [x] Timbó
     - [x] Gaspar
     - [x] RioMafra
-- [ ] Viação Praiana
+- [x] Viação Praiana
 - [ ] Consorcio Atalaia
 - [ ] Consórcio Nosso Brusque
 

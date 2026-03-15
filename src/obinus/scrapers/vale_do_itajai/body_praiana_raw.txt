@@ -1,12 +1,7 @@
 action=jet_smart_filters
 provider=jet-engine/result2
-
-**IMPORTANTE** parece que dita a linha, deve ir de 0 a 100?
-query[_tax_query_linhas]=21
-
-**IMPORTANTE** parece dizer quantos resultados retornara, 10 deve ser o suficiente
-defaults[posts_per_page]=10
-
+query[_tax_query_linhas]=%s
+defaults[posts_per_page]=99
 defaults[post_status][]=publish
 defaults[post_type]=linhas
 defaults[paged]=1

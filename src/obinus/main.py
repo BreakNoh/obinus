@@ -51,21 +51,9 @@ def testar_mobilibus():
 
 
 def testar_gidion():
-    from obinus.scrapers.norte.senhora_dos_campos import SenhoraDosCampos
-    from obinus.scrapers.vale_do_itajai.expresso_presidente import (
-        ExpressoPresidenteGaspar,
-        ExpressoPresidenteTimbo,
-        ExpressoPresidenteRioMafra,
-    )
+    from obinus.scrapers.vale_do_itajai.viacao_praiana import ViacaoPraiana
 
-    # raspador = BCBus()
-    for r in [
-        ExpressoPresidenteTimbo(),
-        ExpressoPresidenteGaspar(),
-        ExpressoPresidenteRioMafra(),
-    ]:
-        r.raspar()
-    # raspador.raspar()
+    ViacaoPraiana().raspar()
 
 
 def teste():

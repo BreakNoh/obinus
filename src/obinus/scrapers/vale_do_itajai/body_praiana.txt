@@ -1,0 +1,6 @@
+action=jet_smart_filters
+provider=jet-engine/result2
+query[_tax_query_linhas]=%s
+defaults[posts_per_page]=99
+defaults[post_type]=linhas
+settings[lisitng_id]=250
