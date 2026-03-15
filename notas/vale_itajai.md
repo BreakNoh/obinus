@@ -23,7 +23,7 @@ Não oferece transporte normal
 
 # Consórcio Nosso Brusque
 
-A comunicação é criptografada com AES, e é salgada \
+A comunicação é criptografada com AES, e é salgada 
 Achei a chave `AL0EHMARC0`, ~mas não sei como descriptografar~
 Consegui descriptografar usando crypto-js
 

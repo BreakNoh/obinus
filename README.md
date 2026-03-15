@@ -21,13 +21,13 @@
 
 - [x] BluMob
 - [x] BCBus
-- [ ] Consórcio Nosso Brusque
-- [ ] Expresso presidente
-    - [ ] Timbó
-    - [ ] Gaspar
-    - [ ] RioMafra
+- [x] Expresso presidente
+    - [x] Timbó
+    - [x] Gaspar
+    - [x] RioMafra
 - [ ] Viação Praiana
 - [ ] Consorcio Atalaia
+- [ ] Consórcio Nosso Brusque
 
 ## SUL
 
