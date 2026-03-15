@@ -19,7 +19,7 @@
 
 ## VALE DO ITAJAÍ E LITORAL NORTE
 
-- [ ] BluMob
+- [x] BluMob
 - [ ] BCBus
 - [ ] Consórcio Nosso Brusque
 - [ ] Expresso presidente
