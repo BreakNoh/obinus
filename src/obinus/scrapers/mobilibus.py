@@ -3,6 +3,7 @@ from obinus.core.base import Raspador
 from obinus.core.modelos import Linha, Horario
 from obinus.utils.http import get_json
 import jmespath
+from pprint import pp, pprint
 
 URL_LINHAS = "https://mobilibus.com/api/routes"
 URL_HORARIOS = "https://mobilibus.com/api/timetable"
@@ -25,15 +26,17 @@ class DadosLinha(TypedDict):
     detalhe: str
 
 
-QUERY_HORARIOS = """
-    [?shortName==`"%s"`].timetable.directions[].{
+# pega o primeiro item da lista ou o objeto raiz, depende do que a api manda
+# a api pode mandar um ou outro por causa da versão
+QUERY_HORARIOS = jmespath.compile("""
+    ([0] || @).timetable.directions[].{ 
         sentido: desc,
         dias: services[].{
             dia: desc,
             horas: departures[].dep
         }
     }
-"""
+""")
 
 QUERY_LINHAS = jmespath.compile("""
     [].{
@@ -89,9 +92,7 @@ class Mobilibus(Raspador):
 
         horarios = []
 
-        query: list[DadosHorarios] = jmespath.search(
-            QUERY_HORARIOS % linha.codigo, json
-        )
+        query: list[DadosHorarios] = QUERY_HORARIOS.search(json)
 
         if query is None or query == []:
             return []
