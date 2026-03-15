@@ -4,16 +4,14 @@ from obinus.scrapers.mobilibus import Mobilibus
 from obinus.utils.http import get_soup
 from obinus.utils.texto import extrair_texto
 
-NOME = "EXPRESSO_PRESIDENTE"
-
 
 class ExpressoPresidenteGaspar(Mobilibus):
-    NOME_EMPRESA = NOME
+    NOME_EMPRESA = "EXPRESSO_PRESIDENTE_GASPAR"
     ID_PROJETO = "699"
 
 
 class ExpressoPresidenteRioMafra(Mobilibus):
-    NOME_EMPRESA = NOME
+    NOME_EMPRESA = "EXPRESSO_PRESIDENTE_RIOMAFRA"
     ID_PROJETO = "956"
 
 
@@ -22,7 +20,7 @@ URL_HORAIOS = "https://expressopresidente.com.br/cidades/timbo/linha/%s"
 
 
 class ExpressoPresidenteTimbo(Raspador):
-    NOME_EMPRESA = NOME
+    NOME_EMPRESA = "EXPRESSO_PRESIDENTE_TIMBO"
 
     def raspar_linhas(self) -> list[Linha]:
         soup, status = get_soup(URL_LINHAS)
@@ -38,7 +36,7 @@ class ExpressoPresidenteTimbo(Raspador):
                 continue
 
             linha = Linha(
-                empresa=NOME,
+                empresa=self.NOME_EMPRESA,
                 codigo=codigo,
                 nome=nome,
                 url=URL_HORAIOS % url,
@@ -76,7 +74,7 @@ class ExpressoPresidenteTimbo(Raspador):
             horarios.extend(
                 [
                     Horario(
-                        empresa=NOME,
+                        empresa=self.NOME_EMPRESA,
                         linha=linha.codigo,
                         sentido=sentido,
                         hora=hora,

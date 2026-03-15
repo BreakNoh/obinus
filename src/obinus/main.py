@@ -51,9 +51,9 @@ def testar_mobilibus():
 
 
 def testar_gidion():
-    from obinus.scrapers.vale_do_itajai.viacao_praiana import ViacaoPraiana
+    from obinus.scrapers.vale_do_itajai.consorcio_atalaia import ConsorcioAtalaia
 
-    ViacaoPraiana().raspar()
+    ConsorcioAtalaia().raspar()
 
 
 def teste():

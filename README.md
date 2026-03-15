@@ -26,7 +26,7 @@
     - [x] Gaspar
     - [x] RioMafra
 - [x] Viação Praiana
-- [ ] Consorcio Atalaia
+- [x] Consorcio Atalaia
 - [ ] Consórcio Nosso Brusque
 
 ## SUL
