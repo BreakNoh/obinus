@@ -1,5 +1,6 @@
-from requests import Session
-from bs4 import BeautifulSoup
+from requests import Response, Session, request
+from bs4 import BeautifulSoup, Tag
+from obinus.utils.texto import normalizar
 
 sessao = Session()
 
@@ -8,26 +9,61 @@ HEADERS_BASE = {
 }
 
 
+def _req(
+    metodo: str,
+    url: str,
+    params: dict[str, str] = {},
+    headers: dict[str, str] = {},
+    data: str | dict[str, str] | None = None,
+) -> Response:
+    res: Response = request(
+        method=metodo, url=url, params=params, headers=HEADERS_BASE | headers, data=data
+    )
+
+    if res.status_code != 200:
+        print(f"{url}: {res.status_code}")
+
+    if "charset" not in res.headers.get("Content-Type", "").lower():
+        res.encoding = res.apparent_encoding
+
+    return res
+
+
 def get_html(
-    url, params: dict[str, str] = {}, headers: dict[str, str] = {}
+    url,
+    params: dict[str, str] = {},
+    headers: dict[str, str] = {},
+    metodo: str = "GET",
+    data: str | dict[str, str] | None = None,
 ) -> tuple[str, int]:
-    req = sessao.get(url, params=params, headers=HEADERS_BASE | headers)
-    if "charset" not in req.headers.get("Content-Type", "").lower():
-        req.encoding = req.apparent_encoding
-    return (req.text, req.status_code)
+    res = _req(metodo, url, params, headers, data)
+
+    return (res.text, res.status_code)
 
 
 def get_json(
-    url, params: dict[str, str] = {}, headers: dict[str, str] = {}
-) -> tuple[str, int]:
-    req = sessao.get(url, params=params, headers=HEADERS_BASE | headers)
+    url,
+    params: dict[str, str] = {},
+    headers: dict[str, str] = {},
+    metodo: str = "GET",
+    data: str | dict[str, str] | None = None,
+) -> tuple[object, int]:
+    try:
+        res = _req(metodo, url, params, headers, data)
 
-    if "charset" not in req.headers.get("Content-Type", "").lower():
-        req.encoding = req.apparent_encoding
-
-    return req.json(), req.status_code
+        return (res.json(), res.status_code)
+    except Exception as e:
+        print(f"erro ao extrair json de {url}:", e)
+        return {}, 0
 
 
 def get_soup(url, params: dict = {}) -> tuple[BeautifulSoup, int]:
     html, status = get_html(url, params)
     return (BeautifulSoup(html, "html.parser"), status)
+
+
+def extrair_texto(tag: Tag | None) -> str | None:
+    if not tag or tag is None:
+        return None
+
+    return normalizar("".join(tag.find_all(string=True, recursive=False)))
