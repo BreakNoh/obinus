@@ -7,7 +7,7 @@
 - [x] Empresa Estrela
 - [x] Biguaçu Transportes Coletivos
 - [x] Auto Viação Imperatriz
-- [x] Santa Terezinha
+- [x] Viação Santa Terezinha
 
 ## NORTE E PLANALTO NORTE
 
@@ -16,27 +16,29 @@
 - [x] Coletivo Rainha
 - [x] Senhora dos Campos
 - [x] Coletivo Santa Cruz
+- [x] Expresso Presidente (RioMafra)
 
 ## VALE DO ITAJAÍ E LITORAL NORTE
 
 - [x] BluMob
 - [x] BCBus
-- [x] Expresso presidente
-    - [x] Timbó
-    - [x] Gaspar
-    - [x] RioMafra
+- [x] Expresso Presidente
+  - [x] Timbó
+  - [x] Gaspar
+- [ ] Ônibus Circular Ltda (Rio do Sul)
 - [x] Viação Praiana
-- [x] Consorcio Atalaia
+- [x] Consórcio Atalaia
 - [x] Consórcio Nosso Brusque
 
 ## SUL
 
 - [x] Consórcio CriBus
-  <!-- - [ ] Transpiedade Tubarão -->
+  - [x] CRITUR (Auto Viação São João)
 - [ ] Lagunatur
 - [ ] Expresso Coletivo Içarense
-  <!-- - [ ] Santo Anjo -->
 - [ ] Viação Cidade
+<!-- - [ ] Cidade Sombrio -->
+- [ ] Consórcio Cidade Azul (Tubarão)
 
 ## OESTE E MEIO-OESTE
 
@@ -44,12 +46,11 @@
 - [ ] Hodierna
 - [ ] Auto Coletivo Caçador
 - [ ] Empresa Joaçabense
-- [ ] Estrela
-- [ ] Santa Teresinha
-- [ ] Auto Viação Xanxerê
+- [ ] Castilho & CIA
+- [ ] Santa Teresinha (Videira)
+- [ ] TCI (Porto União)
 
 ## SERRA
 
 - [ ] Transul
 - [ ] Transportes Coletivos Curitibanos
-- [ ] Expresso Lorenzetti

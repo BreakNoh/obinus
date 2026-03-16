@@ -22,3 +22,9 @@ Considerar raspagem manual
 ou raspagem por llm
 **Linhas e Horarios** ( pdf )
 https://viacidade.com.br/itinerario
+
+# Consórcio Cidade Azul
+
+Considerar LLM
+**Linhas e Horários** (html / pdf)
+https://consorciocidadeazul.wixsite.com/tubarao/horários

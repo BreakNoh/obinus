@@ -94,3 +94,10 @@ https://praiana.com.br/horarios/
 Utiliza a API do **Moblibus (Bus2)**
 
 **ID do projeto:** 391
+
+# Ônibus Circular LTDA
+
+Utiliza a API do **Moblibus (Bus2)**
+
+**ID do projeto:** 821
+**Versão horários:** 2
