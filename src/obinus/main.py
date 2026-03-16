@@ -57,9 +57,7 @@ def testar_gidion():
 
 
 def teste():
-    global scrapers
-    from .scrapers.teste import Teste
+    from obinus.scrapers.vale_do_itajai.nosso_brusque import NossoBrusque
+    import pprint
 
-    scrapers = [Teste()]
-
-    main()
+    pprint.pp(NossoBrusque().raspar())

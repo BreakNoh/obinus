@@ -27,15 +27,15 @@
     - [x] RioMafra
 - [x] Viação Praiana
 - [x] Consorcio Atalaia
-- [ ] Consórcio Nosso Brusque
+- [x] Consórcio Nosso Brusque
 
 ## SUL
 
 - [ ] Consórcio CriBus
-- [ ] Transpiedade Tubarão
+  <!-- - [ ] Transpiedade Tubarão -->
 - [ ] Lagunatur
 - [ ] Expresso Coletivo Içarense
-- [ ] Santo Anjo
+  <!-- - [ ] Santo Anjo -->
 - [ ] Viação Cidade
 
 ## OESTE E MEIO-OESTE
@@ -53,9 +53,3 @@
 - [ ] Transul
 - [ ] Transportes Coletivos Curitibanos
 - [ ] Expresso Lorenzetti
-
-<!-- ## RODOVIÁRIO (INTERESTADUAL/ESTADUAL) -->
-<!-- - [ ] Catarinense -->
-<!-- - [ ] Reunidas -->
-<!-- - [ ] Unesul -->
-<!-- - [ ] Eucatur -->

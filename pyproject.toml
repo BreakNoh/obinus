@@ -7,15 +7,16 @@ requires-python = ">=3.14"
 dependencies = [
   "bs4>=0.0.2",
   "jmespath>=1.1.0",
+  "pycryptodome>=3.23.0",
   "requests>=2.32.5",
 ]
 
 [project.scripts]
 raspar-empresa = "obinus.main:empresas"
-raspar-teste = "obinus.main:teste"
 raspar-tudo = "obinus.main:main"
 testar-gidion = "obinus.main:testar_gidion"
 testar-mobilibus = "obinus.main:testar_mobilibus"
+teste = "obinus.main:teste"
 
 [tool.uv]
 package = true

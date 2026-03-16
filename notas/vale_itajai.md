@@ -23,11 +23,19 @@ Não oferece transporte normal
 
 # Consórcio Nosso Brusque
 
-A comunicação é criptografada com AES, e é salgada 
+A comunicação é criptografada com AES, e é salgada
 Achei a chave `AL0EHMARC0`, ~mas não sei como descriptografar~
 Consegui descriptografar usando crypto-js
 
-- https://www.nossobrusque.com.br/ | SPA -> chatinho
+depois de decriptar uma mensagem vi que que na verdade usa o sistema Moblibus
+e dá pra chamar diretamente sem a criptografia B)
+
+~- https://www.nossobrusque.com.br/ | SPA -> chatinho~
+
+Utiliza a API do **Moblibus (Bus2)**
+
+**ID do projeto:** 8
+**Versao horarios:** 2
 
 # ~Viação Navegantes~
 
