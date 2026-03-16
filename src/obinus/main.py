@@ -57,7 +57,7 @@ def testar_gidion():
 
 
 def teste():
-    from obinus.scrapers.vale_do_itajai.nosso_brusque import NossoBrusque
+    from obinus.scrapers.sul.cribus import CriBus
     import pprint
 
-    pprint.pp(NossoBrusque().raspar())
+    CriBus().raspar()

@@ -31,7 +31,7 @@
 
 ## SUL
 
-- [ ] Consórcio CriBus
+- [x] Consórcio CriBus
   <!-- - [ ] Transpiedade Tubarão -->
 - [ ] Lagunatur
 - [ ] Expresso Coletivo Içarense
