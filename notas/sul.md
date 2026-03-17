@@ -6,6 +6,8 @@ Utiliza a API do **Moblibus (Bus2)**
 
 # Lagunatur
 
+SITE NÃO FUNCIONA MAIS?
+
 **Linhas e Horarios** ( pdf :( )
 http://www.lagunatur.com.br/paginas/transporte-urbano.html
 

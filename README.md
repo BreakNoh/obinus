@@ -27,8 +27,8 @@
 - [x] BluMob
 - [x] BCBus
 - [x] Expresso Presidente
-    - [x] Timbó
-    - [x] Gaspar
+  - [x] Timbó
+  - [x] Gaspar
 - [x] Viação Praiana
 - [x] Consórcio Atalaia
 - [x] Consórcio Nosso Brusque
@@ -37,9 +37,9 @@
 ## SUL
 
 - [x] Consórcio CriBus
-    - [x] CRITUR (Auto Viação São João)
+  - [x] CRITUR (Auto Viação São João)
 - [ ] Lagunatur
-- [ ] Expresso Coletivo Içarense
+- [x] Expresso Coletivo Içarense
 - [ ] Viação Cidade
 - [ ] Consórcio Cidade Azul (Tubarão)
 

@@ -57,7 +57,7 @@ def testar_gidion():
 
 
 def teste():
-    from obinus.scrapers.sul.cribus import CriBus
     import pprint
+    from .scrapers.sul.expresso_icarense import ExpressoIcarense
 
-    CriBus().raspar()
+    ExpressoIcarense().raspar()

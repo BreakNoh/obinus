@@ -7,7 +7,7 @@ class Linha:
     empresa: str
     codigo: str
     nome: str
-    detalhe: str
+    detalhe: str = ""
     executivo: bool = False
     url: str = ""
 
