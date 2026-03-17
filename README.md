@@ -1,6 +1,10 @@
 # TODO
 
-## GRANDE FLORIANÓPOLIS
+**Regiões Concluídas**
+
+> 3/6
+
+## _GRANDE FLORIANÓPOLIS_
 
 - [x] Consórcio Fênix
 - [x] Jotur
@@ -9,7 +13,7 @@
 - [x] Auto Viação Imperatriz
 - [x] Viação Santa Terezinha
 
-## NORTE E PLANALTO NORTE
+## _NORTE E PLANALTO NORTE_
 
 - [x] Transtusa
 - [x] Gidion
@@ -18,26 +22,25 @@
 - [x] Coletivo Santa Cruz
 - [x] Expresso Presidente (RioMafra)
 
-## VALE DO ITAJAÍ E LITORAL NORTE
+## _VALE DO ITAJAÍ E LITORAL NORTE_
 
 - [x] BluMob
 - [x] BCBus
 - [x] Expresso Presidente
-  - [x] Timbó
-  - [x] Gaspar
-- [ ] Ônibus Circular Ltda (Rio do Sul)
+    - [x] Timbó
+    - [x] Gaspar
 - [x] Viação Praiana
 - [x] Consórcio Atalaia
 - [x] Consórcio Nosso Brusque
+- [x] Ônibus Circular Ltda (Rio do Sul)
 
 ## SUL
 
 - [x] Consórcio CriBus
-  - [x] CRITUR (Auto Viação São João)
+    - [x] CRITUR (Auto Viação São João)
 - [ ] Lagunatur
 - [ ] Expresso Coletivo Içarense
 - [ ] Viação Cidade
-<!-- - [ ] Cidade Sombrio -->
 - [ ] Consórcio Cidade Azul (Tubarão)
 
 ## OESTE E MEIO-OESTE
