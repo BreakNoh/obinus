@@ -16,6 +16,13 @@ Considerar raspagem manual
 **Linhas e Horarios** ( html )
 https://icarense.com.br/linhas-e-horarios/
 
+_seletor tabs dias_
+
+```css
+[role='tablist'].e-n-tabs-content > [data-element_type='container']
+
+```
+
 # Viação Cidade
 
 Considerar raspagem manual
