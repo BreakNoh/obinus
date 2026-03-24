@@ -58,6 +58,6 @@ def testar_gidion():
 
 def teste():
     import pprint
-    from .scrapers.sul.expresso_icarense import ExpressoIcarense
+    from .scrapers.sul.grupo_forquilinhas import GrupoForquilhinha
 
-    ExpressoIcarense().raspar()
+    GrupoForquilhinha().raspar()

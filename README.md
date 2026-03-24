@@ -42,13 +42,13 @@
 - [x] Expresso Coletivo Içarense
 - [ ] Viação Cidade
 - [ ] Consórcio Cidade Azul (Tubarão)
-- [ ] Grupo Forquilinha
+- [x] Grupo Forquilinha
 
 ## OESTE E MEIO-OESTE
 
 - [ ] Auto Viação Chapecó
 - [ ] Hodierna
-- [ ] Auto Coletivo Caçador
+- [x] Auto Coletivo Caçador
 - [ ] Empresa Joaçabense
 - [ ] Castilho & CIA
 - [ ] Santa Teresinha (Videira)
