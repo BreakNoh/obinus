@@ -37,3 +37,8 @@ https://viacidade.com.br/itinerario
 Considerar LLM
 **Linhas e Horários** (html / pdf)
 https://consorciocidadeazul.wixsite.com/tubarao/horários
+
+# Grupo Forquilinha
+
+**Linhas e Horários** (html)
+https://www.grupoforquilhinha.com.br/horarios
