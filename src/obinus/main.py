@@ -1,19 +1,17 @@
-from .scrapers.grande_florianopolis import *
 from .core.modelos import *
 from .database import db
 from .utils.salvar import salvar_csv
-from .scrapers.mobilibus import Mobilibus
+from .scrapers import todos
 
 todas_linhas: list[Linha] = []
 todos_horarios: list[Horario] = []
 
-scrapers = [Biguacu(), Fenix(), Estrela(), SantaTerezinha(), Imperatriz(), Jotur()]
-
 
 def main():
-    db.iniciar_db()
+    todas_linhas = []
+    todos_horarios = []
 
-    for raspador in scrapers:
+    for raspador in todos:
         linhas, horarios = raspador.raspar()
 
         todas_linhas.extend(linhas)
@@ -22,42 +20,5 @@ def main():
         salvar_csv(linhas, f"LINHAS_{raspador.empresa()}.csv")
         salvar_csv(horarios, f"HORARIOS_{raspador.empresa()}.csv")
 
-    print("# salvando linhas...")
-    db.salvar_linhas(todas_linhas)
-
-    print("# salvando horarios...")
-    db.salvar_horarios(todos_horarios)
-
-
-def empresas():
-    global scrapers
-    import sys
-
-    selecionados = []
-
-    for e in sys.argv:
-        for s in scrapers:
-            if s.empresa().lower() == e.lower():
-                selecionados.append(s)
-
-    scrapers = selecionados
-    main()
-
-
-def testar_mobilibus():
-    raspador = Mobilibus()
-    raspador.ID_PROJETO = "816"
-    raspador.raspar()
-
-
-def testar_gidion():
-    from obinus.scrapers.vale_do_itajai.consorcio_atalaia import ConsorcioAtalaia
-
-    ConsorcioAtalaia().raspar()
-
-
-def teste():
-    import pprint
-    from .scrapers.serra.transul import Transul
-
-    Transul().raspar()
+    salvar_csv(todas_linhas, "LINHAS_SANTA_CATARINA.csv")
+    salvar_csv(todos_horarios, "HORARIOS_SANTA_CATARINA.csv")

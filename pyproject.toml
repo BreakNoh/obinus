@@ -13,11 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-raspar-empresa = "obinus.main:empresas"
 raspar-tudo = "obinus.main:main"
-testar-gidion = "obinus.main:testar_gidion"
-testar-mobilibus = "obinus.main:testar_mobilibus"
-teste = "obinus.main:teste"
 
 [tool.uv]
 package = true
