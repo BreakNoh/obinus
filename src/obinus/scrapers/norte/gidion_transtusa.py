@@ -54,9 +54,9 @@ class GidionTranstusa(Raspador):
 
         linhas: list[Linha] = []
 
-        query: list[DadosLinha] = QUERY_LINHAS.search(json)
+        query: list[DadosLinha] | None = QUERY_LINHAS.search(json)
 
-        if query is []:
+        if query is [] or not query:
             return []
 
         for l in query:
@@ -77,9 +77,9 @@ class GidionTranstusa(Raspador):
 
         horarios: list[Horario] = []
 
-        query: list[DadosHorarios] = QUERY_HORARIOS.search(json)
+        query: list[DadosHorarios] | None = QUERY_HORARIOS.search(json)
 
-        if query is []:
+        if query is [] or not query:
             return []
 
         for ser in query:
