@@ -58,6 +58,6 @@ def testar_gidion():
 
 def teste():
     import pprint
-    from .scrapers.sul.grupo_forquilinhas import GrupoForquilhinha
+    from .scrapers.serra.transul import Transul
 
-    GrupoForquilhinha().raspar()
+    Transul().raspar()

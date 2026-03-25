@@ -21,6 +21,14 @@ class Raspador(ABC):
     def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
         pass
 
+    def raspar_horarios(self, linhas: list[Linha]) -> list[Horario]:
+        horarios = []
+        for linha in linhas:
+            horarios_raspados = self.raspar_horarios_linha(linha)
+
+            horarios.extend(horarios_raspados)
+        return horarios
+
     def esperar(self):
         sleep(random.uniform(MIN_DELAY, MAX_DELAY))
 
