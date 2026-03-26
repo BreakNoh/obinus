@@ -12,12 +12,16 @@ HEADERS_BASE = {
 def _req(
     metodo: str,
     url: str,
-    params: dict[str, str] = {},
-    headers: dict[str, str] = {},
+    params: dict[str, str] | None = None,
+    headers: dict[str, str] | None = None,
     data: str | dict[str, str] | None = None,
 ) -> Response:
     res: Response = request(
-        method=metodo, url=url, params=params, headers=HEADERS_BASE | headers, data=data
+        method=metodo,
+        url=url,
+        params=params,
+        headers=HEADERS_BASE | (headers if headers else {}),
+        data=data,
     )
 
     if res.status_code != 200:
@@ -31,35 +35,43 @@ def _req(
 
 def get_html(
     url,
-    params: dict[str, str] = {},
-    headers: dict[str, str] = {},
+    params: dict[str, str] | None = None,
+    headers: dict[str, str] | None = None,
     metodo: str = "GET",
     data: str | dict[str, str] | None = None,
 ) -> tuple[str, int]:
     res = _req(metodo, url, params, headers, data)
-
     return (res.text, res.status_code)
 
 
 def get_json(
-    url,
-    params: dict[str, str] = {},
-    headers: dict[str, str] = {},
+    url: str,
+    params: dict[str, str] | None = None,
+    headers: dict[str, str] | None = None,
     metodo: str = "GET",
     data: str | dict[str, str] | None = None,
-) -> tuple[object, int]:
+) -> tuple[object, int] | None:
     try:
         res = _req(metodo, url, params, headers, data)
-
         return (res.json(), res.status_code)
     except Exception as e:
         print(f"erro ao extrair json de {url}:", e)
-        return {}, 0
+        return None
 
 
-def get_soup(url, params: dict = {}) -> tuple[BeautifulSoup, int]:
-    html, status = get_html(url, params)
-    return (BeautifulSoup(html, "html.parser"), status)
+def get_soup(
+    url: str,
+    params: dict[str, str] | None = None,
+    headers: dict[str, str] | None = None,
+    metodo: str = "GET",
+    data: str | dict[str, str] | None = None,
+) -> tuple[BeautifulSoup, int] | None:
+    try:
+        html, status = get_html(url, params, headers, metodo, data)
+        return (BeautifulSoup(html, "html.parser"), status)
+    except Exception as e:
+        print(f"erro ao parsear html de {url}:", e)
+        return None
 
 
 def extrair_texto(tag: Tag | None) -> str | None:
