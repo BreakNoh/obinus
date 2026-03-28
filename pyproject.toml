@@ -15,5 +15,14 @@ dependencies = [
 [project.scripts]
 raspar-tudo = "obinus.main:main"
 
+[tool.pytest]
+addopts = ["-q", "-ra"]
+minversion = "9.0"
+pythonpath = ["src"]
+testpaths = [
+  "integration",
+  "tests",
+]
+
 [tool.uv]
 package = true

@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum, auto
 from typing import NamedTuple, Final
 from bs4 import BeautifulSoup
@@ -14,25 +14,45 @@ class TipoLinha(Enum):
     EXECUTIVO = auto()
 
 
+@dataclass(frozen=True)
+class Adaptado: ...
+
+
+@dataclass(frozen=True)
+class MeiaViagem: ...
+
+
+@dataclass(frozen=True)
+class HorarioPrevisto: ...
+
+
+@dataclass(frozen=True)
+class ItinerarioDiferenciado:
+    itinerario: str
+
+
+ObsHorario = Adaptado | ItinerarioDiferenciado | MeiaViagem | HorarioPrevisto
+
+
 @dataclass
-class Linha_:
-    nome: str
-    codigo: str | None = None
-    servicos: list[Servico] = []
-    tipo: TipoLinha = TipoLinha.CONVENCIONAL
+class Horario:
+    hora: str
+    obs: list[ObsHorario] = field(default_factory=list[ObsHorario])
 
 
 @dataclass
 class Servico:
     dias: Dias = 0
     sentido: str | None = None
-    horarios: list[Horario_] = []
+    horarios: list[Horario] = field(default_factory=list[Horario])
 
 
 @dataclass
-class Horario_:
-    hora: str
-    obs: list[str] | None = None
+class Linha:
+    nome: str
+    codigo: str | None = None
+    servicos: list[Servico] = field(default_factory=list[Servico])
+    tipo: TipoLinha = TipoLinha.CONVENCIONAL
 
 
 class Html(NamedTuple):

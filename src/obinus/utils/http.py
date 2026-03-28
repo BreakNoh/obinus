@@ -50,13 +50,9 @@ def get_json(
     headers: dict[str, str] | None = None,
     metodo: str = "GET",
     data: str | dict[str, str] | None = None,
-) -> tuple[object, int] | None:
-    try:
-        res = _req(metodo, url, params, headers, data)
-        return (res.json(), res.status_code)
-    except Exception as e:
-        print(f"erro ao extrair json de {url}:", e)
-        return None
+) -> object:
+    res = _req(metodo, url, params, headers, data)
+    return res.json()
 
 
 def get_soup(
@@ -65,13 +61,9 @@ def get_soup(
     headers: dict[str, str] | None = None,
     metodo: str = "GET",
     data: str | dict[str, str] | None = None,
-) -> tuple[BeautifulSoup, int] | None:
-    try:
-        html, status = get_html(url, params, headers, metodo, data)
-        return (BeautifulSoup(html, "html.parser"), status)
-    except Exception as e:
-        print(f"erro ao parsear html de {url}:", e)
-        return None
+) -> BeautifulSoup:
+    html, status = get_html(url, params, headers, metodo, data)
+    return BeautifulSoup(html, "html.parser")
 
 
 def extrair_texto(tag: Tag | None) -> str | None:

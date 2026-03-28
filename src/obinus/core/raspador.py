@@ -8,7 +8,7 @@ B = TypeVar("B", bound=Busca)
 
 
 class Extrator(Protocol, Generic[P, Q, B]):
-    def extrair_linhas(self, payload: P) -> list[tuple[Linha_, B]]: ...
+    def extrair_linhas(self, payload: P) -> list[tuple[Linha, B]]: ...
     def extrair_horarios(self, payload: Q) -> list[Servico]: ...
 
 
@@ -22,13 +22,20 @@ class InterfaceRaspador(
 ): ...
 
 
-def raspar(extrator: Extrator[P, Q, B], buscador: Buscador[P, Q, B]) -> list[Linha_]:
-    payload_linhas = buscador.buscar_linhas()
-    resultado_linhas = extrator.extrair_linhas(payload_linhas)
+def raspar(extrator: Extrator[P, Q, B], buscador: Buscador[P, Q, B]) -> list[Linha]:
+    linhas = []
 
-    for linha, busca in resultado_linhas:
-        payload_horarios = buscador.buscar_horarios(busca)
+    try:
+        payload_linhas = buscador.buscar_linhas()
+        resultado_linhas = extrator.extrair_linhas(payload_linhas)
 
-        horarios = extrator.extrair_horarios(payload_horarios)
+        for linha, busca in resultado_linhas:
+            payload_horarios = buscador.buscar_horarios(busca)
 
-    return []  # só mockup
+            servicos = extrator.extrair_horarios(payload_horarios)
+
+            linha.servicos = servicos
+    except Exception as e:
+        print(e)
+
+    return linhas  # só mockup
