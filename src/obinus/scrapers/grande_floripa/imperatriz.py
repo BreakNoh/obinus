@@ -1,0 +1,82 @@
+import re
+
+from obinus.core.base import Raspador
+from obinus.core.modelos import Linha, Horario
+from obinus.utils.http import get_soup
+from obinus.utils.texto import extrair_texto
+
+
+EMPRESA: str = "IMPERATRIZ"
+
+
+URL_BASE = "https://www.tcimperatriz.com.br"
+DIAS = {
+    "Dias Úteis": "UTIL",
+    "Sábado": "SABADO",
+    "Domingo e Feriado": "DOMINGO_FERIADO",
+}
+
+
+class Imperatriz(Raspador):
+    def empresa(self) -> str:
+        return EMPRESA
+
+    def raspar_linhas(self) -> list[Linha]:
+        soup, status = get_soup(URL_BASE + "/horarios/")
+
+        linhas = []
+
+        for item in soup.select(".elementor-shortcode  li > a"):
+            nome = extrair_texto(item.select_one("b"))
+            texto = extrair_texto(item).replace("-", "")
+            url = item["href"]
+
+            codigo, detalhe = "", ""
+
+            partes = re.split(r"\s{2,}", texto)
+
+            if len(partes) > 0:
+                codigo = partes[0].strip()
+            if len(partes) > 1:
+                detalhe = partes[1].strip()
+
+            if len(nome) == 0 or len(codigo) == 0:
+                continue
+
+            linha = Linha(EMPRESA, codigo, nome, detalhe, False, str(url))
+
+            linhas.append(linha)
+
+        return linhas
+
+    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
+        soup, status = get_soup(linha.url)
+
+        horarios = []
+
+        for painel in soup.select(".diapanel"):
+            id_botao = painel["aria-labelledby"]
+            dia = extrair_texto(soup.select_one(f"#{id_botao}"))
+
+            if not dia in DIAS.keys():
+                continue
+
+            dia = DIAS[dia]
+
+            for sub in painel.select(".horario--panel"):
+                sentido = extrair_texto(sub.select_one("h3"))
+                if sentido == "":
+                    continue
+                for item in sub.select("li"):
+                    hora = extrair_texto(item)
+                    hora_extraida = re.search(r"[0-9]+:[0-9]+", hora)
+
+                    if hora_extraida is None:
+                        continue
+
+                    hora = hora_extraida.group(0)
+
+                    horario = Horario(EMPRESA, linha.codigo, sentido, hora, dia)
+                    horarios.append(horario)
+
+        return horarios
