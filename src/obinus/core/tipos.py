@@ -40,6 +40,17 @@ class ItinerarioDiferenciado:
     itinerario: str
 
 
+@dataclass(frozen=True)
+class Generica:
+    tipo: str | None = None
+    valor: str | None = None
+
+
+@dataclass(frozen=True)
+class SaidaDe:
+    said: str
+
+
 ObsHorario = (
     Adaptado
     | ItinerarioDiferenciado
@@ -47,6 +58,8 @@ ObsHorario = (
     | HorarioPrevisto
     | OperadoPor
     | RecolheBairro
+    | SaidaDe
+    | Generica
 )
 
 
