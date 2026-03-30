@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum, auto
 from typing import NamedTuple, Final
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 type Dias = int
 DIAS_UTEIS: Final[int] = 0b0111110
@@ -19,6 +19,15 @@ class Adaptado: ...
 
 
 @dataclass(frozen=True)
+class OperadoPor:
+    empresa: str
+
+
+@dataclass(frozen=True)
+class RecolheBairro: ...
+
+
+@dataclass(frozen=True)
 class MeiaViagem: ...
 
 
@@ -31,7 +40,14 @@ class ItinerarioDiferenciado:
     itinerario: str
 
 
-ObsHorario = Adaptado | ItinerarioDiferenciado | MeiaViagem | HorarioPrevisto
+ObsHorario = (
+    Adaptado
+    | ItinerarioDiferenciado
+    | MeiaViagem
+    | HorarioPrevisto
+    | OperadoPor
+    | RecolheBairro
+)
 
 
 @dataclass
@@ -51,12 +67,13 @@ class Servico:
 class Linha:
     nome: str
     codigo: str | None = None
+    detalhe: str | None = None
     servicos: list[Servico] = field(default_factory=list[Servico])
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
 
 
 class Html(NamedTuple):
-    html: BeautifulSoup
+    html: BeautifulSoup | Tag
 
 
 class Json(NamedTuple):
@@ -71,5 +88,5 @@ class Raw(NamedTuple):
     valor: str
 
 
-Busca = Url | Html | None
+Busca = Url | Html | Raw | None
 Payload = Html | Json | Raw | None
