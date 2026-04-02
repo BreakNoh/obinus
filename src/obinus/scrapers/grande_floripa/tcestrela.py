@@ -41,36 +41,40 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
     ) -> list[tuple[str, ObsHorario]]:
         legenda = []
         dentro_legenda = False
-        PADRAO = re.compile(r"(?P<cod>[\*A-Z\u00B2\u00B9]+?)(?:\W+)(?P<leg>*)")
+        PADRAO = re.compile(r"(?P<cod>[\*A-Z\u00B2\u00B9]+?)(?:\W+)(?P<leg>.*)")
 
         for lin in html.find_all("tr"):
             cols = lin.find_all("td")
 
-            match len(cols):
-                case 4 | 6 if "observações" in extrair_texto(cols[1]).lower():
+            for c in cols:
+                valor = extrair_texto(c)
+                valor_norm = valor.lower()
+
+                if "observaç" in valor_norm:
                     dentro_legenda = True
-                case _ if dentro_legenda:
-                    break
-                case _ if not dentro_legenda:
                     continue
+                elif not dentro_legenda:
+                    continue
+                elif len(cols) == 3:
+                    break
 
-            if (texto := extrair_texto(cols[2])) and (match := PADRAO.search(texto)):
-                leg = match.group("leg")
-                leg_norm = leg.lower()
-                cod = match.group("cod")
+                if match := PADRAO.search(valor):
+                    leg = match.group("leg")
+                    leg_norm = leg.lower()
+                    cod = match.group("cod")
 
-                if cod == "*":
-                    obs = HorarioPrevisto()
-                elif "recolhe" in leg_norm:
-                    obs = RecolheBairro()
-                elif "até" in leg_norm:
-                    obs = ItinerarioDiferenciado(leg)
-                elif cod in "\u00b2\u00b9":
-                    obs = OperadoPor("Estrela", leg)
-                else:
-                    obs = Generica(valor=leg)
+                    if cod == "*":
+                        obs = HorarioPrevisto()
+                    elif "recolhe" in leg_norm:
+                        obs = RecolheBairro()
+                    elif "até" in leg_norm:
+                        obs = ItinerarioDiferenciado(leg)
+                    elif cod in "\u00b2\u00b9":
+                        obs = OperadoPor("Estrela", leg)
+                    else:
+                        obs = Generica(valor=leg)
 
-                legenda.append((match.group("cod"), obs))
+                    legenda.append((match.group("cod"), obs))
 
         return legenda
 
@@ -90,19 +94,23 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
             buffer_sentido = None
             servicos_dias = None
 
+            print(len(cols))
             match len(cols):
                 case 3:
                     buffer_sentido = extrair_texto(cols[1])
-                case 8:
-                    pass
-                case 5 if buffer_sentido:
+                    continue
+                case 5 | 7 if buffer_sentido:
+                    print(buffer_sentido)
                     servicos_dias = [
                         Servico(DIAS_UTEIS, buffer_sentido),
                         Servico(SABADO, buffer_sentido),
                         Servico(DOMINGO_E_FERIADOS, buffer_sentido),
                     ]
                     buffer_sentido = None
-                case _:
+                case 7 if servicos_dias:
+                    print("a")
+                    pass
+                case _ if servicos_dias:
                     buffer_sentido = None
                     continue
 
@@ -113,6 +121,7 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
                 if (texto := extrair_texto(cols[i + 1]).strip()) and (
                     hora := re.search(r"\d{2}\.\d{2}", texto)
                 ):
+                    print(hora)
                     horario = Horario(hora.group().replace(".", ":"))
                     self.adicionar_obs(horario, texto, legenda)
                     servicos_dias[dia].horarios.append(horario)
