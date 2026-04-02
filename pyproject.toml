@@ -19,7 +19,7 @@ raspar-tudo = "obinus.main:main"
 [tool.pytest]
 addopts = ["-q", "-ra"]
 minversion = "9.0"
-pythonpath = ["src"]
+pythonpath = ["src", "tests"]
 testpaths = [
   "integration",
   "tests",
