@@ -57,21 +57,20 @@ class Jotur(InterfaceRaspador[Html, Html, Url]):
 
         return Html(html_final)
 
-    def raspar_horarios_linha(self, payload: Html) -> list[Horario]:
+    def extrair_horarios(self, payload: Html) -> list[Servico]:
         servicos = []
 
-        for coluna in payload.html.select(".column[data-sentido]"):
+        for coluna in payload.html.select("div.column[data-sentido]"):
             if dia := extrair_texto(coluna.select_one("h4")):
                 sentido = str(coluna["data-sentido"])
                 servico = Servico(DIAS[dia], sentido)
             else:
                 continue
 
-            for item in coluna.select(".time-item"):
+            for item in coluna.select("div.time-item"):
                 if hora := extrair_texto(item):
                     servico.horarios.append(Horario(hora))
-                    ...
 
-                servicos.append(servico)
+            servicos.append(servico)
 
         return servicos
