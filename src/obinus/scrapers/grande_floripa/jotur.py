@@ -1,76 +1,77 @@
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
-from obinus.utils.http import get_soup
-from obinus.utils.texto import extrair_texto
+from bs4 import BeautifulSoup
+from obinus.core.raspador import InterfaceRaspador
+from obinus.core.tipos import *
+from obinus.utils.http import get_soup, extrair_texto
 
 EMPRESA: str = "JOTUR"
 
-URL_BASE = "https://www2.jotur.com.br/linhas/"
+URL_BASE = "https://www2.jotur.com.br/linhas"
 DIAS = {
-    "Dias Úteis": "UTIL",
-    "Sábados": "SABADO",
-    "Domingos e Feriados": "DOMINGO_FERIADO",
+    "Dias Úteis": DIAS_UTEIS,
+    "Sábados": SABADO,
+    "Domingos e Feriados": DOMINGO_E_FERIADOS,
 }
 
 
-class Jotur(Raspador):
-    def empresa(self) -> str:
-        return EMPRESA
+class Jotur(InterfaceRaspador[Html, Html, Url]):
+    def buscar_linhas(self) -> Html:
+        html_final = BeautifulSoup()
+        html = get_soup(URL_BASE)
 
-    def raspar_linhas(self) -> list[Linha]:
-        soup, status = get_soup(URL_BASE)
+        [html_final.append(link) for link in html.select("ul a")]
 
+        return Html(html_final)
+
+    def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []
 
-        for item in soup.select("li>a"):
-            url = item["href"]
+        for item in payload.html.select("a"):
+            url = f"{URL_BASE}/{item['href']}"
 
-            tag_cod = item.select_one("strong")
-            tag_nome = item.select_one("span")
+            if (cod := extrair_texto(item.select_one("strong, b"))) and (
+                nome := extrair_texto(item.find("span"))
+            ):
+                tipo = (
+                    TipoLinha.EXECUTIVO
+                    if "executivo" in nome.lower()
+                    else TipoLinha.CONVENCIONAL
+                )
 
-            if tag_cod is None or tag_nome is None:
-                continue
+                linha = Linha(nome=nome, codigo=cod, tipo=tipo)
 
-            codigo = extrair_texto(tag_cod)
-            nome = extrair_texto(tag_nome).removeprefix("- ")
-            executivo = "executivo" in nome.lower()
-
-            linha = Linha(EMPRESA, codigo, nome, "", executivo, URL_BASE + str(url))
-
-            linhas.append(linha)
+                linhas.append((linha, Url(url)))
 
         return linhas
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        soup, status = get_soup(linha.url)
+    def buscar_horarios(self, busca: Url) -> Html:
+        html_final = BeautifulSoup()
+        html = get_soup(busca.url)
 
-        horarios = []
-        codigo = linha.codigo
+        for aba in html.select(".accordion-item"):
+            if sentido := extrair_texto(
+                aba.select_one(".accordion-header > span:last-child")
+            ):
+                for coluna in aba.select(".column"):
+                    coluna["data-sentido"] = sentido
+                    html_final.append(coluna)
 
-        for aba in soup.select(".accordion-item"):
-            tag_sentido = aba.select_one(".accordion-header > :last-child")
-            sentido = extrair_texto(tag_sentido)
+        return Html(html_final)
 
-            if sentido == "":
+    def raspar_horarios_linha(self, payload: Html) -> list[Horario]:
+        servicos = []
+
+        for coluna in payload.html.select(".column[data-sentido]"):
+            if dia := extrair_texto(coluna.select_one("h4")):
+                sentido = str(coluna["data-sentido"])
+                servico = Servico(DIAS[dia], sentido)
+            else:
                 continue
 
-            for coluna in aba.select(".column"):
-                tag_dia = coluna.select_one("h4")
-                dia = extrair_texto(tag_dia)
+            for item in coluna.select(".time-item"):
+                if hora := extrair_texto(item):
+                    servico.horarios.append(Horario(hora))
+                    ...
 
-                if not dia in DIAS.keys():
-                    continue
+                servicos.append(servico)
 
-                dia = DIAS[str(dia)]
-
-                for item in coluna.select(".time-item"):
-                    hora = extrair_texto(item)
-
-                    if hora == "":
-                        continue
-
-                    horario = Horario(EMPRESA, codigo, sentido, hora, dia)
-
-                    horarios.append(horario)
-
-        return horarios
+        return servicos
