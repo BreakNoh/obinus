@@ -25,16 +25,29 @@ DIAS = {
     "SÁBADO": SABADO,
     "DOMINGOS E FERIADOS": DOMINGO_E_FERIADOS,
 }
+SEPARADORES = re.compile(r"[\-\u2013\u2014]")
 
 
 class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
     def buscar_linhas(self) -> Html:
-        return Html(get_soup(URL_BASE))
+        html_final = BeautifulSoup()
+
+        for item in get_soup(URL_BASE).select(".box-body"):
+            html_final.append(item)
+
+        return Html(html_final)
 
     def buscar_horarios(self, busca: Url) -> Html:
         html = get_soup(busca.url)
-        if "diretao" in busca.url and (root := html.find("html")):
-            root["data-diretao"] = ""
+        html_final = BeautifulSoup()
+
+        for legenda in html.select(".dialog-message p"):
+            legenda["data-legenda"] = ""
+            html.append(legenda)
+
+        for bloco in html.find_all("details"):
+            html_final.append(bloco)
+
         return Html(html)
 
     def gerar_url(self, nome_linha: str) -> str:
@@ -50,7 +63,10 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
             if not nome:
                 continue
 
-            url = item.get("href") or self.gerar_url(nome)
+            if link := item.select_one("a"):
+                url = link.get("href")
+            else:
+                url = self.gerar_url(nome)
 
             linha = Linha(nome)
 
@@ -58,57 +74,57 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
 
         return linhas
 
-    def adicionar_obs(self, horario: Horario, texto: str, linha_comp: bool = False):
-        tabela = [
-            ("GV", SaidaDe("Residencial Garden Ville")),
-            ("SE", ItinerarioDiferenciado("Da linha Sertão do Maruim")),
-            [
-                ("EXP BR", ItinerarioDiferenciado("Via Via Expressa e BR101")),
-                ("EXP", ItinerarioDiferenciado("Via Via Expressa")),
-            ],
-            ("PE", Generica(valor="Período Escolar")),
-            [
-                (
-                    "SC*",
-                    ItinerarioDiferenciado(
-                        "Rua Luiz Fagundes até Armazem Vieira (Via Shopping Continente)"
-                    ),
-                ),
-                ("SC", ItinerarioDiferenciado("Via Shopping Continente")),
-            ],
-            (" A", ItinerarioDiferenciado("Via Aero Club")),
-            ("UN", ItinerarioDiferenciado("Via Univali")),
-            (" B", Generica(valor="Sai do condomínio Beija Flor")),
-            ("LV", ItinerarioDiferenciado("Via Lagoa Vermelha")),
-            ("VJ", ItinerarioDiferenciado("Via Vila Junkes")),
-            ("SD", Generica(valor="Entra no residencial Santos Drummont")),
-            (" D", Adaptado()),
-            ("VP", Generica(valor="Sai do condomínio Vila do Porto")),
-        ]
-        ext_tabela = [
-            ("ST", OperadoPor("Santa Terezinha")),
-            (" E", OperadoPor("Estrela")),
-            (" B", OperadoPor("Biguaçu")),
-        ]
+    def extrair_legenda(
+        self, html: BeautifulSoup | Tag
+    ) -> list[tuple[str, ObsHorario]]:
+        legendas = []
 
-        alvo = tabela if not linha_comp else ext_tabela
-        for item in alvo:
-            if not isinstance(item, list):
-                if item[0] in texto:
-                    horario.obs.append(item[1])
+        for item in html.select("[data-legenda]"):
+            if cod := item.find("strong"):
+                codigo = extrair_texto(cod)
+                valor = extrair_texto(item)
+
+                if codigo and valor:
+                    valor = SEPARADORES.sub("", valor).strip()
+                    codigo = codigo.strip()
+            elif conteudo := extrair_texto(item):
+                codigo, valor = SEPARADORES.split(conteudo, maxsplit=1)
+
+                if codigo and valor:
+                    valor = SEPARADORES.sub("", valor).strip()
+                    codigo = codigo.strip()
             else:
-                for sub in item:
-                    if sub[0] in texto:
-                        horario.obs.append(sub[1])
-                        break
+                continue
+            if not valor or not codigo:
+                continue
+
+            if re.search(r"adptado|necessidades especiais", valor.lower()):
+                obs = Adaptado()
+            elif re.search(r"via|linha", valor.lower()):
+                obs = ItinerarioDiferenciado(valor)
+            elif re.search(r"estrela|terezinha|biguaçú", valor.lower()):
+                obs = OperadoPor(valor.replace("ú", "u"))
+            elif re.search(r"sai|saem", valor.lower()):
+                obs = SaidaDe(valor)
+            else:
+                obs = Generica(valor=valor)
+
+            legendas.append((f"{codigo: >2}", obs))
+
+        return legendas
+
+    def adicionar_obs(
+        self, horario: Horario, texto: str, legendas: list[tuple[str, ObsHorario]]
+    ):
+        for item in legendas:
+            if item[0] in texto:
+                horario.obs.append(item[1])
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
         servicos = []
-        linha_comp = False
-        if (root := payload.html.find("html")) and root.has_attr("data-diretao"):
-            linha_comp = True
+        legendas = self.extrair_legenda(payload.html)
 
-        for tag_s in payload.html.select("details"):
+        for tag_s in payload.html.find_all("details"):
             sentido = extrair_texto(tag_s.select_one(".e-n-accordion-item-title-text"))
             if not sentido:
                 continue
@@ -131,7 +147,7 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
 
                     if match := re.search("[0-9]+:[0-9]+", conteudo):
                         horario = Horario(match.group())
-                        self.adicionar_obs(horario, conteudo, linha_comp)
+                        self.adicionar_obs(horario, conteudo, legendas)
                     else:
                         continue
 
