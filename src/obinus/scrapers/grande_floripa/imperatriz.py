@@ -1,82 +1,89 @@
 import re
-
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
-from obinus.utils.http import get_soup
-from obinus.utils.texto import extrair_texto
+from obinus.core.raspador import InterfaceRaspador
+from obinus.core.tipos import *
+from obinus.utils.http import get_soup, extrair_texto
 
 
-EMPRESA: str = "IMPERATRIZ"
-
-
-URL_BASE = "https://www.tcimperatriz.com.br"
+URL_LINHAS = "https://www.tcimperatriz.com.br/horarios"
 DIAS = {
-    "Dias Úteis": "UTIL",
-    "Sábado": "SABADO",
-    "Domingo e Feriado": "DOMINGO_FERIADO",
+    "dia-1": DIAS_UTEIS,
+    "dia-2": SABADO,
+    "dia-3": DOMINGO_E_FERIADOS,
 }
 
 
-class Imperatriz(Raspador):
-    def empresa(self) -> str:
-        return EMPRESA
+class TCImperatriz(InterfaceRaspador[Html, Html, Url]):
+    def buscar_linhas(self) -> Html:
+        html_final = BeautifulSoup()
 
-    def raspar_linhas(self) -> list[Linha]:
-        soup, status = get_soup(URL_BASE + "/horarios/")
+        for item in get_soup(URL_LINHAS).select(".elementor-shortcode  li > a"):
+            item["data-linha"] = ""
+            html_final.append(item)
 
+        return Html(html_final)
+
+    def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []
 
-        for item in soup.select(".elementor-shortcode  li > a"):
+        for item in payload.html.select("a[data-linha]"):
             nome = extrair_texto(item.select_one("b"))
-            texto = extrair_texto(item).replace("-", "")
-            url = item["href"]
 
-            codigo, detalhe = "", ""
+            if texto := extrair_texto(item):
+                if texto.count("-") == 2:
+                    codigo, detalhe = re.split(r"-.*-", texto, maxsplit=1)
+                else:
+                    codigo = texto.replace("-", "").strip()
+                    detalhe = None
+            else:
+                codigo = None
+                detalhe = None
 
-            partes = re.split(r"\s{2,}", texto)
-
-            if len(partes) > 0:
-                codigo = partes[0].strip()
-            if len(partes) > 1:
-                detalhe = partes[1].strip()
-
-            if len(nome) == 0 or len(codigo) == 0:
+            if not nome or not codigo:
                 continue
 
-            linha = Linha(EMPRESA, codigo, nome, detalhe, False, str(url))
-
-            linhas.append(linha)
+            url = str(item["href"])
+            linhas.append((Linha(nome, codigo, detalhe), Url(url)))
 
         return linhas
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        soup, status = get_soup(linha.url)
+    def buscar_horarios(self, busca: Url) -> Html:
+        html_final = BeautifulSoup()
+        html = get_soup(busca.url)
 
-        horarios = []
+        for botao in html.select("button[id^=dia]"):
+            if item := html.select_one(f".diapanel#{botao['aria-controls']}"):
+                item["data-dia"] = botao["id"]
+                html_final.append(item)
 
-        for painel in soup.select(".diapanel"):
-            id_botao = painel["aria-labelledby"]
-            dia = extrair_texto(soup.select_one(f"#{id_botao}"))
+        return Html(html_final)
 
-            if not dia in DIAS.keys():
-                continue
+    def extrair_horarios(self, payload: Html) -> list[Servico]:
+        servicos = []
 
-            dia = DIAS[dia]
+        for painel in payload.html.select("div.diapanel[data-dia]"):
+            dia = DIAS[str(painel["data-dia"])] or 0
 
             for sub in painel.select(".horario--panel"):
                 sentido = extrair_texto(sub.select_one("h3"))
                 if sentido == "":
                     continue
+
+                servico = Servico(dia, sentido)
+
                 for item in sub.select("li"):
-                    hora = extrair_texto(item)
-                    hora_extraida = re.search(r"[0-9]+:[0-9]+", hora)
-
-                    if hora_extraida is None:
+                    if (texto := extrair_texto(item)) and (
+                        match := re.search(r"\d{2}:\d{2}", texto)
+                    ):
+                        hora = match.group()
+                    else:
                         continue
+                    if texto := extrair_texto(item.find("span")):
+                        obs = Generica(valor=texto)
+                    else:
+                        obs = None
 
-                    hora = hora_extraida.group(0)
+                    servico.horarios.append(Horario(hora, obs=[obs] if obs else []))
 
-                    horario = Horario(EMPRESA, linha.codigo, sentido, hora, dia)
-                    horarios.append(horario)
+                servicos.append(servico)
 
-        return horarios
+        return servicos
