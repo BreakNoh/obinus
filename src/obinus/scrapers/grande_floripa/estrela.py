@@ -1,72 +1,124 @@
 import re
-
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
+from obinus.core.tipos import *
+from obinus.core.raspador import InterfaceRaspador
 from obinus.utils.http import get_soup
 from obinus.utils.texto import extrair_texto
 
-EMPRESA: str = "ESTRELA"
-
 URL_BASE = "https://insulartc.com.br"
-URL_LINHAS = URL_BASE + "/est/wp/"
-DIAS = ["UTIL", "UTIL", "UTIL", "SABADO", "SABADO", "DOMINGO_FERIADO"]
+URL_LINHAS = f"{URL_BASE}/est/wp/"
 
 
-class Estrela(Raspador):
-    def empresa(self) -> str:
-        return EMPRESA
+class TCEstrela(InterfaceRaspador[Html, Html, Url]):
+    def buscar_linhas(self) -> Html:
+        return Html(get_soup(URL_LINHAS))
 
-    def raspar_linhas(self) -> list[Linha]:
-        soup, status = get_soup(URL_LINHAS)
-        linhas: list[Linha] = []
+    def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
+        linhas = []
 
-        for tr in soup.find_all("tr"):
-            tag_cod = tr.select_one(":first-child")
-            tag_nome = tr.select_one("a")
+        for lin in payload.html.find_all("tr"):
+            if (
+                (cod := extrair_texto(lin.select_one("td:first-child")))
+                and (tag := lin.select_one("a"))
+                and (nome := extrair_texto(tag))
+            ):
+                tipo = (
+                    TipoLinha.EXECUTIVO
+                    if re.search(r"executivo|vip", nome.lower())
+                    else TipoLinha.CONVENCIONAL
+                )
 
-            if tag_cod is None or tag_nome is None:
-                continue
+                url = str(tag["href"])
 
-            codigo = extrair_texto(tag_cod)
-            nome = extrair_texto(tag_nome)
-
-            executivo = "executivo" in nome.lower() or "VIP" in nome
-            url = str(tag_nome["href"])
-
-            linhas.append(Linha(EMPRESA, codigo, nome, "", executivo, url))
+                linhas.append((Linha(nome, cod, tipo=tipo), Url(url)))
 
         return linhas
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        soup, status = get_soup(linha.url)
-        horarios: list[Horario] = []
+    def buscar_horarios(self, busca: Url) -> Html:
+        return Html(get_soup(busca.url))
 
-        sentido = ""
-        for tr in soup.find_all("tr"):
-            colunas = tr.find_all("td")
+    def extrair_legenda(
+        self, html: BeautifulSoup | Tag
+    ) -> list[tuple[str, ObsHorario]]:
+        legenda = []
+        dentro_legenda = False
+        PADRAO = re.compile(r"(?P<cod>[\*A-Z\u00B2\u00B9]+?)(?:\W+)(?P<leg>*)")
 
-            if len(colunas) == 3:
-                texto = extrair_texto(colunas[1])
-                if "(Ida)" in texto or "(Volta)" in texto or "Partida" in texto:
-                    sentido = texto
-                continue
+        for lin in html.find_all("tr"):
+            cols = lin.find_all("td")
 
-            if len(colunas) != 8 or sentido == "":
-                continue
-
-            for i, dia in enumerate(DIAS):
-                hora = extrair_texto(colunas[i + 1])
-
-                if len(hora) == 0:
+            match len(cols):
+                case 4 | 6 if "observações" in extrair_texto(cols[1]).lower():
+                    dentro_legenda = True
+                case _ if dentro_legenda:
+                    break
+                case _ if not dentro_legenda:
                     continue
 
-                match_limpo = re.findall("([0-9]+:[0-9]+)", hora.replace(".", ":"))
+            if (texto := extrair_texto(cols[2])) and (match := PADRAO.search(texto)):
+                leg = match.group("leg")
+                leg_norm = leg.lower()
+                cod = match.group("cod")
 
-                if len(match_limpo) == 0:
+                if cod == "*":
+                    obs = HorarioPrevisto()
+                elif "recolhe" in leg_norm:
+                    obs = RecolheBairro()
+                elif "até" in leg_norm:
+                    obs = ItinerarioDiferenciado(leg)
+                elif cod in "\u00b2\u00b9":
+                    obs = OperadoPor("Estrela", leg)
+                else:
+                    obs = Generica(valor=leg)
+
+                legenda.append((match.group("cod"), obs))
+
+        return legenda
+
+    def adicionar_obs(
+        self, horario: Horario, texto: str, legenda: list[tuple[str, ObsHorario]]
+    ):
+        for cod, obs in legenda:
+            if cod in texto:
+                horario.obs.append(obs)
+
+    def extrair_horarios(self, payload: Html) -> list[Servico]:
+        servicos = []
+        legenda = self.extrair_legenda(payload.html)
+
+        for lin in payload.html.find_all("tr"):
+            cols = lin.find_all("td")
+            buffer_sentido = None
+            servicos_dias = None
+
+            match len(cols):
+                case 3:
+                    buffer_sentido = extrair_texto(cols[1])
+                case 8:
+                    pass
+                case 5 if buffer_sentido:
+                    servicos_dias = [
+                        Servico(DIAS_UTEIS, buffer_sentido),
+                        Servico(SABADO, buffer_sentido),
+                        Servico(DOMINGO_E_FERIADOS, buffer_sentido),
+                    ]
+                    buffer_sentido = None
+                case _:
+                    buffer_sentido = None
                     continue
 
-                hora = match_limpo[0]
+            if not servicos_dias:
+                continue
 
-                horarios.append(Horario(EMPRESA, linha.codigo, sentido, hora, dia))
+            for i, dia in enumerate([0, 0, 0, 1, 1, 2]):
+                if (texto := extrair_texto(cols[i + 1]).strip()) and (
+                    hora := re.search(r"\d{2}\.\d{2}", texto)
+                ):
+                    horario = Horario(hora.group().replace(".", ":"))
+                    self.adicionar_obs(horario, texto, legenda)
+                    servicos_dias[dia].horarios.append(horario)
+                else:
+                    continue
 
-        return horarios
+            [servicos.append(s) for s in servicos_dias]
+
+        return servicos

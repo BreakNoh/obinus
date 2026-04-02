@@ -21,6 +21,7 @@ class Adaptado: ...
 @dataclass(frozen=True)
 class OperadoPor:
     empresa: str
+    durante: None | str = None
 
 
 @dataclass(frozen=True)
