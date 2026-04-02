@@ -26,7 +26,7 @@ class TCImperatriz(InterfaceRaspador[Html, Html, Url]):
         linhas = []
 
         for item in payload.html.select("a[data-linha]"):
-            nome = extrair_texto(item.select_one("b"))
+            nome = extrair_texto(item.select_one("b, strong"))
 
             if texto := extrair_texto(item):
                 if texto.count("-") == 2:
@@ -63,12 +63,11 @@ class TCImperatriz(InterfaceRaspador[Html, Html, Url]):
         for painel in payload.html.select("div.diapanel[data-dia]"):
             dia = DIAS[str(painel["data-dia"])] or 0
 
-            for sub in painel.select(".horario--panel"):
-                sentido = extrair_texto(sub.select_one("h3"))
-                if sentido == "":
+            for sub in painel.select("div.horario--panel"):
+                if sentido := extrair_texto(sub.select_one("h3")):
+                    servico = Servico(dia, sentido)
+                else:
                     continue
-
-                servico = Servico(dia, sentido)
 
                 for item in sub.select("li"):
                     if (texto := extrair_texto(item)) and (
