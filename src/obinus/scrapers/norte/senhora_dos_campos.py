@@ -1,6 +1,6 @@
-from obinus.scrapers.mobilibus import Mobilibus
+from obinus.scrapers.mobilibus import InterfaceMobilibus
 
 
-class SenhoraDosCampos(Mobilibus):
+class SenhoraDosCampos(InterfaceMobilibus):
     ID_PROJETO = "816"
-    NOME_EMPRESA = "SENHORA_DOS_CAMPOS"
+    NOME_EMPRESA = "Senhora dos Campos"

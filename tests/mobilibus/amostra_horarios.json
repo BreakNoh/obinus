@@ -1,0 +1,53 @@
+{
+    "timetable": {
+        "directions": [
+            {
+                "desc": "Saída do Beco Pavesi",
+                "services": [
+                    {
+                        "desc": "Dias Úteis",
+                        "departures": [
+                            {
+                                "dep": "04:00"
+                            },
+                            {
+                                "dep": "05:45"
+                            },
+                            {
+                                "dep": "06:15"
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Sábados ",
+                        "departures": [
+                            {
+                                "dep": "05:55"
+                            },
+                            {
+                                "dep": "06:25"
+                            },
+                            {
+                                "dep": "07:25"
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Domingos",
+                        "departures": [
+                            {
+                                "dep": "06:20"
+                            },
+                            {
+                                "dep": "07:30"
+                            },
+                            {
+                                "dep": "13:30"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

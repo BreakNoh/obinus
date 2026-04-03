@@ -1,0 +1,20 @@
+[
+    {
+        "routeId": 283791,
+        "shortName": "100",
+        "longName": "Madrugadão Centro / UFSC Norte",
+        "desc": ""
+    },
+    {
+        "routeId": 38370,
+        "shortName": "102",
+        "longName": "Madrugadão Centro / UFSC Sul",
+        "desc": ""
+    },
+    {
+        "routeId": 38009,
+        "shortName": "104",
+        "longName": "TICEN / Itacorubi via Mauro Ramos",
+        "desc": "[*] Previsão no Bairro\n\nPara ter a previsão mais precisa no bairro, consulte seu ponto de embarque habitual no mapa e salve-o como favorito!"
+    }
+]

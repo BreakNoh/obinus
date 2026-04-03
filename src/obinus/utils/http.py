@@ -55,15 +55,26 @@ def get_json(
     return res.json()
 
 
-def get_soup(
+def get_json_s(
     url: str,
     params: dict[str, str] | None = None,
     headers: dict[str, str] | None = None,
     metodo: str = "GET",
     data: str | dict[str, str] | None = None,
-) -> BeautifulSoup:
+) -> tuple[object, int]:
+    res = _req(metodo, url, params, headers, data)
+    return res.json(), res.status_code
+
+
+def get_soup_s(
+    url: str,
+    params: dict[str, str] | None = None,
+    headers: dict[str, str] | None = None,
+    metodo: str = "GET",
+    data: str | dict[str, str] | None = None,
+) -> tuple[BeautifulSoup, int]:
     html, status = get_html(url, params, headers, metodo, data)
-    return BeautifulSoup(html, "html.parser")
+    return BeautifulSoup(html, "html.parser"), status
 
 
 def extrair_texto(tag: Tag | None) -> str | None:
