@@ -14,6 +14,14 @@ class TipoLinha(Enum):
     EXECUTIVO = auto()
 
 
+type Regioes = int
+GRANDE_FLORIPA: Final[Regioes] = 0b10000
+SUL: Final[Regioes] = 0b01000
+NORTE: Final[Regioes] = 0b00100
+VALE_DO_ITAJAI: Final[Regioes] = 0b00010
+SERRANA: Final[Regioes] = 0b00001
+
+
 @dataclass(frozen=True)
 class Adaptado: ...
 
@@ -84,6 +92,13 @@ class Linha:
     detalhe: str | None = None
     servicos: list[Servico] = field(default_factory=list[Servico])
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
+
+
+@dataclass
+class Empresa:
+    nome: str
+    linhas: list[Linha] = field(default_factory=list[Linha])
+    regioes: Regioes = 0
 
 
 class Html(NamedTuple):

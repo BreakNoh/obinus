@@ -29,6 +29,9 @@ SEPARADORES = re.compile(r"[\-\u2013\u2014]")
 
 
 class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
+    def empresa(self) -> Empresa:
+        return Empresa(nome="Santa Terezinha", regioes=GRANDE_FLORIPA)
+
     def buscar_linhas(self) -> Html:
         html_final = BeautifulSoup()
 

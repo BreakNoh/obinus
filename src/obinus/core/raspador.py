@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import Generic, Protocol, TypeVar
 from obinus.core.tipos import *
 
@@ -17,25 +17,28 @@ class Buscador(Protocol, Generic[P, Q, B]):
     def buscar_horarios(self, busca: B) -> Q: ...
 
 
-class InterfaceRaspador(
-    ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q, B]
-): ...
+class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q, B]):
+    @abstractmethod
+    def empresa(self) -> Empresa: ...
 
+    def raspar(self) -> list[Linha]:
+        linhas = []
 
-def raspar(extrator: Extrator[P, Q, B], buscador: Buscador[P, Q, B]) -> list[Linha]:
-    linhas = []
+        try:
+            payload_linhas = self.buscar_linhas()
+            resultado_linhas = self.extrair_linhas(payload_linhas)
 
-    try:
-        payload_linhas = buscador.buscar_linhas()
-        resultado_linhas = extrator.extrair_linhas(payload_linhas)
+            for linha, busca in resultado_linhas:
+                payload_horarios = self.buscar_horarios(busca)
 
-        for linha, busca in resultado_linhas:
-            payload_horarios = buscador.buscar_horarios(busca)
+                servicos = self.extrair_horarios(payload_horarios)
 
-            servicos = extrator.extrair_horarios(payload_horarios)
+                linha.servicos = servicos
 
-            linha.servicos = servicos
-    except Exception as e:
-        print(e)
+                linhas.append(linha)
+        except Exception as e:
+            print(e)
 
-    return linhas  # só mockup
+        return linhas
+
+    ...
