@@ -6,19 +6,19 @@
 
 ## _GRANDE FLORIANÓPOLIS_
 
-- [x] Consórcio Fênix
-- [x] Jotur
-- [x] Empresa Estrela
-- [x] Biguaçu Transportes Coletivos
-- [x] Auto Viação Imperatriz
-- [x] Viação Santa Terezinha
+- [x] Consórcio Fênix +
+- [x] Jotur +
+- [x] Empresa Estrela +
+- [x] Biguaçu Transportes Coletivos +
+- [x] Auto Viação Imperatriz +
+- [x] Viação Santa Terezinha +
 
 ## _NORTE E PLANALTO NORTE_
 
 - [x] Transtusa
 - [x] Gidion
 - [x] Coletivo Rainha
-- [x] Senhora dos Campos
+- [x] Senhora dos Campos +
 - [x] Coletivo Santa Cruz
 - [x] Expresso Presidente (RioMafra)
 
@@ -27,8 +27,8 @@
 - [x] BluMob
 - [x] BCBus
 - [x] Expresso Presidente
-  - [x] Timbó
-  - [x] Gaspar
+    - [x] Timbó
+    - [x] Gaspar
 - [x] Viação Praiana
 - [x] Consórcio Atalaia
 - [x] Consórcio Nosso Brusque
@@ -37,7 +37,7 @@
 ## SUL
 
 - [x] Consórcio CriBus
-  - [x] CRITUR (Auto Viação São João)
+    - [x] CRITUR (Auto Viação São João)
 - [ ] Lagunatur
 - [x] Expresso Coletivo Içarense
 - [ ] Viação Cidade

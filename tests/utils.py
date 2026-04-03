@@ -1,8 +1,7 @@
 from pathlib import Path
-
 from bs4 import BeautifulSoup
-
-from obinus.core.tipos import Html
+from obinus.core.tipos import *
+import json
 
 
 def carregar_amostras(raiz: Path) -> list[Html]:
