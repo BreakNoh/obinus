@@ -15,8 +15,8 @@
 
 ## _NORTE E PLANALTO NORTE_
 
-- [x] Transtusa
-- [x] Gidion
+- [x] Transtusa +
+- [x] Gidion +
 - [x] Coletivo Rainha
 - [x] Senhora dos Campos +
 - [x] Coletivo Santa Cruz

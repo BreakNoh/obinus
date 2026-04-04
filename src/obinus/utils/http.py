@@ -66,6 +66,17 @@ def get_json_s(
     return res.json(), res.status_code
 
 
+def get_soup(
+    url: str,
+    params: dict[str, str] | None = None,
+    headers: dict[str, str] | None = None,
+    metodo: str = "GET",
+    data: str | dict[str, str] | None = None,
+) -> BeautifulSoup:
+    html, _ = get_html(url, params, headers, metodo, data)
+    return BeautifulSoup(html, "html.parser")
+
+
 def get_soup_s(
     url: str,
     params: dict[str, str] | None = None,
