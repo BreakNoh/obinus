@@ -9,9 +9,14 @@ from jmespath import compile
 URL_BASE = "https://editor.mobilibus.com/web/timetable/1db0m"
 
 
+class DadosHorario(TypedDict):
+    hora: str
+    acessivel: bool
+
+
 class DadosSentido(TypedDict):
     sentido: str
-    horas: list[str]
+    horas: list[DadosHorario]
 
 
 class DadosServico(TypedDict):
@@ -24,7 +29,10 @@ QUERY_HORARIOS = compile("""
         dia: serviceName,
         sentidos: directions[].{
             sentido: direction,
-            horas: departures[].time
+            horas: departures[].{
+                hora:time, 
+                acessivel: accessible
+            }
         }
     }
 """)
@@ -57,7 +65,7 @@ class ColetivoRainha(InterfaceRaspador[Html, Json, Url]):
 
             if (codigo_nome := texto.split(" - ", 1)) and len(codigo_nome) == 2:
                 cod, nome = codigo_nome
-                id = l["value"]
+                id = l["data-value"]
 
                 linhas.append((Linha(nome, cod), Url(f"{URL_BASE}/{id}")))
 
@@ -82,7 +90,7 @@ class ColetivoRainha(InterfaceRaspador[Html, Json, Url]):
                     servico.horarios.extend(
                         [
                             Horario(
-                                hora,
+                                hora["hora"], [Adaptado()] if hora["acessivel"] else []
                             )
                             for hora in sen["horas"]
                         ]
