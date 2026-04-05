@@ -17,7 +17,7 @@
 
 - [x] Transtusa +
 - [x] Gidion +
-- [x] Coletivo Rainha
+- [x] Coletivo Rainha +
 - [x] Senhora dos Campos +
 - [x] Coletivo Santa Cruz
 - [x] Expresso Presidente (RioMafra)
