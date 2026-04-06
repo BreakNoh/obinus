@@ -1,4 +1,4 @@
-from obinus.core.tipos import SUL
+from obinus.core.tipos import OESTE
 from obinus.scrapers.mobilibus import InterfaceMobilibus
 
 

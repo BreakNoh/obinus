@@ -32,7 +32,7 @@
 - [x] Viação Praiana
 - [x] Consórcio Atalaia +
 - [x] Consórcio Nosso Brusque +
-- [x] Ônibus Circular Ltda (Rio do Sul)
+- [x] Ônibus Circular Ltda (Rio do Sul) +
 
 ## SUL
 
