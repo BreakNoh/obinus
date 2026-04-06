@@ -30,7 +30,7 @@
     - [x] Timbó +
     - [x] Gaspar +
 - [x] Viação Praiana
-- [x] Consórcio Atalaia
+- [x] Consórcio Atalaia +
 - [x] Consórcio Nosso Brusque
 - [x] Ônibus Circular Ltda (Rio do Sul)
 
@@ -48,7 +48,7 @@
 
 - [ ] Auto Viação Chapecó
 - [ ] Hodierna
-- [x] Auto Coletivo Caçador
+- [x] Auto Coletivo Caçador +
 - [ ] Empresa Joaçabense
 - [ ] Castilho & CIA
 - [ ] Santa Teresinha (Videira)
