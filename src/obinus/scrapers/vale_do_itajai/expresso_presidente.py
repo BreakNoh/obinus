@@ -1,17 +1,18 @@
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
-from obinus.scrapers.mobilibus import Mobilibus
+# from obinus.core.raspador import InterfaceRaspador
+# from obinus.core.tipos import *
+from obinus.core import *
+from obinus.scrapers.mobilibus import InterfaceMobilibus
 from obinus.utils.http import get_soup
 from obinus.utils.texto import extrair_texto
 
 
-class ExpressoPresidenteGaspar(Mobilibus):
-    NOME_EMPRESA = "EXPRESSO_PRESIDENTE_GASPAR"
+class ExpressoPresidenteGaspar(InterfaceMobilibus):
+    NOME_EMPRESA = "Expresso Presidente Gaspar"
     ID_PROJETO = "699"
 
 
-class ExpressoPresidenteRioMafra(Mobilibus):
-    NOME_EMPRESA = "EXPRESSO_PRESIDENTE_RIOMAFRA"
+class ExpressoPresidenteRioMafra(InterfaceMobilibus):
+    NOME_EMPRESA = "Expresso Presidente RioMafra"
     ID_PROJETO = "956"
 
 
@@ -19,7 +20,7 @@ URL_LINHAS = "https://expressopresidente.com.br/cidades/timbo/consulta-itinerari
 URL_HORAIOS = "https://expressopresidente.com.br/cidades/timbo/linha/%s"
 
 
-class ExpressoPresidenteTimbo(Raspador):
+class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
     NOME_EMPRESA = "EXPRESSO_PRESIDENTE_TIMBO"
 
     def raspar_linhas(self) -> list[Linha]:

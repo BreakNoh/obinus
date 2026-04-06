@@ -1,6 +1,10 @@
 from json import loads
 from utils import *
-from obinus.scrapers.norte.santa_cruz import SantaCruz, QUERY_LINHAS, Tratador
+from obinus.scrapers.norte.coletivo_santa_cruz import (
+    ColetivoSantaCruz,
+    QUERY_LINHAS,
+    Tratador,
+)
 
 amostras_raw = carregar(
     Path(__file__).parent,
@@ -23,7 +27,7 @@ ams_hor, ams_lin = carregar(
     Path(__file__).parent,
     ["amostras/amostra_horarios.html", "amostras/amostra_linhas.json"],
 )
-raspador = SantaCruz()
+raspador = ColetivoSantaCruz()
 
 
 def test_extrair_horarios():

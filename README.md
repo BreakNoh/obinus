@@ -19,7 +19,7 @@
 - [x] Gidion +
 - [x] Coletivo Rainha +
 - [x] Senhora dos Campos +
-- [x] Coletivo Santa Cruz
+- [x] Coletivo Santa Cruz +++
 - [x] Expresso Presidente (RioMafra)
 
 ## _VALE DO ITAJAÍ E LITORAL NORTE_
