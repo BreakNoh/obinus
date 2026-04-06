@@ -24,14 +24,14 @@
 
 ## _VALE DO ITAJAÍ E LITORAL NORTE_
 
-- [x] BluMob
+- [x] BluMob +
 - [x] BCBus
 - [x] Expresso Presidente +
     - [x] Timbó +
     - [x] Gaspar +
 - [x] Viação Praiana
 - [x] Consórcio Atalaia +
-- [x] Consórcio Nosso Brusque
+- [x] Consórcio Nosso Brusque +
 - [x] Ônibus Circular Ltda (Rio do Sul)
 
 ## SUL
