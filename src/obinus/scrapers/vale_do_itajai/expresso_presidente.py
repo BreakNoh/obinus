@@ -17,74 +17,54 @@ class ExpressoPresidenteRioMafra(InterfaceMobilibus):
 
 
 URL_LINHAS = "https://expressopresidente.com.br/cidades/timbo/consulta-itinerario"
-URL_HORAIOS = "https://expressopresidente.com.br/cidades/timbo/linha/%s"
+URL_HORARIOS = "https://expressopresidente.com.br/cidades/timbo/linha/%s"
 
 
 class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
     NOME_EMPRESA = "EXPRESSO_PRESIDENTE_TIMBO"
 
-    def raspar_linhas(self) -> list[Linha]:
-        soup, status = get_soup(URL_LINHAS)
+    def empresa(self) -> Empresa:
+        return Empresa("Expresso Presidente Timbó", regioes=VALE_DO_ITAJAI)
+
+    def buscar_horarios(self, busca: Url) -> Html:
+        return Html(get_soup(busca.url))
+
+    def buscar_linhas(self) -> Html:
+        return Html(get_soup(URL_LINHAS))
+
+    def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []
 
-        for opt in soup.select("#id-linha option"):
-            texto = extrair_texto(opt)
-            codigo, nome = texto.split(" - ", maxsplit=1)
-
-            url = opt.get("value")
-
-            if not codigo or not nome or not url:
+        for item in payload.html.select("selecrt#id-linha > option[value]"):
+            if not (texto := extrair_texto(item)):
                 continue
 
-            linha = Linha(
-                empresa=self.NOME_EMPRESA,
-                codigo=codigo,
-                nome=nome,
-                url=URL_HORAIOS % url,
-                detalhe="",
-            )
+            codigo, nome = texto.split(" - ", maxsplit=1)
+            url = URL_HORARIOS % str(item["value"])
 
-            linhas.append(linha)
+            linhas.append((Linha(nome, codigo), Url(url)))
 
         return linhas
 
-    def normalizar_dia(self, d: str) -> str | list[str]:
-        match d:
-            case "dias-uteis":
-                return "UTIL"
-            case "sabados":
-                return "SABADO"
-            case "domingo-feriado":
-                return "DOMINGO_FERIADO"
+    def extrair_horarios(self, payload: Html) -> list[Servico]:
+        servicos = []
+        DIAS = {
+            "dias-uteis": DIAS_UTEIS,
+            "sabados": SABADO,
+            "domingo-feriado": DOMINGO_E_FERIADOS,
+        }
 
-        return ""
-
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        soup, status = get_soup(linha.url)
-        horarios = []
-
-        for tab in soup.select(".tab-content > div"):
-            dia = tab.get("id")
-            sentido = extrair_texto(tab.select_one("h3"))
-
-            horas = [extrair_texto(hora) for hora in tab.select(".nav-box-horarios p")]
-
-            if not dia or not sentido or not horas:
+        for tab in payload.html.select("div.tab-content > div.tab-pane"):
+            if (dia := str(tab.get("id"))) and (
+                sentido := extrair_texto(tab.select_one("h3"))
+            ):
+                servico = Servico(DIAS[dia], sentido)
+            else:
                 continue
 
-            horarios.extend(
-                [
-                    Horario(
-                        empresa=self.NOME_EMPRESA,
-                        linha=linha.codigo,
-                        sentido=sentido,
-                        hora=hora,
-                        dia=self.normalizar_dia(str(dia)),
-                    )
-                    for hora in horas
-                ]
-            )
+            [
+                servico.horarios.append(Horario(extrair_texto(hora)))
+                for hora in tab.select("div.nav-box-horarios > p")
+            ]
 
-            self.esperar()
-
-        return horarios
+        return servicos
