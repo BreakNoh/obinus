@@ -36,99 +36,118 @@ QUERY_LINHAS = jmespath.compile("""
 """)
 
 
+class Tratador:
+    def criar_sentido(self, idx_dia: int, nome: str, alvo: BeautifulSoup) -> Tag:
+        ORDEM_DIAS = ["DU", "SAB", "DOM"]
+
+        sentido = alvo.new_tag("ul")
+        sentido["class"] = "col-sentido"
+        sentido["data-sentido"] = nome
+        sentido["data-dia"] = ORDEM_DIAS[idx_dia]
+
+        alvo.append(sentido)
+
+        return sentido
+
+    def tratar_sentidos(self, html: BeautifulSoup | Tag, alvo: BeautifulSoup):
+        SELETOR_ITENS = "p.font_8.wixui-rich-text__text"
+        SELETOR_TEXTO = "span.wixui-rich-text__text[style*='26px'], span"
+        PADRAO_HORARIO = re.compile(r"\d{2}:\d{2}")
+        PADRAO_INLINE = re.compile(r"[^\d:]+")
+
+        buffer_sentido = ""
+        ultimo_alinhamento = "esq"
+
+        idx_dia = 0
+        sentido = None
+        ultimo_era_bloco = False
+
+        for item in html.select(SELETOR_ITENS):
+            if not (filho_texto := item.select_one(SELETOR_TEXTO)):
+                continue
+
+            while (sub_filho := filho_texto.select_one(SELETOR_TEXTO)) and sub_filho:
+                filho_texto = sub_filho
+
+            texto = extrair_texto(filho_texto).strip().replace("\u200b", "")
+            vazia = len(texto) == 0
+
+            if vazia:
+                if sentido:  # celula vazia no após horários
+                    sentido = None
+
+                elif buffer_sentido != "":  # celula vazia após nome do sentido
+                    sentido = self.criar_sentido(idx_dia, buffer_sentido, alvo)
+                    buffer_sentido = ""
+
+                continue
+
+            if estilo := item.get("style"):
+                alinhamento = "dir" if re.search(r"right", str(estilo)) else "esq"
+            else:
+                alinhamento = "esq"
+
+            if alinhamento != ultimo_alinhamento or (
+                alinhamento == "esq" and ultimo_era_bloco
+            ):
+                idx_dia = (
+                    (idx_dia + 1) % 3 if alinhamento == "esq" else idx_dia
+                )  # vai para o próximo dia se alinhamento voltar a ser esquerda
+                ultimo_alinhamento = alinhamento
+
+            capturas = list(PADRAO_HORARIO.finditer(texto))
+            ultimo_era_bloco = len(capturas) > 1
+
+            for captura in capturas:
+                item_horario = alvo.new_tag("li", string=captura.group())
+                item_horario["class"] = "item-hora"
+
+                if not sentido:
+                    if buffer_sentido != "":
+                        sentido = self.criar_sentido(idx_dia, buffer_sentido, alvo)
+                        sentido.append(item_horario)
+                        buffer_sentido = ""
+
+                    elif (cap := PADRAO_INLINE.search(texto)) and (nome := cap.group()):
+                        nome_norm = nome.replace("ás", "").replace("às", "").strip()
+                        sentido = self.criar_sentido(idx_dia, nome_norm, alvo)
+                        sentido.append(item_horario)
+                        sentido = None
+
+                    continue
+
+                elif sentido:
+                    sentido.append(item_horario)
+
+                else:
+                    sentido = self.criar_sentido(idx_dia, buffer_sentido, alvo)
+                    buffer_sentido = ""
+                    sentido.append(item_horario)
+
+                continue
+
+            if len(capturas) == 0:
+                sentido = None
+
+                if len(buffer_sentido) > 0:
+                    buffer_sentido += " "
+
+                buffer_sentido += texto
+
+    def tratar_payload_horarios(self, html: BeautifulSoup | Tag) -> BeautifulSoup:
+        html_tratado = BeautifulSoup()
+
+        self.tratar_sentidos(html, html_tratado)
+
+        return html_tratado
+
+
 class SantaCruz(InterfaceRaspador[Json, Html, Url]):
     def empresa(self) -> Empresa: ...
     def buscar_linhas(self) -> Json: ...
     def buscar_horarios(self, busca: Url) -> Html: ...
     def extrair_horarios(self, payload: Html) -> list[Servico]: ...
     def extrair_linhas(self, payload: Json) -> list[tuple[Linha, Url]]: ...
-
-    def tratar_payload_horarios(self, html: BeautifulSoup | Tag) -> BeautifulSoup:
-        html_tratado = BeautifulSoup()
-        dias = []
-        PADRAO_HORARIO = re.compile(r"\d{2}:\d{2}")
-
-        for btn in html.select(
-            "section.wixui-column-strip a:not([aria-label^='<']) > span.wixui-button__label"
-        ):
-            texto = extrair_texto(btn).lower()
-            coluna = html_tratado.new_tag("div", attrs={"class": "col-dia"})
-
-            if "segunda" in texto or "sexta" in texto:
-                coluna["data-dia"] = "DU"
-            elif "sábado" in texto:
-                coluna["data-dia"] = "SAB"
-            elif "domingo" in texto or "feriado" in texto:
-                coluna["data-dia"] = "DOM"
-            else:
-                continue
-
-            dias.append(coluna)
-
-        buffer_sentido = ""
-        adicionou_hora = False
-        ultimo_alinhamento = ""
-
-        idx_dia = 0
-        prox_col = 0
-
-        sentido = None
-
-        for item in html.select("p.font_8.wixui-rich-text__text"):
-            texto = extrair_texto(
-                item.select_one("span.wixui-rich-text__text[style~='26px']")
-            ).strip()
-
-            match len(texto):
-                case 0 if adicionou_hora and sentido:  # celula vazia após horario
-                    # print(buffer_sentido)
-                    dias[idx_dia].append(sentido)
-                    sentido = None
-                    adicionou_hora = False
-                    buffer_sentido = ""
-                    idx_dia = prox_col
-
-                    continue
-                case 0 if buffer_sentido and not sentido:  # celula vazia apos sentido
-                    sentido = html_tratado.new_tag(
-                        "ul",
-                        attrs={"class": "col-sentido", "data-sentido": buffer_sentido},
-                    )
-
-                    continue
-                case _:
-                    pass
-
-            alinhamento = "dir" if re.search(r"right", str(item["style"])) else "esq"
-
-            if alinhamento != ultimo_alinhamento and alinhamento == "esq":
-                prox_col = (idx_dia + 1) % len(dias)
-
-            ultimo_alinhamento = alinhamento
-
-            if (hora := PADRAO_HORARIO.search(texto)) and sentido:
-                sentido.append(
-                    html_tratado.new_tag(
-                        "li", string=hora.group(), attrs={"class": "item-hora"}
-                    )
-                )
-                adicionou_hora = True
-                continue
-            elif adicionou_hora:
-                dias[idx_dia].append(sentido)
-                sentido = None
-                adicionou_hora = False
-                buffer_sentido = ""
-                idx_dia = prox_col
-
-            buffer_sentido += (
-                " " if len(buffer_sentido) > 0 else ""
-            )  # adiciona espaço entre celulas
-            buffer_sentido += texto
-
-        [html_tratado.append(d) for d in dias]
-
-        return html_tratado
 
     # def raspar_linhas(self) -> list[Linha]:
     #
