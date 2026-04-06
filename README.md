@@ -24,7 +24,7 @@
 
 ## _VALE DO ITAJAÍ E LITORAL NORTE_
 
-- [x] BluMob
+- [x] BluMob +
 - [x] BCBus
 - [x] Expresso Presidente +
     - [x] Timbó +
