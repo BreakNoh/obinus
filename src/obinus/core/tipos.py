@@ -15,11 +15,12 @@ class TipoLinha(Enum):
 
 
 type Regioes = int
-GRANDE_FLORIPA: Final[Regioes] = 0b10000
-SUL: Final[Regioes] = 0b01000
-NORTE: Final[Regioes] = 0b00100
-VALE_DO_ITAJAI: Final[Regioes] = 0b00010
-SERRANA: Final[Regioes] = 0b00001
+GRANDE_FLORIPA: Final[Regioes] = 0b100000
+SUL: Final[Regioes] = 0b010000
+NORTE: Final[Regioes] = 0b001000
+VALE_DO_ITAJAI: Final[Regioes] = 0b000100
+SERRANA: Final[Regioes] = 0b000010
+OESTE: Final[Regioes] = 0b000001
 
 
 @dataclass(frozen=True)

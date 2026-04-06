@@ -24,7 +24,7 @@
 
 ## _VALE DO ITAJAÍ E LITORAL NORTE_
 
-- [x] BluMob +
+- [x] BluMob
 - [x] BCBus
 - [x] Expresso Presidente +
     - [x] Timbó +
@@ -36,7 +36,7 @@
 
 ## SUL
 
-- [x] Consórcio CriBus
+- [x] Consórcio CriBus +
     - [x] CRITUR (Auto Viação São João)
 - [ ] Lagunatur
 - [x] Expresso Coletivo Içarense
