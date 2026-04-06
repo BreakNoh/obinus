@@ -99,6 +99,40 @@ class Tratador:
                         sentido.append(item_horario)
                         buffer_sentido = ""
 
+                    elif (cap := PADRAO_INLINE.search(texto)) and (nome := cap.group()):
+                        nome_norm = nome.replace("ás", "").replace("às", "").strip()
+                        sentido = self.criar_sentido(idx_dia, nome_norm, alvo)
+                        sentido.append(item_horario)
+                        sentido = None
+
+                    continue
+
+                elif sentido:
+                    sentido.append(item_horario)
+
+                else:
+                    sentido = self.criar_sentido(idx_dia, buffer_sentido, alvo)
+                    buffer_sentido = ""
+                    sentido.append(item_horario)
+
+                continue
+
+            if len(capturas) == 0:
+                sentido = None
+
+                if len(buffer_sentido) > 0:
+                    buffer_sentido += " "
+
+                buffer_sentido += texto
+
+    def tratar_payload_horarios(self, html: BeautifulSoup | Tag) -> BeautifulSoup:
+        html_tratado = BeautifulSoup()
+
+        self.tratar_sentidos(html, html_tratado)
+
+        return html_tratado
+
+
 class SantaCruz(InterfaceRaspador[Json, Html, Url]):
     def empresa(self) -> Empresa: ...
 
