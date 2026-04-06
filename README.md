@@ -20,15 +20,15 @@
 - [x] Coletivo Rainha +
 - [x] Senhora dos Campos +
 - [x] Coletivo Santa Cruz +++
-- [x] Expresso Presidente (RioMafra)
+- [x] Expresso Presidente (RioMafra) +
 
 ## _VALE DO ITAJAÍ E LITORAL NORTE_
 
 - [x] BluMob
 - [x] BCBus
-- [x] Expresso Presidente
-    - [x] Timbó
-    - [x] Gaspar
+- [x] Expresso Presidente +
+    - [x] Timbó +
+    - [x] Gaspar +
 - [x] Viação Praiana
 - [x] Consórcio Atalaia
 - [x] Consórcio Nosso Brusque

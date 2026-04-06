@@ -1,5 +1,3 @@
-# from obinus.core.raspador import InterfaceRaspador
-# from obinus.core.tipos import *
 from obinus.core import *
 from obinus.scrapers.mobilibus import InterfaceMobilibus
 from obinus.utils.http import get_soup
@@ -9,11 +7,13 @@ from obinus.utils.texto import extrair_texto
 class ExpressoPresidenteGaspar(InterfaceMobilibus):
     NOME_EMPRESA = "Expresso Presidente Gaspar"
     ID_PROJETO = "699"
+    REGIOES = NORTE
 
 
 class ExpressoPresidenteRioMafra(InterfaceMobilibus):
     NOME_EMPRESA = "Expresso Presidente RioMafra"
     ID_PROJETO = "956"
+    REGIOES = NORTE
 
 
 URL_LINHAS = "https://expressopresidente.com.br/cidades/timbo/consulta-itinerario"
@@ -35,7 +35,7 @@ class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []
 
-        for item in payload.html.select("selecrt#id-linha > option[value]"):
+        for item in payload.html.select("select#id-linha > option[value]"):
             if not (texto := extrair_texto(item)):
                 continue
 
@@ -54,17 +54,20 @@ class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
             "domingo-feriado": DOMINGO_E_FERIADOS,
         }
 
-        for tab in payload.html.select("div.tab-content > div.tab-pane"):
-            if (dia := str(tab.get("id"))) and (
-                sentido := extrair_texto(tab.select_one("h3"))
+        for tab in payload.html.select("div.tab-content div.tab-pane "):
+            if (dia := tab.get("id")) and (
+                sentido := extrair_texto(tab.select_one("div.row div.row h3"))
             ):
-                servico = Servico(DIAS[dia], sentido)
+                servico = Servico(DIAS[str(dia)], sentido)
             else:
                 continue
 
             [
                 servico.horarios.append(Horario(extrair_texto(hora)))
-                for hora in tab.select("div.nav-box-horarios > p")
+                for hora in tab.select("div.row div.row div.nav-box-horarios > p")
             ]
+
+            if len(servico.horarios) != 0:
+                servicos.append(servico)
 
         return servicos
