@@ -1,94 +1,81 @@
 import re
-from typing import Optional
-
-from bs4 import BeautifulSoup, Tag
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
-from obinus.utils.http import get_soup
-from obinus.utils.texto import extrair_texto
+from obinus.core import *
+from bs4 import BeautifulSoup
+from obinus.utils.http import get_soup, extrair_texto
 
 URL: str = "https://bcbus.com.br/"
 
 
-class BCBus(Raspador):
-    NOME_EMPRESA = "BCBUS"
-    _cache: Optional[tuple[BeautifulSoup, int]]
+class BCBus(InterfaceRaspador[Html, Html, Html]):
+    def empresa(self) -> Empresa:
+        return Empresa(nome="BCBus", regioes=VALE_DO_ITAJAI)
 
-    def __init__(self) -> None:
-        self._cache = None
+    def buscar_linhas(self) -> Html:
+        return Html(get_soup(URL))
 
-    def _carregar_soup(self) -> tuple[BeautifulSoup, int]:
-        if self._cache:
-            return self._cache
-        else:
-            self._cache = get_soup(URL)
-            return self._cache
+    def buscar_horarios(self, busca: Html) -> Html:
+        return busca
 
-    def raspar_linhas(self) -> list[Linha]:
-        soup, status = self._carregar_soup()
+    def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Html]]:
+        linhas: dict[str, tuple[Linha, BeautifulSoup]] = {}
 
-        linhas = []
+        for info in payload.html.select("div.et_pb_equal_columns"):
+            if nome := extrair_texto(info.select_one("div:first-child h3 span")):
+                if not nome in linhas:
+                    linhas[nome] = (Linha(nome), BeautifulSoup())
 
-        for info in soup.select(".et_pb_equal_columns"):
-            nome = extrair_texto(info.select_one(":first-child h3 span"))
-            detalhe = extrair_texto(info.select_one(":first-child h2"))
+                linhas[nome][1].append(info)
 
-            linha = Linha(
-                empresa=self.NOME_EMPRESA,
-                codigo="",
-                detalhe=detalhe,
-                nome=nome,
-                metadados=(info, detalhe),
-            )
+        linhas_final = []
+        [linhas_final.append((l, Html(h))) for l, h in linhas.values()]
 
-            linhas.append(linha)
+        return linhas_final
 
-        return linhas
+    def extrair_horarios(self, payload: Html) -> list[Servico]:
+        TODOS_DIAS = DIAS_UTEIS | SABADO | DOMINGO_E_FERIADOS
+        DIAS = {
+            "SEGUNDA A SEXTA": DIAS_UTEIS,
+            "SÁBADOS": SABADO,
+            "DOMINGOS E FERIADOS": DOMINGO_E_FERIADOS,
+            "DIARIAMENTE": TODOS_DIAS,
+            "TODOS OS DIAS": TODOS_DIAS,
+        }
+        PADRAO_HORARIO = re.compile(r"(?P<hor>\d{2}h\d{2})(?: - | \s+)?(?P<obs>.*)?")
 
-    def normalizar_dia(self, d: str) -> str | list[str]:
-        match d:
-            case "SEGUNDA A SEXTA":
-                return "UTIL"
-            case "SÁBADOS":
-                return "SABADO"
-            case "DOMINGOS E FERIADOS":
-                return "DOMINGO_FERIADO"
-            case "DIARIAMENTE" | "TODOS OS DIAS":
-                return ["UTIL", "SABADO", "DOMINGO_FERIADO"]
-        return ""
+        servicos = []
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        tag, sentido = linha.metadados
-        horarios = []
+        for coluna in payload.html.select("div.et_pb_equal_columns"):
+            sentido = extrair_texto(
+                coluna.select_one("div:first-child h2")
+            )  # primeiro ve se sentido está embaixo do nome da linha
 
-        if not isinstance(tag, Tag):
-            return []
-
-        for coluna in tag.select("div + div"):
-            dia = extrair_texto(coluna.select_one("h3:first-child"))
-
-            sentido = (
-                extrair_texto(coluna.select_one("h3 + h3"))
-                if sentido == ""
-                else sentido
-            )
-
-            for item in coluna.select("li"):
-                match = re.match(r"(\d{2}h\d{2})", extrair_texto(item))
-
-                if not match:
+            for sub_col in coluna.select("div + div"):
+                if not (dia := extrair_texto(sub_col.select_one("h3:first-child"))):
                     continue
 
-                hora = match.group(0).lower().replace("h", ":")
+                if not sentido and (
+                    sentido_novo := extrair_texto(sub_col.select_one("h3 + h3"))
+                ):  # caso sentido esteja abaixo do dia
+                    sentido = sentido_novo
+                else:
+                    continue
 
-                horario = Horario(
-                    empresa=self.NOME_EMPRESA,
-                    linha=linha.nome,
-                    sentido=sentido,
-                    hora=hora,
-                    dia=self.normalizar_dia(dia),
-                )
+                servico = Servico(DIAS[dia.upper().strip()], sentido)
 
-                horarios.append(horario)
+                for item in sub_col.select("li"):
+                    if (texto := extrair_texto(item)) and (
+                        match := PADRAO_HORARIO.search(texto)
+                    ):
+                        horario = Horario(match.group("hor").replace("h", ":"))
+                        obs_raw = match.group("obs")
 
-        return horarios
+                        if "DEZ" in obs_raw:
+                            horario.obs.append(FuncionaDurante(obs_raw))
+                        elif obs_raw != "":
+                            horario.obs.append(ItinerarioDiferenciado(obs_raw))
+
+                        servico.horarios.append(horario)
+
+                servicos.append(servico)
+
+        return servicos

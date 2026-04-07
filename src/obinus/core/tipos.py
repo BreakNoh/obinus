@@ -34,6 +34,11 @@ class OperadoPor:
 
 
 @dataclass(frozen=True)
+class FuncionaDurante:
+    durante: str
+
+
+@dataclass(frozen=True)
 class RecolheBairro: ...
 
 
@@ -63,6 +68,7 @@ class SaidaDe:
 
 ObsHorario = (
     Adaptado
+    | FuncionaDurante
     | ItinerarioDiferenciado
     | MeiaViagem
     | HorarioPrevisto
