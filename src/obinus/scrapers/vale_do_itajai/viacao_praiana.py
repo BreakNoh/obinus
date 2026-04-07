@@ -47,7 +47,7 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
         if "sex" in d_norm and "seg" in d_norm:
             dias |= DIAS_UTEIS
 
-        if "sáb" in d_norm:
+        if "sáb" in d_norm or "sab" in d_norm:
             dias |= SABADO
 
         if "feri" in d_norm and "domi" in d_norm:
@@ -68,8 +68,8 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
         SELETOR_BLOCO = "div.jet-equal-columns[data-post-id]"
-        SELETOR_HORARIOS = "span.elementor-icon-list-text"
         SELETOR_SENTIDO = "div.jet-listing-dynamic-field__content"
+        SELETOR_HORARIOS = "span.elementor-icon-list-text"
         PADRAO_SENTIDO_DIA = re.compile(r"(?P<sent>[^\(\)]+)(?P<dia>\(.+\))?")
         PADRAO_HORA = re.compile(r"\d{2}:\d{2}")
 
@@ -79,13 +79,18 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
             servico = None
 
             for i in bloco.select(SELETOR_SENTIDO):
-                if not (texto := extrair_texto(i)) or texto != "" or "$" in texto:
+                if not (texto := extrair_texto(i)):
                     # texto não extraido ou inválido (tarifa ou vazio)
                     continue
 
+                if texto == "" or "$" in texto:
+                    continue
+
                 if match := PADRAO_SENTIDO_DIA.search(texto):
-                    sentido = match.group("sent")
-                    dias = self.normalizar_dia(match.group("dia"))
+                    sentido = match.group("sent").strip()
+                    dia = match.group("dia")
+
+                    dias = self.normalizar_dia(dia) if dia else DIAS_UTEIS
 
                     servico = Servico(dias, sentido)
                     break
