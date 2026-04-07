@@ -36,6 +36,17 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
 
         return linhas
 
+    def buscar_horarios(self, busca: Raw) -> Html:
+        payload = PAYLOAD_TEMPLATE % busca.valor
+        headers = HEADERS_BASE | {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Referer": "https://praiana.com.br/horarios/",
+        }
+
+        json = cast(dict, get_json(URL_HORARIOS, data=payload, headers=headers))
+
+        return Html(BeautifulSoup(json["content"], "html.parser"))
+
     def normalizar_dia(self, d: str) -> Dias:
         d_norm = d.lower().strip()
 
@@ -53,18 +64,7 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
         if "feri" in d_norm and "domi" in d_norm:
             dias |= DOMINGO_E_FERIADOS
 
-        return dias
-
-    def buscar_horarios(self, busca: Raw) -> Html:
-        payload = PAYLOAD_TEMPLATE % busca.valor
-        headers = HEADERS_BASE | {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Referer": "https://praiana.com.br/horarios/",
-        }
-
-        json = cast(dict, get_json(URL_HORARIOS, data=payload, headers=headers))
-
-        return Html(BeautifulSoup(json["content"], "html.parser"))
+        return dias if dias > 0 else DIAS_UTEIS
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
         SELETOR_BLOCO = "div.jet-equal-columns[data-post-id]"
