@@ -35,12 +35,13 @@ class BCBus(InterfaceRaspador[Html, Html, Html]):
         TODOS_DIAS = DIAS_UTEIS | SABADO | DOMINGO_E_FERIADOS
         DIAS = {
             "SEGUNDA A SEXTA": DIAS_UTEIS,
+            "DIAS DE SEMANA": DIAS_UTEIS,
             "SÁBADOS": SABADO,
             "DOMINGOS E FERIADOS": DOMINGO_E_FERIADOS,
             "DIARIAMENTE": TODOS_DIAS,
             "TODOS OS DIAS": TODOS_DIAS,
         }
-        PADRAO_HORARIO = re.compile(r"(?P<hor>\d{2}h\d{2})(?: - | \s+)?(?P<obs>.*)?")
+        PADRAO_HORARIO = re.compile(r"(?P<hor>\d{2}h\d{2})(?:\W)*(?P<obs>[^)]*)?")
 
         servicos = []
 
@@ -57,7 +58,7 @@ class BCBus(InterfaceRaspador[Html, Html, Html]):
                     sentido_novo := extrair_texto(sub_col.select_one("h3 + h3"))
                 ):  # caso sentido esteja abaixo do dia
                     sentido = sentido_novo
-                else:
+                elif not sentido:
                     continue
 
                 servico = Servico(DIAS[dia.upper().strip()], sentido)
