@@ -29,7 +29,7 @@
 - [x] Expresso Presidente +
     - [x] Timbó +
     - [x] Gaspar +
-- [x] Viação Praiana
+- [x] Viação Praiana +
 - [x] Consórcio Atalaia +
 - [x] Consórcio Nosso Brusque +
 - [x] Ônibus Circular Ltda (Rio do Sul) +
