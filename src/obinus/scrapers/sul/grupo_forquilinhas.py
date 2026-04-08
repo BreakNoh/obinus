@@ -66,10 +66,10 @@ class GrupoForquilhinha(InterfaceRaspador[Html, Html, Html]):
             for item in coluna.select(SELETOR_DIA_HORARIOS):
                 match item.name:
                     case "h5" if dia_raw := extrair_texto(item):
-                        if servico:
+                        if servico and len(servico.horarios) > 0:
                             servicos.append(servico)
 
-                        servico = Servico(DIAS[dia_raw.upper()], sentido)
+                        servico = Servico(DIAS[dia_raw.lower()], sentido)
                     case "p" if (
                         servico
                         and (texto := extrair_texto(item))
@@ -82,7 +82,7 @@ class GrupoForquilhinha(InterfaceRaspador[Html, Html, Html]):
 
                         servico.horarios.append(horario)
 
-            if servico:
+            if servico and len(servico.horarios) > 0:
                 servicos.append(servico)
 
         return servicos
