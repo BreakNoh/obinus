@@ -5,9 +5,6 @@ from obinus.utils import get_soup, extrair_texto
 URL_LINHAS = "https://transullages.com.br/linhas"
 
 
-# SELETOR_DIA = '[role="tablist"]'
-
-
 class Transul(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
         return Empresa(nome="Transul", regioes=SUL)
