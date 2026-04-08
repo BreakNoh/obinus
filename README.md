@@ -42,7 +42,7 @@
 - [x] Expresso Coletivo Içarense +
 - [ ] Viação Cidade
 - [ ] ~Consórcio Cidade Azul (Tubarão)~
-- [x] Grupo Forquilinha
+- [x] Grupo Forquilinha +
 
 ## OESTE E MEIO-OESTE
 
