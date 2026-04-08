@@ -39,7 +39,7 @@
 - [x] Consórcio CriBus +
     - [x] CRITUR (Auto Viação São João)
 - [ ] Lagunatur
-- [x] Expresso Coletivo Içarense
+- [x] Expresso Coletivo Içarense +
 - [ ] Viação Cidade
 - [ ] ~Consórcio Cidade Azul (Tubarão)~
 - [x] Grupo Forquilinha
