@@ -18,7 +18,9 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Html]]:
         SELETOR_PAGINA_DIA = "div[id^=listing]"
         SELETOR_BLOCOS = "div[data-query-id][data-listing-source='posts'] > div.jet-listing-grid__item[data-post-id]"
-        SELETOR_NOME_LINHA = ".fa-bus-alt + div.jet-listing-dynamic-field__content"
+        SELETOR_NOME_LINHA = (
+            ".jet-listing-dynamic-field__icon + div.jet-listing-dynamic-field__content"
+        )
         SELETOR_TABELA_HORARIOS = "div[data-query-id][data-listing-source='repeater']"
 
         ID_DIAS = {
@@ -27,7 +29,7 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
             "listing-domingo": "DOM",
         }
 
-        linhas = []
+        linhas: dict[str, BeautifulSoup] = {}
 
         for pag in payload.html.select(SELETOR_PAGINA_DIA):
             for bloco in pag.select(SELETOR_BLOCOS):
@@ -40,34 +42,36 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
 
                     tabela_horarios["data-dia"] = dia
 
-                    linhas.append((Linha(nome_linha), Html(tabela_horarios)))
+                    if not nome_linha in linhas.keys():
+                        linhas[nome_linha] = BeautifulSoup()
 
-        return linhas
+                    linhas[nome_linha].append(tabela_horarios)
+
+        return [(Linha(nom), Html(htm)) for nom, htm in linhas.items()]
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
         SELETOR_ROWS = "div.jet-listing-grid__item[data-post-id]:not([data-listing-source]) div.e-con-inner"
         DIAS = {"DU": DIAS_UTEIS, "SAB": SABADO, "DOM": DOMINGO_E_FERIADOS}
+
         servicos = []
 
-        if not (id_dia := payload.html.get("data-dia")):
-            return []
+        for tabela_dia in payload.html.select("div[data-dia]"):
+            dia = DIAS[str(tabela_dia["data-dia"]).upper()]
+            servico = Servico(dia)
 
-        dia = DIAS[str(id_dia).upper()]
-        servico = Servico(dia)
+            for row in tabela_dia.select(SELETOR_ROWS):
+                hora, via = [
+                    extrair_texto(c)
+                    for c in row.select(".jet-listing-dynamic-field__content", limit=2)
+                ]
 
-        for row in payload.html.select(SELETOR_ROWS):
-            hora, via = [
-                extrair_texto(c)
-                for c in row.select(".jet-listing-dynamic-field__content", limit=2)
-            ]
+                if not hora or not via:
+                    continue
 
-            if not hora or not via:
-                continue
+                servico.horarios.append(
+                    Horario(hora, [ItinerarioDiferenciado(f"Via {via}")])
+                )
 
-            servico.horarios.append(
-                Horario(hora, [ItinerarioDiferenciado(f"Via {via}")])
-            )
-
-        servicos.append(servico)
+            servicos.append(servico)
 
         return servicos
