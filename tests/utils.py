@@ -14,11 +14,16 @@ def carregar_amostras(raiz: Path) -> list[Html]:
     return amostras
 
 
-def carregar(raiz: Path, arqs: list[str]) -> list[str]:
+def carregar(raiz: Path | str, arqs: list[str]) -> list[str]:
+    if isinstance(raiz, str):
+        _raiz = Path(raiz).parent
+    else:
+        _raiz = raiz
+
     amostras = []
 
     for arq in arqs:
-        with open(raiz / arq, "r") as a:
+        with open(_raiz / arq, "r") as a:
             amostras.append(a.read())
 
     return amostras

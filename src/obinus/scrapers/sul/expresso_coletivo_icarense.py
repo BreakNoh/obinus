@@ -16,60 +16,58 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
         return busca
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Html]]:
-        SELETOR_PAGINA_DIA = "div.e-n-tabs-content > div.elementor-element"
-        SELEROT_NOME_LINHA = ".fa-bus-alt + div"
-        DIAS = ["DU", "SAB", "DOM"]
+        SELETOR_PAGINA_DIA = "div[id^=listing]"
+        SELETOR_BLOCOS = "div[data-query-id][data-listing-source='posts'] > div.jet-listing-grid__item[data-post-id]"
+        SELETOR_NOME_LINHA = ".fa-bus-alt + div.jet-listing-dynamic-field__content"
+        SELETOR_TABELA_HORARIOS = "div[data-query-id][data-listing-source='repeater']"
 
-        linhas: dict[str, BeautifulSoup] = {}
+        ID_DIAS = {
+            "listing-dias-ulteis": "DU",  # erro de digitação proposital
+            "listing-sabado": "SAB",
+            "listing-domingo": "DOM",
+        }
 
-        for i, tab_dia in enumerate(payload.html.select(SELETOR_PAGINA_DIA)):
-            if not (blocos := tab_dia.find(class_="jet-listing-grid__items")):
-                continue
+        linhas = []
 
-            for bloco in blocos.find_all(
-                class_="jet-listing-grid__item",
-                recursive=False,  # pega só os filhos imediatos
-            ):
-                if nome := extrair_texto(bloco.select_one(SELEROT_NOME_LINHA)):
-                    if not nome in linhas:
-                        linhas[nome] = BeautifulSoup()
+        for pag in payload.html.select(SELETOR_PAGINA_DIA):
+            for bloco in pag.select(SELETOR_BLOCOS):
+                if nome_linha := extrair_texto(bloco.select_one(SELETOR_NOME_LINHA)):
+                    tabela_horarios = bloco.select_one(SELETOR_TABELA_HORARIOS)
+                    dia = ID_DIAS.get(str(pag["id"]).lower())
 
-                    bloco["data-dia"] = DIAS[i]
-                    linhas[nome].append(bloco)
+                    if not dia or not tabela_horarios:
+                        continue
 
-        linhas_final = []
-        [
-            linhas_final.append((Linha(nome), Html(html)))
-            for nome, html in linhas.items()
-        ]
+                    tabela_horarios["data-dia"] = dia
 
-        return linhas_final
+                    linhas.append((Linha(nome_linha), Html(tabela_horarios)))
+
+        return linhas
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
+        SELETOR_ROWS = "div.jet-listing-grid__item[data-post-id]:not([data-listing-source]) div.e-con-inner"
         DIAS = {"DU": DIAS_UTEIS, "SAB": SABADO, "DOM": DOMINGO_E_FERIADOS}
         servicos = []
 
-        for bloco in payload.html.find_all(
-            class_="jet-listing-grid__item",
-            recursive=False,  # pega só os filhos imediatos
-        ):
-            if id_dia := bloco.get("data-dia"):
-                dia = DIAS[str(id_dia).upper()]
-            else:
-                continue
+        if not (id_dia := payload.html.get("data-dia")):
+            return []
 
+        dia = DIAS[str(id_dia).upper()]
+        servico = Servico(dia)
+
+        for row in payload.html.select(SELETOR_ROWS):
             hora, via = [
-                extrair_texto(t)
-                for t in bloco.select(".jet-listing-dynamic-field__content", limit=2)
+                extrair_texto(c)
+                for c in row.select(".jet-listing-dynamic-field__content", limit=2)
             ]
 
             if not hora or not via:
                 continue
 
-            servico = Servico(dia)
-
             servico.horarios.append(
                 Horario(hora, [ItinerarioDiferenciado(f"Via {via}")])
             )
+
+        servicos.append(servico)
 
         return servicos
