@@ -9,6 +9,12 @@ class Transul(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
         return Empresa(nome="Transul", regioes=SUL)
 
+    def buscar_linhas(self) -> Html:
+        return Html(get_soup(URL_LINHAS))
+
+    def buscar_horarios(self, busca: Url) -> Html:
+        return Html(get_soup(busca.url))
+
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         SELETOR_LINHAS = "table > tr"
         SELETOR_CODIGO = "td:nth-child(2)"
@@ -35,7 +41,7 @@ class Transul(InterfaceRaspador[Html, Html, Url]):
         if not elemento:
             return None
 
-        PADRAO_LEGENDA = re.compile(r"(?P<cod>[A-Z])\W*(?P<leg>.*)")
+        PADRAO_LEGENDA = re.compile(r"(?P<cod>[A-Z])\s*-\s*(?P<leg>.+)")
         legenda = {}
 
         texto = elemento.get_text("\n")
@@ -62,15 +68,18 @@ class Transul(InterfaceRaspador[Html, Html, Url]):
                     horario.obs.append(obs)
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
-        SELETOR_DIA_UTIL = '[id="home-tab-pane"]'
-        SELETOR_DIA_SAB = '[id="profile-tab-pane"]'
-        SELETOR_DIA_DOM = '[id="contact-tab-pane"]'
+        SELETOR_DIA_UTIL = 'div[id="home-tab-pane"]'
+        SELETOR_DIA_SAB = 'div[id="profile-tab-pane"]'
+        SELETOR_DIA_DOM = 'div[id="contact-tab-pane"]'
 
-        SELETOR_COLUA = ".row > .col"
+        SELETOR_COLUNA = "div.row > div.col"
+        SELETOR_LEGENDA = "div.col-12 > div.col > div"
         SELETOR_SENTIDO = "h6"
         SELETOR_HORARIOS = "h6 + div"  # horarios vem num bloco só
 
-        PADRAO_HORARIO = re.compile(r"(?P<hora>\d{1,2}:\d{1,2})[\s\-]*(?P<obs>.*)")
+        PADRAO_HORARIO = re.compile(
+            r"(?P<hora>\d{1,2}:\d{1,2})[\ \-]+(?P<obs>.+)?", re.MULTILINE
+        )
 
         dia_seletor: list[tuple[Dias, str]] = [
             (DIAS_UTEIS, SELETOR_DIA_UTIL),
@@ -81,12 +90,19 @@ class Transul(InterfaceRaspador[Html, Html, Url]):
         servicos = []
 
         for dia, seletor in dia_seletor:
-            if not (legenda := self.extrair_legenda(payload.html.select_one(seletor))):
-                continue
+            if not (
+                legenda := self.extrair_legenda(
+                    payload.html.select_one(f"{seletor} {SELETOR_LEGENDA}")
+                )
+            ):
+                legenda = {}
 
-            for col in payload.html.select(f"{seletor} {SELETOR_COLUA}"):
+            for col in payload.html.select(f"{seletor} {SELETOR_COLUNA}"):
                 sentido = extrair_texto(col.select_one(SELETOR_SENTIDO))
-                horas = extrair_texto(col.select_one(SELETOR_HORARIOS))
+                if item_horas := col.select_one(SELETOR_HORARIOS):
+                    horas = item_horas.get_text("\n")
+                else:
+                    continue
 
                 if not sentido or not horas:
                     continue
@@ -95,8 +111,11 @@ class Transul(InterfaceRaspador[Html, Html, Url]):
 
                 for hora in PADRAO_HORARIO.finditer(horas):
                     horario = Horario(hora.group("hora"))
+
                     self.adicionar_obs(horario, hora.group("obs"), legenda)
 
                     servico.horarios.append(horario)
+
+                servicos.append(servico)
 
         return servicos
