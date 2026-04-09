@@ -1,9 +1,8 @@
-from typing import TypedDict
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
+from typing import TypedDict, cast
+from obinus.core.raspador import InterfaceRaspador
+from obinus.core.tipos import *
 from obinus.utils.http import get_json
 import jmespath
-from pprint import pp, pprint
 
 URL_LINHAS = "https://mobilibus.com/api/routes"
 URL_HORARIOS = "https://mobilibus.com/api/timetable"
@@ -47,74 +46,60 @@ QUERY_LINHAS = jmespath.compile("""
     }
 """)
 
+DIAS = {"dias úteis": DIAS_UTEIS, "sábados": SABADO, "domingos": DOMINGO_E_FERIADOS}
 
-class Mobilibus(Raspador):
+
+class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
+    NOME_EMPRESA: str
+    REGIOES: Regioes
     ID_PROJETO: str
     VERSAO_LINHAS: str = "1"
     VERSAO_HORARIOS: str = "1"
 
-    def raspar_linhas(self) -> list[Linha]:
-        json, status = get_json(
-            URL_LINHAS, params={"project_id": self.ID_PROJETO, "v": self.VERSAO_LINHAS}
-        )
+    def empresa(self) -> Empresa:
+        return Empresa(nome=self.NOME_EMPRESA, regioes=self.REGIOES)
 
+    def extrair_horarios(self, payload: Json) -> list[Servico]:
+        servicos = []
+
+        if json := cast(list[DadosHorarios], payload.json):
+            for ser in json:
+                sentido = ser["sentido"]
+
+                for dia in ser["dias"]:
+                    dia_norm = dia["dia"].lower().strip()
+                    servico = Servico(DIAS[dia_norm], sentido)
+
+                    [servico.horarios.append(Horario(h)) for h in dia["horas"]]
+
+                    servicos.append(servico)
+
+        return servicos
+
+    def extrair_linhas(self, payload: Json) -> list[tuple[Linha, Url]]:
         linhas = []
 
-        query: list[DadosLinha] = QUERY_LINHAS.search(json)
-
-        if query is None or query == []:
-            return []
-
-        for l in query:
-            codigo = l["codigo"]
-            nome = l["nome"]
-            detalhe = l["detalhe"]
-            executivo = "executivo" in nome.lower()
-
-            linha = Linha(
-                empresa=self.NOME_EMPRESA,
-                codigo=codigo,
-                nome=nome,
-                detalhe=detalhe,
-                executivo=executivo,
-                url=URL_HORARIOS
-                + f"?project_id={self.ID_PROJETO}"
-                + f"&route_id={l['id_rota']}"
-                + f"&v={self.VERSAO_HORARIOS}",
-            )
-
-            linhas.append(linha)
+        if json := cast(list[DadosLinha], payload.json):
+            for lin in json:
+                nome = (
+                    lin["nome"]
+                    if lin["nome"] == "" or not lin["nome"]
+                    else lin["codigo"]
+                )
+                codigo = lin["codigo"] if nome != lin["nome"] else None
+                url = f"{URL_HORARIOS}?project_id={self.ID_PROJETO}&route_id={lin['id_rota']}&v={self.VERSAO_HORARIOS}"
+                linhas.append((Linha(nome=nome, codigo=codigo), Url(url)))
 
         return linhas
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        json, status = get_json(linha.url)
+    def buscar_horarios(self, busca: Url) -> Json:
+        json = get_json(busca.url)
 
-        horarios = []
+        return Json(QUERY_LINHAS.search(json))
 
-        query: list[DadosHorarios] = QUERY_HORARIOS.search(json)
+    def buscar_linhas(self) -> Json:
+        json = get_json(
+            URL_LINHAS, params={"project_id": self.ID_PROJETO, "v": self.VERSAO_LINHAS}
+        )
 
-        if query is None or query == []:
-            return []
-
-        for ser in query:
-            sentido = ser["sentido"]
-
-            for d in ser["dias"]:
-                dia = self.normalizar_dia(d["dia"])
-
-                horarios.extend(
-                    [
-                        Horario(
-                            empresa=self.NOME_EMPRESA,
-                            linha=linha.codigo,
-                            sentido=sentido,
-                            hora=hora,
-                            dia=dia,
-                        )
-                        for hora in d["horas"]
-                    ]
-                )
-
-        self.esperar()
-        return horarios
+        return Json(QUERY_LINHAS.search(json))

@@ -1,0 +1,40 @@
+{
+    "services": [
+        {
+            "serviceName": "Dia Útil",
+            "directions": [
+                {
+                    "direction": "ida",
+                    "departures": [
+                        {
+                            "time": "11:11",
+                            "acessible": true
+                        },
+                        {
+                            "time": "22:22",
+                            "acessible": true
+                        },
+                        {
+                            "time": "33:33",
+                            "acessible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "serviceName": "Sábado",
+            "directions": [
+                {
+                    "direction": "volta",
+                    "departures": [
+                        {
+                            "time": "11:11",
+                            "acessible": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

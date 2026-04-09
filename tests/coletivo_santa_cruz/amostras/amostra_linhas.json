@@ -1,0 +1,20 @@
+{
+	"props" : {
+		"siteWixCodeSdk" : {
+			"nonPopupsPagesData" : [
+				{
+					"title" : "A",
+					"pageFullPath" : "a"
+				},
+				{
+					"title" : "B",
+					"pageFullPath" : "b"
+				},
+				{
+					"title" : "C",
+					"pageFullPath" : "c"
+				}
+			]
+		}
+	}
+}

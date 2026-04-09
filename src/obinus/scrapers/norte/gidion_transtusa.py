@@ -1,13 +1,12 @@
-from typing import TypedDict
-from obinus.core.base import Raspador
-from obinus.core.modelos import Linha, Horario
+from typing import TypedDict, cast
+from obinus.core.raspador import InterfaceRaspador
+from obinus.core.tipos import *
 from jmespath import compile
-
 from obinus.utils.http import get_json
 
 
 URL_BASE = "https://onibus.info"
-URL_HORARIOS = URL_BASE + "/api/timetableschedule/"
+URL_HORARIOS = URL_BASE + "/api/timetable/%s"
 URL_LINHAS = URL_BASE + "/api/routes/group"
 
 
@@ -27,13 +26,14 @@ class DadosHorarios(TypedDict):
 
 
 QUERY_LINHAS = compile("""
-    [*].routes[].{
+    [].routes[].{
         codigo: route_id, 
         nome: route_long_name
     }
 """)
+
 QUERY_HORARIOS = compile("""
-    [*].{
+    [].{
         sentido: direction,
         horarios: stop_data[].service_data[].{
             dia: service_id,
@@ -44,62 +44,52 @@ QUERY_HORARIOS = compile("""
 
 headers = {"Referer": URL_BASE + "/linhas"}
 
+DIAS = {"DU": DIAS_UTEIS, "SAB": SABADO, "DOM": DOMINGO_E_FERIADOS}
 
-class GidionTranstusa(Raspador):
-    def empresa(self) -> str:
-        return "GIDION_TRANSTUSA"
 
-    def raspar_linhas(self) -> list[Linha]:
-        json, status = get_json(URL_LINHAS, headers=headers)
+class GidionTranstusa(InterfaceRaspador[Json, Json, Raw]):
+    def empresa(self) -> Empresa:
+        return Empresa(nome="Gidion/Transtusa", regioes=NORTE)
 
-        linhas: list[Linha] = []
+    def buscar_linhas(self) -> Json:
+        return Json(QUERY_LINHAS.search(get_json(URL_LINHAS, headers=headers)))
 
-        query: list[DadosLinha] | None = QUERY_LINHAS.search(json)
+    def buscar_horarios(self, busca: Raw) -> Json:
+        return Json(
+            QUERY_HORARIOS.search(get_json(URL_HORARIOS % busca.valor, headers=headers))
+        )
 
-        if query is [] or not query:
-            return []
+    def extrair_linhas(self, payload: Json) -> list[tuple[Linha, Raw]]:
+        linhas = []
 
-        for l in query:
-            linha = Linha(
-                empresa=self.empresa(),
-                nome=l["nome"],
-                codigo=l["codigo"],
-                detalhe="",
-                executivo=False,
-            )
-
-            linhas.append(linha)
+        if json := cast(list[DadosLinha], payload.json):
+            [
+                linhas.append((Linha(l["nome"], l["codigo"]), Raw(l["codigo"])))
+                for l in json
+            ]
 
         return linhas
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        json, status = get_json(URL_HORARIOS + linha.codigo, headers=headers)
+    def extrair_horarios(self, payload: Json) -> list[Servico]:
+        servicos = []
 
-        horarios: list[Horario] = []
+        if json := cast(list[DadosHorarios], payload.json):
+            for ser in json:
+                sentido = ser["sentido"]
 
-        query: list[DadosHorarios] | None = QUERY_HORARIOS.search(json)
+                for d in ser["horarios"]:
+                    dia = d["dia"]
+                    servico = Servico(DIAS[dia.upper()], sentido)
 
-        if query is [] or not query:
-            return []
+                    servico.horarios.extend(
+                        [
+                            Horario(
+                                hora=hora,
+                            )
+                            for hora in d["horas"]
+                        ]
+                    )
 
-        for ser in query:
-            sentido = ser["sentido"]
+                    servicos.append(servico)
 
-            for d in ser["horarios"]:
-                dia = d["dia"]
-
-                horarios.extend(
-                    [
-                        Horario(
-                            empresa=self.empresa(),
-                            linha=linha.codigo,
-                            sentido=sentido,
-                            hora=hora,
-                            dia=dia,
-                        )
-                        for hora in d["horas"]
-                    ]
-                )
-
-        self.esperar()
-        return horarios
+        return servicos

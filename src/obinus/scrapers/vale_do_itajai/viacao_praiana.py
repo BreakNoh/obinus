@@ -1,145 +1,109 @@
 import re
-from pprint import pp
-import requests
+from typing import cast
 from bs4 import BeautifulSoup
-from obinus.core.base import Raspador
-from obinus.utils.texto import extrair_texto
-from obinus.core.modelos import Linha, Horario
+from obinus.utils.http import extrair_texto, get_json, get_soup
+from obinus.core import *
 from pathlib import Path
-
 from obinus.utils.http import HEADERS_BASE, get_soup
 
-ARQUIVO_ATUAL = Path(__file__)
-PASTA_ATUAL = ARQUIVO_ATUAL.parent
-ARQUIVO_PAYLOAD = PASTA_ATUAL / "body_praiana.txt"
 
 URL_HORARIOS = "https://praiana.com.br/wp-admin/admin-ajax.php"
 URL_LINHAS = "https://praiana.com.br/horarios/"
+ARQUIVO_BODY = Path(__file__).parent / "body_praiana.txt"
+
+with open(ARQUIVO_BODY, "r") as a:
+    PAYLOAD_TEMPLATE = a.read()
 
 
-class ViacaoPraiana(Raspador):
-    NOME_EMPRESA = "VIACAO_PRAIANA"
-    _payload: str | None = None
+class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
+    def empresa(self) -> Empresa:
+        return Empresa(nome="Viação Praiana", regioes=VALE_DO_ITAJAI)
 
-    def raspar_linhas(self) -> list[Linha]:
-        soup, status = get_soup(URL_LINHAS)
+    def buscar_linhas(self) -> Html:
+        return Html(get_soup(URL_LINHAS))
+
+    def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Raw]]:
         linhas = []
 
-        for opt in soup.select("select[name='linhas'] option[value!='']"):
-            nome = extrair_texto(opt)
-            codigo = opt.get("value")
-
-            if not nome or not codigo:
+        for opt in payload.html.select("select[name='linhas'] option[value!='']"):
+            if not (nome := extrair_texto(opt)):
                 continue
+            if codigo := opt.get("value"):
+                if not codigo:
+                    continue
 
-            linha = Linha(
-                empresa=self.NOME_EMPRESA, nome=nome, codigo=str(codigo), detalhe=""
-            )
-
-            linhas.append(linha)
+            linhas.append((Linha(nome), Raw(str(codigo))))
 
         return linhas
 
-    def normalizar_dia(self, d: str) -> str | list[str]:
-        d_norm = d.lower().strip()
-        dias = []
-        if "sex" in d_norm and "seg" in d_norm:
-            dias.append("UTIL")
-        if "sáb" in d_norm:
-            dias.append("SABADO")
-        if "feri" in d_norm and "domi" in d_norm:
-            dias.append("DOMINGO_FERIADO")
-        return dias if len(dias) > 0 else "UTIL"
-
-    def _carregar_payload(self) -> bool:
-        try:
-            self._payload = open(ARQUIVO_PAYLOAD, "r").read().replace("\n", "&")
-            return True
-        except Exception as e:
-            print("x erro ao carregar arquivo payload", e)
-            return False
-
-    def _carregar_html(self, codigo: str) -> BeautifulSoup | None:
-
-        if not self._payload:
-            if not self._carregar_payload():
-                return None
-
-        if self._payload is None:
-            return None
-
-        payload = self._payload % codigo
-        headers = {
+    def buscar_horarios(self, busca: Raw) -> Html:
+        payload = PAYLOAD_TEMPLATE % busca.valor
+        headers = HEADERS_BASE | {
             "Content-Type": "application/x-www-form-urlencoded",
             "Referer": "https://praiana.com.br/horarios/",
         }
-        req = requests.post(URL_HORARIOS, data=payload, headers=HEADERS_BASE | headers)
 
-        if req.status_code != 200:
-            pp(req.raw)
-            return None
+        json = cast(dict, get_json(URL_HORARIOS, data=payload, headers=headers))
 
-        json = req.json()
-        if not json["content"]:
-            pp(json)
-            return None
+        return Html(BeautifulSoup(json["content"], "html.parser"))
 
-        return BeautifulSoup(json["content"], "html.parser")
+    def normalizar_dia(self, d: str) -> Dias:
+        d_norm = d.lower().strip()
 
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        soup = self._carregar_html(linha.codigo)
-        padrao_hora = r"(\d{2}:\d{2})"
+        if d_norm == "":
+            return DIAS_UTEIS
 
-        if not soup:
-            return []
+        dias = 0
 
-        horarios = []
+        if "sex" in d_norm and "seg" in d_norm:
+            dias |= DIAS_UTEIS
 
-        sentido: str | None = None
-        dia: str | list[str] | None = None
+        if "sáb" in d_norm or "sab" in d_norm:
+            dias |= SABADO
 
-        for tag in soup.select("div, span"):
-            texto = extrair_texto(tag)
+        if "feri" in d_norm and "domi" in d_norm:
+            dias |= DOMINGO_E_FERIADOS
 
-            if texto == "":
-                continue
+        return dias if dias > 0 else DIAS_UTEIS
 
-            texto_norm = texto.strip().lower()
+    def extrair_horarios(self, payload: Html) -> list[Servico]:
+        SELETOR_BLOCO = "div.jet-equal-columns[data-post-id]"
+        SELETOR_SENTIDO = "div.jet-listing-dynamic-field__content"
+        SELETOR_HORARIOS = "span.elementor-icon-list-text"
+        PADRAO_SENTIDO_DIA = re.compile(r"(?P<sent>[^\(\)]+)(?P<dia>\(.+\))?")
+        PADRAO_HORA = re.compile(r"\d{2}:\d{2}")
 
-            if re.match(r"R$", texto_norm):
-                continue
+        servicos = []
 
-            if (
-                "rua" in texto_norm
-                or "av" in texto_norm
-                or "sem horários" in texto_norm
-            ):
-                continue
+        for bloco in payload.html.select(SELETOR_BLOCO):
+            servico = None
 
-            if not re.match(padrao_hora, texto_norm):
-                sentido = texto.strip()
-                dia = self.normalizar_dia(sentido)
-
-                sentido = re.sub(r"(\s+-\s+)?\(.*\)", "", sentido)
-                sentido = sentido.replace(linha.nome, "").strip()
-
-            for match in re.finditer(padrao_hora, texto_norm):
-                if not match or not sentido or not dia:
+            for i in bloco.select(SELETOR_SENTIDO):
+                if not (texto := extrair_texto(i)):
+                    # texto não extraido ou inválido (tarifa ou vazio)
                     continue
 
-                horarios.append(
-                    [
-                        Horario(
-                            linha=linha.nome,
-                            dia=dia,
-                            empresa=self.NOME_EMPRESA,
-                            hora=hora,
-                            sentido=sentido,
-                        )
-                        for hora in match.groups()
-                    ]
-                )
+                if texto == "" or "$" in texto:
+                    continue
 
-        pp(horarios)
-        self.esperar()
-        return horarios
+                if match := PADRAO_SENTIDO_DIA.search(texto):
+                    sentido = match.group("sent").strip()
+                    dia = match.group("dia")
+
+                    dias = self.normalizar_dia(dia) if dia else DIAS_UTEIS
+
+                    servico = Servico(dias, sentido)
+                    break
+            else:
+                continue
+
+            for i in bloco.select(SELETOR_HORARIOS):
+                if not (texto := extrair_texto(i)):
+                    continue
+
+                for h in PADRAO_HORA.findall(texto):
+                    servico.horarios.append(Horario(h))
+
+            servicos.append(servico)
+
+        return servicos

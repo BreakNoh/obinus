@@ -1,18 +1,16 @@
-from obinus.scrapers import (
-    grande_florianopolis,
-    norte,
-    oeste,
-    serra,
-    sul,
-    vale_do_itajai,
-)
+from obinus.scrapers.grande_floripa import RASPADORES_GRANDE_FLORIPA
+from obinus.scrapers.norte import RASPADORES_NORTE
+from obinus.scrapers.oeste import RASPADORES_OESTE
+from obinus.scrapers.serrana import RASPADORES_SERRANA
+from obinus.scrapers.sul import RASPADORES_SUL
+from obinus.scrapers.vale_do_itajai import RASPADORES_VALE_DO_ITAJAI
+from obinus.scrapers.mobilibus import InterfaceMobilibus
 
-todos = []
-todos.extend(norte.todos)
-todos.extend(vale_do_itajai.todos)
-todos.extend(grande_florianopolis.todos)
-todos.extend(oeste.todos)
-todos.extend(serra.todos)
-todos.extend(sul.todos)
-
-__all__ = ["todos"]
+RASPADORES_SANTA_CATARINA = {
+    **RASPADORES_GRANDE_FLORIPA,
+    **RASPADORES_VALE_DO_ITAJAI,
+    **RASPADORES_NORTE,
+    **RASPADORES_SUL,
+    **RASPADORES_SERRANA,
+    **RASPADORES_OESTE,
+}

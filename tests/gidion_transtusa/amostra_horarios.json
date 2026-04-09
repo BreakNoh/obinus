@@ -1,0 +1,39 @@
+[
+    {
+        "direction": "Ida",
+        "stop_data": [
+            {
+                "service_data": [
+                    {
+                        "service_id": "DU",
+                        "time_data": [
+                            [
+                                {
+                                    "departure_time": "04:13"
+                                },
+                                {
+                                    "departure_time": "04:30"
+                                }
+                            ],
+                            [
+                                {
+                                    "departure_time": "05:00"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "service_id": "SAB",
+                        "time_data": [
+                            [
+                                {
+                                    "departure_time": "04:13"
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

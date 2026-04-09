@@ -1,5 +1,3 @@
-from .coletivo_cacador import ColetivoCacador
+from obinus.scrapers.oeste.coletivo_cacador import ColetivoCacador
 
-todos = [ColetivoCacador()]
-
-__all__ = ["todos"]
+RASPADORES_OESTE = {"coletivo_cacador": ColetivoCacador}

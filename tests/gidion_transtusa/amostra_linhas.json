@@ -1,0 +1,18 @@
+[
+    {
+        "routes": [
+            {
+                "route_id": "0040",
+                "route_long_name": "Tupy / Norte via Centro"
+            },
+            {
+                "route_id": "0041",
+                "route_long_name": "Norte / Centro"
+            },
+            {
+                "route_id": "0042",
+                "route_long_name": "Tupy / Centro via Goes Monteiro"
+            }
+        ]
+    }
+]

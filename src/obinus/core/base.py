@@ -1,4 +1,9 @@
-from .modelos import Linha, Horario
+from dataclasses import dataclass
+from typing import NamedTuple, Protocol, Union
+from obinus.utils.http import get_json, get_soup
+
+from bs4 import BeautifulSoup
+from .modelos import Dias, Linha, Horario
 from abc import ABC, abstractmethod
 from time import sleep
 import random
@@ -7,19 +12,82 @@ MIN_DELAY = 0.1
 MAX_DELAY = 0.5
 
 
+class _Raspador(Protocol):
+    def extrair_linhas(self, payload: BeautifulSoup | dict) -> list: ...
+    def extrair_horarios(self, payload: BeautifulSoup | dict) -> list: ...
+
+
+class _Cliente(Protocol):
+    def buscar_linhas(self, payload: str | None) -> BeautifulSoup | dict: ...
+    def buscar_horario(self, payload: str | None) -> BeautifulSoup | dict: ...
+
+
+class Json(NamedTuple):
+    url: str
+    metodo: str = "GET"
+    params: dict[str, str] | None = None
+    headers: dict[str, str] | None = None
+    data: dict[str, str] | str | None = None
+
+
+class Html(NamedTuple):
+    url: str
+    metodo: str = "GET"
+    params: dict[str, str] | None = None
+    headers: dict[str, str] | None = None
+    data: dict[str, str] | str | None = None
+
+
+class Raw(NamedTuple):
+    raw: Payload
+
+
+MetodoBusca = Union[Json, Html, Raw]
+type Payload = BeautifulSoup | object
+
+
 class Raspador(ABC):
     NOME_EMPRESA: str = "EMPRESA"
+
+    METODO_EXTRACAO_LINHAS: MetodoBusca
+    METODO_EXTRACAO_HORARIOS: MetodoBusca
 
     def empresa(self) -> str:
         return self.NOME_EMPRESA
 
-    @abstractmethod
-    def raspar_linhas(self) -> list[Linha]:
-        pass
+    def buscar(self, busca: MetodoBusca) -> Payload | None:
+        match busca:
+            case Json(url, metodo, params, headers, data):
+                if resultado := get_json(
+                    url=url, params=params, headers=headers, metodo=metodo, data=data
+                ):
+                    return resultado[0]
+
+            case Html(url, metodo, params, headers, data):
+                if resultado := get_soup(
+                    url=url, params=params, headers=headers, metodo=metodo, data=data
+                ):
+                    return resultado[0]
+            case Raw(raw):
+                return raw
+
+    def buscar_linhas(self) -> Payload | None:
+        return self.buscar(self.METODO_EXTRACAO_LINHAS)
+
+    def buscar_horarios(self, metodo: MetodoBusca) -> Payload | None:
+        return self.buscar(metodo)
 
     @abstractmethod
-    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]:
-        pass
+    def extrair_linhas(self, payload: Payload) -> list[Linha]: ...
+    @abstractmethod
+    def extrair_horarios(self, payload: Payload) -> list[Horario]: ...
+    @abstractmethod
+    def converter_dias(self, d: str) -> Dias: ...
+
+    @abstractmethod
+    def raspar_linhas(self) -> list[Linha]: ...
+    @abstractmethod
+    def raspar_horarios_linha(self, linha: Linha) -> list[Horario]: ...
 
     def raspar_horarios(self, linhas: list[Linha]) -> list[Horario]:
         horarios = []
@@ -36,29 +104,13 @@ class Raspador(ABC):
         return d
 
     def raspar(self) -> tuple[list[Linha], list[Horario]]:
-        print(f"# raspando {self.empresa()}...")
+        linhas, horarios = [], []
 
-        linhas_raspadas: list[Linha] = self.raspar_linhas()
+        payload_linhas = self.buscar_linhas()
+        linhas = self.extrair_linhas(payload_linhas)
 
-        print(f"> {len(linhas_raspadas)} linhas raspadas")
+        for linha in linhas:
+            payload_horarios = self.buscar_horarios(linha.nome)
+            horarios.extend(self.extrair_horarios(payload_horarios))
 
-        num_horarios = 0
-
-        todos_horarios_raspados = []
-
-        print(f"# raspando horarios...")
-
-        for i, linha in enumerate(linhas_raspadas):
-            print(
-                f"> {i + 1}/{len(linhas_raspadas)} linhas raspadas - {linha.nome}",
-                end="\r",
-            )
-
-            horarios_raspados = self.raspar_horarios_linha(linha)
-            num_horarios += len(horarios_raspados)
-
-            todos_horarios_raspados.extend(horarios_raspados)
-
-        print(f"> {num_horarios} horarios raspados")
-
-        return linhas_raspadas, todos_horarios_raspados
+        return linhas, horarios
