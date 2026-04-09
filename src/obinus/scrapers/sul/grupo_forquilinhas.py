@@ -5,7 +5,7 @@ from obinus.utils.http import extrair_texto, get_soup
 URL = "https://www.grupoforquilhinha.com.br/horarios"
 
 
-class GrupoForquilhinha(InterfaceRaspador[Html, Html, Html]):
+class GrupoForquilhinhas(InterfaceRaspador[Html, Html, Html]):
     def empresa(self) -> Empresa:
         return Empresa(nome="Grupo Forquilinha", regioes=GRANDE_FLORIPA | SUL)
 

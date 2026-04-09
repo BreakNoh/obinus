@@ -1,5 +1,3 @@
-from .transul import Transul
+from obinus.scrapers.serrana.transul import Transul
 
-todos = [Transul()]
-
-__all__ = ["todos"]
+RASPADORES_SERRANA = {"transul": Transul}

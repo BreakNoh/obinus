@@ -1,10 +1,10 @@
 import utils
-from obinus.scrapers.sul.grupo_forquilinhas import GrupoForquilhinha
+from obinus.scrapers.sul.grupo_forquilinhas import GrupoForquilhinhas
 
 ams_lin, ams_hor = utils.carregar(
     __file__, ["amostra_linhas.html", "amostra_horarios.html"]
 )
-raspador = GrupoForquilhinha()
+raspador = GrupoForquilhinhas()
 
 
 def test_extrair_linhas():
