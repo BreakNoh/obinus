@@ -82,12 +82,13 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
 
         if json := cast(list[DadosLinha], payload.json):
             for lin in json:
-                nome = (
-                    lin["nome"]
-                    if lin["nome"] == "" or not lin["nome"]
-                    else lin["codigo"]
-                )
-                codigo = lin["codigo"] if nome != lin["nome"] else None
+                if lin["nome"] and lin["nome"] != "":
+                    nome = lin["nome"]
+                    codigo = lin["codigo"]
+                else:
+                    nome = lin["codigo"]
+                    codigo = None
+
                 url = f"{URL_HORARIOS}?project_id={self.ID_PROJETO}&route_id={lin['id_rota']}&v={self.VERSAO_HORARIOS}"
                 linhas.append((Linha(nome=nome, codigo=codigo), Url(url)))
 
