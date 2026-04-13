@@ -23,66 +23,69 @@ SERRANA: Final[Regioes] = 0b000010
 OESTE: Final[Regioes] = 0b000001
 
 
-@dataclass(frozen=True)
-class Adaptado: ...
+class ObsHorario:
+    tipo: str
+    valor: str
+
+    def __init__(self, tipo: str, valor: str) -> None:
+        self.valor = valor
+        self.tipo = tipo
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, ObsHorario):
+            return False
+        return self.tipo == other.tipo and self.valor == other.valor
 
 
-@dataclass(frozen=True)
-class OperadoPor:
-    empresa: str
-    durante: None | str = None
+class Adaptado(ObsHorario):
+    def __init__(self) -> None:
+        super().__init__(tipo="ADAPTADO", valor="Veículo com elevador")
 
 
-@dataclass(frozen=True)
-class FuncionaDurante:
-    durante: str
+class RecolheNoBairo(ObsHorario):
+    def __init__(self) -> None:
+        super().__init__(tipo="RECOLHE_BAIRRO", valor="Recolhe no bairro")
 
 
-@dataclass(frozen=True)
-class RecolheBairro: ...
+class MeiaViagem(ObsHorario):
+    def __init__(self) -> None:
+        super().__init__(tipo="MEIA_VIAGEM", valor="Meia viagem")
 
 
-@dataclass(frozen=True)
-class MeiaViagem: ...
+class HorarioPrevisto(ObsHorario):
+    def __init__(self) -> None:
+        super().__init__(tipo="HORARIO_PREVISTO", valor="Horário previsto")
 
 
-@dataclass(frozen=True)
-class HorarioPrevisto: ...
+class OperadoPorEmpresa(ObsHorario):
+    def __init__(self, empresa: str) -> None:
+        super().__init__(tipo="OPERADO_POR", valor=empresa)
 
 
-@dataclass(frozen=True)
-class ItinerarioDiferenciado:
-    itinerario: str
+class PeriodoFuncionamento(ObsHorario):
+    def __init__(self, periodo: str) -> None:
+        super().__init__(tipo="FUNCIONA_DURANTE", valor=periodo)
 
 
-@dataclass(frozen=True)
-class Generica:
-    tipo: str | None = None
-    valor: str | None = None
+class ItinerarioDiferenciado(ObsHorario):
+    def __init__(self, itinerario: str) -> None:
+        super().__init__(tipo="ITINERARIO_DIFERENCIADO", valor=itinerario)
 
 
-@dataclass(frozen=True)
-class SaidaDe:
-    said: str
+class SaidaDe(ObsHorario):
+    def __init__(self, local: str) -> None:
+        super().__init__(tipo="SAIDA_DE", valor=local)
 
 
-ObsHorario = (
-    Adaptado
-    | FuncionaDurante
-    | ItinerarioDiferenciado
-    | MeiaViagem
-    | HorarioPrevisto
-    | OperadoPor
-    | RecolheBairro
-    | SaidaDe
-    | Generica
-)
+class Generica(ObsHorario):
+    def __init__(self, valor: str, tipo: str = "GENERICA") -> None:
+        super().__init__(tipo=tipo, valor=valor)
 
 
 @dataclass
 class Horario:
     hora: str
-    obs: list[ObsHorario] = field(default_factory=list[ObsHorario])
+    obs: list[ObsHorario] = field(default_factory=list)
     id: str | None = None
 
 
@@ -90,7 +93,7 @@ class Horario:
 class Servico:
     dias: Dias = 0
     sentido: str | None = None
-    horarios: list[Horario] = field(default_factory=list[Horario])
+    horarios: list[Horario] = field(default_factory=list)
     id: str | None = None
 
 
@@ -99,7 +102,7 @@ class Linha:
     nome: str
     codigo: str | None = None
     detalhe: str | None = None
-    servicos: list[Servico] = field(default_factory=list[Servico])
+    servicos: list[Servico] = field(default_factory=list)
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
     id: str | None = None
 
@@ -108,7 +111,7 @@ class Linha:
 class Empresa:
     id: str
     nome: str
-    linhas: list[Linha] = field(default_factory=list[Linha])
+    linhas: list[Linha] = field(default_factory=list)
     regioes: Regioes = 0
 
 

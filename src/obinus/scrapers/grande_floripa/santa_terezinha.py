@@ -106,7 +106,7 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
             elif re.search(r"via|linha", valor.lower()):
                 obs = ItinerarioDiferenciado(valor)
             elif re.search(r"estrela|terezinha|biguaçú", valor.lower()):
-                obs = OperadoPor(valor.replace("ú", "u"))
+                obs = OperadoPorEmpresa(valor.replace("ú", "u"))
             elif re.search(r"sai|saem", valor.lower()):
                 obs = SaidaDe(valor)
             else:

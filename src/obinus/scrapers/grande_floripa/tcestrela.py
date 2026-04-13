@@ -69,11 +69,13 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
                     if cod == "*":
                         obs = HorarioPrevisto()
                     elif "recolhe" in leg_norm:
-                        obs = RecolheBairro()
+                        obs = RecolheNoBairo()
                     elif re.search(r"via|até", leg_norm):
                         obs = ItinerarioDiferenciado(leg)
                     elif cod in "\u00b2\u00b9":
-                        obs = OperadoPor("Estrela", leg)
+                        obs = OperadoPorEmpresa("Estrela")
+                        legenda.append((cod, obs))
+                        obs = PeriodoFuncionamento(leg)
                     else:
                         obs = Generica(valor=leg)
 

@@ -71,7 +71,7 @@ class BCBus(InterfaceRaspador[Html, Html, Html]):
                         obs_raw = match.group("obs")
 
                         if "DEZ" in obs_raw:
-                            horario.obs.append(FuncionaDurante(obs_raw))
+                            horario.obs.append(PeriodoFuncionamento(obs_raw))
                         elif obs_raw != "":
                             horario.obs.append(ItinerarioDiferenciado(obs_raw))
 

@@ -6,7 +6,11 @@ amostra_linhas, amostra_horarios = carregar_amostras(Path(__file__).parent)
 
 
 def test_extrair_linhas():
-    assert len(Jotur().extrair_linhas(amostra_linhas)) == 3
+    linhas = Jotur().extrair_linhas(amostra_linhas)
+    assert len(linhas) == 3
+
+    assert linhas[0][0].nome == "linha A"
+    assert linhas[0][0].detalhe == "via teste 123"
 
 
 def test_extrair_horarios():

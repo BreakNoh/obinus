@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import re
 from typing import Generic, Protocol, TypeVar
 from obinus.core.tipos import *
 from obinus.utils.salvar import gerar_id
@@ -29,6 +30,9 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
         MIN_DELAY = 0.5
 
         sleep(uniform(MIN_DELAY, MAX_DELAY))
+
+        def _tirar_rebarbas(self, texto: str) -> str:
+            return re.sub(r"^[^\w\(\)]+|[^\w\(\)]+$", "", texto)
 
     def raspar(self) -> Empresa:
         empresa = self.empresa()

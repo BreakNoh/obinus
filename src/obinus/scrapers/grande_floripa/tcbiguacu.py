@@ -67,9 +67,9 @@ class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
                         legenda = extrair_texto(h.select_one(".leg_dif"))
                         horario.obs.append(ItinerarioDiferenciado(legenda))
                     if "compartilhada" in ico["class"]:
-                        horario.obs.append(OperadoPor("Biguaçu"))
+                        horario.obs.append(OperadoPorEmpresa("Biguaçu"))
                     if "ponto-final" in ico["class"]:
-                        horario.obs.append(RecolheBairro())
+                        horario.obs.append(RecolheNoBairo())
 
                 servico.horarios.append(horario)
 

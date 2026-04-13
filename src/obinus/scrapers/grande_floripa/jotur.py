@@ -1,3 +1,4 @@
+import re
 from bs4 import BeautifulSoup
 from obinus.core.raspador import InterfaceRaspador
 from obinus.core.tipos import *
@@ -27,6 +28,9 @@ class Jotur(InterfaceRaspador[Html, Html, Url]):
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []
+        PADRAO_NOME_DETELHE = re.compile(
+            r"^\W*(?P<nome>.+?)\s*(?P<detalhe>via.+?)?\W*$", re.IGNORECASE
+        )
 
         for item in payload.html.select("a"):
             url = f"{URL_BASE}/{item['href']}"
@@ -40,7 +44,14 @@ class Jotur(InterfaceRaspador[Html, Html, Url]):
                     else TipoLinha.CONVENCIONAL
                 )
 
-                linha = Linha(nome=nome, codigo=cod, tipo=tipo)
+                if match := PADRAO_NOME_DETELHE.search(nome):
+                    nome_limpo = match.group("nome")
+                    detalhe = match.group("detalhe")
+                else:
+                    nome_limpo = nome
+                    detalhe = None
+
+                linha = Linha(nome=nome_limpo, detalhe=detalhe, codigo=cod, tipo=tipo)
 
                 linhas.append((linha, Url(url)))
 
