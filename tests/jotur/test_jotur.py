@@ -9,8 +9,8 @@ def test_extrair_linhas():
     linhas = Jotur().extrair_linhas(amostra_linhas)
     assert len(linhas) == 3
 
-    assert linhas[0][0].nome == "linha A"
-    assert linhas[0][0].detalhe == "via teste 123"
+    assert linhas[0][0].nome == "Linha A"
+    assert linhas[0][0].detalhe == "Via Teste 123"
 
 
 def test_extrair_horarios():

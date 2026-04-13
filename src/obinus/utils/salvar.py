@@ -1,4 +1,5 @@
 from dataclasses import asdict
+import json
 from pathlib import Path
 import csv
 import hashlib
@@ -41,8 +42,19 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
                 rows["servicos"].append(servico_ser)
 
             for horario in servico.horarios:
+                obs_ser = f"[{','.join([str(obs) for obs in horario.obs] or [])}]"
+
                 rows["horarios"].append(
-                    {"id_servico": servico.id, "id": horario.id, "hora": horario.hora}
+                    {
+                        "id_servico": servico.id,
+                        "id": horario.id,
+                        "hora": horario.hora,
+                        "observacoes": json.dumps(
+                            horario.obs,
+                            ensure_ascii=False,
+                            default=lambda o: o.__dict__,
+                        ),
+                    }
                 )
 
     return rows

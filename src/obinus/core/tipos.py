@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum, auto
+import json
 from typing import NamedTuple, Final
 from bs4 import BeautifulSoup, Tag
 
@@ -35,6 +36,9 @@ class ObsHorario:
         if not isinstance(other, ObsHorario):
             return False
         return self.tipo == other.tipo and self.valor == other.valor
+
+    def __str__(self) -> str:
+        return rf"{{\"tipo:{self.tipo},valor:{self.valor}}}"
 
 
 class Adaptado(ObsHorario):

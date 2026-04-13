@@ -31,8 +31,13 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
 
         sleep(uniform(MIN_DELAY, MAX_DELAY))
 
-        def _tirar_rebarbas(self, texto: str) -> str:
-            return re.sub(r"^[^\w\(\)]+|[^\w\(\)]+$", "", texto)
+    def _padronizar_texto(self, texto: str | None) -> str | None:
+        if not texto:
+            return None
+        texto_sem_rebarbas = re.sub(r"^[^\w\(\)]+|[^\w\(\)]+$", "", texto)
+        texto_primeira_maiuscula = texto_sem_rebarbas.lower().title()
+
+        return texto_primeira_maiuscula
 
     def raspar(self) -> Empresa:
         empresa = self.empresa()
@@ -43,17 +48,26 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
 
         for linha, busca in resultado_linhas:
             try:
-                self._esperar()
+                if isinstance(busca, Url):
+                    self._esperar()
                 payload_horarios = self.buscar_horarios(busca)
 
                 servicos = self.extrair_horarios(payload_horarios)
                 linha.id = gerar_id(linha.codigo or linha.nome, empresa.id)
 
+                linha.nome = self._padronizar_texto(linha.nome) or linha.nome
+                linha.detalhe = self._padronizar_texto(linha.detalhe)
+
                 for servico in servicos:
                     servico.id = gerar_id(servico.sentido or "", linha.id)
 
+                    servico.sentido = self._padronizar_texto(servico.sentido)
+
                     for horario in servico.horarios:
                         horario.id = gerar_id(horario.hora, servico.id)
+
+                        for obs in horario.obs:
+                            obs.valor = self._padronizar_texto(obs.valor) or obs.valor
 
                 linha.servicos = servicos
 
