@@ -10,7 +10,7 @@ URL_LINHAS = f"{URL_BASE}/est/wp/"
 
 class TCEstrela(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Transporte Coletivo Estrela", regioes=GRANDE_FLORIPA)
+        return Empresa(id="TCEST", nome="Transporte Coletivo Estrela", regioes=GRANDE_FLORIPA)
 
     def buscar_linhas(self) -> Html:
         return Html(get_soup(URL_LINHAS))

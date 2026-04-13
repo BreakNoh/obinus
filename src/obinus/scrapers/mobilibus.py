@@ -50,6 +50,7 @@ DIAS = {"dias úteis": DIAS_UTEIS, "sábados": SABADO, "domingos": DOMINGO_E_FER
 
 
 class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
+    ID_EMPRESA: str
     NOME_EMPRESA: str
     REGIOES: Regioes
     ID_PROJETO: str
@@ -57,7 +58,7 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
     VERSAO_HORARIOS: str = "1"
 
     def empresa(self) -> Empresa:
-        return Empresa(nome=self.NOME_EMPRESA, regioes=self.REGIOES)
+        return Empresa(id=self.ID_EMPRESA, nome=self.NOME_EMPRESA, regioes=self.REGIOES)
 
     def extrair_horarios(self, payload: Json) -> list[Servico]:
         servicos = []

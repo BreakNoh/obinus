@@ -48,7 +48,7 @@ DIAS = {
 
 class ColetivoRainha(InterfaceRaspador[Html, Json, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Coletivo Rainha", regioes=NORTE)
+        return Empresa(id="CRAIN", nome="Coletivo Rainha", regioes=NORTE)
 
     def buscar_linhas(self) -> Html:
         html_final = BeautifulSoup()

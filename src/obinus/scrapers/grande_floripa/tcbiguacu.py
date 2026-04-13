@@ -15,7 +15,7 @@ DIAS: dict[str, Dias] = {"1": DIAS_UTEIS, "2": SABADO, "3": DOMINGO_E_FERIADOS}
 
 class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Transporte Coletivo Biguaçu", regioes=GRANDE_FLORIPA)
+        return Empresa(id="TCBGC", nome="Transporte Coletivo Biguaçu", regioes=GRANDE_FLORIPA)
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Raw]]:
         linhas = []

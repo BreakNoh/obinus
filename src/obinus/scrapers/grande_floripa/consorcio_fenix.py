@@ -29,7 +29,7 @@ def parsear_dias(d: str) -> Dias:
 
 class ConsorcioFenix(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Consórcio Fênix", regioes=GRANDE_FLORIPA)
+        return Empresa(id="CFENX", nome="Consórcio Fênix", regioes=GRANDE_FLORIPA)
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []

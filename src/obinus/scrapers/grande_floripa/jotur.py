@@ -15,7 +15,7 @@ DIAS = {
 
 class Jotur(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Jotur", regioes=GRANDE_FLORIPA)
+        return Empresa(id="JOTUR", nome="Jotur", regioes=GRANDE_FLORIPA)
 
     def buscar_linhas(self) -> Html:
         html_final = BeautifulSoup()

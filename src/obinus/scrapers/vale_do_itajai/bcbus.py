@@ -8,7 +8,7 @@ URL: str = "https://bcbus.com.br/"
 
 class BCBus(InterfaceRaspador[Html, Html, Html]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="BCBus", regioes=VALE_DO_ITAJAI)
+        return Empresa(id="BCBUS", nome="BCBus", regioes=VALE_DO_ITAJAI)
 
     def buscar_linhas(self) -> Html:
         return Html(get_soup(URL))

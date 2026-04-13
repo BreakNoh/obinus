@@ -5,12 +5,14 @@ from obinus.utils.texto import extrair_texto
 
 
 class ExpressoPresidenteGaspar(InterfaceMobilibus):
+    ID_EMPRESA = "EPGSP"
     NOME_EMPRESA = "Expresso Presidente Gaspar"
     ID_PROJETO = "699"
     REGIOES = NORTE
 
 
 class ExpressoPresidenteRioMafra(InterfaceMobilibus):
+    ID_EMPRESA = "EPRMF"
     NOME_EMPRESA = "Expresso Presidente RioMafra"
     ID_PROJETO = "956"
     REGIOES = NORTE
@@ -24,7 +26,7 @@ class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
     NOME_EMPRESA = "EXPRESSO_PRESIDENTE_TIMBO"
 
     def empresa(self) -> Empresa:
-        return Empresa("Expresso Presidente Timbó", regioes=VALE_DO_ITAJAI)
+        return Empresa(id="EPTMB", nome="Expresso Presidente Timbó", regioes=VALE_DO_ITAJAI)
 
     def buscar_horarios(self, busca: Url) -> Html:
         return Html(get_soup(busca.url))

@@ -7,7 +7,7 @@ URL_LINHAS = "https://transullages.com.br/linhas"
 
 class Transul(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Transul", regioes=SUL)
+        return Empresa(id="TRNSL", nome="Transul", regioes=SUL)
 
     def buscar_linhas(self) -> Html:
         return Html(get_soup(URL_LINHAS))

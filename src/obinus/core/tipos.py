@@ -103,6 +103,7 @@ class Linha:
 
 @dataclass
 class Empresa:
+    id: str
     nome: str
     linhas: list[Linha] = field(default_factory=list[Linha])
     regioes: Regioes = 0

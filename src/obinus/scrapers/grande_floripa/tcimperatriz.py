@@ -14,7 +14,7 @@ DIAS = {
 
 class TCImperatriz(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Transporte Coletivo Imperatriz", regioes=GRANDE_FLORIPA)
+        return Empresa(id="TCIMP", nome="Transporte Coletivo Imperatriz", regioes=GRANDE_FLORIPA)
 
     def buscar_linhas(self) -> Html:
         html_final = BeautifulSoup()

@@ -49,7 +49,7 @@ DIAS = {"DU": DIAS_UTEIS, "SAB": SABADO, "DOM": DOMINGO_E_FERIADOS}
 
 class GidionTranstusa(InterfaceRaspador[Json, Json, Raw]):
     def empresa(self) -> Empresa:
-        return Empresa(nome="Gidion/Transtusa", regioes=NORTE)
+        return Empresa(id="GDTRN", nome="Gidion/Transtusa", regioes=NORTE)
 
     def buscar_linhas(self) -> Json:
         return Json(QUERY_LINHAS.search(get_json(URL_LINHAS, headers=headers)))
