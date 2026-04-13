@@ -3,7 +3,7 @@ from obinus.scrapers.mobilibus import InterfaceMobilibus
 
 
 class CriBus(InterfaceMobilibus):
-    ID_EMPRESA = "CRIBS"
+    ID_EMPRESA = "cribus"
     NOME_EMPRESA = "CriBus"
     ID_PROJETO = "740"
     VERSAO_HORARIOS = "2"

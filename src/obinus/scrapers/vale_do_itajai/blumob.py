@@ -3,7 +3,7 @@ from obinus.scrapers.mobilibus import InterfaceMobilibus
 
 
 class BluMob(InterfaceMobilibus):
-    ID_EMPRESA = "BLUMB"
+    ID_EMPRESA = "blumob"
     NOME_EMPRESA = "BluMob"
     ID_PROJETO = "5"
     VERSAO_HORARIOS = "2"

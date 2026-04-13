@@ -135,7 +135,7 @@ class Tratador:
 
 class ColetivoSantaCruz(InterfaceRaspador[Json, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(id="CSCRZ", nome="Coletivo Santa Cruz", regioes=NORTE)
+        return Empresa(id="coletivo-santa-cruz", nome="Coletivo Santa Cruz", regioes=NORTE)
 
     def buscar_linhas(self) -> Json:
         with open(ARQUIVO_URL, "r") as a:

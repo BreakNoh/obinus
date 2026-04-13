@@ -7,7 +7,7 @@ URL = "https://icarense.com.br/linhas-e-horarios/"
 
 class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
     def empresa(self) -> Empresa:
-        return Empresa(id="ECICA", nome="Expresso Coletivo Içarense", regioes=SUL)
+        return Empresa(id="expresso-coletivo-icarense", nome="Expresso Coletivo Içarense", regioes=SUL)
 
     def buscar_linhas(self) -> Html:
         return Html(get_soup(URL))

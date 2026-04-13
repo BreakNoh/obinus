@@ -7,7 +7,7 @@ URL = "https://www.grupoforquilhinha.com.br/horarios"
 
 class GrupoForquilhinhas(InterfaceRaspador[Html, Html, Html]):
     def empresa(self) -> Empresa:
-        return Empresa(id="GFORQ", nome="Grupo Forquilinha", regioes=GRANDE_FLORIPA | SUL)
+        return Empresa(id="grupo-forquilinha", nome="Grupo Forquilinha", regioes=GRANDE_FLORIPA | SUL)
 
     def buscar_linhas(self) -> Html:
         return Html(get_soup(URL))

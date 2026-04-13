@@ -15,7 +15,11 @@ DIAS: dict[str, Dias] = {"1": DIAS_UTEIS, "2": SABADO, "3": DOMINGO_E_FERIADOS}
 
 class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
     def empresa(self) -> Empresa:
-        return Empresa(id="TCBGC", nome="Transporte Coletivo Biguaçu", regioes=GRANDE_FLORIPA)
+        return Empresa(
+            id="transporte-coletivo-biguacu",
+            nome="Transporte Coletivo Biguaçu",
+            regioes=GRANDE_FLORIPA,
+        )
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Raw]]:
         linhas = []
@@ -77,6 +81,7 @@ class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
         html_final = BeautifulSoup()
 
         for i in "123":  # uma requisição para cada dia
+            self._esperar()
             html = get_soup(
                 URL_HORARIOS, params={"id_line_bus": busca.valor, "id_day_week": i}
             )
