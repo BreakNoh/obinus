@@ -1,6 +1,5 @@
 from pathlib import Path
-from obinus.core.tipos import DIAS_UTEIS, SABADO
-from utils import carregar_amostras
+from utils import *
 from obinus.scrapers.grande_floripa.jotur import Jotur
 
 amostra_linhas, amostra_horarios = carregar_amostras(Path(__file__).parent)
@@ -16,3 +15,4 @@ def test_extrair_horarios():
     assert servicos[0].dias == DIAS_UTEIS
     assert servicos[1].dias == SABADO
     assert servicos[0].horarios[0].hora == "11:11"
+    [checar_horario(s.horarios) for s in servicos]

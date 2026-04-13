@@ -25,3 +25,5 @@ def test_extrair_horarios():
     assert servicos[2].horarios[0].obs == [
         utils.ItinerarioDiferenciado("Via PV-MARILI-B.VISTA")
     ]
+
+    [utils.checar_horario(s.horarios) for s in servicos]

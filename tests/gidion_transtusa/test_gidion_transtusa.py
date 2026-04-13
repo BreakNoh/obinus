@@ -28,3 +28,5 @@ def test_extrair_horarios():
     assert servicos[0].dias == DIAS_UTEIS
     assert len(servicos[1].horarios) == 1
     assert servicos[1].dias == SABADO
+
+    [checar_horario(s.horarios) for s in servicos]

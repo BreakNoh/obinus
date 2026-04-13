@@ -1,4 +1,4 @@
-from utils import carregar_amostras
+from utils import *
 from obinus.scrapers.grande_floripa.tcimperatriz import TCImperatriz
 
 from pathlib import Path
@@ -15,3 +15,5 @@ def test_extrair_horarios():
     assert len(servicos) == 2
     assert len(servicos[0].horarios) == 3
     assert len(servicos[1].horarios) == 1
+
+    [checar_horario(s.horarios) for s in servicos]

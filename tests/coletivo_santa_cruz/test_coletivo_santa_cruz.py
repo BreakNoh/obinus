@@ -36,6 +36,7 @@ def test_extrair_horarios():
 
     assert len(servicos) == 1
     assert len(servicos[0].horarios) == 6
+    [checar_horario(s.horarios) for s in servicos]
 
 
 def test_extrair_linhas():

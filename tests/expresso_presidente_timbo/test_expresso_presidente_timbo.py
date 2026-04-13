@@ -23,3 +23,4 @@ def test_extrair_horarios():
     assert len(servicos) == 2
     assert len(servicos[0].horarios) == 2
     assert len(servicos[1].horarios) == 1
+    [utils.checar_horario(s.horarios) for s in servicos]

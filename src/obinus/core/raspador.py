@@ -21,14 +21,15 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
     @abstractmethod
     def empresa(self) -> Empresa: ...
 
-    def raspar(self) -> list[Linha]:
+    def raspar(self) -> Empresa:
+        empresa = self.empresa()
         linhas = []
 
-        try:
-            payload_linhas = self.buscar_linhas()
-            resultado_linhas = self.extrair_linhas(payload_linhas)
+        payload_linhas = self.buscar_linhas()
+        resultado_linhas = self.extrair_linhas(payload_linhas)
 
-            for linha, busca in resultado_linhas:
+        for linha, busca in resultado_linhas:
+            try:
                 payload_horarios = self.buscar_horarios(busca)
 
                 servicos = self.extrair_horarios(payload_horarios)
@@ -36,9 +37,9 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
                 linha.servicos = servicos
 
                 linhas.append(linha)
-        except Exception as e:
-            print(e)
+            except Exception as e:
+                print(e)
 
-        return linhas
+        empresa.linhas = linhas
 
-    ...
+        return empresa

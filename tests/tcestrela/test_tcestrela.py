@@ -1,6 +1,5 @@
 from utils import *
 from obinus.scrapers.grande_floripa.tcestrela import TCEstrela
-from obinus.core.tipos import *
 from pathlib import Path
 from pprint import pprint
 
@@ -25,3 +24,5 @@ def test_extrair_horarios():
 
     assert servicos[0].horarios[0].obs == [ItinerarioDiferenciado("via abc")]
     assert servicos[0].horarios[1].obs == [HorarioPrevisto()]
+
+    [checar_horario(s.horarios) for s in servicos]

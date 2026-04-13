@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 from obinus.core.tipos import DIAS_UTEIS, DOMINGO_E_FERIADOS, SABADO, Adaptado, Html
 from obinus.scrapers.grande_floripa.consorcio_fenix import ConsorcioFenix
+import utils
 
 dir_atual = Path(__file__).parent
 raspador = ConsorcioFenix()
@@ -27,6 +28,8 @@ def test_raspar_horarios():
         assert sc.dias == DIAS_UTEIS
         assert sc.sentido == "C"
         assert len(sa.horarios) == 1
+
+        [utils.checar_horario(s.horarios) for s in servicos]
 
 
 def test_raspar_linhas():

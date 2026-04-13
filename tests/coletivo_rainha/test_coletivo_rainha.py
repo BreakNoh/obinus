@@ -22,3 +22,4 @@ def test_extrair_horarios():
     servicos = raspador.extrair_horarios(Json(json))
 
     assert len(servicos) == 2
+    [checar_horario(s.horarios) for s in servicos]

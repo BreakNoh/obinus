@@ -27,3 +27,4 @@ def test_extrair_horarios():
     assert len(servicos[3].horarios) == 23
     assert servicos[3].sentido == "Camboriú - Itajaí via SANTA REGINA - AREIAS"
     assert servicos[3].dias == utils.DIAS_UTEIS
+    [utils.checar_horario(s.horarios) for s in servicos]

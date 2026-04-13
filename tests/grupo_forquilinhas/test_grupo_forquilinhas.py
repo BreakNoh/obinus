@@ -35,3 +35,4 @@ def test_extrair_horarios():
     assert servicos[2].horarios[1] == utils.Horario(
         "06:12", [utils.ItinerarioDiferenciado("B")]
     )
+    [utils.checar_horario(s.horarios) for s in servicos]

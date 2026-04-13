@@ -29,3 +29,4 @@ def test_extrair_horarios():
     assert len(servicos) == 5
     assert servicos[3].sentido == "Saída Terminal"
     assert servicos[4].sentido == "Saída Bairro"
+    [utils.checar_horario(s.horarios) for s in servicos]

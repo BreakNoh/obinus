@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from obinus.core.tipos import DIAS_UTEIS, Html, Linha, TipoLinha
 from obinus.scrapers.grande_floripa.tcbiguacu import TCBiguacu
 from pathlib import Path
+import utils
 
 PASTA = Path(__file__).parent
 
@@ -25,3 +26,5 @@ def test_extrair_horarios():
         assert len(servicos[1].horarios) == 1
         assert servicos[0].dias == DIAS_UTEIS
         assert len(servicos[1].horarios[0].obs) == 2
+
+        [utils.checar_horario(s.horarios) for s in servicos]
