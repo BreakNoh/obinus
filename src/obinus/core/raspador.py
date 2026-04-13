@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 from typing import Generic, Protocol, TypeVar
 from obinus.core.tipos import *
 from obinus.utils.salvar import gerar_id
+from time import sleep
+from random import uniform
 
 P = TypeVar("P", bound=Payload)
 Q = TypeVar("Q", bound=Payload)
@@ -22,6 +24,12 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
     @abstractmethod
     def empresa(self) -> Empresa: ...
 
+    def _esperar(self):
+        MAX_DELAY = 1
+        MIN_DELAY = 0.5
+
+        sleep(uniform(MIN_DELAY, MAX_DELAY))
+
     def raspar(self) -> Empresa:
         empresa = self.empresa()
         linhas = []
@@ -31,6 +39,7 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
 
         for linha, busca in resultado_linhas:
             try:
+                self._esperar()
                 payload_horarios = self.buscar_horarios(busca)
 
                 servicos = self.extrair_horarios(payload_horarios)
