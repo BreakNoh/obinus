@@ -83,6 +83,7 @@ ObsHorario = (
 class Horario:
     hora: str
     obs: list[ObsHorario] = field(default_factory=list[ObsHorario])
+    id: str | None = None
 
 
 @dataclass
@@ -90,6 +91,7 @@ class Servico:
     dias: Dias = 0
     sentido: str | None = None
     horarios: list[Horario] = field(default_factory=list[Horario])
+    id: str | None = None
 
 
 @dataclass
@@ -99,6 +101,7 @@ class Linha:
     detalhe: str | None = None
     servicos: list[Servico] = field(default_factory=list[Servico])
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
+    id: str | None = None
 
 
 @dataclass

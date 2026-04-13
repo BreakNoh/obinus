@@ -1,6 +1,6 @@
 # from .base import *
 # from .modelos import *
-from .tipos import *
-from .raspador import InterfaceRaspador
+from obinus.core.tipos import *
+from obinus.core.raspador import InterfaceRaspador
 #
 # __all__ = ["Horario", "Linha", "Raspador"]

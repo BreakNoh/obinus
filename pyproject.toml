@@ -14,7 +14,9 @@ dependencies = [
 ]
 
 [project.scripts]
-raspar-tudo = "obinus.main:main"
+geral = "obinus.main:extrair_geral"
+regiao = "obinus.main:extrair_regiao"
+empresa = "obinus.main:extrair_empresa"
 
 [tool.pytest]
 addopts = ["-q", "-ra"]

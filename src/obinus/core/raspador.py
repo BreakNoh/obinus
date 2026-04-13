@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Generic, Protocol, TypeVar
 from obinus.core.tipos import *
+from obinus.utils.salvar import gerar_id
 
 P = TypeVar("P", bound=Payload)
 Q = TypeVar("Q", bound=Payload)
@@ -33,6 +34,13 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
                 payload_horarios = self.buscar_horarios(busca)
 
                 servicos = self.extrair_horarios(payload_horarios)
+                linha.id = gerar_id(linha.codigo or linha.nome, empresa.id)
+
+                for servico in servicos:
+                    servico.id = gerar_id(servico.sentido or "", linha.id)
+
+                    for horario in servico.horarios:
+                        horario.id = gerar_id(horario.hora, servico.id)
 
                 linha.servicos = servicos
 
