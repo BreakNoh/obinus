@@ -1,24 +1,14 @@
-from .core.modelos import *
-from .database import db
-from .utils.salvar import salvar_csv
-from .scrapers import todos
-
-todas_linhas: list[Linha] = []
-todos_horarios: list[Horario] = []
+from obinus.core.tipos import Empresa
+from obinus.scrapers import RASPADORES_SANTA_CATARINA
 
 
-def main():
-    todas_linhas = []
-    todos_horarios = []
+def extrair_regiao(regiao: str) -> list[Empresa]:
+    if not (raspadores := RASPADORES_SANTA_CATARINA.get(regiao)):
+        return []
 
-    for raspador in todos:
-        linhas, horarios = raspador.raspar()
+    empresas = []
 
-        todas_linhas.extend(linhas)
-        todos_horarios.extend(horarios)
+    for e, r in raspadores.items():
+        pass
 
-        salvar_csv(linhas, f"LINHAS_{raspador.empresa()}.csv")
-        salvar_csv(horarios, f"HORARIOS_{raspador.empresa()}.csv")
-
-    salvar_csv(todas_linhas, "LINHAS_SANTA_CATARINA.csv")
-    salvar_csv(todos_horarios, "HORARIOS_SANTA_CATARINA.csv")
+    return empresas

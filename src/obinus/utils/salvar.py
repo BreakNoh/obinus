@@ -2,6 +2,8 @@ from dataclasses import asdict
 from pathlib import Path
 import csv
 
+from obinus.core.tipos import Empresa, Horario, Linha, Servico
+
 
 ARQUIVO_ATUAL = Path(__file__).resolve()
 DIR_ATUAL = ARQUIVO_ATUAL.parent
