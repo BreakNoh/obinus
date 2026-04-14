@@ -3,9 +3,8 @@ import json
 from pathlib import Path
 import csv
 import hashlib
-
-
-from obinus.core.tipos import Empresa
+import re
+from obinus.core.tipos import *
 
 
 ARQUIVO_ATUAL = Path(__file__).resolve()
@@ -16,6 +15,46 @@ PASTA_SQL = DIR_ATUAL / "sql"
 PASTA_OUTPUT = DIR_RAIZ / "output"
 
 PASTA_OUTPUT.mkdir(parents=True, exist_ok=True)
+
+
+def padronizar_texto(texto: str | None) -> str | None:
+    if not texto:
+        return None
+    texto_sem_rebarbas = re.sub(r"^[^\w\(\)]+|[^\w\(\)]+$", "", texto)
+    texto_primeira_maiuscula = texto_sem_rebarbas.lower().title()
+
+    return texto_primeira_maiuscula
+
+
+def identificar(obj: Linha | Servico | Horario, prefixo: str):
+    if isinstance(obj, Linha):
+        obj.id = gerar_id(obj.codigo or obj.nome, prefixo)
+        [identificar(s, obj.id) for s in obj.servicos]
+    elif isinstance(obj, Servico):
+        obj.id = gerar_id(obj.sentido or "", prefixo)
+        [identificar(h, obj.id) for h in obj.horarios]
+    else:
+        obj.id = gerar_id(obj.hora + str(obj.obs), prefixo)
+
+
+def normalizar(obj: Linha | Servico | Horario | ObsHorario):
+    if isinstance(obj, Linha):
+        obj.nome = padronizar_texto(obj.nome) or ""
+        obj.detalhe = padronizar_texto(obj.detalhe)
+
+        [normalizar(s) for s in obj.servicos]
+    elif isinstance(obj, Servico):
+        obj.sentido = padronizar_texto(obj.sentido)
+
+        [normalizar(h) for h in obj.horarios]
+    elif isinstance(obj, Horario):
+        PADRAO_HORA = re.compile(r"\d{2}:\d{2}")
+        if match := PADRAO_HORA.search(obj.hora):
+            obj.hora = match.group()
+
+        [normalizar(o) for o in obj.obs]
+    else:
+        obj.valor = padronizar_texto(obj.valor) or obj.valor
 
 
 def gerar_rows(empresa: Empresa) -> dict[str, list]:
@@ -42,7 +81,7 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
                 rows["servicos"].append(servico_ser)
 
             for horario in servico.horarios:
-                obs_ser = f"[{','.join([str(obs) for obs in horario.obs] or [])}]"
+                # obs_ser = f"[{','.join([str(obs) for obs in horario.obs] or [])}]"
 
                 rows["horarios"].append(
                     {

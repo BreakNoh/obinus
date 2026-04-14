@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import re
-from typing import Generic, Protocol, TypeVar
+from typing import Callable, Generic, Protocol, TypeVar
 from obinus.core.tipos import *
-from obinus.utils.salvar import gerar_id
+from obinus.utils.salvar import gerar_id, identificar, normalizar
 from time import sleep
 from random import uniform
 
@@ -22,6 +22,8 @@ class Buscador(Protocol, Generic[P, Q, B]):
 
 
 class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q, B]):
+    _cache_linhas: list[tuple[Linha, B]] | None = None
+
     @abstractmethod
     def empresa(self) -> Empresa: ...
 
@@ -31,50 +33,41 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
 
         sleep(uniform(MIN_DELAY, MAX_DELAY))
 
-    def _padronizar_texto(self, texto: str | None) -> str | None:
-        if not texto:
-            return None
-        texto_sem_rebarbas = re.sub(r"^[^\w\(\)]+|[^\w\(\)]+$", "", texto)
-        texto_primeira_maiuscula = texto_sem_rebarbas.lower().title()
-
-        return texto_primeira_maiuscula
-
-    def raspar(self) -> Empresa:
-        empresa = self.empresa()
-        linhas = []
-
+    def _raspar_linhas(self) -> list[tuple[Linha, B]]:
         payload_linhas = self.buscar_linhas()
-        resultado_linhas = self.extrair_linhas(payload_linhas)
 
-        for linha, busca in resultado_linhas:
+        if self._cache_linhas is None:
+            self._cache_linhas = self.extrair_linhas(payload_linhas)
+        return self._cache_linhas
+
+    def _raspar_horarios(self, busca: B) -> list[Servico]:
+        payload_horarios = self.buscar_horarios(busca)
+        return self.extrair_horarios(payload_horarios)
+
+    def raspar(
+        self,
+        atualizar_progresso: Callable[[int]] | None = None,
+    ) -> Empresa:
+        empresa = self.empresa()
+
+        linhas = self._raspar_linhas()
+        linhas_finalizadas = []
+
+        for linha, busca in linhas:
             try:
                 if isinstance(busca, Url):
                     self._esperar()
-                payload_horarios = self.buscar_horarios(busca)
 
-                servicos = self.extrair_horarios(payload_horarios)
-                linha.id = gerar_id(linha.codigo or linha.nome, empresa.id)
+                linha.servicos = self._raspar_horarios(busca)
+                normalizar(linha)
+                identificar(linha, empresa.id)
 
-                linha.nome = self._padronizar_texto(linha.nome) or linha.nome
-                linha.detalhe = self._padronizar_texto(linha.detalhe)
-
-                for servico in servicos:
-                    servico.id = gerar_id(servico.sentido or "", linha.id)
-
-                    servico.sentido = self._padronizar_texto(servico.sentido)
-
-                    for horario in servico.horarios:
-                        horario.id = gerar_id(horario.hora, servico.id)
-
-                        for obs in horario.obs:
-                            obs.valor = self._padronizar_texto(obs.valor) or obs.valor
-
-                linha.servicos = servicos
-
-                linhas.append(linha)
+                linhas_finalizadas.append(linha)
+                if atualizar_progresso:
+                    atualizar_progresso(1)
             except Exception as e:
-                print(e)
+                print(f"erro ao raspar {linha.nome}:", e)
 
-        empresa.linhas = linhas
+        empresa.linhas = linhas_finalizadas
 
         return empresa
