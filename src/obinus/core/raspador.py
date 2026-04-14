@@ -31,12 +31,17 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
         sleep(uniform(min, max))
 
     def _raspar_linhas(self) -> list[tuple[Linha, B]]:
-        payload_linhas = self.buscar_linhas()
         if self._cache_linhas is None:
+            self._esperar()
+            payload_linhas = self.buscar_linhas()
             self._cache_linhas = self.extrair_linhas(payload_linhas)
+
         return self._cache_linhas
 
     def _raspar_horarios(self, busca: B) -> list[Servico]:
+        if isinstance(busca, Url):
+            self._esperar()
+
         payload_horarios = self.buscar_horarios(busca)
         return self.extrair_horarios(payload_horarios)
 
@@ -51,9 +56,6 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
 
         for linha, busca in linhas:
             try:
-                if isinstance(busca, Url):
-                    self._esperar()
-
                 linha.servicos = self._raspar_horarios(busca)
                 normalizar(linha)
                 identificar(linha, empresa.id)
@@ -63,7 +65,7 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
                     atualizar_progresso(1)
 
             except Exception as e:
-                print(f"erro ao raspar {linha.nome}:", e)
+                print(f"erro ao raspar {empresa.nome} | {linha.nome}:", e)
 
         empresa.linhas = linhas_finalizadas
 

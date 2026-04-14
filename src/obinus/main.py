@@ -26,7 +26,13 @@ def _extrair(
 
     instancias = [r() for r in raspadores]
     empresas = []
+
     total_linhas = sum(len(i._raspar_linhas()) for i in instancias)
+
+    if "--contagem-linhas" in argv:
+        print(total_linhas)
+
+        exit(0)
 
     with tqdm(
         total=total_linhas, desc="Linhas raspadadas", unit="lin"
@@ -55,7 +61,7 @@ def _extrair(
 
 def extrair_empresa(empresa: str | None = None):
     if not empresa:
-        if len(argv) > 1:
+        if len(argv) > 2:
             alvo = argv[1]
         else:
             print("lista de todas as empresas:")
