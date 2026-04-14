@@ -58,9 +58,12 @@ def normalizar(obj: Linha | Servico | Horario | ObsHorario):
         for h in obj.horarios:
             normalizar(h)
     elif isinstance(obj, Horario):
-        PADRAO_HORA = re.compile(r"\d{2}:\d{2}")
+        PADRAO_HORA = re.compile(r"(?P<h>\d{1,2})\D*(?P<m>\d{1,2})")
+
         if match := PADRAO_HORA.search(obj.hora):
-            obj.hora = match.group()
+            hrs = match.group("h")
+            min = match.group("m")
+            obj.hora = f"{hrs:0>2}:{min:0>2}"
 
         for o in obj.obs:
             normalizar(o)

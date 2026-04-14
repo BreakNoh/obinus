@@ -64,7 +64,7 @@ def _extrair(
 
 def extrair_empresa(empresa: str | None = None):
     if not empresa:
-        if len(argv) > 0:
+        if len(argv) > 1:
             alvo = argv[1]
         else:
             print("lista de todas as empresas:")

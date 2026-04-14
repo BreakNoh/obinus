@@ -21,6 +21,7 @@ def test_extrair_horarios():
     assert len(servicos) == 3
     assert len(servicos[0].horarios) == 2
     assert len(servicos[2].horarios) == 1
+    assert servicos[2].sentido = ""
     assert servicos[2].horarios[0].hora == "17:25"
     assert servicos[2].horarios[0].obs == [
         utils.ItinerarioDiferenciado("Via PV-MARILI-B.VISTA")
