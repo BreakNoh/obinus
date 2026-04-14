@@ -5,19 +5,23 @@ from obinus.utils.http import extrair_texto, get_json, get_soup
 from obinus.core import *
 from pathlib import Path
 from obinus.utils.http import HEADERS_BASE, get_soup
+import pprint
 
 
 URL_HORARIOS = "https://praiana.com.br/wp-admin/admin-ajax.php"
 URL_LINHAS = "https://praiana.com.br/horarios/"
 ARQUIVO_BODY = Path(__file__).parent / "body_praiana.txt"
+ARQUIVO_BODY_RAW = Path(__file__).parent / "body_praiana_raw.txt"
 
 with open(ARQUIVO_BODY, "r") as a:
-    PAYLOAD_TEMPLATE = a.read()
+    PAYLOAD_TEMPLATE = a.read().replace("\n", "&")
 
 
 class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
     def empresa(self) -> Empresa:
-        return Empresa(id="viacao-praiana", nome="Viação Praiana", regioes=VALE_DO_ITAJAI)
+        return Empresa(
+            id="viacao-praiana", nome="Viação Praiana", regioes=VALE_DO_ITAJAI
+        )
 
     def buscar_linhas(self) -> Html:
         return Html(get_soup(URL_LINHAS))
@@ -43,9 +47,13 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
             "Referer": "https://praiana.com.br/horarios/",
         }
 
-        json = cast(dict, get_json(URL_HORARIOS, data=payload, headers=headers))
+        json = cast(
+            dict, get_json(URL_HORARIOS, data=payload, headers=headers, metodo="POST")
+        )
 
-        return Html(BeautifulSoup(json["content"], "html.parser"))
+        html = BeautifulSoup(json["content"], "html.parser")
+
+        return Html(html)
 
     def normalizar_dia(self, d: str) -> Dias:
         d_norm = d.lower().strip()
@@ -97,6 +105,7 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
             else:
                 continue
 
+            print(servico)
             for i in bloco.select(SELETOR_HORARIOS):
                 if not (texto := extrair_texto(i)):
                     continue
