@@ -1,7 +1,7 @@
 from obinus.core import *
 from obinus.scrapers.mobilibus import InterfaceMobilibus
 from obinus.utils.http import get_soup
-from obinus.utils.texto import extrair_texto
+from obinus.utils.texto import extrair_texto, normalizar_dia
 
 
 class ExpressoPresidenteGaspar(InterfaceMobilibus):
@@ -26,7 +26,11 @@ class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
     NOME_EMPRESA = "EXPRESSO_PRESIDENTE_TIMBO"
 
     def empresa(self) -> Empresa:
-        return Empresa(id="expresso-presidente-timbo", nome="Expresso Presidente Timbó", regioes=VALE_DO_ITAJAI)
+        return Empresa(
+            id="expresso-presidente-timbo",
+            nome="Expresso Presidente Timbó",
+            regioes=VALE_DO_ITAJAI,
+        )
 
     def buscar_horarios(self, busca: Url) -> Html:
         return Html(get_soup(busca.url))
@@ -50,17 +54,12 @@ class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
         servicos = []
-        DIAS = {
-            "dias-uteis": DIAS_UTEIS,
-            "sabados": SABADO,
-            "domingo-feriado": DOMINGO_E_FERIADOS,
-        }
 
         for tab in payload.html.select("div.tab-content div.tab-pane "):
             if (dia := tab.get("id")) and (
                 sentido := extrair_texto(tab.select_one("div.row div.row h3"))
             ):
-                servico = Servico(DIAS[str(dia)], sentido)
+                servico = Servico(normalizar_dia(str(dia)), sentido)
             else:
                 continue
 

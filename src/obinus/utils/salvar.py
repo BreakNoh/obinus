@@ -33,8 +33,15 @@ def identificar(obj: Linha | Servico | Horario, prefixo: str):
     elif isinstance(obj, Servico):
         obj.id = gerar_id(obj.sentido or "", prefixo)
         [identificar(h, obj.id) for h in obj.horarios]
-    else:
-        obj.id = gerar_id(obj.hora + str(obj.obs), prefixo)
+    else:  # horario
+        obs_ser = json.dumps(
+            obj.obs,
+            sort_keys=True,
+            ensure_ascii=False,
+            default=lambda o: o.__dict__,
+        )
+
+        obj.id = gerar_id(obj.hora + obs_ser, prefixo, tamanho=12)
 
 
 def normalizar(obj: Linha | Servico | Horario | ObsHorario):
@@ -42,29 +49,36 @@ def normalizar(obj: Linha | Servico | Horario | ObsHorario):
         obj.nome = padronizar_texto(obj.nome) or ""
         obj.detalhe = padronizar_texto(obj.detalhe)
 
-        [normalizar(s) for s in obj.servicos]
+        for s in obj.servicos:
+            normalizar(s)
+
     elif isinstance(obj, Servico):
         obj.sentido = padronizar_texto(obj.sentido)
 
-        [normalizar(h) for h in obj.horarios]
+        for h in obj.horarios:
+            normalizar(h)
     elif isinstance(obj, Horario):
         PADRAO_HORA = re.compile(r"\d{2}:\d{2}")
         if match := PADRAO_HORA.search(obj.hora):
             obj.hora = match.group()
 
-        [normalizar(o) for o in obj.obs]
+        for o in obj.obs:
+            normalizar(o)
     else:
         obj.valor = padronizar_texto(obj.valor) or obj.valor
 
 
 def gerar_rows(empresa: Empresa) -> dict[str, list]:
-    rows = {"horarios": [], "servicos": [], "linhas": []}
+    rows = {"horarios": [], "servicos": [], "linhas": [], "empresas": []}
 
+    rows["empresas"].append(
+        {"id": empresa.id, "nome": empresa.nome, "regioes": empresa.regioes}
+    )
     for linha in empresa.linhas:
         rows["linhas"].append(
             {
-                "id_empresa": empresa.id,
                 "id": linha.id,
+                "id_empresa": empresa.id,
                 "nome": linha.nome,
                 "codigo": linha.codigo,
                 "detalhe": linha.detalhe,
@@ -73,9 +87,10 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
 
         for servico in linha.servicos:
             servico_ser = {
-                "id_linha": linha.id,
                 "id": servico.id,
+                "id_linha": linha.id,
                 "sentido": servico.sentido,
+                "dias": servico.dias,
             }
             if not servico_ser in rows["servicos"]:
                 rows["servicos"].append(servico_ser)
@@ -85,11 +100,12 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
 
                 rows["horarios"].append(
                     {
-                        "id_servico": servico.id,
                         "id": horario.id,
+                        "id_servico": servico.id,
                         "hora": horario.hora,
                         "observacoes": json.dumps(
                             horario.obs,
+                            sort_keys=True,
                             ensure_ascii=False,
                             default=lambda o: o.__dict__,
                         ),
@@ -99,14 +115,14 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
     return rows
 
 
-def gerar_id(identificador: str, prefixo: str) -> str:
+def gerar_id(identificador: str, prefixo: str, tamanho: int = 8) -> str:
     _identificador = identificador.lower().strip()
     _prefixo = prefixo.lower().strip()
 
     segredo = f"{_prefixo}:{_identificador}"
     hash = hashlib.sha256(segredo.encode()).hexdigest()
 
-    return hash[:8]
+    return hash[:tamanho]
 
 
 def salvar_csv(dados: list, nome_arquivo: str):

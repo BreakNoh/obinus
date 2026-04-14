@@ -15,6 +15,9 @@ def _processar_raspador(
     rows = gerar_rows(empresa)
 
     for lista, valores in rows.items():
+        if lista == "empresas":
+            continue
+
         salvar_csv(valores, f"{empresa.id}_{lista}.csv".lower())
 
     return empresa
