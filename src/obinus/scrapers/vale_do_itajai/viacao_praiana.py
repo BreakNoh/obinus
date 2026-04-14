@@ -75,11 +75,12 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
         return dias if dias > 0 else DIAS_UTEIS
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
-        SELETOR_BLOCO = "div.jet-equal-columns[data-post-id]"
+        SELETOR_BLOCO = "div[data-post-id]"
         SELETOR_SENTIDO = "div.jet-listing-dynamic-field__content"
         SELETOR_HORARIOS = "span.elementor-icon-list-text"
+
         PADRAO_SENTIDO_DIA = re.compile(r"(?P<sent>[^\(\)]+)(?P<dia>\(.+\))?")
-        PADRAO_HORA = re.compile(r"\d{2}:\d{2}")
+        PADRAO_HORA = re.compile(r"\d{1,2}:\d{1,2}")
 
         servicos = []
 
@@ -105,7 +106,6 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
             else:
                 continue
 
-            print(servico)
             for i in bloco.select(SELETOR_HORARIOS):
                 if not (texto := extrair_texto(i)):
                     continue
