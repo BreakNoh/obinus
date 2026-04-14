@@ -1,55 +1,67 @@
-[
-    {
-        "timetable": {
-            "directions": [
-                {
-                    "desc": "Saída do Beco Pavesi",
-                    "services": [
-                        {
-                            "desc": "Dias Úteis",
-                            "departures": [
-                                {
-                                    "dep": "04:00"
-                                },
-                                {
-                                    "dep": "05:45"
-                                },
-                                {
-                                    "dep": "06:15"
-                                }
-                            ]
-                        },
-                        {
-                            "desc": "Sábados ",
-                            "departures": [
-                                {
-                                    "dep": "05:55"
-                                },
-                                {
-                                    "dep": "06:25"
-                                },
-                                {
-                                    "dep": "07:25"
-                                }
-                            ]
-                        },
-                        {
-                            "desc": "Domingos",
-                            "departures": [
-                                {
-                                    "dep": "06:20"
-                                },
-                                {
-                                    "dep": "07:30"
-                                },
-                                {
-                                    "dep": "13:30"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
+{
+    "timetable": {
+        "directions": [
+            {
+                "directionId": 0,
+                "desc": "Ida",
+                "services": [
+                    {
+                        "serviceId": 64777,
+                        "desc": "Dia útil",
+                        "days": [false, true, true, true, true, true, false],
+                        "departures": [
+                            {
+                                "dep": "05:12",
+                                "arr": "05:33",
+                                "wa": 1,
+                                "seq": 1
+                            },
+                            {
+                                "dep": "05:22",
+                                "arr": "05:43",
+                                "wa": 1,
+                                "seq": 2
+                            },
+                            {
+                                "dep": "05:32",
+                                "arr": "05:53",
+                                "wa": 1,
+                                "seq": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "trips": [
+            {
+                "tripId": 1094613,
+                "tripDesc": "101C - Terminal Próspera (TPRO)",
+                "shortName": "TPI x Jardim Angélica x TCE x TPRO",
+                "directionId": 0,
+                "seq": 1
+            },
+            {
+                "tripId": 1094614,
+                "tripDesc": "101C - Terminal Pinheirinho (TPI)",
+                "shortName": "TPRO x TCE x TPI",
+                "directionId": 1,
+                "seq": 3
+            },
+            {
+                "tripId": 1094697,
+                "tripDesc": "0101 - Terminal Próspera (TPRO)",
+                "shortName": "TPI x TCE x TPRO",
+                "directionId": 0,
+                "seq": 2
+            },
+            {
+                "tripId": 1094698,
+                "tripDesc": "0101 - Terminal Pinheirinho (TPI)",
+                "shortName": "TPRO x TCE x TPI",
+                "directionId": 1,
+                "seq": 4
+            }
+        ]
     }
-]
+}

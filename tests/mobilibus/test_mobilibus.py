@@ -33,5 +33,6 @@ def test_extrair_horarios_alt():
     amostra = Json(QUERY_HORARIOS.search(json.loads(am_hor_alt)))
     servicos = raspador.extrair_horarios(amostra)
 
-    assert len(servicos) == 3
+    assert len(servicos) == 1
+    assert len(servicos[0].horarios) == 3
     [checar_horario(s.horarios) for s in servicos]

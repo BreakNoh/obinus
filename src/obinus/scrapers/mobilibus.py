@@ -46,7 +46,29 @@ QUERY_LINHAS = jmespath.compile("""
     }
 """)
 
-DIAS = {"dias úteis": DIAS_UTEIS, "sábados": SABADO, "domingos": DOMINGO_E_FERIADOS}
+
+def normalizar_dia(dia: str) -> Dias:
+    dia_norm = dia.strip().lower()
+
+    if "úti" in dia_norm:
+        return DIAS_UTEIS
+
+    if "sáb" in dia_norm:
+        return SABADO
+
+    if "dom" in dia_norm:
+        return DOMINGO_E_FERIADOS
+
+    DIAS = {
+        "dias úteis": DIAS_UTEIS,
+        "dia útil": DIAS_UTEIS,
+        "sábados": SABADO,
+        "sábado": SABADO,
+        "domingo": DOMINGO_E_FERIADOS,
+        "domingos": DOMINGO_E_FERIADOS,
+    }
+
+    return DIAS.get(dia) or 0
 
 
 class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
@@ -68,8 +90,7 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
                 sentido = ser["sentido"]
 
                 for dia in ser["dias"]:
-                    dia_norm = dia["dia"].lower().strip()
-                    servico = Servico(DIAS[dia_norm], sentido)
+                    servico = Servico(normalizar_dia(dia["dia"]), sentido)
 
                     [servico.horarios.append(Horario(h)) for h in dia["horas"]]
 
@@ -97,7 +118,7 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
     def buscar_horarios(self, busca: Url) -> Json:
         json = get_json(busca.url)
 
-        return Json(QUERY_LINHAS.search(json))
+        return Json(QUERY_HORARIOS.search(json))
 
     def buscar_linhas(self) -> Json:
         json = get_json(
