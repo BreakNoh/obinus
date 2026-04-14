@@ -3,6 +3,8 @@ from obinus.core.tipos import *
 from obinus.utils.http import get_soup, extrair_texto
 import re
 
+from obinus.utils.texto import normalizar_dia
+
 URL_BASE = "https://santaterezinha.com/horarios"
 TRADUCAO = str.maketrans(
     {
@@ -30,7 +32,9 @@ SEPARADORES = re.compile(r"[\-\u2013\u2014]")
 
 class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
-        return Empresa(id="santa-terezinha", nome="Santa Terezinha", regioes=GRANDE_FLORIPA)
+        return Empresa(
+            id="santa-terezinha", nome="Santa Terezinha", regioes=GRANDE_FLORIPA
+        )
 
     def buscar_linhas(self) -> Html:
         html_final = BeautifulSoup()
@@ -41,17 +45,19 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
         return Html(html_final)
 
     def buscar_horarios(self, busca: Url) -> Html:
+        SELETOR_ITEM_LEGENDA = "div[data-elementor-type=popup] p"
         html = get_soup(busca.url)
         html_final = BeautifulSoup()
-
-        for legenda in html.select(".dialog-message p"):
-            legenda["data-legenda"] = ""
-            html.append(legenda)
 
         for bloco in html.find_all("details"):
             html_final.append(bloco)
 
-        return Html(html)
+        for legenda in html.select(SELETOR_ITEM_LEGENDA):
+            legenda["data-legenda"] = ""
+
+            html_final.append(legenda)
+
+        return Html(html_final)
 
     def gerar_url(self, nome_linha: str) -> str:
         nome_normalizado = nome_linha.lower().translate(TRADUCAO)
@@ -67,20 +73,18 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
                 continue
 
             if link := item.select_one("a"):
-                url = link.get("href")
+                url = link.get("href") or self.gerar_url(nome)
             else:
                 url = self.gerar_url(nome)
 
             linha = Linha(nome)
 
-            linhas.append((linha, url))
+            linhas.append((linha, Url(str(url))))
 
         return linhas
 
-    def extrair_legenda(
-        self, html: BeautifulSoup | Tag
-    ) -> list[tuple[str, ObsHorario]]:
-        legendas = []
+    def extrair_legenda(self, html: BeautifulSoup | Tag) -> dict[str, ObsHorario]:
+        legendas = {}
 
         for item in html.select("[data-legenda]"):
             if cod := item.find("strong"):
@@ -90,12 +94,16 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
                 if codigo and valor:
                     valor = SEPARADORES.sub("", valor).strip()
                     codigo = codigo.strip()
-            elif conteudo := extrair_texto(item):
-                codigo, valor = SEPARADORES.split(conteudo, maxsplit=1)
 
-                if codigo and valor:
-                    valor = SEPARADORES.sub("", valor).strip()
-                    codigo = codigo.strip()
+            elif conteudo := extrair_texto(item):
+                try:
+                    codigo, valor = SEPARADORES.split(conteudo, maxsplit=1)
+
+                    if codigo and valor:
+                        valor = SEPARADORES.sub("", valor).strip()
+                        codigo = codigo.strip()
+                except:
+                    continue
             else:
                 continue
             if not valor or not codigo:
@@ -112,37 +120,40 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
             else:
                 obs = Generica(valor=valor)
 
-            legendas.append((f"{codigo: >2}", obs))
+            legendas[f"{codigo: >2}"] = obs
 
         return legendas
 
     def adicionar_obs(
-        self, horario: Horario, texto: str, legendas: list[tuple[str, ObsHorario]]
+        self, horario: Horario, texto: str, legendas: dict[str, ObsHorario]
     ):
-        for item in legendas:
-            if item[0] in texto:
-                horario.obs.append(item[1])
+        for cod, leg in legendas.items():
+            if cod in texto:
+                horario.obs.append(leg)
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
+        SELETOR_BLOCO_SENTIDO = "details"
+        SELETOR_SENTIDO = "div.e-n-accordion-item-title-text"
+        SELETOR_DIA = "summary + div > div"
+
         servicos = []
         legendas = self.extrair_legenda(payload.html)
 
-        for tag_s in payload.html.find_all("details"):
-            sentido = extrair_texto(tag_s.select_one(".e-n-accordion-item-title-text"))
-            if not sentido:
+        for tag_s in payload.html.select(SELETOR_BLOCO_SENTIDO):
+            if not (sentido := extrair_texto(tag_s.select_one(SELETOR_SENTIDO))):
                 continue
+
             servico = Servico(sentido=sentido)
 
-            for col in tag_s.select(".e-con-inner"):
-                dia = extrair_texto(col.select_one("h2"))
-
-                if dia:
-                    servico.dias = DIAS[dia.upper()] or 0
-                else:
+            for col in tag_s.select(SELETOR_DIA):
+                if not (dia := extrair_texto(col.select_one("h2"))):
                     continue
+
+                servico.dias = normalizar_dia(dia)
 
                 for item in col.select(".elementor-icon-list-text"):
                     conteudo = extrair_texto(item)
+
                     if not conteudo:
                         continue
 
