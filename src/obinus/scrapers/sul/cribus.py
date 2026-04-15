@@ -8,3 +8,4 @@ class CriBus(InterfaceMobilibus):
     ID_PROJETO = "740"
     VERSAO_HORARIOS = "2"
     REGIOES = SUL
+    FONTE = "https://www.cribus.com.br"

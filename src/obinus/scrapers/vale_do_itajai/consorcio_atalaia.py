@@ -7,3 +7,4 @@ class ConsorcioAtalaia(InterfaceMobilibus):
     NOME_EMPRESA = "Consórcio Atalaia"
     ID_PROJETO = "391"
     REGIOES = VALE_DO_ITAJAI
+    FONTE = "https://consorcioatalaia.com.br"

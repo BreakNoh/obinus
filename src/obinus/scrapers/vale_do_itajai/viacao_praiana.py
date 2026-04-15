@@ -19,7 +19,10 @@ with open(ARQUIVO_BODY, "r") as a:
 class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
     def empresa(self) -> Empresa:
         return Empresa(
-            id="viacao-praiana", nome="Viação Praiana", regioes=VALE_DO_ITAJAI
+            id="viacao-praiana",
+            nome="Viação Praiana",
+            regioes=VALE_DO_ITAJAI,
+            fonte="https://praiana.com.br",
         )
 
     def buscar_linhas(self) -> Html:

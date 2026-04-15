@@ -7,3 +7,4 @@ class SenhoraDosCampos(InterfaceMobilibus):
     ID_PROJETO = "816"
     NOME_EMPRESA = "Senhora dos Campos"
     REGIOES = NORTE
+    FONTE = "https://www.senhoradoscampos.com.br"

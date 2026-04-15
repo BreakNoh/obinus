@@ -33,7 +33,10 @@ SEPARADORES = re.compile(r"[\-\u2013\u2014]")
 class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
         return Empresa(
-            id="santa-terezinha", nome="Santa Terezinha", regioes=GRANDE_FLORIPA
+            id="santa-terezinha",
+            nome="Santa Terezinha",
+            regioes=GRANDE_FLORIPA,
+            fonte="https://santaterezinha.com",
         )
 
     def buscar_linhas(self) -> Html:
@@ -159,7 +162,7 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
 
                     horario = None
 
-                    if match := re.search("[0-9]+:[0-9]+", conteudo):
+                    if match := re.search(r"\d{1,2}:\d{1,2}", conteudo):
                         horario = Horario(match.group())
                         self.adicionar_obs(horario, conteudo, legendas)
                     else:

@@ -19,6 +19,7 @@ class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
             id="transporte-coletivo-biguacu",
             nome="Transporte Coletivo Biguaçu",
             regioes=GRANDE_FLORIPA,
+            fonte="https://www.tcbiguacu.com.br",
         )
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Raw]]:

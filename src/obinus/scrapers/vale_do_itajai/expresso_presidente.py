@@ -9,6 +9,7 @@ class ExpressoPresidenteGaspar(InterfaceMobilibus):
     NOME_EMPRESA = "Expresso Presidente Gaspar"
     ID_PROJETO = "699"
     REGIOES = NORTE
+    FONTE = "https://expressopresidente.com.br"
 
 
 class ExpressoPresidenteRioMafra(InterfaceMobilibus):
@@ -16,6 +17,7 @@ class ExpressoPresidenteRioMafra(InterfaceMobilibus):
     NOME_EMPRESA = "Expresso Presidente RioMafra"
     ID_PROJETO = "956"
     REGIOES = NORTE
+    FONTE = "https://expressopresidente.com.br"
 
 
 URL_LINHAS = "https://expressopresidente.com.br/cidades/timbo/consulta-itinerario"
@@ -30,6 +32,7 @@ class ExpressoPresidenteTimbo(InterfaceRaspador[Html, Html, Url]):
             id="expresso-presidente-timbo",
             nome="Expresso Presidente Timbó",
             regioes=VALE_DO_ITAJAI,
+            fonte="https://expressopresidente.com.br",
         )
 
     def buscar_horarios(self, busca: Url) -> Html:

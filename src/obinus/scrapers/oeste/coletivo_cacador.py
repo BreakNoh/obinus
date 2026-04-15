@@ -8,3 +8,4 @@ class ColetivoCacador(InterfaceMobilibus):
     ID_PROJETO = "331"
     VERSAO_HORARIOS = "2"
     REGIOES = OESTE
+    FONTE = "https://autocoletivo.com.br"

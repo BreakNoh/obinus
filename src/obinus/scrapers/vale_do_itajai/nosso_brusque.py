@@ -8,3 +8,4 @@ class ConsorcioNossoBrusque(InterfaceMobilibus):
     ID_PROJETO = "8"
     VERSAO_HORARIOS = "2"
     REGIOES = VALE_DO_ITAJAI
+    FONTE = "https://www.nossobrusque.com.br"

@@ -6,6 +6,7 @@ from obinus.utils.salvar import gerar_rows, salvar_csv
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from sys import argv
 from tqdm import tqdm
+import time
 
 
 def _processar_raspador(
@@ -13,12 +14,10 @@ def _processar_raspador(
 ) -> Empresa:
     empresa = raspador.raspar(atualizar_progresso)
     rows = gerar_rows(empresa)
+    data = time.strftime("%Y%m%d", time.localtime())
 
     for lista, valores in rows.items():
-        if lista == "empresas":
-            continue
-
-        salvar_csv(valores, f"{empresa.id}_{lista}.csv".lower())
+        salvar_csv(valores, f"{data}/{empresa.id}/{lista}.csv".lower())
 
     return empresa
 

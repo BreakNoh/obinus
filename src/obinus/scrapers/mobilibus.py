@@ -76,11 +76,12 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
     NOME_EMPRESA: str
     REGIOES: Regioes
     ID_PROJETO: str
+    FONTE: str
     VERSAO_LINHAS: str = "1"
     VERSAO_HORARIOS: str = "1"
 
     def empresa(self) -> Empresa:
-        return Empresa(id=self.ID_EMPRESA, nome=self.NOME_EMPRESA, regioes=self.REGIOES)
+        return Empresa(id=self.ID_EMPRESA, nome=self.NOME_EMPRESA, regioes=self.REGIOES, fonte=self.FONTE)
 
     def extrair_horarios(self, payload: Json) -> list[Servico]:
         servicos = []

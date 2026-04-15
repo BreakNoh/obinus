@@ -12,6 +12,7 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
             id="expresso-coletivo-icarense",
             nome="Expresso Coletivo Içarense",
             regioes=SUL,
+            fonte="https://icarense.com.br",
         )
 
     def buscar_linhas(self) -> Html:
@@ -45,7 +46,7 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
                         continue
 
                     tokens = nome_linha.strip().split(" ")
-                    tabela_horarios["sentido"] = tokens[0]
+                    tabela_horarios["data-sentido"] = tokens[0]
                     tabela_horarios["data-dia"] = dia
 
                     nome_comp = "".join(sorted(tokens))
@@ -62,9 +63,10 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
 
         servicos = []
 
-        for tabela_dia in payload.html.select("div[data-dia]"):
+        for tabela_dia in payload.html.select("div[data-dia][data-sentido]"):
             dia = normalizar_dia(str(tabela_dia["data-dia"]))
-            sentido = str(tabela_dia["sentido"])
+            sentido = str(tabela_dia["data-sentido"])
+
             servico = Servico(dia, sentido)
 
             for row in tabela_dia.select(SELETOR_ROWS):

@@ -115,6 +115,7 @@ class Linha:
 class Empresa:
     id: str
     nome: str
+    fonte: str | None = None
     linhas: list[Linha] = field(default_factory=list)
     regioes: Regioes = 0
 
