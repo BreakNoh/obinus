@@ -6,11 +6,11 @@ from abc import ABC, abstractmethod
 from typing import Type
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 from typing import Callable, Generic, Protocol, TypeVar
 
 from obinus.core.tipos import *
 from obinus.utils.salvar import (
-    gerar_id,
     identificar,
     normalizar,
     gerar_rows,
@@ -38,15 +38,23 @@ def _processar_raspador(
 def _extrair(
     raspadores: list[Type[InterfaceRaspador]], _async: bool = True
 ) -> list[Empresa]:
-
     instancias = [r() for r in raspadores]
     empresas = []
+    total_linhas = 0
 
-    total_linhas = sum(len(i._raspar_linhas()) for i in instancias)
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(ins._raspar_linhas) for ins in instancias]
 
-    if "--contagem-linhas" in sys.argv:
+        for future in as_completed(futures):
+            try:
+                linhas = future.result()
+                total_linhas += len(linhas)
+
+            except Exception as e:
+                print(f"erro: {e} \n")
+
+    if any(arg in ["--contagem-linhas", "--contar", "-c"] for arg in sys.argv):
         print(total_linhas)
-
         exit(0)
 
     with tqdm(
