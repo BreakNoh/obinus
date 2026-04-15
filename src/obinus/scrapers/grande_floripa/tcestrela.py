@@ -80,7 +80,7 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
                     elif cod in "\u00b2\u00b9":
                         obs = OperadoPorEmpresa("Estrela")
                         legenda.append((cod, obs))
-                        obs = PeriodoFuncionamento(leg)
+                        obs = FuncionaDurante(leg)
                     else:
                         obs = Generica(valor=leg)
 

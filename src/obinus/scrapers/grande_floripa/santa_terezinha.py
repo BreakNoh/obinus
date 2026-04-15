@@ -112,6 +112,7 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
             if not valor or not codigo:
                 continue
 
+            val_norm = valor.lower()
             if re.search(r"adptado|necessidades especiais", valor.lower()):
                 obs = Adaptado()
             elif re.search(r"via|linha", valor.lower()):
@@ -120,6 +121,8 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
                 obs = OperadoPorEmpresa(valor.replace("ú", "u"))
             elif re.search(r"sai|saem", valor.lower()):
                 obs = SaidaDe(valor)
+            elif re.search(r"escola", val_norm):
+                obs = FuncionaDurante("Período Escolar")
             else:
                 obs = Generica(valor=valor)
 

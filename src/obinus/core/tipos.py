@@ -58,7 +58,7 @@ class MeiaViagem(ObsHorario):
 
 class HorarioPrevisto(ObsHorario):
     def __init__(self) -> None:
-        super().__init__(tipo="HORARIO_PREVISTO", valor="Horário previsto")
+        super().__init__(tipo="PREVISTO", valor="Horário previsto")
 
 
 class OperadoPorEmpresa(ObsHorario):
@@ -66,14 +66,14 @@ class OperadoPorEmpresa(ObsHorario):
         super().__init__(tipo="OPERADO_POR", valor=empresa)
 
 
-class PeriodoFuncionamento(ObsHorario):
+class FuncionaDurante(ObsHorario):
     def __init__(self, periodo: str) -> None:
-        super().__init__(tipo="FUNCIONA_DURANTE", valor=periodo)
+        super().__init__(tipo="DURANTE", valor=periodo)
 
 
 class ItinerarioDiferenciado(ObsHorario):
     def __init__(self, itinerario: str) -> None:
-        super().__init__(tipo="ITINERARIO_DIFERENCIADO", valor=itinerario)
+        super().__init__(tipo="ITINERARIO", valor=itinerario)
 
 
 class SaidaDe(ObsHorario):

@@ -9,7 +9,10 @@ URL: str = "https://bcbus.com.br/"
 class BCBus(InterfaceRaspador[Html, Html, Html]):
     def empresa(self) -> Empresa:
         return Empresa(
-            id="bcbus", nome="BCBus", regioes=VALE_DO_ITAJAI, fonte="https://bcbus.com.br"
+            id="bcbus",
+            nome="BCBus",
+            regioes=VALE_DO_ITAJAI,
+            fonte="https://bcbus.com.br",
         )
 
     def buscar_linhas(self) -> Html:
@@ -77,7 +80,7 @@ class BCBus(InterfaceRaspador[Html, Html, Html]):
                         obs_raw = match.group("obs")
 
                         if "DEZ" in obs_raw:
-                            horario.obs.append(PeriodoFuncionamento(obs_raw))
+                            horario.obs.append(FuncionaDurante(obs_raw))
                         elif obs_raw != "":
                             horario.obs.append(ItinerarioDiferenciado(obs_raw))
 
