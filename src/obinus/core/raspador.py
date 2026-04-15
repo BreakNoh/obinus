@@ -79,7 +79,28 @@ def _extrair(
                 except Exception as e:
                     print(f"erro: {e} \n")
 
+    print(_sumario(empresas))
     return empresas
+
+
+def _sumario(empresas: list[Empresa]) -> str:
+    contagem = {"empresas": len(empresas), "linhas": 0, "servicos": 0, "horarios": 0}
+
+    for emp in empresas:
+        contagem["linhas"] += len(emp.linhas)
+
+        for lin in emp.linhas:
+            contagem["servicos"] += len(lin.servicos)
+
+            for ser in lin.servicos:
+                contagem["horarios"] += len(ser.horarios)
+
+    resultado = "Sumário da raspagem:"
+
+    for k, v in contagem.items():
+        resultado += f"\n\t> {k}: {v}"
+
+    return resultado
 
 
 class Extrator(Protocol, Generic[P, Q, B]):

@@ -26,7 +26,7 @@ def extrair_empresa(empresa: str | None = None):
                 return
 
 
-def extrair_regiao(regiao: str | None = None) -> list[Empresa]:
+def extrair_regiao(regiao: str | None = None):
     if not regiao:
         if len(argv) > 1:
             alvo = argv[1]
@@ -41,11 +41,11 @@ def extrair_regiao(regiao: str | None = None) -> list[Empresa]:
     if not (raspadores := RASPADORES_SANTA_CATARINA.get(alvo)):
         return []
 
-    return _extrair(list(raspadores.values()))
+    _extrair(list(raspadores.values()))
 
 
-def extrair_geral() -> list[Empresa]:
+def extrair_geral():
     raspadores = []
     [raspadores.extend(list(r.values())) for r in RASPADORES_SANTA_CATARINA.values()]
 
-    return _extrair(list(raspadores))
+    _extrair(list(raspadores))
