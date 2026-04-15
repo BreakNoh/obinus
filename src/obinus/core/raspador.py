@@ -1,14 +1,77 @@
+import sys
+import time
+import random
+
 from abc import ABC, abstractmethod
-import re
+from typing import Type
+from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Callable, Generic, Protocol, TypeVar
+
 from obinus.core.tipos import *
-from obinus.utils.salvar import gerar_id, identificar, normalizar
-from time import sleep
-from random import uniform
+from obinus.utils.salvar import (
+    gerar_id,
+    identificar,
+    normalizar,
+    gerar_rows,
+    salvar_csv,
+)
 
 P = TypeVar("P", bound=Payload)
 Q = TypeVar("Q", bound=Payload)
 B = TypeVar("B", bound=Busca)
+
+
+def _processar_raspador(
+    raspador: InterfaceRaspador, atualizar_progresso: Callable[[int]] | None = None
+) -> Empresa:
+    empresa = raspador.raspar(atualizar_progresso)
+    rows = gerar_rows(empresa)
+    data = time.strftime("%Y%m%d", time.localtime())
+
+    for lista, valores in rows.items():
+        salvar_csv(valores, f"{data}/{empresa.id}/{lista}.csv".lower())
+
+    return empresa
+
+
+def _extrair(
+    raspadores: list[Type[InterfaceRaspador]], _async: bool = True
+) -> list[Empresa]:
+
+    instancias = [r() for r in raspadores]
+    empresas = []
+
+    total_linhas = sum(len(i._raspar_linhas()) for i in instancias)
+
+    if "--contagem-linhas" in sys.argv:
+        print(total_linhas)
+
+        exit(0)
+
+    with tqdm(
+        total=total_linhas, desc="Linhas raspadadas", unit="lin"
+    ) as barra_progresso:
+        atualizar_progresso = lambda n=1: barra_progresso.update(n)
+
+        if not _async:
+            return [_processar_raspador(ins, atualizar_progresso) for ins in instancias]
+
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            futures = [
+                executor.submit(_processar_raspador, ins, atualizar_progresso)
+                for ins in instancias
+            ]
+
+            for future in as_completed(futures):
+                try:
+                    empresa = future.result()
+                    empresas.append(empresa)
+
+                except Exception as e:
+                    print(f"erro: {e} \n")
+
+    return empresas
 
 
 class Extrator(Protocol, Generic[P, Q, B]):
@@ -28,7 +91,7 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
     def empresa(self) -> Empresa: ...
 
     def _esperar(self, min: float = 0.5, max: float = 1.5):
-        sleep(uniform(min, max))
+        time.sleep(random.uniform(min, max))
 
     def _raspar_linhas(self) -> list[tuple[Linha, B]]:
         if self._cache_linhas is None:

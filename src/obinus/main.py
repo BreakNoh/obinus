@@ -1,64 +1,7 @@
-from typing import Callable, Type
-from obinus.core.raspador import InterfaceRaspador
+from obinus.core.raspador import _extrair
 from obinus.core.tipos import Empresa
 from obinus.scrapers import RASPADORES_SANTA_CATARINA
-from obinus.utils.salvar import gerar_rows, salvar_csv
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from sys import argv
-from tqdm import tqdm
-import time
-
-
-def _processar_raspador(
-    raspador: InterfaceRaspador, atualizar_progresso: Callable[[int]] | None = None
-) -> Empresa:
-    empresa = raspador.raspar(atualizar_progresso)
-    rows = gerar_rows(empresa)
-    data = time.strftime("%Y%m%d", time.localtime())
-
-    for lista, valores in rows.items():
-        salvar_csv(valores, f"{data}/{empresa.id}/{lista}.csv".lower())
-
-    return empresa
-
-
-def _extrair(
-    raspadores: list[Type[InterfaceRaspador]], _async: bool = True
-) -> list[Empresa]:
-
-    instancias = [r() for r in raspadores]
-    empresas = []
-
-    total_linhas = sum(len(i._raspar_linhas()) for i in instancias)
-
-    if "--contagem-linhas" in argv:
-        print(total_linhas)
-
-        exit(0)
-
-    with tqdm(
-        total=total_linhas, desc="Linhas raspadadas", unit="lin"
-    ) as barra_progresso:
-        atualizar_progresso = lambda n=1: barra_progresso.update(n)
-
-        if not _async:
-            return [_processar_raspador(ins, atualizar_progresso) for ins in instancias]
-
-        with ThreadPoolExecutor(max_workers=10) as executor:
-            futures = [
-                executor.submit(_processar_raspador, ins, atualizar_progresso)
-                for ins in instancias
-            ]
-
-            for future in as_completed(futures):
-                try:
-                    empresa = future.result()
-                    empresas.append(empresa)
-
-                except Exception as e:
-                    print(f"erro: {e} \n")
-
-    return empresas
 
 
 def extrair_empresa(empresa: str | None = None):
