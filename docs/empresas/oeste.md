@@ -1,5 +1,7 @@
 # Coletivo Caçador
 
+- [x] implementada
+
 **Usa Mobilibus**
 ID: 331
 Versão horarios: 2
