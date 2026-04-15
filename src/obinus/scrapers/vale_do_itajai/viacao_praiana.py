@@ -4,9 +4,8 @@ from bs4 import BeautifulSoup
 from obinus.utils.http import extrair_texto, get_json, get_soup
 from obinus.core import *
 from pathlib import Path
-from obinus.utils.http import HEADERS_BASE, get_soup
-import pprint
 
+from obinus.utils.texto import normalizar_dia
 
 URL_HORARIOS = "https://praiana.com.br/wp-admin/admin-ajax.php"
 URL_LINHAS = "https://praiana.com.br/horarios/"
@@ -36,13 +35,16 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
                 if not codigo:
                     continue
 
-            linhas.append((Linha(nome), Raw(str(codigo))))
+            linhas.append((Linha(nome), Raw(f"{codigo}:{nome}")))
 
         return linhas
 
     def buscar_horarios(self, busca: Raw) -> Html:
-        payload = PAYLOAD_TEMPLATE % busca.valor
-        headers = HEADERS_BASE | {
+        SELETOR_BLOCO = "div[data-post-id]"
+        cod, nome = busca.valor.split(":", maxsplit=1)
+
+        payload = PAYLOAD_TEMPLATE % cod
+        headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Referer": "https://praiana.com.br/horarios/",
         }
@@ -53,26 +55,11 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
 
         html = BeautifulSoup(json["content"], "html.parser")
 
+        for i in html.select(SELETOR_BLOCO):
+            if nome:
+                i["data-nome-linha"] = nome
+
         return Html(html)
-
-    def normalizar_dia(self, d: str) -> Dias:
-        d_norm = d.lower().strip()
-
-        if d_norm == "":
-            return DIAS_UTEIS
-
-        dias = 0
-
-        if "sex" in d_norm and "seg" in d_norm:
-            dias |= DIAS_UTEIS
-
-        if "sáb" in d_norm or "sab" in d_norm:
-            dias |= SABADO
-
-        if "feri" in d_norm and "domi" in d_norm:
-            dias |= DOMINGO_E_FERIADOS
-
-        return dias if dias > 0 else DIAS_UTEIS
 
     def extrair_horarios(self, payload: Html) -> list[Servico]:
         SELETOR_BLOCO = "div[data-post-id]"
@@ -86,6 +73,7 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
 
         for bloco in payload.html.select(SELETOR_BLOCO):
             servico = None
+            nome_linha = bloco.get("data-nome-linha")
 
             for i in bloco.select(SELETOR_SENTIDO):
                 if not (texto := extrair_texto(i)):
@@ -97,11 +85,15 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
 
                 if match := PADRAO_SENTIDO_DIA.search(texto):
                     sentido = match.group("sent").strip()
-                    dia = match.group("dia")
 
-                    dias = self.normalizar_dia(dia) if dia else DIAS_UTEIS
+                    if nome_linha:
+                        sentido = sentido.replace(str(nome_linha), "")
 
+                    dia = match.group("dia") or "dia util"
+
+                    dias = normalizar_dia(dia)
                     servico = Servico(dias, sentido)
+
                     break
             else:
                 continue
