@@ -75,7 +75,12 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
     rows = {"horarios": [], "servicos": [], "linhas": [], "empresas": []}
 
     rows["empresas"].append(
-        {"id": empresa.id, "nome": empresa.nome, "regioes": empresa.regioes}
+        {
+            "id": empresa.id,
+            "nome": empresa.nome,
+            "regioes": empresa.regioes,
+            "fonte": empresa.fonte,
+        }
     )
     for linha in empresa.linhas:
         rows["linhas"].append(
