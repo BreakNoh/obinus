@@ -6,7 +6,7 @@ def test_serializar_empresa():
     mock = Empresa(
         "0",
         "empresa",
-        [
+        linhas=[
             Linha(
                 "linha",
                 "1",
