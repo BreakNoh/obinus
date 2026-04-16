@@ -2,7 +2,8 @@ from typing import TypedDict, cast
 from obinus.core.raspador import InterfaceRaspador
 from obinus.core.tipos import *
 from obinus.utils.http import get_json, get_soup
-from obinus.utils.texto import extrair_texto
+from obinus.utils.texto import extrair_texto, normalizar_dia
+from unicodedata import normalize
 from jmespath import compile
 
 
@@ -58,19 +59,19 @@ class ColetivoRainha(InterfaceRaspador[Html, Json, Url]):
     def buscar_linhas(self) -> Html:
         html_final = BeautifulSoup()
 
-        [html_final.append(opt) for opt in get_soup(URL_BASE).select("div[data-value]")]
+        [html_final.append(opt) for opt in get_soup(URL_BASE).select("option[value]")]
 
         return Html(html_final)
 
     def extrair_linhas(self, payload: Html) -> list[tuple[Linha, Url]]:
         linhas = []
 
-        for l in payload.html.select("div[data-value]"):
+        for l in payload.html.select("option[value]"):
             texto = extrair_texto(l)
 
             if (codigo_nome := texto.split(" - ", 1)) and len(codigo_nome) == 2:
                 cod, nome = codigo_nome
-                id = l["data-value"]
+                id = l["value"]
 
                 linhas.append((Linha(nome, cod), Url(f"{URL_BASE}/{id}")))
 
@@ -88,19 +89,19 @@ class ColetivoRainha(InterfaceRaspador[Html, Json, Url]):
             return []
 
         for ser in json:
-            if dia := DIAS[ser["dia"].lower()]:
-                for sen in ser["sentidos"]:
-                    servico = Servico(dia, sen["sentido"])
+            if not (dia := ser["dia"].lower()):
+                continue
 
-                    servico.horarios.extend(
-                        [
-                            Horario(
-                                hora["hora"], [Adaptado()] if hora["acessivel"] else []
-                            )
-                            for hora in sen["horas"]
-                        ]
-                    )
+            for sen in ser["sentidos"]:
+                servico = Servico(normalizar_dia(dia), sen["sentido"])
 
-                    servicos.append(servico)
+                servico.horarios.extend(
+                    [
+                        Horario(hora["hora"], [Adaptado()] if hora["acessivel"] else [])
+                        for hora in sen["horas"]
+                    ]
+                )
+
+                servicos.append(servico)
 
         return servicos

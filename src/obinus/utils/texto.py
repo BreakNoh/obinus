@@ -18,6 +18,7 @@ def normalizar_dia(s: str) -> Dias:
         s.lower().strip().replace("á", "a").replace("ú", "u").replace("à", "a")
     )
     testes = {
+        "letivo": DIAS_UTEIS,
         "du": DIAS_UTEIS,
         "dia ": DIAS_UTEIS,
         "dias": DIAS_UTEIS,

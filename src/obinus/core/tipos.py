@@ -99,6 +99,7 @@ class Servico:
     sentido: str | None = None
     horarios: list[Horario] = field(default_factory=list)
     id: str | None = None
+    slug: str | None = None
 
 
 @dataclass
@@ -109,6 +110,7 @@ class Linha:
     servicos: list[Servico] = field(default_factory=list)
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
     id: str | None = None
+    slug: str | None = None
 
 
 @dataclass
@@ -118,6 +120,7 @@ class Empresa:
     fonte: str | None = None
     linhas: list[Linha] = field(default_factory=list)
     regioes: Regioes = 0
+    slug: str | None = None
 
 
 class Html(NamedTuple):

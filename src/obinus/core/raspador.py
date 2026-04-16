@@ -11,6 +11,7 @@ from typing import Callable, Generic, Protocol, TypeVar
 
 from obinus.core.tipos import *
 from obinus.utils.salvar import (
+    criar_slug,
     identificar,
     normalizar,
     gerar_rows,
@@ -160,5 +161,6 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
                 print(f"erro ao raspar {empresa.nome} | {linha.nome}:", e)
 
         empresa.linhas = linhas_finalizadas
+        empresa.slug = criar_slug(empresa.nome)
 
         return empresa

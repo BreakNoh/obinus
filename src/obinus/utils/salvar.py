@@ -4,6 +4,7 @@ from pathlib import Path
 import csv
 import hashlib
 import re
+from unidecode import unidecode
 from obinus.core.tipos import *
 
 
@@ -26,13 +27,32 @@ def padronizar_texto(texto: str | None) -> str | None:
     return texto_primeira_maiuscula
 
 
-def identificar(obj: Linha | Servico | Horario, prefixo: str):
-    if isinstance(obj, Linha):
+def criar_slug(texto: str) -> str:
+    slug = unidecode(texto.lower().strip())  # deixa minuscula e remove acentos
+    slug = re.sub(r"^\W+|\W+$", "", slug)  # strip melhorado
+    slug = re.sub(r"\W+", "-", slug)  # troca tudo que não for letra/numero por -
+
+    return slug
+
+
+def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
+    if isinstance(obj, Empresa):
+        obj.slug = criar_slug(obj.nome)
+
+        for l in obj.linhas:
+            identificar(l, obj.id)
+    elif isinstance(obj, Linha):
         obj.id = gerar_id(obj.codigo or obj.nome, prefixo)
-        [identificar(s, obj.id) for s in obj.servicos]
+        obj.slug = criar_slug(f"{obj.codigo or ''} {obj.nome or ''}")
+
+        for s in obj.servicos:
+            identificar(s, obj.id)
     elif isinstance(obj, Servico):
         obj.id = gerar_id(obj.sentido or "", prefixo)
-        [identificar(h, obj.id) for h in obj.horarios]
+        obj.slug = criar_slug(obj.sentido or "")
+
+        for h in obj.horarios:
+            identificar(h, obj.id)
     else:  # horario
         obs_ser = json.dumps(
             obj.obs,
@@ -79,6 +99,7 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
             "id": empresa.id,
             "nome": empresa.nome,
             "regioes": empresa.regioes,
+            "slug": empresa.slug,
             "fonte": empresa.fonte,
         }
     )
@@ -90,6 +111,7 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
                 "nome": linha.nome,
                 "codigo": linha.codigo,
                 "detalhe": linha.detalhe,
+                "slug": linha.slug,
             }
         )
 
@@ -99,6 +121,7 @@ def gerar_rows(empresa: Empresa) -> dict[str, list]:
                 "id_linha": linha.id,
                 "sentido": servico.sentido,
                 "dias": servico.dias,
+                "slug": servico.slug,
             }
             if not servico_ser in rows["servicos"]:
                 rows["servicos"].append(servico_ser)

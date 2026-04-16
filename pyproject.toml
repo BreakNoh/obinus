@@ -12,6 +12,7 @@ dependencies = [
   "pytest>=9.0.2",
   "requests>=2.32.5",
   "tqdm>=4.67.3",
+  "unidecode>=1.4.0",
 ]
 
 [project.scripts]
