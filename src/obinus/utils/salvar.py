@@ -17,6 +17,22 @@ PASTA_OUTPUT = DIR_RAIZ / "output"
 
 PASTA_OUTPUT.mkdir(parents=True, exist_ok=True)
 
+ABREVIACOES = {
+    "plataforma": "plat",
+    "loteamento": "lot",
+    "avenida": "av",
+    "rua": "r",
+    "governador": "gov",
+    "florianopolis": "fpolis",
+    "florianópolis": "fpolis",
+}
+
+
+def abreviar(s: str) -> str:
+    resultado = s
+
+    return s
+
 
 def padronizar_texto(texto: str | None) -> str | None:
     if not texto:
@@ -35,6 +51,38 @@ def criar_slug(texto: str) -> str:
     return slug
 
 
+def encurtar_nome(obj: Linha | Servico):
+    TAMANHO_SEGURO = 15
+    PADRAO_LINHA = re.compile(
+        r"\(?P<via>(via\W.*?)[^\w\ ]+$|(?P<lixo>\(.*\))", re.IGNORECASE
+    )
+    PADRAO_SERVICO = re.compile(
+        r"\(.*\)|(via|sa[i\í]da(s)?|partida(s)?|sentido)\W*", re.IGNORECASE
+    )
+
+    if isinstance(obj, Linha):
+        if len(obj.nome) < TAMANHO_SEGURO:
+            return
+
+        for i in PADRAO_LINHA.finditer(obj.nome):
+            obj.nome = obj.nome.replace(i.group(), "")
+
+            for i in i.groupdict():
+                if i[0] == "lixo":
+                    continue
+
+                if obj.detalhe:
+                    obj.detalhe += f"\n{i[1]}"
+                else:
+                    obj.detalhe = str(i[1])
+
+    else:
+        if not obj.sentido or len(obj.sentido) < TAMANHO_SEGURO:
+            return
+
+        obj.sentido = PADRAO_SERVICO.sub("", obj.sentido).strip()
+
+
 def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
     if isinstance(obj, Empresa):
         obj.slug = criar_slug(obj.nome)
@@ -43,12 +91,16 @@ def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
             identificar(l, obj.id)
     elif isinstance(obj, Linha):
         obj.id = gerar_id(obj.codigo or obj.nome, prefixo)
+
+        encurtar_nome(obj)  # encurta o nome após usar para gerar hash
         obj.slug = criar_slug(f"{obj.codigo or ''} {obj.nome or ''}")
 
         for s in obj.servicos:
             identificar(s, obj.id)
     elif isinstance(obj, Servico):
         obj.id = gerar_id(obj.sentido or "", prefixo)
+
+        encurtar_nome(obj)
         obj.slug = criar_slug(obj.sentido or "")
 
         for h in obj.horarios:

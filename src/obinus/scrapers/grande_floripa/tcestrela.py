@@ -122,7 +122,13 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
                 case 8:
                     pass
                 case _ if servicos_dias:
-                    [servicos.append(s) for s in servicos_dias]
+                    if servicos_dias:
+                        for s in servicos_dias:
+                            if len(s.horarios) == 0:
+                                continue
+
+                            servicos.append(s)
+
                     servicos_dias = None
                     buffer_sentido = None
                     continue
@@ -141,6 +147,10 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
                     continue
 
         if servicos_dias:
-            [servicos.append(s) for s in servicos_dias]
+            for s in servicos_dias:
+                if len(s.horarios) == 0:
+                    continue
+
+                servicos.append(s)
 
         return servicos
