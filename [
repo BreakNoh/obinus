@@ -4,7 +4,7 @@ from pathlib import Path
 import csv
 import hashlib
 import re
-from obinus.utils.texto import REMOCOES, encurtar, criar_slug, padronizar_texto
+from obinus.utils.texto import encurtar, criar_slug, padronizar_texto
 from obinus.core.tipos import *
 
 
@@ -19,7 +19,6 @@ PASTA_OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
 TAMANHO_SEGURO = 20
-TAMANHO_MAXIMO_SLUG = 30
 
 
 def encurtar_nome(obj: Linha | Servico):
@@ -43,13 +42,13 @@ def encurtar_nome(obj: Linha | Servico):
                 else:
                     obj.detalhe = str(i[1])
 
-        obj.nome = encurtar(obj.nome, lista_negra=set(), truncar=False) or ""
+        obj.nome = encurtar(obj.nome, remover=False, truncar=False) or ""
 
     else:
         if not obj.sentido or len(obj.sentido) < TAMANHO_SEGURO:
             return
 
-        obj.sentido = encurtar(obj.sentido, truncar=False, lista_negra=set())
+        obj.sentido = encurtar(obj.sentido, truncar=False)
 
 
 def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
@@ -65,9 +64,7 @@ def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
         nome_slug = (
             encurtar(obj.nome, truncar=len(obj.nome or "") > TAMANHO_SEGURO) or ""
         )
-
-        slug = criar_slug(f"{obj.codigo or ''} {nome_slug}")
-        obj.slug = slug
+        obj.slug = criar_slug(f"{obj.codigo or ''} {nome_slug}")
 
         for s in obj.servicos:
             identificar(s, obj.id)
@@ -75,13 +72,10 @@ def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
         obj.id = gerar_id(obj.sentido or "", prefixo)
 
         encurtar_nome(obj)
-
-        nome_limpo = encurtar(obj.sentido, truncar=False)
-        nome_slug = encurtar(
-            nome_limpo, truncar=len(nome_limpo or "") >= TAMANHO_SEGURO
+        nome_slug = (
+            encurtar(obj.sentido, truncar=len(obj.sentido or "") > TAMANHO_SEGURO) or ""
         )
-
-        obj.slug = criar_slug(nome_slug or "")
+        obj.slug = criar_slug(nome_slug)
 
         for h in obj.horarios:
             identificar(h, obj.id)

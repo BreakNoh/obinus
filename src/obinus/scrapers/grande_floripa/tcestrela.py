@@ -136,13 +136,18 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
             if not servicos_dias:
                 continue
 
-            for i, dia in enumerate([0, 0, 0, 1, 1, 2]):
-                if (texto := extrair_texto(cols[i + 1]).strip()) and (
-                    hora := re.search(r"\d{2}(?:\.|:)\d{2}", texto)
+            DU = 0
+            SAB = 1
+            DOM = 2
+
+            for offset, dia_col in enumerate([DU, DU, DU, SAB, SAB, DOM]):
+                if (texto := extrair_texto(cols[offset + 1]).strip()) and (
+                    hora := re.search(r"\d{1,2}(?:\W)\d{1,2}", texto)
                 ):
-                    horario = Horario(hora.group(0).replace(".", ":"))
+                    horario = Horario(re.sub(r"\W", ":", hora.group(0)))
+
                     self.adicionar_obs(horario, texto, legenda)
-                    servicos_dias[dia].horarios.append(horario)
+                    servicos_dias[dia_col].horarios.append(horario)
                 else:
                     continue
 
