@@ -4,6 +4,8 @@ from obinus.core.tipos import *
 from obinus.utils.http import get_json
 import jmespath
 
+from obinus.utils.texto import normalizar_dia
+
 URL_LINHAS = "https://mobilibus.com/api/routes"
 URL_HORARIOS = "https://mobilibus.com/api/timetable"
 
@@ -47,30 +49,6 @@ QUERY_LINHAS = jmespath.compile("""
 """)
 
 
-def normalizar_dia(dia: str) -> Dias:
-    dia_norm = dia.strip().lower()
-
-    if "úti" in dia_norm:
-        return DIAS_UTEIS
-
-    if "sáb" in dia_norm:
-        return SABADO
-
-    if "dom" in dia_norm:
-        return DOMINGO_E_FERIADOS
-
-    DIAS = {
-        "dias úteis": DIAS_UTEIS,
-        "dia útil": DIAS_UTEIS,
-        "sábados": SABADO,
-        "sábado": SABADO,
-        "domingo": DOMINGO_E_FERIADOS,
-        "domingos": DOMINGO_E_FERIADOS,
-    }
-
-    return DIAS.get(dia) or 0
-
-
 class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
     ID_EMPRESA: str
     NOME_EMPRESA: str
@@ -81,7 +59,12 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
     VERSAO_HORARIOS: str = "1"
 
     def empresa(self) -> Empresa:
-        return Empresa(id=self.ID_EMPRESA, nome=self.NOME_EMPRESA, regioes=self.REGIOES, fonte=self.FONTE)
+        return Empresa(
+            id=self.ID_EMPRESA,
+            nome=self.NOME_EMPRESA,
+            regioes=self.REGIOES,
+            fonte=self.FONTE,
+        )
 
     def extrair_horarios(self, payload: Json) -> list[Servico]:
         servicos = []
