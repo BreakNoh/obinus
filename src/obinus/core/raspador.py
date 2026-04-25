@@ -1,3 +1,4 @@
+from dataclasses import asdict
 import sys
 import time
 import random
@@ -16,6 +17,7 @@ from obinus.utils.salvar import (
     normalizar,
     gerar_rows,
     salvar_csv,
+    salvar_json,
 )
 
 P = TypeVar("P", bound=Payload)
@@ -27,11 +29,20 @@ def _processar_raspador(
     raspador: InterfaceRaspador, atualizar_progresso: Callable[[int]] | None = None
 ) -> Empresa:
     empresa = raspador.raspar(atualizar_progresso)
-    rows = gerar_rows(empresa)
+
+    # rows = gerar_rows(empresa)
     data = time.strftime("%Y%m%d", time.localtime())
 
-    for lista, valores in rows.items():
-        salvar_csv(valores, f"{data}/{empresa.id}/{lista}.csv".lower())
+    # for lista, valores in rows.items():
+    #     salvar_csv(valores, f"{data}/{empresa.id}/{lista}.csv".lower())
+
+    for linha in empresa.linhas:
+        salvar_json(asdict(linha), f"{data}/{empresa.slug}/{linha.slug}.json")
+
+    dados_empresa = asdict(empresa)
+    del dados_empresa["linhas"]
+
+    salvar_json(dados_empresa, f"{data}/{empresa.slug}/self.json")
 
     return empresa
 

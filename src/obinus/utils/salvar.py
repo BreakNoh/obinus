@@ -6,6 +6,7 @@ import hashlib
 import re
 from obinus.utils.texto import REMOCOES, encurtar, criar_slug, padronizar_texto
 from obinus.core.tipos import *
+import json
 
 
 ARQUIVO_ATUAL = Path(__file__).resolve()
@@ -186,6 +187,24 @@ def gerar_id(identificador: str, prefixo: str, tamanho: int = 8) -> str:
     hash = hashlib.sha256(segredo.encode()).hexdigest()
 
     return hash[:tamanho]
+
+
+def salvar_json(dados: dict | list, arquivo: str | Path):
+    if not dados:
+        return
+
+    try:
+        caminho = PASTA_OUTPUT / arquivo
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(caminho, "w", encoding="utf-8") as arq:
+            dados_serializados = json.dumps(dados, ensure_ascii=False, indent=4)
+            arq.write(dados_serializados)
+
+    except Exception as e:
+        print(e)
+
+    pass
 
 
 def salvar_csv(dados: list, nome_arquivo: str):
