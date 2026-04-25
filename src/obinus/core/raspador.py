@@ -131,7 +131,7 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
     @abstractmethod
     def empresa(self) -> Empresa: ...
 
-    def _esperar(self, min: float = 0.5, max: float = 1.5):
+    def _esperar(self, min: float = 1, max: float = 1.5):
         time.sleep(random.uniform(min, max))
 
     def _raspar_linhas(self) -> list[tuple[Linha, B]]:

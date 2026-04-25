@@ -1,4 +1,4 @@
-from requests import Response, Session, request
+from requests import Response, Session, get, request
 from bs4 import BeautifulSoup, Tag
 from obinus.utils.texto import normalizar
 

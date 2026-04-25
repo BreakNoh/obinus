@@ -94,13 +94,21 @@ class InterfaceMobilibus(InterfaceRaspador[Json, Json, Url]):
                     nome = lin["codigo"]
                     codigo = None
 
-                url = f"{URL_HORARIOS}?project_id={self.ID_PROJETO}&route_id={lin['id_rota']}&v={self.VERSAO_HORARIOS}"
+                url = f"{URL_HORARIOS}?project_id={self.ID_PROJETO}&route_id={lin['id_rota']}"
                 linhas.append((Linha(nome=nome, codigo=codigo), Url(url)))
 
         return linhas
 
     def buscar_horarios(self, busca: Url) -> Json:
-        json = get_json(busca.url)
+        json = ""
+
+        try:
+            for i in range(2):
+                json = get_json(busca.url + (f"&v={i}" if i > 0 else ""))
+                self._esperar()
+        except Exception as e:
+            if json == "":
+                raise e
 
         return Json(QUERY_HORARIOS.search(json))
 
