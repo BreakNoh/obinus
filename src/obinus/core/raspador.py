@@ -15,8 +15,6 @@ from obinus.utils.salvar import (
     criar_slug,
     identificar,
     normalizar,
-    gerar_rows,
-    salvar_csv,
     salvar_json,
 )
 
@@ -25,24 +23,46 @@ Q = TypeVar("Q", bound=Payload)
 B = TypeVar("B", bound=Busca)
 
 
+def _serializar_linha(linha: Linha):
+    dados_linha = asdict(linha)
+
+    servicos_ser = {}
+
+    for s in dados_linha["servicos"]:
+        dia = str(s["dias"])
+
+        if not servicos_ser.get(dia):
+            servicos_ser[dia] = []
+
+        servicos_ser[dia].append({"sentido": s["sentido"], "horarios": s["horarios"]})
+
+    dados_linha["servicos"] = servicos_ser
+
+    return dados_linha
+
+
 def _processar_raspador(
     raspador: InterfaceRaspador, atualizar_progresso: Callable[[int]] | None = None
 ) -> Empresa:
     empresa = raspador.raspar(atualizar_progresso)
 
-    # rows = gerar_rows(empresa)
-    data = time.strftime("%Y%m%d", time.localtime())
-
-    # for lista, valores in rows.items():
-    #     salvar_csv(valores, f"{data}/{empresa.id}/{lista}.csv".lower())
+    # data = time.strftime("%Y%m%d", time.localtime())
 
     for linha in empresa.linhas:
-        salvar_json(asdict(linha), f"{data}/{empresa.slug}/{linha.slug}.json")
+        salvar_json(_serializar_linha(linha), f"{empresa.slug}/{linha.slug}.json")
 
     dados_empresa = asdict(empresa)
-    del dados_empresa["linhas"]
+    del dados_empresa["id"]
+    dados_empresa["linhas"] = [
+        {
+            "nome_linha": l["nome"],
+            "codigo_linha": l["codigo"],
+            "nome_empresa": dados_empresa["nome"],
+        }
+        for l in dados_empresa["linhas"]
+    ]
 
-    salvar_json(dados_empresa, f"{data}/{empresa.slug}/self.json")
+    salvar_json(dados_empresa, f"{empresa.slug}/_self.json")
 
     return empresa
 
@@ -162,7 +182,7 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
             try:
                 linha.servicos = self._raspar_horarios(busca)
                 normalizar(linha)
-                identificar(linha, empresa.id)
+                identificar(linha)
 
                 linhas_finalizadas.append(linha)
                 if atualizar_progresso:

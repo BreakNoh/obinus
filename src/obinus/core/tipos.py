@@ -28,21 +28,6 @@ OESTE: Final[Regioes] = 0b000001
 class ObsHorario:
     tipo: str
     valor: str
-    #
-    # def __init__(self, tipo: str, valor: str) -> None:
-    #     self.valor = valor
-    #     self.tipo = tipo
-    #
-    # def __eq__(self, other: object) -> bool:
-    #     if not isinstance(other, ObsHorario):
-    #         return False
-    #     return self.tipo == other.tipo and self.valor == other.valor
-    #
-    # def __str__(self) -> str:
-    #     return rf"{{\"tipo:{self.tipo},valor:{self.valor}}}"
-    #
-    # def to_dict(self):
-    #     return {"tipo": self.tipo, "valor": self.valor}
 
 
 class Adaptado(ObsHorario):
@@ -95,17 +80,12 @@ class Horario:
     hora: str
     obs: list[ObsHorario] = field(default_factory=list)
 
-    id: str | None = None
-
 
 @dataclass
 class Servico:
     dias: Dias = 0
     sentido: str | None = None
     horarios: list[Horario] = field(default_factory=list)
-
-    id: str | None = None
-    slug: str | None = None
 
 
 @dataclass
@@ -115,8 +95,6 @@ class Linha:
     detalhe: str | None = None
     servicos: list[Servico] = field(default_factory=list)
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
-
-    id: str | None = None
     slug: str | None = None
 
 

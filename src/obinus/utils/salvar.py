@@ -1,8 +1,6 @@
 from dataclasses import asdict
 import json
 from pathlib import Path
-import csv
-import hashlib
 import re
 from obinus.utils.texto import REMOCOES, encurtar, criar_slug, padronizar_texto
 from obinus.core.tipos import *
@@ -10,14 +8,9 @@ import json
 
 
 ARQUIVO_ATUAL = Path(__file__).resolve()
-DIR_ATUAL = ARQUIVO_ATUAL.parent
-DIR_PACOTE = DIR_ATUAL.parent
-DIR_RAIZ = DIR_PACOTE.parent.parent
-PASTA_SQL = DIR_ATUAL / "sql"
+DIR_RAIZ = ARQUIVO_ATUAL.parents[3]
 PASTA_OUTPUT = DIR_RAIZ / "output"
-
 PASTA_OUTPUT.mkdir(parents=True, exist_ok=True)
-
 
 TAMANHO_SEGURO = 20
 TAMANHO_MAXIMO_SLUG = 30
@@ -53,15 +46,11 @@ def encurtar_nome(obj: Linha | Servico):
         obj.sentido = encurtar(obj.sentido, truncar=False, lista_negra=set())
 
 
-def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
+def identificar(obj: Empresa | Linha):
     if isinstance(obj, Empresa):
         obj.slug = criar_slug(obj.nome)
 
-        for l in obj.linhas:
-            identificar(l, obj.id)
     elif isinstance(obj, Linha):
-        obj.id = gerar_id(obj.codigo or obj.nome, prefixo)
-
         encurtar_nome(obj)  # encurta o nome após usar para gerar hash
         nome_slug = (
             encurtar(obj.nome, truncar=len(obj.nome or "") > TAMANHO_SEGURO) or ""
@@ -69,32 +58,6 @@ def identificar(obj: Empresa | Linha | Servico | Horario, prefixo: str):
 
         slug = criar_slug(f"{obj.codigo or ''} {nome_slug}")
         obj.slug = slug
-
-        for s in obj.servicos:
-            identificar(s, obj.id)
-    elif isinstance(obj, Servico):
-        obj.id = gerar_id(obj.sentido or "", prefixo)
-
-        encurtar_nome(obj)
-
-        nome_limpo = encurtar(obj.sentido, truncar=False)
-        nome_slug = encurtar(
-            nome_limpo, truncar=len(nome_limpo or "") >= TAMANHO_SEGURO
-        )
-
-        obj.slug = criar_slug(nome_slug or "")
-
-        for h in obj.horarios:
-            identificar(h, obj.id)
-    else:  # horario
-        obs_ser = json.dumps(
-            obj.obs,
-            sort_keys=True,
-            ensure_ascii=False,
-            default=lambda o: o.__dict__,
-        )
-
-        obj.id = gerar_id(obj.hora + obs_ser, prefixo, tamanho=12)
 
 
 def normalizar(obj: Linha | Servico | Horario | ObsHorario):
@@ -124,71 +87,6 @@ def normalizar(obj: Linha | Servico | Horario | ObsHorario):
         obj.valor = padronizar_texto(obj.valor) or obj.valor
 
 
-def gerar_rows(empresa: Empresa) -> dict[str, list]:
-    rows = {"horarios": [], "servicos": [], "linhas": [], "empresas": []}
-
-    rows["empresas"].append(
-        {
-            "id": empresa.id,
-            "nome": empresa.nome,
-            "regioes": empresa.regioes,
-            "slug": empresa.slug,
-            "fonte": empresa.fonte,
-        }
-    )
-    for linha in empresa.linhas:
-        rows["linhas"].append(
-            {
-                "id": linha.id,
-                "id_empresa": empresa.id,
-                "nome": linha.nome,
-                "codigo": linha.codigo,
-                "detalhe": linha.detalhe,
-                "slug": linha.slug,
-            }
-        )
-
-        for servico in linha.servicos:
-            servico_ser = {
-                "id": servico.id,
-                "id_linha": linha.id,
-                "sentido": servico.sentido,
-                "dias": servico.dias,
-                "slug": servico.slug,
-            }
-            if not servico_ser in rows["servicos"]:
-                rows["servicos"].append(servico_ser)
-
-            for horario in servico.horarios:
-                # obs_ser = f"[{','.join([str(obs) for obs in horario.obs] or [])}]"
-
-                rows["horarios"].append(
-                    {
-                        "id": horario.id,
-                        "id_servico": servico.id,
-                        "hora": horario.hora,
-                        "observacoes": json.dumps(
-                            horario.obs,
-                            sort_keys=True,
-                            ensure_ascii=False,
-                            default=lambda o: o.__dict__,
-                        ),
-                    }
-                )
-
-    return rows
-
-
-def gerar_id(identificador: str, prefixo: str, tamanho: int = 8) -> str:
-    _identificador = identificador.lower().strip()
-    _prefixo = prefixo.lower().strip()
-
-    segredo = f"{_prefixo}:{_identificador}"
-    hash = hashlib.sha256(segredo.encode()).hexdigest()
-
-    return hash[:tamanho]
-
-
 def salvar_json(dados: dict | list, arquivo: str | Path):
     if not dados:
         return
@@ -203,38 +101,4 @@ def salvar_json(dados: dict | list, arquivo: str | Path):
 
     except Exception as e:
         print(e)
-
     pass
-
-
-def salvar_csv(dados: list, nome_arquivo: str):
-    if not dados:
-        return
-
-    try:
-        cabecalho = asdict(dados[0]).keys()
-    except:
-        if isinstance(dados[0], dict):
-            cabecalho = dados[0].keys()
-        else:
-            print("erro ao salvar csv")
-            return
-
-    try:
-        caminho = PASTA_OUTPUT / nome_arquivo
-        caminho.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(caminho, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=cabecalho, delimiter=";")
-
-            writer.writeheader()
-            for item in dados:
-                try:
-                    writer.writerow(asdict(item))
-                except:
-                    if isinstance(item, dict):
-                        writer.writerow(item)
-
-        print(f"> {len(dados)} registros salvos em: {nome_arquivo}")
-    except Exception as e:
-        print(f"X erro ao salvar csv: ", e)
