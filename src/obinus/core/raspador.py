@@ -53,11 +53,13 @@ def _processar_raspador(
 
     dados_empresa = asdict(empresa)
     del dados_empresa["id"]
+
     dados_empresa["linhas"] = [
         {
             "nome_linha": l["nome"],
             "codigo_linha": l["codigo"],
             "nome_empresa": dados_empresa["nome"],
+            "slug": f"{dados_empresa['slug']}/{l['slug']}",
         }
         for l in dados_empresa["linhas"]
     ]

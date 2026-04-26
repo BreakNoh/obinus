@@ -47,7 +47,7 @@ class BCBus(InterfaceRaspador[Html, Html, Html]):
             "DIARIAMENTE": TODOS_DIAS,
             "TODOS OS DIAS": TODOS_DIAS,
         }
-        PADRAO_HORARIO = re.compile(r"(?P<hor>\d{2}h\d{2})(?:\W)*(?P<obs>[^)]*)?")
+        PADRAO_HORARIO = re.compile(r"(?P<hor>\d{1,2}h\d{1,2})(?:\W)*(?P<obs>[^)]*)?")
 
         servicos = []
         sub_sentido = False
