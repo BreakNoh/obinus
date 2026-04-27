@@ -195,6 +195,14 @@ def criar_slug(texto: str) -> str:
     slug = unidecode(texto.lower().strip())  # deixa minuscula e remove acentos
 
     slug = PADRAO_REBARBA.sub("", slug)  # strip melhorado
+
+    for i, j in [
+        (r"\bexpresso\b", "exp"),
+        (r"\bcoletivo\b", "col"),
+        (r"\btransporte(s)?\b", "trans"),
+    ]:
+        slug = re.sub(i, j, slug)
+
     slug = re.sub(r"\W+", "-", slug)  # troca tudo que não for letra/numero por -
 
     tamanho = min(len(slug), TAMANHO_MAXIMO_SLUG)
