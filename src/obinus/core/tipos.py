@@ -89,6 +89,21 @@ class Servico:
 
 
 @dataclass
+class Ponto:
+    nome: str | None = None
+    eh_parada: bool = False
+    lat: float | None = None
+    lng: float | None = None
+
+
+@dataclass
+class Itinerario:
+    ruas: list[str] = field(default_factory=list)
+    pontos: list[Ponto] = field(default_factory=list)
+    polyline: str | None = None
+
+
+@dataclass
 class Linha:
     nome: str
     codigo: str | None = None
@@ -96,6 +111,7 @@ class Linha:
     servicos: list[Servico] = field(default_factory=list)
     tipo: TipoLinha = TipoLinha.CONVENCIONAL
     slug: str | None = None
+    itinerarios: dict[str, Itinerario] = field(default_factory=dict)
 
 
 @dataclass
