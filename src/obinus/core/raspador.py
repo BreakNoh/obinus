@@ -1,4 +1,5 @@
 from dataclasses import asdict
+from functools import reduce
 import sys
 import time
 import random
@@ -16,6 +17,12 @@ from obinus.utils.salvar import (
     identificar,
     normalizar,
     salvar_json,
+)
+from obinus.utils.transformacao import (
+    adicionar_slug,
+    encurtar_nome,
+    extrair_detalhe_nome,
+    normalizar_nome,
 )
 
 P = TypeVar("P", bound=Payload)
@@ -45,6 +52,15 @@ def _processar_raspador(
     raspador: InterfaceRaspador, atualizar_progresso: Callable[[int]] | None = None
 ) -> Empresa:
     empresa = raspador.raspar(atualizar_progresso)
+
+    transformacoes = [
+        normalizar_nome,
+        adicionar_slug,
+        extrair_detalhe_nome,
+        encurtar_nome,
+    ]
+
+    empresa = reduce(lambda emp, trans: trans(emp), transformacoes, empresa)
 
     # data = time.strftime("%Y%m%d", time.localtime())
 
@@ -183,8 +199,8 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
         for linha, busca in linhas:
             try:
                 linha.servicos = self._raspar_horarios(busca)
-                normalizar(linha)
-                identificar(linha)
+                # normalizar(linha)
+                # identificar(linha)
 
                 linhas_finalizadas.append(linha)
                 if atualizar_progresso:
@@ -194,6 +210,6 @@ class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q,
                 print(f"erro ao raspar {empresa.nome} | {linha.nome}:", e)
 
         empresa.linhas = linhas_finalizadas
-        empresa.slug = criar_slug(empresa.nome)
+        # empresa.slug = criar_slug(empresa.nome)
 
         return empresa
