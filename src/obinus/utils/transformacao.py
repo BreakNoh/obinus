@@ -52,13 +52,6 @@ def adicionar_slug(empresa: Empresa) -> Empresa:
             replace(
                 L,
                 slug=_criar_slug(f"{L.codigo} {L.nome}" if L.codigo else L.nome),
-                servicos=[
-                    replace(
-                        S,
-                        slug=_criar_slug(S.sentido or ""),
-                    )
-                    for S in L.servicos
-                ],
             )
             for L in empresa.linhas
         ],
