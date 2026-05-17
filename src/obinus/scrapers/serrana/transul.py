@@ -8,7 +8,7 @@ URL_LINHAS = "https://transullages.com.br/linhas"
 class Transul(InterfaceRaspador[Html, Html, Url]):
     def empresa(self) -> Empresa:
         return Empresa(
-            id="transul", nome="Transul", regioes=SUL, fonte="https://transullages.com.br"
+            id="transul", nome="Transul", regioes=[SUL], fonte="https://transullages.com.br"
         )
 
     def buscar_linhas(self) -> Html:

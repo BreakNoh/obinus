@@ -32,7 +32,7 @@ class ConsorcioFenix(InterfaceRaspador[Html, Html, Url]):
         return Empresa(
             id="consorcio-fenix",
             nome="Consórcio Fênix",
-            regioes=GRANDE_FLORIPA,
+            regioes=[GRANDE_FLORIPA],
             fonte="https://www.consorciofenix.com.br",
         )
 

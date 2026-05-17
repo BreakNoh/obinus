@@ -7,5 +7,5 @@ class CriBus(InterfaceMobilibus):
     NOME_EMPRESA = "CriBus"
     ID_PROJETO = "740"
     VERSAO_HORARIOS = "1"
-    REGIOES = SUL
+    REGIOES = [SUL]
     FONTE = "https://www.cribus.com.br"

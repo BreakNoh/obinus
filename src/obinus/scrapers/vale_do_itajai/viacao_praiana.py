@@ -21,7 +21,7 @@ class ViacaoPraiana(InterfaceRaspador[Html, Html, Raw]):
         return Empresa(
             id="viacao-praiana",
             nome="Viação Praiana",
-            regioes=VALE_DO_ITAJAI,
+            regioes=[VALE_DO_ITAJAI],
             fonte="https://praiana.com.br",
         )
 

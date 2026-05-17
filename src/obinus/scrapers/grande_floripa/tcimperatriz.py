@@ -17,7 +17,7 @@ class TCImperatriz(InterfaceRaspador[Html, Html, Url]):
         return Empresa(
             id="transporte-coletivo-imperatriz",
             nome="Transporte Coletivo Imperatriz",
-            regioes=GRANDE_FLORIPA,
+            regioes=[GRANDE_FLORIPA],
             fonte="https://www.tcimperatriz.com.br",
         )
 

@@ -7,5 +7,5 @@ class OnibusCircular(InterfaceMobilibus):
     NOME_EMPRESA = "Ônibus Circular"
     ID_PROJETO = "821"
     VERSAO_HORARIOS = "2"
-    REGIOES = VALE_DO_ITAJAI
+    REGIOES = [VALE_DO_ITAJAI]
     FONTE = "https://onibuscircular.com.br"

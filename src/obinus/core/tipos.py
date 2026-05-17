@@ -15,13 +15,13 @@ class TipoLinha(str, Enum):
     EXECUTIVO = "executivo"
 
 
-type Regioes = int
-GRANDE_FLORIPA: Final[Regioes] = 0b100000
-SUL: Final[Regioes] = 0b010000
-NORTE: Final[Regioes] = 0b001000
-VALE_DO_ITAJAI: Final[Regioes] = 0b000100
-SERRANA: Final[Regioes] = 0b000010
-OESTE: Final[Regioes] = 0b000001
+type Regioes = list[str]
+GRANDE_FLORIPA: Final[str] = "grande_floripa"
+SUL: Final[str] = "sul"
+NORTE: Final[str] = "norte"
+VALE_DO_ITAJAI: Final[str] = "vale_do_itajai"
+SERRANA: Final[str] = "serrana"
+OESTE: Final[str] = "oeste"
 
 
 @dataclass
@@ -104,7 +104,7 @@ class Empresa:
     nome: str
     fonte: str | None = None
     linhas: list[Linha] = field(default_factory=list)
-    regioes: Regioes = 0
+    regioes: Regioes = field(default_factory=list)
     slug: str | None = None
 
 
