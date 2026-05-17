@@ -112,6 +112,7 @@ def _encurtar_nome(nome: str, agressivo: bool = False) -> str:
         "governador": "gov",
         "rodovia": "rod",
         "expresso": "exp",
+        "presidente": "pres",
     }
 
     ABREVIACAO_PESADA = {
@@ -131,6 +132,7 @@ def _encurtar_nome(nome: str, agressivo: bool = False) -> str:
         "saidas": "sai",
         "coletivo": "col",
         "transporte": "trans",
+        "consorcio": "cons",
     }
 
     resultado = nome
