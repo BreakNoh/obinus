@@ -1,3 +1,6 @@
+![Python](https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&logo=python&logoColor=ffdd54)
+![uv](https://img.shields.io/badge/uv-%23DE5FE9.svg?style=for-the-badge&logo=uv&logoColor=white)
+
 # obinus
 
 **obinus** é uma coleção de raspadores de linhas de ônibus do território de **Santa Catarina** escrita em **Python**
@@ -46,6 +49,8 @@ uv run regiao
 Usado para raspar dados de todas as empresas de uma região. Pode ser usado passando o nome da região direto no comando (`uv run regiao <regiao>`) ou somente o comando para uma escolha interativa (`uv run regiao`)
 
 _obs:_ caso o nome da região ou empresa passado como parâmetro não corresponder a nenhuma reconhecida, o modo interativo será usado.
+
+> Mais informações sobre os identificadores de empresas e regiões em [/docs/empresas.md](./docs/empresas.md)
 
 ## Formato dos dados
 
