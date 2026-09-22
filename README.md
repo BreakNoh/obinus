@@ -33,7 +33,7 @@ uv sync
 
 ## Uso
 
-O uso dos raspadores é feito através de 2 comandos: `uv run empresa` e `uv run regiao`.  
+O uso dos raspadores é feito através de 2 comandos: `uv run empresa`, `uv run regiao` e `uv run geral`.  
 Ao iniciar a raspagem será apresentado uma barra de progresso da raspagem e ao finalizar o processo os dados serão salvos no diretório `output/` na raiz do projeto. Caso já exista dados sobre a empresa **os dados antigos serão sobreescritos**.
 
 ```bash
@@ -50,6 +50,12 @@ Usado para raspar dados de todas as empresas de uma região. Pode ser usado pass
 
 _obs:_ caso o nome da região ou empresa passado como parâmetro não corresponder a nenhuma reconhecida, o modo interativo será usado.
 
+```bash
+uv run geral
+```
+
+Usado para raspar todas as empresas disponíveis.
+
 > Mais informações sobre os identificadores de empresas e regiões em [/docs/empresas.md](./docs/empresas.md)
 
 ## Capacidades
@@ -65,11 +71,22 @@ _obs:_ caso o nome da região ou empresa passado como parâmetro não correspond
 - [ ] Extrair **avisos**
 - [ ] Mais métodos de exportação
 
-## Formato dos dados
+## Formato do resultado
 
 Os dados raspados são retornados no formato JSON no diretório `output`. No diretório, os dados de cada empresa são salvos em diretórios nomeados com o identificador da empresa (`output/<empresa>/`).  
 No diretório da empresa são guardados os dados de cada linha em arquivos JSON separados nomeados de acordo com o slug da linha.
 Também é salvo o arquivo `_self.json`, nele são guardados os dados da linha.
+
+### Estrutura do resultado
+
+```
+output/
+└─ <empresa>
+   ├─ _self.json
+   ├─ <linha>.json
+   ├─ <linha>.json
+   └─ ...
+```
 
 ### `<linha>.json`
 
