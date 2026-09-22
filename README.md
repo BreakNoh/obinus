@@ -1,10 +1,10 @@
 # obinus
 
-obinus é uma coleção de raspadores de linhas ônibus do território de Santa Catarina escrita em python
+obinus é uma coleção de raspadores de linhas de ônibus do território de Santa Catarina escrita em Python
 
 ## Dependências
 
-- python v3.14 ou posteriores
+- Python v3.14 ou posteriores
 - uv v0.11.19 ou posteriores
 - git
 
@@ -20,7 +20,7 @@ obinus é uma coleção de raspadores de linhas ônibus do território de Santa 
 
 3. instale as dependências
 
-`uv install`
+`uv sync`
 
 ## Uso
 
@@ -35,12 +35,12 @@ Ao iniciar a raspagem será apresentado uma barra de progresso da raspagem e ao 
 
     Usado para raspar dados de todas as empresas de uma região. Pode ser usado passando o nome da região direto no comando (`uv run regiao <regiao>`) ou somente o comando para uma escolha interativa (`uv run regiao`)
 
-_obs:_ caso o nome da regiao ou empresa passado como parâmetro não corresponder a nenhuma reconhecida, o modo interativo será usado.
+_obs:_ caso o nome da região ou empresa passado como parâmetro não corresponder a nenhuma reconhecida, o modo interativo será usado.
 
 ## Formato dos dados
 
 Os dados raspados são retornados no formato JSON no diretório `output`. No diretório, os dados de cada empresa são salvos em diretórios nomeados com o identificador da empresa (`output/<identificador>`).  
-No diretório da empresa são guardados os dados de cada linha em arquivos JSON separados nomeados de acordo como slug da linha.
+No diretório da empresa são guardados os dados de cada linha em arquivos JSON separados nomeados de acordo com o slug da linha.
 Também é salvo o arquivo `_self.json`, nele são guardados os dados da linha.
 
 ### `<linha>.json`
@@ -99,3 +99,14 @@ _Exemplo:_ dias uteis seriam `0b0111110` que em decimal seria `62`, então a cha
 }
 
 ```
+
+## Licença
+
+Este projeto está licenciado sob a licença GNU GPLv3. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Aviso sobre os dados
+
+Os dados raspados por este projeto pertencem às respectivas empresas de ônibus e fontes
+originais. Este projeto não reivindica propriedade sobre esses dados e seu uso deve respeitar
+os termos de uso dos sites de origem. As informações podem mudar sem aviso prévio e não há
+garantia de precisão ou atualização.
