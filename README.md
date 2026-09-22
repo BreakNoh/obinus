@@ -52,6 +52,19 @@ _obs:_ caso o nome da região ou empresa passado como parâmetro não correspond
 
 > Mais informações sobre os identificadores de empresas e regiões em [/docs/empresas.md](./docs/empresas.md)
 
+## Capacidades
+
+- Extrair **linhas**
+- Extrair **sentidos**
+- Extrair **horários**
+
+**Capacidades planejadas:**
+
+- [ ] Extrair **itinerários**
+- [ ] Extrair **tarifas**
+- [ ] Extrair **avisos**
+- [ ] Mais métodos de exportação
+
 ## Formato dos dados
 
 Os dados raspados são retornados no formato JSON no diretório `output`. No diretório, os dados de cada empresa são salvos em diretórios nomeados com o identificador da empresa (`output/<empresa>/`).  
@@ -95,7 +108,7 @@ _obs:_ as chaves do campo servicos da linha são strings númericas baseadas em 
 | 5   | Sexta         |
 | 6   | Sábado        |
 
-_Exemplo:_ dias uteis seriam `0b0111110` que em decimal seria `62`, então a chave dos serviços dos dias da semanha seria `"62"`.
+_Exemplo:_ dias uteis seriam `0b0111110` que em decimal seria `62`, então a chave dos serviços desses dias seria `"62"`.
 
 ### `_self.json`
 
