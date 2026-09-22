@@ -33,7 +33,7 @@ uv sync
 
 ## Uso
 
-O uso dos raspadores é feito através de 2 comandos: `uv run empresa`, `uv run regiao` e `uv run geral`.  
+O uso dos raspadores é feito através dos comandos: `uv run empresa`, `uv run regiao` e `uv run geral`.  
 Ao iniciar a raspagem será apresentado uma barra de progresso da raspagem e ao finalizar o processo os dados serão salvos no diretório `output/` na raiz do projeto. Caso já exista dados sobre a empresa **os dados antigos serão sobreescritos**.
 
 ```bash
