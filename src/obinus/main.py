@@ -1,4 +1,4 @@
-from obinus.core.raspador import _extrair
+from obinus.core.raspagem import _extrair
 from obinus.core.tipos import Empresa
 from obinus.scrapers import RASPADORES_SANTA_CATARINA
 from sys import argv
