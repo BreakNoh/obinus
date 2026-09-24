@@ -2,7 +2,7 @@ import time
 import random
 
 from abc import ABC, abstractmethod
-from typing import Callable, Generic, Protocol, TypeVar
+from typing import Callable, Generic, Protocol, TypeVar, runtime_checkable
 from obinus.core.tipos import *
 
 P = TypeVar("P", bound=Payload)
@@ -18,6 +18,17 @@ class Extrator(Protocol, Generic[P, Q, B]):
 class Buscador(Protocol, Generic[P, Q, B]):
     def buscar_linhas(self) -> P: ...
     def buscar_horarios(self, busca: B) -> Q: ...
+
+
+# raspagem de itinerario
+@runtime_checkable
+class BuscadorItinerario[B: Busca, P: Payload](Protocol):
+    def buscar_itinerarios(self, busca: B) -> P: ...
+
+
+@runtime_checkable
+class ExtratorItinerario[P: Payload](Protocol):
+    def extrair_itinerarios(self, payload: P) -> dict[str, list[str]]: ...
 
 
 class InterfaceRaspador(ABC, Extrator[P, Q, B], Buscador[P, Q, B], Generic[P, Q, B]):
