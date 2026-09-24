@@ -138,7 +138,7 @@ class ColetivoSantaCruz(InterfaceRaspador[Json, Html, Url]):
         return Empresa(
             id="coletivo-santa-cruz",
             nome="Coletivo Santa Cruz",
-            regioes=NORTE,
+            regioes=[NORTE],
             fonte="https://www.coletivosantacruz.com.br",
         )
 

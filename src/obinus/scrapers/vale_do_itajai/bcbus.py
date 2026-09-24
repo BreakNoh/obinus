@@ -11,7 +11,7 @@ class BCBus(InterfaceRaspador[Html, Html, Html]):
         return Empresa(
             id="bcbus",
             nome="BCBus",
-            regioes=VALE_DO_ITAJAI,
+            regioes=[VALE_DO_ITAJAI],
             fonte="https://bcbus.com.br",
         )
 

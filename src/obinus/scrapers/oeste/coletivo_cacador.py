@@ -7,5 +7,5 @@ class ColetivoCacador(InterfaceMobilibus):
     NOME_EMPRESA = "Coletivo Caçador"
     ID_PROJETO = "331"
     VERSAO_HORARIOS = "2"
-    REGIOES = OESTE
+    REGIOES = [OESTE]
     FONTE = "https://autocoletivo.com.br"

@@ -35,7 +35,7 @@ class SantaTerezinha(InterfaceRaspador[Html, Html, Url]):
         return Empresa(
             id="santa-terezinha",
             nome="Santa Terezinha",
-            regioes=GRANDE_FLORIPA,
+            regioes=[GRANDE_FLORIPA],
             fonte="https://santaterezinha.com",
         )
 

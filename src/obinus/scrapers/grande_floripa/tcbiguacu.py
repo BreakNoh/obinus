@@ -18,7 +18,7 @@ class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
         return Empresa(
             id="transporte-coletivo-biguacu",
             nome="Transporte Coletivo Biguaçu",
-            regioes=GRANDE_FLORIPA,
+            regioes=[GRANDE_FLORIPA],
             fonte="https://www.tcbiguacu.com.br",
         )
 

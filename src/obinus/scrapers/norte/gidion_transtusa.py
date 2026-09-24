@@ -52,7 +52,7 @@ class GidionTranstusa(InterfaceRaspador[Json, Json, Raw]):
         return Empresa(
             id="gidion-transtusa",
             nome="Gidion/Transtusa",
-            regioes=NORTE,
+            regioes=[NORTE],
             fonte="https://onibus.info",
         )
 

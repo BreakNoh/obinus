@@ -11,7 +11,7 @@ class ExpressoColetivoIcarense(InterfaceRaspador[Html, Html, Html]):
         return Empresa(
             id="expresso-coletivo-icarense",
             nome="Expresso Coletivo Içarense",
-            regioes=SUL,
+            regioes=[SUL],
             fonte="https://icarense.com.br",
         )
 

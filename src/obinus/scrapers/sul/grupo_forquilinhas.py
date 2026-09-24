@@ -10,7 +10,7 @@ class GrupoForquilhinhas(InterfaceRaspador[Html, Html, Html]):
         return Empresa(
             id="grupo-forquilinha",
             nome="Grupo Forquilinha",
-            regioes=GRANDE_FLORIPA | SUL,
+            regioes=[GRANDE_FLORIPA, SUL],
             fonte="https://www.grupoforquilhinha.com.br",
         )
 

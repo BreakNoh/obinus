@@ -13,7 +13,7 @@ class TCEstrela(InterfaceRaspador[Html, Html, Url]):
         return Empresa(
             id="transporte-coletivo-estrela",
             nome="Transporte Coletivo Estrela",
-            regioes=GRANDE_FLORIPA,
+            regioes=[GRANDE_FLORIPA],
             fonte="https://insulartc.com.br",
         )
 

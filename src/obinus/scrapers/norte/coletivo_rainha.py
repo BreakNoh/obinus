@@ -52,7 +52,7 @@ class ColetivoRainha(InterfaceRaspador[Html, Json, Url]):
         return Empresa(
             id="coletivo-rainha",
             nome="Coletivo Rainha",
-            regioes=NORTE,
+            regioes=[NORTE],
             fonte="https://editor.mobilibus.com/web/timetable/1db0m",
         )
 
