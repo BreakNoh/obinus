@@ -1,6 +1,10 @@
 from obinus.utils.http import get_soup
 from obinus.utils.texto import extrair_texto
-from obinus.core.raspador import InterfaceRaspador
+from obinus.core.raspador import (
+    InterfaceRaspador,
+    ExtratorItinerario,
+    BuscadorItinerario,
+)
 from obinus.core.tipos import *
 
 EMPRESA: str = "BIGUACU"
@@ -9,11 +13,40 @@ URL_BASE = "https://www.tcbiguacu.com.br"
 URL_BUSCA_LINHAS = "https://www.tcbiguacu.com.br/sistema/sys/AJAX_search_line.php"
 URL_LINHAS = "https://www.tcbiguacu.com.br/sistema/sys/AJAX_search_line.php"
 URL_HORARIOS = "https://www.tcbiguacu.com.br/sistema/sys/AJAX_get_line_hours.php"
+URL_ITINERARIOS = f"{URL_BASE}/sistema/sys/AJAX_get_line_itinerario.php"
 
 DIAS: dict[str, Dias] = {"1": DIAS_UTEIS, "2": SABADO, "3": DOMINGO_E_FERIADOS}
 
 
-class TCBiguacu(InterfaceRaspador[Html, Html, Raw]):
+class TCBiguacu(
+    InterfaceRaspador[Html, Html, Raw], ExtratorItinerario, BuscadorItinerario
+):
+    def buscar_itinerarios(self, busca: Raw):  # recebe o codigo da linha
+        return Html(get_soup(URL_ITINERARIOS, {"id_line_bus": busca.valor}))
+
+    def extrair_itinerarios(self, payload: Html):  # recebe GET URL_ITINERARIOS
+        SELETOR_ITINERARIOS = "div.itinerario-line"
+        SELETOR_NOME_ITINERARIO = "div.title"
+        SELETOR_ITENS = "ul.col-itinerario>li"
+
+        html = payload.html
+        itinerarios = {}
+
+        for sentido in html.select(SELETOR_ITINERARIOS):
+            nome = extrair_texto(sentido.select_one(SELETOR_NOME_ITINERARIO))
+
+            if not nome:
+                continue
+
+            ruas = []
+
+            for rua in sentido.select(SELETOR_ITENS):
+                ruas.append(extrair_texto(rua))
+
+            itinerarios[nome] = ruas
+
+        return itinerarios
+
     def empresa(self) -> Empresa:
         return Empresa(
             id="transporte-coletivo-biguacu",
